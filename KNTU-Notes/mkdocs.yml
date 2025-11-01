@@ -1,0 +1,9 @@
+site_name: MJ'S KNTU Notes
+theme:
+  name: material
+  language: fa
+extra:
+  generator: false
+  footer: "ساخته شده با چای توسط MJBakhshi "
+extra_css:
+  - extra.css
