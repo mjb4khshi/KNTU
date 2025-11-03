@@ -7,3 +7,6 @@ extra:
   footer: "ساخته شده با چای توسط MJBakhshi "
 extra_css:
   - extra.css
+plugins:
+  - search
+  - ezlinks
