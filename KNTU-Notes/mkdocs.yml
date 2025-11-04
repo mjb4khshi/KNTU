@@ -10,3 +10,9 @@ extra_css:
 plugins:
   - search
   - ezlinks
+  - callouts # برای تبدیل Calloutهای Obsidian
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - nl2br
