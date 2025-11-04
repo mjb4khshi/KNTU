@@ -2,6 +2,21 @@ site_name: MJ'S KNTU Notes
 theme:
   name: material
   language: fa
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: حالت تاریک
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: حالت روشن
+  logo: Group 1.png
+  favicon: Group 1.png
 extra:
   generator: false
   footer: "ساخته شده با چای توسط MJBakhshi "
