@@ -4,25 +4,25 @@ theme:
   language: fa
   palette:
     - scheme: default
-      primary: indigo
+      primary: cyan
       accent: indigo
       toggle:
         icon: material/weather-night
         name: حالت تاریک
     - scheme: slate
-      primary: indigo
+      primary: cyan
       accent: indigo
       toggle:
         icon: material/weather-sunny
         name: حالت روشن
   logo: Group 1w.png
   favicon: Group 1w.png
+copyright: "ساخته شده با مقادیر فراوان چای و حوصله بسیار توسط MJBakhshi "
 extra:
   generator: false
-  copyright: "ساخته شده با مقادیر فراوان چای و حوصله بسیار توسط MJBakhshi "
   social:
     - icon: fontawesome/brands/linkedin
-      link: www.linkedin.com/in/mjb4khshi
+      link: https://www.linkedin.com/in/mjb4khshi/
 extra_css:
   - extra.css
 plugins:
