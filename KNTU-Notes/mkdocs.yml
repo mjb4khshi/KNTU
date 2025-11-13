@@ -29,6 +29,7 @@ plugins:
   - search
   - ezlinks
   - callouts # برای تبدیل Calloutهای Obsidian
+  - glightbox
 markdown_extensions:
   - admonition
   - pymdownx.details
