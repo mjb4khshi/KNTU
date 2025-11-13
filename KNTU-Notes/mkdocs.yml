@@ -2,6 +2,8 @@ site_name: MJ'S KNTU Notes
 theme:
   name: material
   language: fa
+  features:
+    - toc.integrate
   palette:
     - scheme: default
       primary: cyan
@@ -30,8 +32,11 @@ plugins:
   - ezlinks
   - callouts # برای تبدیل Calloutهای Obsidian
   - glightbox
+  
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
   - nl2br
+  - toc:
+      permalink: true
