@@ -39,5 +39,8 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - nl2br
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - toc:
       permalink: true
+      
