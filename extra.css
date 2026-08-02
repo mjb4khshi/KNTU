@@ -91,10 +91,25 @@ article .headerlink.leading {
 [data-slot="dialog-trigger"] {
   padding-left: 0;
   padding-right: calc(var(--spacing) * 3);
+  
 }
 @media (min-width: 40rem) {
   [data-slot="dialog-trigger"] {
     padding-right: calc(var(--spacing) * 3);
     padding-left: calc(var(--spacing) * 12);
   }
+}
+/* چرخش و تنظیم جهت فلش‌های ناوبری پایین صفحه (قبلی و بعدی) */
+nav[aria-label="Pagination"] svg,
+.pagination svg,
+a[rel="prev"] svg,
+a[rel="next"] svg {
+  transform: scaleX(-1);
+}
+
+/* جابه‌جایی آیکون و متن در دکمه‌های پجینیشن برای تطابق با RTL */
+a[rel="prev"], a[rel="next"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
