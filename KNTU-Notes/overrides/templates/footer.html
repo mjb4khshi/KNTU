@@ -1,0 +1,34 @@
+<footer view-transition-name="footer"
+    class="group-has-[.section-soft]/body:bg-surface/40 3xl:fixed:bg-transparent dark:bg-transparent mt-10 border-t border-border">
+    <div class="container-wrapper px-4 xl:px-6 py-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            
+            <!-- کپی رایت -->
+            <div class="text-muted-foreground w-full text-center md:text-right text-xs sm:text-sm">
+                {% if config.copyright %}
+                {{ config.copyright }}
+                {% endif %}
+            </div>
+
+            <!-- شبکه‌های اجتماعی -->
+            <div class="flex items-center gap-4 text-muted-foreground" style="direction: ltr;">
+                
+                <!-- Instagram -->
+                <a href="https://instagram.com/mjb4khshi" target="_blank" class="hover:text-foreground transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/mjb4khshi/" target="_blank" class="hover:text-foreground transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/mjb4khshi" target="_blank" class="hover:text-foreground transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3-.3 6-1.5 6-6.5a5.5 5.5 0 0 0-1.5-3.8 5.5 5.5 0 0 0 .2-3.7s-1.2-.4-3.9 1.7a13.4 13.4 0 0 0-7 0C6.2 3.5 5 3.5 5 3.5a5.5 5.5 0 0 0 .2 3.7A5.5 5.5 0 0 0 3.7 11c0 5 3 6.2 6 6.5a4.8 4.8 0 0 0-1 3.2v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</footer>

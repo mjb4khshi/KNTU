@@ -1,5 +1,115 @@
-@import url("https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap");
+/* فونت وزیرمتن */
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
 
-body {
-  font-family: "Vazirmatn", sans-serif;
+:root {
+  --font-sans: "Vazirmatn", "Geist", sans-serif;
+}
+
+/* راست‌چین کامل سایت — Grid/Flex تم به‌درستی آینه می‌شوند */
+html, body {
+  direction: rtl;
+}
+
+/* کدبلاک‌ها، فرمول‌ها و نمودارها همیشه چپ‌به‌راست */
+pre, code, kbd, samp,
+.katex, .katex-display, .arithmatex,
+.mermaid, .codehilite, table.codehilitetable,
+.codexec, .codexec-result {
+  direction: ltr;
+  text-align: left;
+}
+
+/* ===== اصلاح کلاس‌های فیزیکی Tailwind که با dir خودکار نمی‌شوند ===== */
+
+/* عنوان سایت در هدر */
+header h1 {
+  padding-right: 0;
+  padding-left: calc(var(--spacing) * 2);
+}
+
+/* فلش باز/بسته‌شدن بخش‌های سایدبار: جابه‌جایی و آینه کردن جهت */
+button[data-slot="collapsible-trigger"] svg {
+  margin-left: 0;
+  margin-right: auto;
+  transform: scaleX(-1);
+}
+
+/* چیدمان متن دکمه‌های سایدبار */
+[data-sidebar="menu-button"],
+[data-slot="collapsible-trigger"],
+[data-sidebar="group-label"] {
+  text-align: right;
+}
+
+/* تورفتگی و خط جداکننده‌ی زیرمنوهای سایدبار */
+[data-sidebar="menu-sub"] {
+  margin-left: 0;
+  margin-right: 0.875rem;
+  padding-left: 0;
+  padding-right: 0.625rem;
+  border-left: none;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: var(--color-sidebar-border);
+}
+
+/* تورفتگی سطح‌های فهرست مطالب (TOC) */
+#toc a[data-depth="3"] { padding-left: 0; padding-right: 1rem; }
+#toc a[data-depth="4"] { padding-left: 0; padding-right: 1.5rem; }
+
+/* لیست‌ها و نقل‌قول‌ها در متن مقاله */
+article ul {
+  margin-left: 0;
+  margin-right: calc(var(--spacing) * 6);
+}
+article ol {
+  margin-left: 0;
+  margin-right: calc(var(--spacing) * 6);
+}
+article blockquote {
+  border-left: none;
+  padding-left: 0;
+  border-right-width: 2px;
+  border-right-style: solid;
+  padding-right: calc(var(--spacing) * 6);
+}
+
+/* آیکون لینک کنار تیترها (headerlink) */
+article .headerlink {
+  margin-left: 0;
+  margin-right: calc(var(--spacing) * 2);
+}
+article .headerlink.leading {
+  left: auto;
+  right: 0;
+  transform: translateX(100%);
+  padding-right: 0;
+  padding-left: calc(var(--spacing) * 2);
+}
+
+/* پدینگ متن داخل دکمه‌ی جست‌وجو */
+[data-slot="dialog-trigger"] {
+  padding-left: 0;
+  padding-right: calc(var(--spacing) * 3);
+  
+}
+@media (min-width: 40rem) {
+  [data-slot="dialog-trigger"] {
+    padding-right: calc(var(--spacing) * 3);
+    padding-left: calc(var(--spacing) * 12);
+  }
+}
+/* چرخش و تنظیم جهت فلش‌های ناوبری پایین صفحه (قبلی و بعدی) */
+nav[aria-label="Pagination"] svg,
+.pagination svg,
+a[rel="prev"] svg,
+a[rel="next"] svg {
+  transform: scaleX(-1);
+}
+
+/* جابه‌جایی آیکون و متن در دکمه‌های پجینیشن برای تطابق با RTL */
+a[rel="prev"], a[rel="next"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }

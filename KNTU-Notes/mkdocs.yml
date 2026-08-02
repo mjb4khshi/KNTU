@@ -1,46 +1,59 @@
 site_name: MJ'S KNTU Notes
+copyright: "ساخته شده با مقادیر فراوان چای و حوصله بسیار توسط MJBakhshi"
+
 theme:
-  name: material
+  name: shadcn
   language: fa
-  features:
-    - toc.follow
-    - navigation.path
-  palette:
-    - scheme: default
-      primary: cyan
-      accent: indigo
-      toggle:
-        icon: material/weather-night
-        name: حالت تاریک
-    - scheme: slate
-      primary: cyan
-      accent: indigo
-      toggle:
-        icon: material/weather-sunny
-        name: حالت روشن
-  logo: Group 1w.png
+  custom_dir: overrides          # برای override کردن footer.html
+  show_title: true
+  show_stargazers: false
+  icon: Group 1w.png              # نکته: کلید درست "icon" است نه "logo"
   favicon: Group 1w.png
-copyright: "ساخته شده با مقادیر فراوان چای و حوصله بسیار توسط MJBakhshi "
+  accent: "oklch(64.5% 0.246 16.439)"
+  katex_options: {}
+  pygments_style:
+    light: shadcn-light
+    dark: github-dark
+
 extra:
   generator: false
   social:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/mjb4khshi/
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/translate.js
+
 extra_css:
   - extra.css
+
 plugins:
   - search
-  - ezlinks
-  - callouts # برای تبدیل Calloutهای Obsidian
+  - ezlinks:
+      wikilinks: false 
+  - callouts
   - glightbox
-  
+  - awesome-pages
+
+hooks:
+  - hooks/fix_obsidian_links.py    # فایل جدید، توضیح در بخش ۴
+
 markdown_extensions:
   - admonition
+  - wikilinks
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - nl2br
   - pymdownx.tasklist:
       custom_checkbox: true
   - toc:
       permalink: true
-      

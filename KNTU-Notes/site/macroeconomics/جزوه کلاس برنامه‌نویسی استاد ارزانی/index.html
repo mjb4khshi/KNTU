@@ -1,0 +1,1560 @@
+<!DOCTYPE html><html lang="en"><head>
+    <script>
+        /* const base_url = "None"; */
+        const base_url = (new URL("../..", window.location)).href.replace(/\/+$/, ""); /* for search plugin notably */
+        /* const root_relative_url = "../.."; */
+    </script>
+    <script integrity="sha384-m6cZ+Whl1ci89lidlu8DH4C+sZLNOYBvImtjUIhUK+iaNffXhqtbYgBVuuPfRsa0" src="../../js/dark.js"></script>
+
+
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    
+    
+
+
+<title>جزوه کلاس برنامه‌نویسی استاد ارزانی</title>
+
+
+
+
+
+
+
+
+
+
+<!-- Open Graph (Facebook, LinkedIn) -->
+
+<meta property="og:title" content="جزوه کلاس برنامه‌نویسی استاد ارزانی">
+
+
+
+
+
+
+
+
+
+
+<!-- Twitter Card -->
+
+<meta name="twitter:title" content="جزوه کلاس برنامه‌نویسی استاد ارزانی">
+
+
+
+
+
+
+<!-- JSON-LD Structured Data -->
+
+
+
+    
+    <link href="../../Group 1w.png" rel="icon">
+
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/geist.css" rel="stylesheet">
+
+    
+
+    <style>
+        :root {
+            --theme-accent: oklch(64.5% 0.246 16.439);
+        }
+    </style>
+    <link href="../../extra.css" rel="stylesheet">
+
+    
+
+    <script integrity="sha384-V2jkXRy811qODUbfkLlkVJYBbf4h6XHAEjcU6ReASBPrJvTrlYh4GrI4t6GCju6n" src="../../js/callbacks.js"></script>
+
+    
+    
+<!-- katex -->
+<link href="../../css/katex.min.css" rel="stylesheet">
+<!-- The loading of KaTeX is deferred to speed up page rendering -->
+<script defer="" integrity="sha384-YPHNAPyrxGS8BNnA7Q4ommqra8WQPEjooVSLzFgwgs8OXJBvadbyvx4QpfiFurGr" src="../../js/katex.min.js"></script>
+<!-- To automatically render math in text elements, include the auto-render extension: -->
+<script defer="" integrity="sha384-JKXHIJf8PKPyDFptuKZoUyMRQJAmQKj4B4xyOca62ebJhciMYGiDdq/9twUUWyZH" onload="renderMathInElement(document.body, &quot;{}&quot;);" src="../../js/auto-render.min.js"></script>
+    
+
+    
+
+    
+
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll("a.headerlink").forEach(function (link) {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                // Build the full URL with the anchor fragment
+                const url = window.location.origin + window.location.pathname + this.getAttribute("href");
+
+                navigator.clipboard.writeText(url).then(function () {
+                    // Optional: brief visual feedback
+                });
+            });
+        });
+    });
+</script>
+    
+
+    
+    
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body class="text-foreground group/body overscroll-none font-sans antialiased [--footer-height:calc(var(--spacing)*14)] [--header-height:calc(var(--spacing)*14)] xl:[--footer-height:calc(var(--spacing)*24)] theme-default">
+    <div class="bg-background relative z-10 flex min-h-svh flex-col" id="inner-body">
+        <header class="bg-background sticky top-0 z-50 w-full" view-transition-name="header">
+    <div class="container-wrapper 3xl:fixed:px-0 px-6">
+        <div class="3xl:fixed:container flex h-(--header-height) items-center gap-2 **:data-[slot=separator]:!h-4">
+            <button id="menu-button" data-slot="popover-trigger" onclick="onMobileMenuButtonClick(event)" class="group whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground px-4 py-2 has-[&gt;svg]:px-3 extend-touch-target h-8 touch-manipulation items-center justify-start gap-2.5 !p-0 hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 active:bg-transparent dark:hover:bg-transparent flex lg:hidden" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-«Rmplb»" data-state="closed">
+                <div class="relative flex h-8 w-4 items-center justify-center">
+                    <div class="relative size-4">
+                        <!-- 16px x 16px -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="0" x2="16" y1="5" y2="5" class="group-data-[state=open]:translate-y-[2.25px] group-data-[state=open]:-translate-x-[2.25px] group-data-[state=open]:rotate-45 transition-all duration-300 origin-center"></line>
+                            <line x1="0" x2="16" y1="11" y2="11" class="group-data-[state=open]:-translate-y-[2.25px] group-data-[state=open]:-translate-x-[2.25px] group-data-[state=open]:-rotate-45 transition-all duration-300 origin-center"></line>
+                        </svg>
+                    </div>
+
+                    <span class="sr-only">Toggle Menu</span>
+                </div>
+                <span class="flex h-8 items-center text-lg leading-none font-medium">Menu</span>
+            </button>
+            <a data-slot="button" class="items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-5 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 hidden h-8 lg:flex" href="None">
+                <span class="size-8 flex flex-row justify-center items-center">
+                    
+
+
+<img class="size-5" src="../../Group 1w.png" alt="icon">
+
+
+
+                </span>
+
+                
+                <h1 class="pr-2">MJ'S KNTU Notes</h1>
+                
+            </a>
+            
+            <div class="ml-auto flex items-center gap-2 md:flex-1 md:justify-end">
+                <div class="hidden w-full flex-1 md:flex md:w-auto md:flex-none">
+                    <div class="hidden w-full flex-1 md:flex md:w-auto md:flex-none">
+    <button onclick="onSearchBarClick(event)" data-slot="dialog-trigger" data-variant="outline" data-size="default" class="inline-flex shrink-0 items-center gap-2 text-sm whitespace-nowrap transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 [&amp;_svg]:pointer-events-none [&amp;_svg]:shrink-0 [&amp;_svg:not([class*='size-'])]:size-4 border bg-background hover:text-accent-foreground dark:border-input dark:hover:bg-input/50 px-4 py-2 has-[&gt;svg]:px-3 relative h-8 w-full justify-start rounded-lg pl-3 font-normal text-foreground shadow-none hover:bg-muted/50 sm:pr-12 md:w-48 lg:w-56 xl:w-64 dark:bg-card" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-_r_1_" data-state="closed">
+        <span class="hidden lg:inline-flex">Search documentation...</span>
+        <span class="inline-flex lg:hidden">Search...</span>
+    </button>
+</div>
+<dialog id="search-dialog" onclick="onSearchDialogClick(event)" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background rounded-lg shadow-lg border overflow-hidden p-0">
+    <div class="w-lg gap-4">
+        <div class="flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground">
+            <div data-slot="command-input-wrapper" class="flex h-9 items-center gap-2 border-b px-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search size-4 shrink-0 opacity-50">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.3-4.3"></path>
+                </svg>
+                <input data-slot="command-input" class="placeholder:text-muted-foreground flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-hidden disabled:cursor-not-allowed disabled:opacity-50" placeholder="Search documentation..." cmdk-input="" autocomplete="off" autocorrect="off" spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-controls="radix-«r1t6»" aria-labelledby="radix-«r1t7»" id="radix-«r1t8»" type="text" value="" aria-activedescendant="radix-«r1th»" oninput="onInputHandler(event)">
+            </div>
+        </div>
+        <div id="mkdocs-search-results">
+            <!-- search results go there -->
+        </div>
+    </div>
+</dialog>
+<script>
+    document.removeEventListener("keydown", searchShortcutHandler);
+    document.addEventListener("keydown", searchShortcutHandler);
+</script>
+                </div>
+                
+                <div data-orientation="vertical" role="none" data-slot="separator" class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px 3xl:flex hidden">
+                </div>
+                
+                <button data-slot="button" class="items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-8 3xl:flex hidden" title="Toggle layout" onclick="toggleLayout(event)">
+                    <span class="sr-only">Toggle layout</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gallery-horizontal">
+                        <path d="M2 3v18"></path>
+                        <rect width="12" height="18" x="6" y="3" rx="2"></rect>
+                        <path d="M22 3v18"></path>
+                    </svg>
+                </button>
+                <div data-orientation="vertical" role="none" data-slot="separator" class="bg-border shrink-0 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px">
+                </div>
+                <button data-slot="button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 group/toggle extend-touch-target size-8" title="Toggle theme" onclick="onThemeSwitch(event)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4.5">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                        <path d="M12 3l0 18"></path>
+                        <path d="M12 9l4.65 -4.65"></path>
+                        <path d="M12 14.3l7.37 -7.37"></path>
+                        <path d="M12 19.6l8.85 -8.85"></path>
+                    </svg>
+                    <span class="sr-only">Toggle theme</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+        <main class="flex flex-1 flex-col">
+            <div class="container-wrapper flex flex-1 flex-col px-2">
+                <div class="group/sidebar-wrapper has-data-[variant=inset]:bg-sidebar flex w-full 3xl:fixed:container 3xl:fixed:px-3 min-h-min flex-1 items-start px-0 [--sidebar-width:220px] [--top-spacing:0] lg:grid lg:grid-cols-[var(--sidebar-width)_minmax(0,1fr)] lg:[--sidebar-width:240px] lg:[--top-spacing:calc(var(--spacing)*4)]" data-slot="sidebar-wrapper" style="--sidebar-width:calc(var(--spacing) * 72);--sidebar-width-icon:3rem;">
+                    <div class="w-(--sidebar-width) flex-col text-sidebar-foreground sticky top-[calc(var(--header-height)+0.6rem)] z-30 hidden h-[calc(100svh-10rem)] overscroll-none bg-transparent [--sidebar-menu-width:--spacing(56)] lg:flex" data-slot="sidebar">
+                        <div class="h-9"></div>
+                        <div class="absolute top-8 z-10 h-8 w-(--sidebar-menu-width) shrink-0 bg-gradient-to-b from-background via-background/80 to-background/50 blur-xs">
+                        </div>
+                        <div class="absolute top-12 right-2 bottom-0 hidden h-full w-px bg-gradient-to-b from-transparent via-border to-transparent lg:flex">
+                        </div>
+                        <div class="flex min-h-0 flex-1 flex-col gap-2 overflow-auto group-data-[collapsible=icon]:overflow-hidden mx-auto no-scrollbar w-(--sidebar-menu-width) overflow-x-hidden px-2" data-sidebar="content" data-slot="sidebar-content" view-transition-name="sidebar">
+                            
+
+
+
+
+
+
+
+
+
+
+
+<div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2 pt-6">
+    <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+        <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+            
+            
+            
+            <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button" data-size="default" href="../.." class="peer/menu-button flex items-center gap-2 rounded-md p-2 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+
+        
+        Home
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+            
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+<div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+    <div data-slot="sidebar-group-label" data-sidebar="group-label" class="flex h-8 shrink-0 items-center rounded-md px-2 text-xs ring-sidebar-ring outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 font-medium text-muted-foreground">
+        ادبیات فارسی</div>
+    <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+        <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+            
+            
+            <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button" data-size="default" href="../../adabiat/%D8%A7%D9%86%D9%88%D8%A7%D8%B9%20%D8%B2%D8%A8%D8%A7%D9%86/" class="peer/menu-button flex items-center gap-2 rounded-md p-2 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+
+        
+        انواع زبان
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+            
+            
+            
+            <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button" data-size="default" href="../../adabiat/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%81%D8%A7%D8%B1%D8%B3%DB%8C/" class="peer/menu-button flex items-center gap-2 rounded-md p-2 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+
+        
+        تاریخچه زبان فارسی
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+            
+            
+            
+            <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button" data-size="default" href="../../adabiat/%D8%AC%D8%AF%D8%A7%D9%84%20%D8%B3%D8%B9%D8%AF%DB%8C%20%D9%88%20%D9%85%D8%AF%D8%B9%DB%8C/" class="peer/menu-button flex items-center gap-2 rounded-md p-2 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+
+        
+        جدال سعدی و مدعی
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+            
+            
+            
+            <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button" data-size="default" href="../../adabiat/%D8%B4%DA%A9%D9%84%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C%20%D9%88%20%D9%BE%DB%8C%D8%AF%D8%A7%DB%8C%D8%B4%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%85%D9%84%D9%81%D9%88%D8%B8/" class="peer/menu-button flex items-center gap-2 rounded-md p-2 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+
+        
+        شکل‌گیری و پیدایش زبان ملفوظ
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+            
+            
+        </ul>
+    </div>
+</div>
+
+
+
+<div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+    <div data-slot="sidebar-group-label" data-sidebar="group-label" class="flex h-8 shrink-0 items-center rounded-md px-2 text-xs ring-sidebar-ring outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 font-medium text-muted-foreground">
+        Calculus</div>
+    <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+        <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+            
+            
+            <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button" data-size="default" href="../../calculus/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/" class="peer/menu-button flex items-center gap-2 rounded-md p-2 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+
+        
+        فهرست مطالب درس ریاضی
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+            
+            
+        </ul>
+    </div>
+</div>
+
+
+
+<div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+    <div data-slot="sidebar-group-label" data-sidebar="group-label" class="flex h-8 shrink-0 items-center rounded-md px-2 text-xs ring-sidebar-ring outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 font-medium text-muted-foreground">
+        Macroeconomics</div>
+    <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+        <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+            
+            
+            <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button" data-size="default" href="../%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D9%86%D9%87%D8%A7%D8%AF%DA%AF%D8%B1%D8%A7%20%D9%88%20%D8%AF%D9%88%D9%84%D8%AA%20%D8%AA%D9%88%D8%B3%D8%B9%D9%87%E2%80%8C%DA%AF%D8%B1%D8%A7/" class="peer/menu-button flex items-center gap-2 rounded-md p-2 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+
+        
+        اقتصاد نهادگرا و دولت توسعه‌گرا
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+            
+            
+            
+            <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-active="true" data-sidebar="menu-button" data-size="default" href="./" class="peer/menu-button flex items-center gap-2 rounded-md p-2 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+
+        
+        جزوه کلاس برنامه‌نویسی استاد ارزانی
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+            
+            
+        </ul>
+    </div>
+</div>
+
+
+
+<div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+    <div data-slot="sidebar-group-label" data-sidebar="group-label" class="flex h-8 shrink-0 items-center rounded-md px-2 text-xs ring-sidebar-ring outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 font-medium text-muted-foreground">
+        Micro economics</div>
+    <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+        <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+            
+            
+            <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button" data-size="default" href="../../micro%20economics/" class="peer/menu-button flex items-center gap-2 rounded-md p-2 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+
+        
+        فهرست مطالب مرتبط با درس اقتصاد خرد
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+            
+            
+        </ul>
+    </div>
+</div>
+
+
+
+<div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+    <div data-slot="sidebar-group-label" data-sidebar="group-label" class="flex h-8 shrink-0 items-center rounded-md px-2 text-xs ring-sidebar-ring outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 font-medium text-muted-foreground">
+        Out of kntu university</div>
+    <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+        <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+            
+            
+            <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button" data-size="default" href="../../out%20of%20kntu%20university/" class="peer/menu-button flex items-center gap-2 rounded-md p-2 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+
+        
+        مطالب خارج از دانشگاه خواجه نصیرالدین طوسی
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+            
+            
+            
+            <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    
+    <button data-slot="collapsible-trigger" data-sidebar="menu-button" data-size="default" data-active="false" class="peer/menu-button group/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-open:hover:bg-sidebar-accent data-open:hover:text-sidebar-accent-foreground data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 [&amp;&gt;span:last-child]:truncate hover:bg-sidebar-accent hover:text-sidebar-accent-foreground h-8 text-[0.8rem] font-medium" type="button" aria-expanded="true" data-state="closed" onclick="this.setAttribute('data-state', this.getAttribute('data-state') === 'closed' ? 'open' : 'closed')">
+        
+        JS نوت‌های جاوا اسکریپت
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right ml-auto transition-[stroke,rotate] duration-200 group-data-[state=open]/menu-button:rotate-90 group-data-[state=closed]/menu-button:stroke-muted-foreground">
+            <path d="m9 18 6-6-6-6"></path>
+        </svg>
+    </button>
+    <div data-state="open" data-slot="collapsible-content" class="grid grid-rows-[0fr] transition-[grid-template-rows] peer-data-[state=open]/menu-button:grid-rows-[1fr] py-0.5">
+        <ul data-slot="sidebar-menu-sub" data-sidebar="menu-sub" class="overflow-hidden ml-3.5 flex flex-col gap-0.5 border-l border-sidebar-border pl-2.5">
+
+            
+            
+            <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button" data-size="default" href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/jonas/" class="peer/menu-button flex items-center gap-2 rounded-md p-2 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+
+        
+        Jonas
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+            
+            
+        </ul>
+    </div>
+</li>
+            
+            
+        </ul>
+    </div>
+</div>
+
+
+
+<div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+    <div data-slot="sidebar-group-label" data-sidebar="group-label" class="flex h-8 shrink-0 items-center rounded-md px-2 text-xs ring-sidebar-ring outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 font-medium text-muted-foreground">
+        Physics</div>
+    <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+        <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+            
+            
+            <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button" data-size="default" href="../../physics/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/" class="peer/menu-button flex items-center gap-2 rounded-md p-2 text-left ring-sidebar-ring outline-hidden transition-[width,height,padding] group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground [&amp;&gt;span:last-child]:truncate [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md data-[active=true]:border-accent data-[active=true]:bg-accent 3xl:fixed:w-full 3xl:fixed:max-w-48">
+
+        
+        فهرست مطالب درس فیزیک
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+            
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+<div class="sticky -bottom-1 z-10 h-16 shrink-0 bg-gradient-to-t from-background via-background/80 to-background/50 blur-xs">
+</div>
+
+                        </div>
+                    </div>
+                    <div class="h-full w-full">
+                        <div class="flex items-stretch text-[1.05rem] sm:text-[15px] xl:w-full" data-slot="docs">
+
+                            <div class="flex min-w-0 flex-1 flex-col">
+                                <div class="h-(--top-spacing) shrink-0"></div>
+                                
+                                
+                                <article class="w-full" view-transition-name="page">
+  <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-2">
+      <div id="page-header" class="flex items-start justify-between">
+        <h1 class="scroll-m-20 text-4xl font-semibold tracking-tight sm:text-3xl xl:text-4xl">
+          جزوه کلاس برنامه‌نویسی استاد ارزانی
+        </h1>
+
+        <div class="flex items-center gap-2 pt-1.5">
+          
+          <button onclick="fetch(`../..`).then((r) =&gt; r.text()).then((text) =&gt; navigator.clipboard.write([new ClipboardItem({ 'text/plain': text })]))" data-slot="button" class="secondary cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-copy ">
+        <path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z">
+        </path>
+        <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1"></path>
+    </svg>
+    <span class="max-md:hidden">Copy Page</span>
+</button>
+          
+          
+          <a data-slot="button" id="previous-button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7" href="../%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D9%86%D9%87%D8%A7%D8%AF%DA%AF%D8%B1%D8%A7%20%D9%88%20%D8%AF%D9%88%D9%84%D8%AA%20%D8%AA%D9%88%D8%B3%D8%B9%D9%87%E2%80%8C%DA%AF%D8%B1%D8%A7/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-arrow-left">
+              <path d="M5 12l14 0"></path>
+              <path d="M5 12l6 6"></path>
+              <path d="M5 12l6 -6"></path>
+            </svg>
+            <span class="sr-only">Previous</span>
+          </a>
+          
+          
+          <a data-slot="button" id="next-button" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7" href="../../micro%20economics/">
+            <span class="sr-only">Next</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-arrow-right">
+              <path d="M5 12l14 0"></path>
+              <path d="M13 18l6 -6"></path>
+              <path d="M13 6l6 6"></path>
+            </svg>
+          </a>
+          
+        </div>
+      </div>
+      
+    </div>
+    <div class="flex justify-end items-center">
+      
+      
+    </div>
+  </div>
+  <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
+    <p><strong>به همت محمدجواد بخشی ایرج و رفقای هوش مصنوعیش</strong></p>
+<h1 id="_1">جلسه ۱: از فلوچارت تا کد — جمع دو عدد<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<h2 id="_2">🎯 هدف جلسه<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>آشنایی با ساختار پایه یک برنامه: <strong>ورودی → پردازش → خروجی</strong></p>
+<p>فلوچارت‌هایی که جلسات قبل کشیدیم رو امروز تبدیل به کد واقعی می‌کنیم، هم در <strong>پایتون</strong> هم در <strong>++C</strong>.</p>
+<h2 id="_3">📝 مثال ۱: جمع دو عدد ثابت<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>فلوچارت: شروع → عدد اول ۵ → عدد دوم ۲ → جمع → نمایش نتیجه → پایان</p>
+<h3 id="_4">🔷 پیاده‌سازی در پایتون<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># تعریف دو عدد به صورت ثابت</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># محاسبه جمع</span>
+<span class="n">sum_result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="c1"># نمایش نتیجه</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"حاصل جمع:"</span><span class="p">,</span> <span class="n">sum_result</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> + </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">sum_result</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>حاصل جمع: 7
+5 + 2 = 7
+</code></pre></div>
+<h3 id="_5">پیاده‌سازی در سی++<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// تعریف دو عدد به صورت ثابت</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// محاسبه جمع</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sum_result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// نمایش نتیجه</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"حاصل جمع: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sum_result</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" + "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">" = "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">sum_result</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="_6">مثال ۲: محاسبه محیط و مساحت مستطیل (با ورودی از کاربر)<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<h3 id="_7">🎯 هدف<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<p>گرفتن <strong>ورودی از کاربر</strong> در هر دو زبان و انجام محاسبه — این‌بار دیگه اعداد ثابت نیستن، هرچی کاربر وارد کنه حساب می‌کنیم!</p>
+<p>فلوچارت: شروع → دریافت طول → دریافت عرض → محاسبه محیط → محاسبه مساحت → نمایش نتایج → پایان</p>
+<h3 id="_8">🔷 پیاده‌سازی در پایتون<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># گرفتن طول و عرض از کاربر</span>
+<span class="c1"># نکته: input() همیشه رشته برمی‌گردونه، پس float() می‌کنیم</span>
+<span class="n">length</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"طول مستطیل را وارد کنید: "</span><span class="p">))</span>
+<span class="n">width</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"عرض مستطیل را وارد کنید: "</span><span class="p">))</span>
+
+<span class="c1"># محاسبات</span>
+<span class="n">perimeter</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">length</span> <span class="o">+</span> <span class="n">width</span><span class="p">)</span>    <span class="c1"># محیط</span>
+<span class="n">area</span> <span class="o">=</span> <span class="n">length</span> <span class="o">*</span> <span class="n">width</span>               <span class="c1"># مساحت</span>
+
+<span class="c1"># نمایش نتایج</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">--- نتایج ---"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"محیط مستطیل: </span><span class="si">{</span><span class="n">perimeter</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"مساحت مستطیل: </span><span class="si">{</span><span class="n">area</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>طول مستطیل را وارد کنید:  3
+عرض مستطیل را وارد کنید:  4
+
+--- نتایج ---
+محیط مستطیل: 14.0
+مساحت مستطیل: 12.0
+</code></pre></div>
+<h2 id="_9">پیاده‌سازی در سی++<a class="headerlink" href="#_9" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// تعریف متغیرها</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">length</span><span class="p">,</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// گرفتن ورودی از کاربر</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"طول مستطیل را وارد کنید: "</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">length</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"عرض مستطیل را وارد کنید: "</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">width</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// محاسبات</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">perimeter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">length</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">width</span><span class="p">);</span><span class="w">    </span><span class="c1">// محیط</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">width</span><span class="p">;</span><span class="w">               </span><span class="c1">// مساحت</span>
+<span class="w">    </span><span class="c1">// نمایش نتایج</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">--- نتایج ---"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"محیط مستطیل: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">perimeter</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"مساحت مستطیل: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="if-else-elif">ساختارهای شرطی در پایتون — <code>if</code> و <code>else</code> و <code>elif</code><a class="headerlink" href="#if-else-elif" title="Permanent link">¶</a></h2>
+<h3 id="_10">🎯 هدف<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<p>در برنامه‌نویسی همیشه مسیر اجرا مستقیم نیست. گاهی باید <strong>تصمیم بگیری</strong>:<br>
+- اگر این شرط برقرار بود → فلان کار رو بکن<br>
+- در غیر این صورت → یه کار دیگه بکن</p>
+<p>این دقیقاً همون چیزی‌ست که توی فلوچارت با <strong>لوزی (شرط)</strong> نشون می‌دادیم.</p>
+<h3 id="_11">🧠 ساختار کلی در پایتون<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">شرط_اول</span><span class="p">:</span>
+    <span class="c1"># اگر شرط اول درست بود، اینجا اجرا میشه</span>
+<span class="k">elif</span> <span class="n">شرط_دوم</span><span class="p">:</span>
+    <span class="c1"># اگر شرط اول غلط بود ولی شرط دوم درست بود، اینجا</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># اگر هیچ‌کدوم از شرط‌ها درست نبود، اینجا</span>
+</code></pre></div>
+<h3 id="_12">📌 نکات کلیدی<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>نکته</th>
+<th>توضیح</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>دندانه‌گذاری (Indentation)</strong></td>
+<td>حتماً ۴ فاصله یا یک Tab بذارید. پایتون بهش حساسه!</td>
+</tr>
+<tr>
+<td><strong><code>:</code> یادتون نره</strong></td>
+<td>آخر هر <code>if</code> و <code>elif</code> و <code>else</code> حتماً دونقطه بذارید</td>
+</tr>
+<tr>
+<td><strong><code>elif</code> = مخفف else if</strong></td>
+<td>می‌تونی چندتا شرط پشت سر هم بذاری</td>
+</tr>
+<tr>
+<td><strong><code>else</code> اختیاریه</strong></td>
+<td>می‌تونی فقط <code>if</code> تنها هم داشته باشی</td>
+</tr>
+<tr>
+<td><strong>اولین شرط درست اجرا می‌شه</strong></td>
+<td>بقیه شرط‌ها دیگه چک نمی‌شن</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="_13">🔷 مثال ساده: چک کردن مثبت یا منفی<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">number</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"یک عدد وارد کن: "</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"عدد مثبته! 😊"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"عدد منفیه! 😟"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"عدد صفره! 😐"</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="if-else">مثال ۳: پیدا کردن ماکسیمم دو عدد با <code>if-else</code><a class="headerlink" href="#if-else" title="Permanent link">¶</a></h2>
+<h3 id="_14">🎯 مسئله<a class="headerlink" href="#_14" title="Permanent link">¶</a></h3>
+<p>کاربر دو عدد وارد می‌کند، برنامه عدد بزرگ‌تر را مشخص کند.</p>
+<p>فلوچارت: شروع → دریافت a → دریافت b → اگر a &gt; b → چاپ a → در غیر این صورت → چاپ b → پایان</p>
+<h3 id="_15">🔷 پیاده‌سازی در پایتون<a class="headerlink" href="#_15" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># گرفتن دو عدد از کاربر</span>
+<span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"عدد اول: "</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"عدد دوم: "</span><span class="p">))</span>
+
+<span class="c1"># پیدا کردن ماکسیمم با if-else</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"عدد بزرگ‌تر: </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">b</span> <span class="o">&gt;</span> <span class="n">a</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"عدد بزرگ‌تر: </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"هر دو عدد با هم برابرند! 🤝"</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>نمونه اجرا (ورودی: ۷ و ۱۲):</strong></p>
+<div class="highlight"><pre><span></span><code>عدد اول: 7
+عدد دوم: 12
+عدد بزرگ‌تر: 12.0
+</code></pre></div>
+<p><strong>نمونه اجرا (اعداد برابر):</strong></p>
+<div class="highlight"><pre><span></span><code>عدد اول: 5
+عدد دوم: 5
+هر دو عدد با هم برابرند! 🤝
+</code></pre></div>
+<hr>
+<h3 id="c">🔶 پیاده‌سازی در ++C<a class="headerlink" href="#c" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"عدد اول: "</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"عدد دوم: "</span><span class="p">;</span>
+<span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// پیدا کردن ماکسیمم با if-else</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"عدد بزرگ‌تر: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"عدد بزرگ‌تر: "</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"هر دو عدد با هم برابرند!"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>نمونه اجرا (ورودی: ۷ و ۱۲):</strong></p>
+<div class="highlight"><pre><span></span><code>عدد اول: 7
+عدد دوم: 12
+عدد بزرگ‌تر: 12
+</code></pre></div>
+<hr>
+<h3 id="if-else-c">📊 مقایسه <code>if-else</code> در پایتون و ++C<a class="headerlink" href="#if-else-c" title="Permanent link">¶</a></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>ویژگی</th>
+<th>Python 🐍</th>
+<th>++C ⚙️</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>نوشتن شرط</strong></td>
+<td><code>if a &gt; b:</code></td>
+<td><code>if (a &gt; b)</code></td>
+</tr>
+<tr>
+<td><strong>پرانتز شرط</strong></td>
+<td>لازم نیست</td>
+<td>حتماً بذارید</td>
+</tr>
+<tr>
+<td><strong>بلوک کد</strong></td>
+<td>با دندانه‌گذاری (فاصله) مشخص می‌شه</td>
+<td>با آکولاد <code>{}</code> مشخص می‌شه</td>
+</tr>
+<tr>
+<td><strong><code>elif</code> / <code>else if</code></strong></td>
+<td><code>elif</code></td>
+<td><code>else if</code> (دو کلمه جداجدا)</td>
+</tr>
+<tr>
+<td><strong>علامت مساوی</strong></td>
+<td><code>==</code></td>
+<td><code>==</code></td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h3 id="_16">🧠 چرا سه حالت در نظر گرفتیم؟<a class="headerlink" href="#_16" title="Permanent link">¶</a></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>حالت</th>
+<th>شرط</th>
+<th>توضیح</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>a &gt; b</code></td>
+<td><code>if</code></td>
+<td>عدد اول بزرگ‌تره</td>
+</tr>
+<tr>
+<td><code>b &gt; a</code></td>
+<td><code>elif</code></td>
+<td>عدد دوم بزرگ‌تره</td>
+</tr>
+<tr>
+<td><code>a == b</code></td>
+<td><code>else</code></td>
+<td>هیچ‌کدوم بزرگ‌تر نیستن، برابرن</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p>اگه <code>else</code> رو نمی‌ذاشتیم و دو عدد برابر می‌دادیم، برنامه هیچ‌چیزی چاپ نمی‌کرد! 😐</p>
+<p>⚡ <strong>نکته:</strong> در پایتون از <code>and</code> بجای <code>&amp;&amp;</code> و از <code>or</code> بجای <code>||</code> استفاده می‌شود.</p>
+<p>و بازه‌ها را می‌توان به صورت زنجیره‌ای نوشت:<br>
+<code>if 10 &lt; score &lt;= 15:</code> یعنی score بین ۱۰ و ۱۵ (بدون نیاز به <code>and</code>)</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># دریافت نمره از کاربر</span>
+<span class="n">score</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"نمره خود را وارد کنید (از ۰ تا ۲۰): "</span><span class="p">))</span>
+
+<span class="c1"># گریدبندی نمره</span>
+<span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">score</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="s2">"F (ضعیف)"</span>
+<span class="k">elif</span> <span class="mi">5</span> <span class="o">&lt;</span> <span class="n">score</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="s2">"D (نیاز به تلاش بیشتر)"</span>
+<span class="k">elif</span> <span class="mi">10</span> <span class="o">&lt;</span> <span class="n">score</span> <span class="o">&lt;=</span> <span class="mi">15</span><span class="p">:</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="s2">"C (متوسط)"</span>
+<span class="k">elif</span> <span class="mi">15</span> <span class="o">&lt;</span> <span class="n">score</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="s2">"A (عالی)"</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="s2">"نمره نامعتبر! (باید بین ۰ تا ۲۰ باشد)"</span>
+
+<span class="c1"># نمایش نتیجه</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"نمره شما: </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"گرید: </span><span class="si">{</span><span class="n">grade</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>نمره خود را وارد کنید (از ۰ تا ۲۰):  20
+
+نمره شما: 20.0
+گرید: A (عالی)
+</code></pre></div>
+<h2 id="_17">مقداردهی چند متغیر در پایتون<a class="headerlink" href="#_17" title="Permanent link">¶</a></h2>
+<h3 id="_18">🎯 هدف<a class="headerlink" href="#_18" title="Permanent link">¶</a></h3>
+<p>در پایتون می‌توانیم چند متغیر را <strong>هم‌زمان</strong> و در <strong>یک خط</strong> مقداردهی کنیم. این قابلیت پایتون رو از خیلی زبان‌ها</p>
+<h3 id="_19">۱. مقداردهی مساوی (همه یک مقدار بگیرند)<a class="headerlink" href="#_19" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># هر سه متغیر مقدار یکسان می‌گیرند</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>  <span class="c1"># 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>  <span class="c1"># 10</span>
+</code></pre></div>
+<blockquote>
+<p>💡 <strong>نکته:</strong> همه متغیرها به یک مقدار در حافظه اشاره می‌کنند. برای اعداد و رشته‌ها مشکلی نیست، ولی برای لیست‌ها باید حواست باشه!</p>
+</blockquote>
+<hr>
+<h3 id="_20">۲. مقداردهی نامساوی (هرکدام مقدار متفاوت)<a class="headerlink" href="#_20" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># هر متغیر مقدار خودش را می‌گیرد</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>  <span class="c1"># 2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>  <span class="c1"># 3</span>
+</code></pre></div>
+<h3 id="_21">۳. جابجایی دو متغیر بدون متغیر کمکی<a class="headerlink" href="#_21" title="Permanent link">¶</a></h3>
+<p>این یکی از قشنگ‌ترین ویژگی‌های پایتونه:</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># جابجایی در یک خط!</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>  <span class="c1"># 10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>  <span class="c1"># 5</span>
+</code></pre></div>
+<blockquote>
+<p>✨ <strong>معجزه پایتون:</strong> در ++C برای این کار به یک متغیر موقت (<code>temp</code>) نیاز داریم، ولی پایتون در یک خط انجامش می‌ده!</p>
+</blockquote>
+<hr>
+<h3 id="c_1">📊 مقایسه با ++C<a class="headerlink" href="#c_1" title="Permanent link">¶</a></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>کار</th>
+<th>Python 🐍</th>
+<th>++C ⚙️</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>مقداردهی مساوی</strong></td>
+<td><code>x = y = z = 5</code></td>
+<td>باید خط‌به‌خط بنویسی</td>
+</tr>
+<tr>
+<td><strong>مقداردهی نامساوی</strong></td>
+<td><code>a, b, c = 1, 2, 3</code></td>
+<td>بازم خط‌به‌خط</td>
+</tr>
+<tr>
+<td><strong>جابجایی</strong></td>
+<td><code>x, y = y, x</code></td>
+<td>نیاز به متغیر کمکی داره</td>
+</tr>
+<tr>
+<td><strong>Unpacking</strong></td>
+<td>پشتیبانی عالی</td>
+<td>نداره</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="_22">استانداردهای نام‌گذاری متغیرها در پایتون<a class="headerlink" href="#_22" title="Permanent link">¶</a></h2>
+<h3 id="_23">🎯 هدف<a class="headerlink" href="#_23" title="Permanent link">¶</a></h3>
+<p>انتخاب اسم خوب برای متغیر، <strong>نصف خوانایی کد</strong> است. پایتون قوانین مشخصی برای نام‌گذاری دارد که باید رعایت شوند، و البته توصیه‌هایی هم برای زیباتر شدن کد دارد.</p>
+<h3 id="_24">📏 قوانین اجباری (اگر رعایت نکنی → ارور!)<a class="headerlink" href="#_24" title="Permanent link">¶</a></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>قانون</th>
+<th>مثال درست ✅</th>
+<th>مثال غلط ❌</th>
+<th>خطا</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>فقط حروف، عدد و آندرلاین</strong></td>
+<td><code>name</code>, <code>score_1</code></td>
+<td><code>na@me</code>, <code>my-var</code></td>
+<td><code>SyntaxError</code></td>
+</tr>
+<tr>
+<td><strong>با عدد شروع نشود</strong></td>
+<td><code>var1</code>, <code>_name</code></td>
+<td><code>1var</code>, <code>123</code></td>
+<td><code>SyntaxError</code></td>
+</tr>
+<tr>
+<td><strong>کلمات کلیدی پایتون نباشند</strong></td>
+<td><code>student</code></td>
+<td><code>if</code>, <code>class</code>, <code>for</code></td>
+<td><code>SyntaxError</code></td>
+</tr>
+<tr>
+<td><strong>بین حروف فاصله نباشد</strong></td>
+<td><code>user_name</code></td>
+<td><code>user name</code></td>
+<td><code>SyntaxError</code></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="_25">🔑 کلمات کلیدی ممنوعه در پایتون<a class="headerlink" href="#_25" title="Permanent link">¶</a></h3>
+<p>این کلمات را <strong>نمی‌توانید</strong> به عنوان نام متغیر استفاده کنید:</p>
+<div class="highlight"><pre><span></span><code><span class="kc">False</span>   <span class="k">await</span>   <span class="k">else</span>    <span class="kn">import</span><span class="w">  </span><span class="nn">pass</span>
+<span class="kc">None</span>    <span class="k">break</span>   <span class="k">except</span>  <span class="ow">in</span>      <span class="k">raise</span>
+<span class="kc">True</span>    <span class="k">class</span><span class="w">   </span><span class="nc">finally</span> <span class="ow">is</span>      <span class="k">return</span>
+<span class="ow">and</span>     <span class="k">continue</span> <span class="k">for</span>    <span class="k">lambda</span>  <span class="k">try</span>
+<span class="k">as</span>      <span class="k">def</span><span class="w">     </span><span class="nf">from</span>    <span class="k">nonlocal</span> <span class="k">while</span>
+<span class="k">assert</span>  <span class="k">del</span>     <span class="k">global</span>  <span class="ow">not</span>     <span class="k">with</span>
+<span class="k">async</span>   <span class="k">elif</span>    <span class="k">if</span>      <span class="ow">or</span>      <span class="k">yield</span>
+</code></pre></div>
+<blockquote>
+<p>💡 <strong>ترفند:</strong> با دستور <code>import keyword</code> و <code>print(keyword.kwlist)</code> لیست کامل را ببینید.</p>
+</blockquote>
+<h3 id="pep-8-style-guide">🎨 قراردادهای پیشنهادی (PEP 8 — Style Guide)<a class="headerlink" href="#pep-8-style-guide" title="Permanent link">¶</a></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>نوع نام‌گذاری</th>
+<th>سبک</th>
+<th>مثال</th>
+<th>کاربرد</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>snake_case</strong> 🐍</td>
+<td>حروف_کوچک_با_آندرلاین</td>
+<td><code>student_name</code></td>
+<td>متغیرها و توابع</td>
+</tr>
+<tr>
+<td><strong>UPPER_CASE</strong> 📢</td>
+<td>حروف_بزرگ_با_آندرلاین</td>
+<td><code>MAX_SCORE</code>, <code>PI</code></td>
+<td>ثابت‌ها</td>
+</tr>
+<tr>
+<td><strong>PascalCase</strong> 🏛️</td>
+<td>حرف_اول_بزرگ_هر_کلمه</td>
+<td><code>StudentRecord</code></td>
+<td>نام کلاس‌ها</td>
+</tr>
+<tr>
+<td><strong>_underscore</strong> 🤫</td>
+<td>شروع با آندرلاین</td>
+<td><code>_private_var</code></td>
+<td>متغیرهای داخلی/خصوصی</td>
+</tr>
+</tbody>
+</table></div>
+<hr>
+<h3 id="_26">✨ نمونه‌های خوب و بد<a class="headerlink" href="#_26" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># ❌ بد — نام‌های بی‌معنی</span>
+<span class="n">a</span> <span class="o">=</span> <span class="s2">"علی"</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="mf">3.14</span>
+
+<span class="c1"># ✅ خوب — نام‌های با معنی</span>
+<span class="n">student_name</span> <span class="o">=</span> <span class="s2">"علی"</span>
+<span class="n">student_age</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">pi_value</span> <span class="o">=</span> <span class="mf">3.14</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># ❌ بد — مخفف‌های نامفهوم</span>
+<span class="n">std_nm</span> <span class="o">=</span> <span class="s2">"علی"</span>
+<span class="n">calc_avg</span> <span class="o">=</span> <span class="mf">17.5</span>
+
+<span class="c1"># ✅ خوب — کامل و خوانا</span>
+<span class="n">student_name</span> <span class="o">=</span> <span class="s2">"علی"</span>
+<span class="n">calculated_average</span> <span class="o">=</span> <span class="mf">17.5</span>
+</code></pre></div>
+<h3 id="c_2">📊 مقایسه با ++C<a class="headerlink" href="#c_2" title="Permanent link">¶</a></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>ویژگی</th>
+<th>Python 🐍</th>
+<th>++C ⚙️</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>حساسیت به حروف بزرگ/کوچک</strong></td>
+<td><code>name</code> ≠ <code>Name</code> (حساسه)</td>
+<td><code>name</code> ≠ <code>Name</code> (حساسه)</td>
+</tr>
+<tr>
+<td><strong>کلمات کلیدی</strong></td>
+<td>حدود ۳۵ کلمه</td>
+<td>بیش از ۹۰ کلمه</td>
+</tr>
+<tr>
+<td><strong>طول نام</strong></td>
+<td>محدودیت عملی نداره</td>
+<td>محدودیت عملی نداره</td>
+</tr>
+<tr>
+<td><strong>یونیکد (فارسی)</strong></td>
+<td>مجازه</td>
+<td>معمولاً پشتیبانی نمی‌شه</td>
+</tr>
+<tr>
+<td><strong>قرارداد رسمی</strong></td>
+<td>snake_case</td>
+<td>camelCase یا PascalCase</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="_27">🧠 خلاصه یک‌خطی<a class="headerlink" href="#_27" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>🎯 <strong>قاعده طلایی:</strong> نام متغیر باید آنقدر گویا باشد که یک غریبه بدون توضیح اضافه بفهمد چه چیزی در آن ذخیره شده. نه آنقدر بلند که حوصله‌سربر شود، نه آنقدر کوتاه که مبهم باشد.</p>
+</blockquote>
+  </div>
+  
+  <script>
+    document.querySelectorAll('article h2, article h3').forEach((header) => {
+      toc.observer.observe(header);
+    });
+  </script>
+</article>
+                                <div class="mx-auto flex flex-wrap h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">
+    
+    <a data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 shadow-none" href="../%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D9%86%D9%87%D8%A7%D8%AF%DA%AF%D8%B1%D8%A7%20%D9%88%20%D8%AF%D9%88%D9%84%D8%AA%20%D8%AA%D9%88%D8%B3%D8%B9%D9%87%E2%80%8C%DA%AF%D8%B1%D8%A7/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-arrow-left ">
+            <path d="M5 12l14 0"></path>
+            <path d="M5 12l6 6"></path>
+            <path d="M5 12l6 -6"></path>
+        </svg>
+        <span class="max-[500px]:hidden">اقتصاد نهادگرا و دولت توسعه‌گرا</span>
+    </a>
+    
+    
+    <a data-slot="button" class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 ml-auto shadow-none" href="../../micro%20economics/">
+        <span class="max-[500px]:hidden">فهرست مطالب مرتبط با درس اقتصاد خرد</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-arrow-right ">
+            <path d="M5 12l14 0"></path>
+            <path d="M13 18l6 -6"></path>
+            <path d="M13 6l6 6"></path>
+        </svg>
+    </a>
+    
+</div>
+                                
+                                
+                            </div>
+                            
+                            <dialog id="bottom-sidebar" onclick="onBottomSidebarDialogClick(event)" class="bg-transparent" style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 58px); min-width: max-content; --radix-popper-transform-origin: 0% 0px; will-change: transform; z-index: 50; --radix-popper-available-width: 504px; --radix-popper-available-height: 857px; --radix-popper-anchor-width: 72.94999694824219px; --radix-popper-anchor-height: 32px;">
+    <div data-side="bottom" data-align="start" data-state="open" role="dialog" data-slot="popover-content" class="text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 origin-(--radix-popover-content-transform-origin) border outline-hidden bg-background/90 no-scrollbar h-(--radix-popper-available-height) w-(--radix-popper-available-width) overflow-y-auto rounded-none border-none p-0 shadow-none backdrop-blur duration-100" style="--radix-popover-content-transform-origin: var(--radix-popper-transform-origin); --radix-popover-content-available-width: var(--radix-popper-available-width); --radix-popover-content-available-height: var(--radix-popper-available-height); --radix-popover-trigger-width: var(--radix-popper-anchor-width); --radix-popover-trigger-height: var(--radix-popper-anchor-height);" tabindex="-1">
+        <div class="flex flex-col gap-12 overflow-auto px-6 py-6">
+            
+            
+            
+
+            
+            <div class="flex flex-col gap-4">
+                <div class="text-muted-foreground text-sm font-medium">Menu</div>
+                <div class="flex flex-col gap-3">
+                    
+                    <a class="text-2xl font-medium" href="../..">
+                        
+                        Home
+                        
+                    </a>
+                    
+                </div>
+            </div>
+            
+
+            
+            <div class="flex flex-col gap-8">
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">ادبیات فارسی</div>
+                    
+                    <div class="flex flex-col gap-3">
+                        
+                        <a class="text-2xl font-medium" href="../../adabiat/%D8%A7%D9%86%D9%88%D8%A7%D8%B9%20%D8%B2%D8%A8%D8%A7%D9%86/">
+                            
+                            انواع زبان
+                            
+                        </a>
+                        
+                        <a class="text-2xl font-medium" href="../../adabiat/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%81%D8%A7%D8%B1%D8%B3%DB%8C/">
+                            
+                            تاریخچه زبان فارسی
+                            
+                        </a>
+                        
+                        <a class="text-2xl font-medium" href="../../adabiat/%D8%AC%D8%AF%D8%A7%D9%84%20%D8%B3%D8%B9%D8%AF%DB%8C%20%D9%88%20%D9%85%D8%AF%D8%B9%DB%8C/">
+                            
+                            جدال سعدی و مدعی
+                            
+                        </a>
+                        
+                        <a class="text-2xl font-medium" href="../../adabiat/%D8%B4%DA%A9%D9%84%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C%20%D9%88%20%D9%BE%DB%8C%D8%AF%D8%A7%DB%8C%D8%B4%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%85%D9%84%D9%81%D9%88%D8%B8/">
+                            
+                            شکل‌گیری و پیدایش زبان ملفوظ
+                            
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Calculus</div>
+                    
+                    <div class="flex flex-col gap-3">
+                        
+                        <a class="text-2xl font-medium" href="../../calculus/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/">
+                            
+                            فهرست مطالب درس ریاضی
+                            
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Macroeconomics</div>
+                    
+                    <div class="flex flex-col gap-3">
+                        
+                        <a class="text-2xl font-medium" href="../%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D9%86%D9%87%D8%A7%D8%AF%DA%AF%D8%B1%D8%A7%20%D9%88%20%D8%AF%D9%88%D9%84%D8%AA%20%D8%AA%D9%88%D8%B3%D8%B9%D9%87%E2%80%8C%DA%AF%D8%B1%D8%A7/">
+                            
+                            اقتصاد نهادگرا و دولت توسعه‌گرا
+                            
+                        </a>
+                        
+                        <a class="text-2xl font-medium" href="./">
+                            
+                            جزوه کلاس برنامه‌نویسی استاد ارزانی
+                            
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Micro economics</div>
+                    
+                    <div class="flex flex-col gap-3">
+                        
+                        <a class="text-2xl font-medium" href="../../micro%20economics/">
+                            
+                            فهرست مطالب مرتبط با درس اقتصاد خرد
+                            
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Out of kntu university</div>
+                    
+                    <div class="flex flex-col gap-3">
+                        
+                        <a class="text-2xl font-medium" href="../../out%20of%20kntu%20university/">
+                            
+                            مطالب خارج از دانشگاه خواجه نصیرالدین طوسی
+                            
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Physics</div>
+                    
+                    <div class="flex flex-col gap-3">
+                        
+                        <a class="text-2xl font-medium" href="../../physics/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/">
+                            
+                            فهرست مطالب درس فیزیک
+                            
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+            
+
+        </div>
+    </div>
+</dialog>
+                            <div class="sticky top-[calc(var(--header-height)+1px)] ml-auto hidden h-[calc(100svh-var(--header-height)-var(--footer-height))] w-72 flex-col gap-4 overflow-hidden overscroll-none pb-8 xl:flex">
+                                <div class="h-(--top-spacing) shrink-0"></div>
+                                
+                                
+                                <div id="toc" view-transition-name="toc" class="no-scrollbar overflow-y-auto px-8">
+    <div class="flex flex-col gap-2 p-4 pt-0 text-sm">
+        <p class="text-muted-foreground bg-background sticky top-0 h-6 text-xs">On This Page</p>
+        
+        
+        
+        
+        <a href="#_2" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="2" onclick="deferSetActiveTocLink('#_2');">
+            🎯 هدف جلسه
+        </a>
+        
+
+        
+        <a href="#_3" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="2" onclick="deferSetActiveTocLink('#_3');">
+            📝 مثال ۱: جمع دو عدد ثابت
+        </a>
+        
+        
+        <a href="#_4" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_4');">
+            🔷 پیاده‌سازی در پایتون
+        </a>
+        
+        <a href="#_5" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_5');">
+            پیاده‌سازی در سی++
+        </a>
+        
+        
+
+        
+        <a href="#_6" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="2" onclick="deferSetActiveTocLink('#_6');">
+            مثال ۲: محاسبه محیط و مساحت مستطیل (با ورودی از کاربر)
+        </a>
+        
+        
+        <a href="#_7" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_7');">
+            🎯 هدف
+        </a>
+        
+        <a href="#_8" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_8');">
+            🔷 پیاده‌سازی در پایتون
+        </a>
+        
+        
+
+        
+        <a href="#_9" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="2" onclick="deferSetActiveTocLink('#_9');">
+            پیاده‌سازی در سی++
+        </a>
+        
+
+        
+        <a href="#if-else-elif" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="2" onclick="deferSetActiveTocLink('#if-else-elif');">
+            ساختارهای شرطی در پایتون — if و else و elif
+        </a>
+        
+        
+        <a href="#_10" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_10');">
+            🎯 هدف
+        </a>
+        
+        <a href="#_11" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_11');">
+            🧠 ساختار کلی در پایتون
+        </a>
+        
+        <a href="#_12" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_12');">
+            📌 نکات کلیدی
+        </a>
+        
+        <a href="#_13" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_13');">
+            🔷 مثال ساده: چک کردن مثبت یا منفی
+        </a>
+        
+        
+
+        
+        <a href="#if-else" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="2" onclick="deferSetActiveTocLink('#if-else');">
+            مثال ۳: پیدا کردن ماکسیمم دو عدد با if-else
+        </a>
+        
+        
+        <a href="#_14" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_14');">
+            🎯 مسئله
+        </a>
+        
+        <a href="#_15" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_15');">
+            🔷 پیاده‌سازی در پایتون
+        </a>
+        
+        <a href="#c" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#c');">
+            🔶 پیاده‌سازی در ++C
+        </a>
+        
+        <a href="#if-else-c" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#if-else-c');">
+            📊 مقایسه if-else در پایتون و ++C
+        </a>
+        
+        <a href="#_16" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_16');">
+            🧠 چرا سه حالت در نظر گرفتیم؟
+        </a>
+        
+        
+
+        
+        <a href="#_17" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="2" onclick="deferSetActiveTocLink('#_17');">
+            مقداردهی چند متغیر در پایتون
+        </a>
+        
+        
+        <a href="#_18" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_18');">
+            🎯 هدف
+        </a>
+        
+        <a href="#_19" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_19');">
+            ۱. مقداردهی مساوی (همه یک مقدار بگیرند)
+        </a>
+        
+        <a href="#_20" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_20');">
+            ۲. مقداردهی نامساوی (هرکدام مقدار متفاوت)
+        </a>
+        
+        <a href="#_21" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_21');">
+            ۳. جابجایی دو متغیر بدون متغیر کمکی
+        </a>
+        
+        <a href="#c_1" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#c_1');">
+            📊 مقایسه با ++C
+        </a>
+        
+        
+
+        
+        <a href="#_22" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="2" onclick="deferSetActiveTocLink('#_22');">
+            استانداردهای نام‌گذاری متغیرها در پایتون
+        </a>
+        
+        
+        <a href="#_23" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_23');">
+            🎯 هدف
+        </a>
+        
+        <a href="#_24" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_24');">
+            📏 قوانین اجباری (اگر رعایت نکنی → ارور!)
+        </a>
+        
+        <a href="#_25" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_25');">
+            🔑 کلمات کلیدی ممنوعه در پایتون
+        </a>
+        
+        <a href="#pep-8-style-guide" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#pep-8-style-guide');">
+            🎨 قراردادهای پیشنهادی (PEP 8 — Style Guide)
+        </a>
+        
+        <a href="#_26" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_26');">
+            ✨ نمونه‌های خوب و بد
+        </a>
+        
+        <a href="#c_2" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#c_2');">
+            📊 مقایسه با ++C
+        </a>
+        
+        <a href="#_27" class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6" data-active="false" data-depth="3" onclick="deferSetActiveTocLink('#_27');">
+            🧠 خلاصه یک‌خطی
+        </a>
+        
+        
+
+        
+        
+        
+        
+
+    </div>
+    <div class="h-12"></div>
+
+</div>
+                                
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer view-transition-name="footer" class="group-has-[.section-soft]/body:bg-surface/40 3xl:fixed:bg-transparent dark:bg-transparent mt-10 border-t border-border">
+    <div class="container-wrapper px-4 xl:px-6 py-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            
+            <!-- کپی رایت -->
+            <div class="text-muted-foreground w-full text-center md:text-right text-xs sm:text-sm">
+                
+                ساخته شده با مقادیر فراوان چای و حوصله بسیار توسط MJBakhshi
+                
+            </div>
+
+            <!-- شبکه‌های اجتماعی -->
+            <div class="flex items-center gap-4 text-muted-foreground" style="direction: ltr;">
+                
+                <!-- Instagram -->
+                <a href="https://instagram.com/mjb4khshi" target="_blank" class="hover:text-foreground transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/mjb4khshi/" target="_blank" class="hover:text-foreground transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/mjb4khshi" target="_blank" class="hover:text-foreground transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3-.3 6-1.5 6-6.5a5.5 5.5 0 0 0-1.5-3.8 5.5 5.5 0 0 0 .2-3.7s-1.2-.4-3.9 1.7a13.4 13.4 0 0 0-7 0C6.2 3.5 5 3.5 5 3.5a5.5 5.5 0 0 0 .2 3.7A5.5 5.5 0 0 0 3.7 11c0 5 3 6.2 6 6.5a4.8 4.8 0 0 0-1 3.2v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+     
+
+<script src="../../javascripts/mathjax.js"></script>
+
+     
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+     
+
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+     
+
+<script src="../../javascripts/translate.js"></script>
+
+     
+
+<script src="../../search/main.js"></script>
+
+
+    
+
+    <script integrity="sha384-JLNLRFGzvOp0up707XKgSnAjjt1w5BF/+lbeLQvlf6mNwf0m89IXFdpNAk4t6Hcs" src="../../js/copy-button.js"></script>
+    <script integrity="sha384-JBx6cBEiyhK1KPwZgBHiI6GDaAmvlOxMQFyWAZTEpW5Ifo5XQ2LBcJ61GVOumwF1" src="../../js/sidebar.js"></script>
+    <script integrity="sha384-fNURFMRt0p/HqXnQnV4+CT9dX1GiU5F0fC3pFbg7gfoANytoUMErSW7suWSBkSuF" src="../../js/slider.js"></script>
+    <script>updatePygmentsStylesheet();</script>
+    
+    
+    
+    <script type="speculationrules">
+{
+  "prerender": [
+    {
+      "where": {
+          "selector_matches": ["#next-button", "#previous-button"]
+      }
+    }
+  ]
+}
+</script>
+
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
