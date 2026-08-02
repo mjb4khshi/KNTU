@@ -100,16 +100,27 @@ article .headerlink.leading {
   }
 }
 /* چرخش و تنظیم جهت فلش‌های ناوبری پایین صفحه (قبلی و بعدی) */
-nav[aria-label="Pagination"] svg,
-.pagination svg,
-a[rel="prev"] svg,
-a[rel="next"] svg {
-  transform: scaleX(-1);
+/* =========================================================
+   اصلاح و قرینه کردن تمام فلش‌های ناوبری، سایدبار و پجینیشن
+   ========================================================= */
+
+/* آینه کردن فلش‌های "قبلی/بعدی" و فلش‌های سایدبار/منو */
+a[rel="prev"] svg, 
+a[rel="next"] svg,
+svg.lucide-chevron-right, 
+svg.lucide-chevron-left {
+  transform: scaleX(-1) !important;
 }
 
-/* جابه‌جایی آیکون و متن در دکمه‌های پجینیشن برای تطابق با RTL */
+/* اصلاح چیدمان دکمه‌های قبلی و بعدی در پایین صفحه برای RTL */
 a[rel="prev"], a[rel="next"] {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+  display: inline-flex !important;
+  flex-direction: row-reverse !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+/* اصلاح جهت قرارگیری دکمه‌های کپی کدبلاک‌ها */
+button[class*="copy"] {
+  direction: rtl !important;
 }

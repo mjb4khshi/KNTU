@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   const translateUI = () => {
-    // تغییر Placeholder های باکس سرچ
-    document.querySelectorAll('input[placeholder*="Search"]').forEach((el) => {
-      el.setAttribute("placeholder", "جستجو...");
+    // ترجمه Placeholder باکس‌های سرچ
+    document.querySelectorAll("input").forEach((el) => {
+      const placeholder = el.getAttribute("placeholder");
+      if (placeholder && placeholder.toLowerCase().includes("search")) {
+        el.setAttribute("placeholder", "جستجو...");
+      }
     });
 
-    // جستجوی دقیق در تمام المان‌های صفحه برای ترجمه متن‌های ثابت
+    // جستجوی متن‌ها بدون حساسیت به حروف بزرگ و کوچک
     const walker = document.createTreeWalker(
       document.body,
       NodeFilter.SHOW_TEXT,
@@ -14,17 +17,27 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     let node;
     while ((node = walker.nextNode())) {
-      const text = node.nodeValue.trim();
-      if (text === "Search documentation..." || text === "Search...") {
+      const originalText = node.nodeValue;
+      const text = originalText.trim().toLowerCase(); // تبدیل به حروف کوچک برای بررسی راحت‌تر
+
+      if (!text) continue;
+
+      if (text === "on this page") {
+        node.nodeValue = originalText.replace(/on this page/gi, "فهرست مطالب");
+      } else if (text === "search documentation..." || text === "search...") {
         node.nodeValue = "جستجو در مستندات...";
-      } else if (text === "On this page") {
-        node.nodeValue = "فهرست مطالب";
-      } else if (text === "Copy") {
-        node.nodeValue = "رونوشت";
-      } else if (text === "Previous") {
-        node.nodeValue = "قبلی";
-      } else if (text === "Next") {
-        node.nodeValue = "بعدی";
+      } else if (text === "copy") {
+        node.nodeValue = originalText.replace(/copy/gi, "رونوشت");
+      } else if (text === "copied!") {
+        node.nodeValue = originalText.replace(/copied!/gi, "کپی شد!");
+      } else if (text === "previous") {
+        node.nodeValue = originalText.replace(/previous/gi, "قبلی");
+      } else if (text === "next") {
+        node.nodeValue = originalText.replace(/next/gi, "بعدی");
+      } else if (text === "menu") {
+        node.nodeValue = originalText.replace(/menu/gi, "فهرست");
+      } else if (text === "home") {
+        node.nodeValue = originalText.replace(/home/gi, "خانه");
       }
     }
   };
@@ -32,9 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // اجرای اولیه
   translateUI();
 
-  // پایش تغییرات صفحه (برای زمان سوییچ بین صفحات یا رندر شدن کامپوننت‌های داینامیک)
-  const observer = new MutationObserver(() => {
-    translateUI();
-  });
+  // پایش تغییرات صفحه (برای وقتی دکمه کپی رو میزنی یا منوی موبایل باز میشه)
+  const observer = new MutationObserver(() => translateUI());
   observer.observe(document.body, { childList: true, subtree: true });
 });
