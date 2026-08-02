@@ -16,3 +16,7 @@ pre, code, .katex, .mermaid {
   direction: ltr !important;
   text-align: left !important;
 }
+/* مخفی کردن کردیت و لینک سازنده تم در فوتر */
+footer .credit, footer [href*="shadcn"], footer [href*="mkdocs"] {
+  display: none !important;
+}
