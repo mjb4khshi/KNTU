@@ -1,36 +1,18 @@
-/* دریافت فونت وزیرمتن */
 @import url('https://fonts.cdnfonts.com/css/vazirmatn');
 
-/* ۱. اعمال اجباری فونت روی تمام عناصر */
-*, *::before, *::after {
-  font-family: 'Vazirmatn', system-ui, -apple-system, sans-serif !important;
+/* تنظیم فونت متغیر Tailwind که تم Shadcn ازش استفاده می‌کنه */
+:root {
+  --font-sans: 'Vazirmatn', system-ui, -apple-system, sans-serif !important;
 }
 
-/* ۲. راست‌چین کردن کل بدنه و کانتینر اصلی */
-html, body, div[data-radix-scroll-area-viewport], main {
-  direction: rtl !important;
-  text-align: right !important;
+body, html {
+  font-family: var(--font-sans) !important;
+  direction: rtl;
+  text-align: right;
 }
 
-/* ۳. اصلاح چیدمان سایدبار و محتوای اصلی تم Shadcn */
-.flex, [class*="flex"] {
-  /* معکوس کردن فلكس‌باکس‌ها برای چیدمان راست به چپ */
-  flex-direction: row-reverse;
-}
-
-/* استثنا: حفظ جهت طبیعی آیکون‌ها و دکمه‌های افقی */
-button, nav, header {
-  direction: rtl !important;
-}
-
-/* ۴. چپ‌به-راست نگه داشتن کدبلاک‌ها، فرمول‌ها و نمودارها */
-pre, code, pre *, code *, .katex, .katex *, .mermaid, .mermaid * {
+/* چپ‌به-راست نگه‌داشتن کدهای برنامه و فرمول‌ها */
+pre, code, .katex, .mermaid {
   direction: ltr !important;
   text-align: left !important;
-}
-
-/* ۵. اصلاح پدینگ و مارجین سایدبار راست و چپ */
-aside {
-  direction: rtl !important;
-  text-align: right !important;
 }
