@@ -1,0 +1,115 @@
+/* =========================================================
+   🌿 Sarv UI Code Highlighting & Pygments Styles
+   Tactile 3D Copy Buttons & Responsive Code Containers
+   Designed & Built with care by MJ (v0.3.1)
+   ========================================================= */
+
+/* Inline Code */
+:not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  background: color-mix(in oklab, var(--color-base-500) 50%, transparent);
+  color: var(--color-accent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 80%, transparent);
+  direction: ltr !important;
+  unicode-bidi: embed;
+}
+
+/* Code Block Container */
+.highlight, .codehilite {
+  position: relative;
+  margin: 1.5rem 0;
+  border-radius: var(--radius-card);
+  background: #18181b !important;
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 40%, transparent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+.highlight pre, .codehilite pre {
+  margin: 0;
+  padding: 1.25rem 1rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: #f4f4f5;
+  background: transparent !important;
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Sleek Flat Code Header & Icon Button (Seamless background, zero 3D) */
+.sarv-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.85rem 0.35rem 0.85rem;
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  direction: ltr;
+}
+
+.sarv-code-lang {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #a1a1aa;
+}
+
+.sarv-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+.sarv-copy-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: none !important;
+}
+.sarv-copy-btn:active {
+  transform: scale(0.92) !important;
+}
+.sarv-copy-btn.copied {
+  background: color-mix(in oklab, var(--color-success) 22%, transparent) !important;
+  color: var(--color-success) !important;
+  border-color: color-mix(in oklab, var(--color-success) 60%, transparent) !important;
+  box-shadow: none !important;
+}
+
+/* Pygments Token Color Palette (Monokai + Vibrant Modern) */
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cs { color: #71717a; font-style: italic; } /* Comment */
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr { color: #f43f5e; font-weight: 600; } /* Keyword */
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sa, .highlight .sb, .highlight .sc { color: #10b981; } /* String */
+.highlight .m, .highlight .mi, .highlight .mf, .highlight .mh, .highlight .mo { color: #f59e0b; } /* Number */
+.highlight .na, .highlight .nc, .highlight .nd, .highlight .ne, .highlight .nf { color: #38bdf8; } /* Function & Class */
+.highlight .o, .highlight .ow { color: #e11d48; } /* Operator */
+.highlight .p { color: #e4e4e7; } /* Punctuation */
+.highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi { color: #a78bfa; } /* Variable */
+.highlight .kt { color: #2dd4bf; } /* Type */
+
+/* Line Numbers */
+.linenos {
+  color: #52525b !important;
+  user-select: none;
+  padding-right: 0.85rem !important;
+  border-right: 1px solid #3f3f46;
+  margin-right: 0.85rem;
+}

@@ -1,0 +1,366 @@
+/* =========================================================
+   🌿 Sarv UI Obsidian-Native CSS (Pure Solid Colors, Zero Gradients)
+   Callouts, Theorems, Exercises, Content Tabs, Timelines,
+   Wikilinks, Highlights, Hover Preview & Backlinks
+   Designed & Built with care by MJ (v0.3.1)
+   ========================================================= */
+
+/* --- 1. Obsidian Callouts & Admonitions --- */
+.admonition, div.callout {
+  margin: 1.5rem 0;
+  padding: 1.15rem 1.35rem;
+  border-radius: var(--radius-card);
+  background: color-mix(in oklab, var(--adm-color, var(--color-info)) 9%, var(--color-base));
+  border: 1px solid color-mix(in oklab, var(--adm-color, var(--color-info)) 25%, transparent);
+  border-right: 4.5px solid var(--adm-color, var(--color-info));
+  position: relative;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  color: var(--color-base-content);
+}
+
+.admonition-title, .callout-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--adm-color, var(--color-info));
+  margin: -0.25rem 0 0.65rem 0;
+  user-select: none;
+}
+
+.admonition > *:not(.admonition-title):not(summary),
+.callout > *:not(.callout-title):not(summary) {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.925rem;
+  line-height: 1.75;
+  color: var(--color-base-content);
+}
+
+/* Collapsible Admonitions (> [!note]- or pymdownx.details) */
+details.admonition summary.admonition-title {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+details.admonition summary::-webkit-details-marker {
+  display: none;
+}
+details.admonition summary.admonition-title::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.25s ease;
+  margin-left: 4px;
+}
+details.admonition[open] summary.admonition-title::after {
+  transform: rotate(135deg);
+}
+
+/* Callout Color Palette Variants */
+.admonition.note, .admonition.info, div.callout[data-callout="note"], div.callout[data-callout="info"] {
+  --adm-color: var(--color-info);
+}
+.admonition.tip, .admonition.success, .admonition.done, .admonition.check,
+div.callout[data-callout="tip"], div.callout[data-callout="success"] {
+  --adm-color: var(--color-success);
+}
+.admonition.warning, .admonition.caution, .admonition.attention,
+div.callout[data-callout="warning"], div.callout[data-callout="caution"] {
+  --adm-color: var(--color-warn);
+}
+.admonition.danger, .admonition.error, .admonition.failure, .admonition.bug,
+div.callout[data-callout="danger"], div.callout[data-callout="error"], div.callout[data-callout="bug"] {
+  --adm-color: var(--color-danger);
+}
+.admonition.example, .admonition.question, .admonition.faq,
+div.callout[data-callout="example"], div.callout[data-callout="question"] {
+  --adm-color: var(--color-accent);
+}
+.admonition.quote, .admonition.cite,
+div.callout[data-callout="quote"], div.callout[data-callout="cite"] {
+  --adm-color: var(--color-neutral);
+}
+
+/* --- 2. Theorem & Golden Formula Card (Zero Gradient) --- */
+.theorem-card {
+  margin: 1.75rem 0;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-card);
+  background: color-mix(in oklab, var(--color-primary) 7%, var(--color-base));
+  border: 1.5px solid color-mix(in oklab, var(--color-primary) 35%, transparent);
+  border-top: 4px solid var(--color-primary);
+  color: var(--color-base-content);
+}
+.theorem-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+.theorem-title {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.theorem-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background: color-mix(in oklab, var(--color-primary) 15%, transparent);
+  color: var(--color-primary);
+}
+
+/* --- 3. Exercise & Spoiler Solution Box (.exercise-box) --- */
+.exercise-box {
+  margin: 1.5rem 0;
+  border-radius: var(--radius-card);
+  border: 1px solid color-mix(in oklab, var(--color-secondary) 35%, transparent);
+  background: color-mix(in oklab, var(--color-secondary) 7%, var(--color-base));
+  padding: 1.25rem;
+  color: var(--color-base-content);
+}
+.exercise-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.exercise-solution {
+  margin-top: 1rem;
+  border-top: 1px dashed color-mix(in oklab, var(--color-secondary) 30%, transparent);
+  padding-top: 0.75rem;
+}
+
+/* --- 4. Content Tabs (pymdownx.tabbed / ===) --- */
+.tabbed-set {
+  margin: 1.5rem 0;
+  border-radius: var(--radius-card);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  overflow: hidden;
+  background: var(--color-base);
+}
+.tabbed-labels {
+  display: flex;
+  gap: 4px;
+  padding: 6px;
+  background: color-mix(in oklab, var(--color-base-500) 40%, transparent);
+  border-bottom: 1px solid color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  overflow-x: auto;
+}
+.tabbed-labels > label {
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-button);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--color-neutral);
+  white-space: nowrap;
+}
+.tabbed-labels > label:hover {
+  color: var(--color-base-content);
+}
+.tabbed-content {
+  padding: 1.25rem;
+}
+
+/* --- 5. Vertical Timeline (.timeline) --- */
+.timeline {
+  position: relative;
+  margin: 2rem 0;
+  padding-right: 1.75rem;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 6px;
+  width: 3px;
+  background: color-mix(in oklab, var(--color-primary) 35%, transparent);
+  border-radius: 9999px;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 1.75rem;
+}
+.timeline-dot {
+  position: absolute;
+  right: -1.75rem;
+  top: 0.35rem;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  border: 3px solid var(--color-base);
+}
+.timeline-date {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+.timeline-content {
+  background: color-mix(in oklab, var(--color-base) 75%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+  border-radius: var(--radius-card);
+  padding: 0.85rem 1.15rem;
+}
+
+/* --- 6. Reading Time & Meta Badge --- */
+.sarv-reading-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 0.75rem 0 1.5rem 0;
+  flex-wrap: wrap;
+}
+.reading-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--color-neutral);
+  background: color-mix(in oklab, var(--color-base-500) 40%, transparent);
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
+}
+button.reading-badge.sarv-print-btn {
+  margin-right: auto; /* انتقال دکمه چاپ به منتهی‌الیه سمت چپ در چیدمان راست‌به‌چپ */
+  background: color-mix(in oklab, var(--color-primary) 14%, var(--color-base));
+  border: 1px solid color-mix(in oklab, var(--color-primary) 40%, transparent);
+  color: var(--color-primary);
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-button, 14px);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  box-shadow: 0 2px 6px color-mix(in oklab, var(--color-primary) 12%, transparent);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+button.reading-badge.sarv-print-btn:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px color-mix(in oklab, var(--color-primary) 28%, transparent);
+}
+
+/* --- 7. Wikilinks & Unresolved Links --- */
+.wikilink {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--color-primary) 40%, transparent);
+  text-underline-offset: 3px;
+  transition: all 0.15s ease;
+}
+.wikilink:hover {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
+.unresolved-wikilink {
+  color: var(--color-neutral);
+  font-style: italic;
+  border-bottom: 1.5px dashed var(--color-neutral);
+  cursor: help;
+}
+
+/* --- 8. Obsidian Text Highlights (==text==) --- */
+mark, .sarv-highlight {
+  background: color-mix(in oklab, var(--color-warn) 20%, transparent);
+  color: inherit;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  border-bottom: 2px solid var(--color-warn);
+}
+
+/* --- 9. Hover Preview Card (#sarv-hover-preview) --- */
+#sarv-hover-preview {
+  position: fixed;
+  z-index: 99999;
+  width: 320px;
+  max-height: 220px;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  background: var(--color-base);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 80%, transparent);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+  padding: 1rem 1.15rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  pointer-events: none;
+  display: none;
+  animation: previewFade 0.18s ease-out;
+}
+
+@keyframes previewFade {
+  from { opacity: 0; transform: scale(0.96) translateY(6px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.sarv-preview-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  padding-bottom: 0.3rem;
+}
+
+/* --- 10. Backlinks Section (.sarv-backlinks-container) --- */
+.sarv-backlinks-container {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px dashed color-mix(in oklab, var(--color-base-500) 60%, transparent);
+}
+.sarv-backlinks-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-base-content);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.sarv-backlinks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.85rem;
+}
+.sarv-backlink-card {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  background: color-mix(in oklab, var(--color-base-500) 25%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  text-decoration: none !important;
+  color: var(--color-base-content);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.sarv-backlink-card:hover {
+  border-color: var(--color-primary);
+  background: color-mix(in oklab, var(--color-primary) 10%, transparent);
+  color: var(--color-primary);
+  transform: translateX(-3px);
+}
