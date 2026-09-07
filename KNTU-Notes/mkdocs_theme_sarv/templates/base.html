@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="persian-dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title and page.title != 'Index' and page.title != 'خانه' %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+  
+  {% if config.site_description %}
+  <meta name="description" content="{{ config.site_description }}">
+  {% endif %}
+  {% if config.site_author %}
+  <meta name="author" content="{{ config.site_author }}">
+  {% endif %}
+
+  <!-- Sarv Metadata for Graph, Search & Navigation -->
+  <meta name="sarv-site-root" content="{{ '' | url }}/">
+  <meta name="sarv-search-url" content="{{ 'search/search_index.json' | url }}">
+  <meta name="sarv-graph-url" content="{{ 'sarv-graph.json' | url }}">
+  <meta name="sarv-current-page" content="{{ page.file.src_uri }}">
+  <meta name="sarv-current-url" content="{{ page.file.url }}">
+
+  <!-- Favicon -->
+  {% if config.theme.favicon %}
+  <link rel="icon" href="{{ config.theme.favicon | url }}">
+  {% elif config.theme.icon %}
+  <link rel="icon" href="{{ config.theme.icon | url }}">
+  {% endif %}
+
+  <!-- Sarv UI Theme CSS -->
+  <link rel="stylesheet" href="{{ 'assets/css/sarv-tokens.css' | url }}">
+  <link rel="stylesheet" href="{{ 'assets/css/sarv-core.css' | url }}">
+  <link rel="stylesheet" href="{{ 'assets/css/sarv-components.css' | url }}">
+  <link rel="stylesheet" href="{{ 'assets/css/sarv-obsidian.css' | url }}">
+  <link rel="stylesheet" href="{{ 'assets/css/sarv-pygments.css' | url }}">
+
+  <!-- Extra CSS -->
+  {% for css in config.extra_css %}
+  <link rel="stylesheet" href="{{ css | url }}">
+  {% endfor %}
+
+  <!-- Immediate Early Theme & Layout Application -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('sarv-theme') || 'persian-dark';
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.setAttribute('datatheme', t);
+      if (t.includes('dark') || t === 'ocean-abyss' || t === 'cyberpunk' || t === 'emerald' || t === 'sunset' || t === 'tokyo-midnight' || t === 'coffee-roast' || t === 'crimson' || t === 'royal-purple' || t === 'nordic') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      var layoutMode = localStorage.getItem('sarv-layout-mode');
+      if (layoutMode === 'full') {
+        document.documentElement.classList.add('sarv-mode-fullwidth');
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- نوار پیشرفت مطالعه بالای صفحه -->
+  <div id="sarv-reading-progress"></div>
+
+  <!-- هدر -->
+  {% include "templates/header.html" %}
+
+  <!-- محتوای اصلی -->
+  {% include "templates/main.html" %}
+
+  <!-- فوتر -->
+  {% include "templates/footer.html" %}
+
+  <!-- کشوی مدرن موبایل -->
+  {% include "templates/partials/mobile_drawer.html" %}
+
+  <!-- مودال گراف کل دانش -->
+  {% include "templates/partials/graph_modal.html" %}
+
+  <!-- مودال جستجوی سریع -->
+  {% include "templates/search.html" %}
+
+  <!-- دکمه شناور بازگشت به بالا -->
+  <button type="button" id="sarv-back-to-top" class="btn btn-accent sarv-back-to-top" title="بازگشت به بالای صفحه">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <style>
+  .sarv-back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 990;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  </style>
+
+  <!-- اسکریپت‌های تم سرو -->
+  <script src="{{ 'assets/js/theme.js' | url }}"></script>
+  <script src="{{ 'assets/js/copy-code.js' | url }}"></script>
+  <script src="{{ 'assets/js/checkbox-anim.js' | url }}"></script>
+  <script src="{{ 'assets/js/reading-progress.js' | url }}"></script>
+  <script src="{{ 'assets/js/graph-engine.js' | url }}"></script>
+  <script src="{{ 'assets/js/hover-preview.js' | url }}"></script>
+  <script src="{{ 'assets/js/mermaid-theme.js' | url }}"></script>
+  <script src="{{ 'assets/js/schedule.js' | url }}"></script>
+  <script src="{{ 'assets/js/search.js' | url }}"></script>
+
+  <!-- اسکریپت‌های افزوده (KaTeX / MathJax / ...) -->
+  {% for js in config.extra_javascript %}
+  <script src="{{ js | url }}"></script>
+  {% endfor %}
+</body>
+</html>

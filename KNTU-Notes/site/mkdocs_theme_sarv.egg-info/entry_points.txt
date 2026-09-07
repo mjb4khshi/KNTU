@@ -1,0 +1,2 @@
+[mkdocs.themes]
+sarv = mkdocs_theme_sarv

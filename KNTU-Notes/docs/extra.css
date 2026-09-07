@@ -1,13 +1,148 @@
-/* فونت وزیرمتن */
-@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+/* =========================================================
+   🌿 Sarv UI v0.2.6 + KNTU Notes Theme
+   Customized with care by MJ
+   ========================================================= */
 
-:root {
-  --font-sans: "Vazirmatn", "Geist", sans-serif;
+/* =========================================================
+   🌿 فونت آراد (Arad Font) - لود محلی و فوق‌سریع
+   ========================================================= */
+
+@font-face {
+  font-family: "Arad";
+  src: url("fonts/AradVF.woff2") format("woff2-variations"),
+       url("fonts/Arad-Regular.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* راست‌چین کامل سایت — Grid/Flex تم به‌درستی آینه می‌شوند */
+@font-face {
+  font-family: "Arad";
+  src: url("fonts/Arad-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arad";
+  src: url("fonts/Arad-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arad";
+  src: url("fonts/Arad-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arad";
+  src: url("fonts/Arad-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arad";
+  src: url("fonts/Arad-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* فونت وزیرمتن (به عنوان فال‌بک ثانویه) */
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+
+/* =========================================================
+   🌿 توکن‌های طراحی Sarv UI (Design Tokens)
+   ========================================================= */
+
+:root {
+  --font-sans: "Arad", "Vazirmatn", "Geist", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* پالت رنگی لایت با الهام از Sarv UI */
+  --theme-color-primary: #0066a4;
+  --theme-color-primary-rgb: 0, 102, 164;
+  --theme-color-success: #15803d;
+  --theme-color-warn: #b45309;
+  --theme-color-info: #0f766e;
+  --theme-color-accent: #c026d3;
+  --theme-color-secondary: #c2410c;
+  --theme-color-danger: #e11d48;
+  --theme-color-neutral: #64748b;
+  --theme-color-neutral-dark: #334155;
+  --theme-color-neutral-darker: #0f172a;
+  
+  --theme-radius-button: 0.5rem;
+  --theme-radius-card: 0.85rem;
+  --theme-shadow-color: 0, 0, 0;
+}
+
+/* پالت رنگی دارک اختصاصی Sarv UI v0.2.6 */
+[data-theme="persian-dark"], [datatheme="persian-dark"] {
+  --theme-color-primary: #0066a4;
+  --theme-color-primary: oklch(49.417% 0.12628 245.712);
+  --theme-color-primary-rgb: 0, 102, 164;
+
+  --theme-color-success: #46c93a;
+  --theme-color-success: oklch(73.664% 0.21363 141.933);
+
+  --theme-color-warn: #ffba00;
+  --theme-color-warn: oklch(0.831 0.171 81.54);
+
+  --theme-color-info: #00a594;
+  --theme-color-info: oklch(64.783% 0.11594 182.205);
+
+  --theme-color-accent: #fe28a2;
+  --theme-color-accent: oklch(66.572% 0.25691 352.736);
+
+  --theme-color-secondary: #d88f58;
+  --theme-color-secondary: oklch(71.263% 0.1137 56.642);
+
+  --theme-color-danger: #ff4757;
+  --theme-color-danger: oklch(66.889% 0.21892 20.897);
+
+  --theme-color-neutral: #a2a2a2;
+  --theme-color-neutral: oklch(71.224% 0.00008 271.152);
+
+  --theme-color-base: #000000;
+  --theme-color-base: oklch(0% 0 0);
+
+  --theme-color-neutral-dark: #404040;
+  --theme-color-neutral-dark: oklch(37.15% 0.00004 271.152);
+
+  --theme-color-neutral-darker: #1e1e1e;
+  --theme-color-neutral-darker: oklch(23.503% 0.00003 271.152);
+
+  --theme-color-base-500: #222222;
+  --theme-color-base-500: oklch(27.274% 0.00003 271.152 / 0.867);
+  --theme-color-base-900: #858585;
+  --theme-color-base-900: oklch(61.671% 0.00007 271.152);
+
+  --theme-color-primary-content: #ffffff;
+  --theme-color-success-content: #ffffff;
+  --theme-color-warn-content: #000000;
+  --theme-color-info-content: #ffffff;
+  --theme-color-accent-content: #ffffff;
+  --theme-color-secondary-content: #ffffff;
+  --theme-color-danger-content: #ffffff;
+  --theme-color-neutral-content: #ffffff;
+  --theme-color-base-content: #ffffff;
+}
+
+/* =========================================================
+   راست‌چین و چیدمان استاندارد RTL
+   ========================================================= */
+
 html, body {
   direction: rtl;
+  font-family: var(--font-sans);
 }
 
 /* کدبلاک‌ها، فرمول‌ها و نمودارها همیشه چپ‌به‌راست */
@@ -19,29 +154,23 @@ pre, code, kbd, samp,
   text-align: left;
 }
 
-/* ===== اصلاح کلاس‌های فیزیکی Tailwind که با dir خودکار نمی‌شوند ===== */
-
-/* عنوان سایت در هدر */
 header h1 {
   padding-right: 0;
   padding-left: calc(var(--spacing) * 2);
 }
 
-/* فلش باز/بسته‌شدن بخش‌های سایدبار: جابه‌جایی و آینه کردن جهت */
 button[data-slot="collapsible-trigger"] svg {
   margin-left: 0;
   margin-right: auto;
   transform: scaleX(-1);
 }
 
-/* چیدمان متن دکمه‌های سایدبار */
 [data-sidebar="menu-button"],
 [data-slot="collapsible-trigger"],
 [data-sidebar="group-label"] {
   text-align: right;
 }
 
-/* تورفتگی و خط جداکننده‌ی زیرمنوهای سایدبار */
 [data-sidebar="menu-sub"] {
   margin-left: 0;
   margin-right: 0.875rem;
@@ -53,58 +182,61 @@ button[data-slot="collapsible-trigger"] svg {
   border-right-color: var(--color-sidebar-border);
 }
 
-/* تورفتگی سطح‌های فهرست مطالب (TOC) */
 #toc a[data-depth="3"] { padding-left: 0; padding-right: 1rem; }
 #toc a[data-depth="4"] { padding-left: 0; padding-right: 1.5rem; }
 
-/* لیست‌ها و نقل‌قول‌ها در متن مقاله */
-article ul {
+article ul, article ol {
   margin-left: 0;
-  margin-right: calc(var(--spacing) * 6);
+  margin-right: calc(var(--spacing) * 5);
 }
-article ol {
-  margin-left: 0;
-  margin-right: calc(var(--spacing) * 6);
-}
+
 article blockquote {
   border-left: none;
   padding-left: 0;
-  border-right-width: 2px;
-  border-right-style: solid;
-  padding-right: calc(var(--spacing) * 6);
+  border-right: 3px solid var(--theme-color-info);
+  padding: 0.75rem 1rem;
+  margin: 1.25rem 0;
+  background: rgba(0, 165, 148, 0.05);
+  border-radius: 0.5rem;
+  color: inherit;
 }
 
-/* آیکون لینک کنار تیترها (headerlink) */
+.dark article blockquote {
+  background: rgba(0, 165, 148, 0.12);
+  border-right-color: var(--theme-color-info);
+}
+
 article .headerlink {
-  margin-left: 0;
-  margin-right: calc(var(--spacing) * 2);
-}
-article .headerlink.leading {
-  left: auto;
-  right: 0;
-  transform: translateX(100%);
-  padding-right: 0;
-  padding-left: calc(var(--spacing) * 2);
+  opacity: 0;
+  margin-right: 0.65rem;
+  margin-left: 0.35rem;
+  color: var(--color-primary, var(--theme-color-primary)) !important;
+  text-decoration: none !important;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  display: inline-block;
 }
 
-/* پدینگ متن داخل دکمه‌ی جست‌وجو */
+article :is(h1, h2, h3, h4, h5, h6):hover .headerlink {
+  opacity: 0.75;
+}
+
+article .headerlink:hover {
+  opacity: 1 !important;
+  transform: scale(1.15);
+}
+
 [data-slot="dialog-trigger"] {
   padding-left: 0;
   padding-right: calc(var(--spacing) * 3);
-  
 }
+
 @media (min-width: 40rem) {
   [data-slot="dialog-trigger"] {
     padding-right: calc(var(--spacing) * 3);
     padding-left: calc(var(--spacing) * 12);
   }
 }
-/* چرخش و تنظیم جهت فلش‌های ناوبری پایین صفحه (قبلی و بعدی) */
-/* =========================================================
-   اصلاح و قرینه کردن تمام فلش‌های ناوبری، سایدبار و پجینیشن
-   ========================================================= */
 
-/* آینه کردن فلش‌های "قبلی/بعدی" و فلش‌های سایدبار/منو */
 a[rel="prev"] svg, 
 a[rel="next"] svg,
 svg.lucide-chevron-right, 
@@ -112,7 +244,6 @@ svg.lucide-chevron-left {
   transform: scaleX(-1) !important;
 }
 
-/* اصلاح چیدمان دکمه‌های قبلی و بعدی در پایین صفحه برای RTL */
 a[rel="prev"], a[rel="next"] {
   display: inline-flex !important;
   flex-direction: row-reverse !important;
@@ -120,7 +251,2390 @@ a[rel="prev"], a[rel="next"] {
   gap: 0.5rem !important;
 }
 
-/* اصلاح جهت قرارگیری دکمه‌های کپی کدبلاک‌ها */
 button[class*="copy"] {
   direction: rtl !important;
+}
+
+/* =========================================================
+   ✨ جلوه‌های بصری کل سایت (Global Visual Polish)
+   ========================================================= */
+
+/* استایل تیترهای مقالات */
+article h1 {
+  font-weight: 800 !important;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem !important;
+  color: #0f172a !important;
+  display: inline-block;
+}
+
+.dark article h1 {
+  color: #f8fafc !important;
+}
+
+article h2 {
+  font-weight: 700 !important;
+  margin-top: 2rem !important;
+}
+
+/* استایل کال‌اوت‌ها / جعبه‌های نکته و هشدار (Admonitions) */
+.admonition {
+  border-radius: 0.85rem !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+  border-right: 4px solid var(--theme-color-info) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+  background: rgba(248, 250, 252, 0.75) !important;
+  backdrop-filter: blur(8px);
+  margin: 1.5rem 0 !important;
+  overflow: hidden;
+}
+
+.dark .admonition {
+  background: rgba(30, 41, 59, 0.45) !important;
+  border-color: rgba(51, 65, 85, 0.7) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+}
+
+.admonition.tip, .admonition.success {
+  border-right-color: var(--theme-color-success) !important;
+}
+.admonition.tip .admonition-title, .admonition.success .admonition-title {
+  color: var(--theme-color-success) !important;
+}
+
+.admonition.warning, .admonition.caution {
+  border-right-color: var(--theme-color-warn) !important;
+}
+.admonition.warning .admonition-title, .admonition.caution .admonition-title {
+  color: var(--theme-color-warn) !important;
+}
+
+.admonition.danger, .admonition.failure {
+  border-right-color: var(--theme-color-danger) !important;
+}
+.admonition.danger .admonition-title, .admonition.failure .admonition-title {
+  color: var(--theme-color-danger) !important;
+}
+
+.admonition.note, .admonition.info {
+  border-right-color: var(--theme-color-info) !important;
+}
+.admonition.note .admonition-title, .admonition.info .admonition-title {
+  color: var(--theme-color-info) !important;
+}
+
+.admonition-title {
+  font-weight: 700 !important;
+  padding: 0.6rem 0.85rem !important;
+  background: transparent !important;
+}
+
+/* استایل جداول مارک‌داون */
+article table:not(.schedule-table) {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 0.85rem;
+  overflow: hidden;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+
+.dark article table:not(.schedule-table) {
+  border-color: rgba(51, 65, 85, 0.8);
+  background: rgba(15, 23, 42, 0.4);
+}
+
+article table:not(.schedule-table) th {
+  background: rgba(0, 102, 164, 0.08);
+  color: var(--theme-color-primary);
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  text-align: right;
+  border-bottom: 2px solid rgba(226, 232, 240, 0.8);
+}
+
+.dark article table:not(.schedule-table) th {
+  background: rgba(0, 165, 148, 0.15);
+  color: #38bdf8;
+  border-bottom-color: rgba(51, 65, 85, 0.8);
+}
+
+article table:not(.schedule-table) td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+}
+
+.dark article table:not(.schedule-table) td {
+  border-bottom-color: rgba(51, 65, 85, 0.6);
+}
+
+article table:not(.schedule-table) tr:hover {
+  background: rgba(0, 102, 164, 0.03);
+}
+
+.dark article table:not(.schedule-table) tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* لینک‌های سایدبار که اکتیو هستند */
+[data-sidebar="menu-button"][data-active="true"] {
+  background: rgba(0, 102, 164, 0.1) !important;
+  color: var(--theme-color-primary) !important;
+  font-weight: 700 !important;
+  border-right: 3px solid var(--theme-color-primary);
+}
+
+.dark [data-sidebar="menu-button"][data-active="true"] {
+  background: rgba(0, 165, 148, 0.18) !important;
+  color: var(--theme-color-info) !important;
+  border-right-color: var(--theme-color-info);
+}
+
+/* =========================================================
+   📅 استایل‌های اختصاصی صفحه برنامه کلاسی (Schedule)
+   ========================================================= */
+
+.schedule-wrapper {
+  margin: 1.5rem 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  font-family: var(--font-sans);
+}
+
+.schedule-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(0, 102, 164, 0.09) 0%, rgba(0, 165, 148, 0.09) 50%, rgba(254, 40, 162, 0.07) 100%);
+  border: 1px solid rgba(0, 102, 164, 0.2);
+  border-radius: 1.25rem;
+  padding: 2rem 1.75rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.dark .schedule-hero {
+  background: linear-gradient(135deg, rgba(0, 102, 164, 0.22) 0%, rgba(0, 165, 148, 0.18) 50%, rgba(254, 40, 162, 0.16) 100%);
+  border-color: rgba(0, 165, 148, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.schedule-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--theme-color-primary);
+  background: rgba(0, 102, 164, 0.12);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(0, 102, 164, 0.25);
+}
+
+.dark .schedule-hero-badge {
+  color: var(--theme-color-info);
+  background: rgba(0, 165, 148, 0.2);
+  border-color: rgba(0, 165, 148, 0.35);
+}
+
+.schedule-hero h1 {
+  font-size: 1.9rem !important;
+  font-weight: 800 !important;
+  margin: 0 0 0.5rem 0 !important;
+  line-height: 1.4 !important;
+  color: #0f172a !important;
+}
+
+.dark .schedule-hero h1 {
+  color: #f8fafc !important;
+}
+
+.schedule-hero-desc {
+  color: #475569;
+  font-size: 0.975rem;
+  line-height: 1.7;
+  max-width: 48rem;
+  margin: 0;
+}
+
+.dark .schedule-hero-desc {
+  color: #cbd5e1;
+}
+
+/* کارت‌های آمار ترم */
+.schedule-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.schedule-stat-card {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 1rem;
+  padding: 1.1rem 1rem;
+  text-align: center;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+}
+
+.dark .schedule-stat-card {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(51, 65, 85, 0.8);
+}
+
+.schedule-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.08);
+  border-color: var(--theme-color-primary);
+}
+
+.dark .schedule-stat-card:hover {
+  border-color: var(--theme-color-info);
+}
+
+.schedule-stat-num {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--theme-color-primary);
+  margin-bottom: 0.25rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.dark .schedule-stat-num {
+  color: var(--theme-color-info);
+}
+
+.schedule-stat-label {
+  font-size: 0.825rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.dark .schedule-stat-label {
+  color: #94a3b8;
+}
+
+/* نوار ابزار */
+.schedule-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: rgba(241, 245, 249, 0.7);
+  border: 1px solid rgba(203, 213, 225, 0.6);
+  padding: 0.75rem 1rem;
+  border-radius: 0.875rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.dark .schedule-toolbar {
+  background: rgba(15, 23, 42, 0.6);
+  border-color: rgba(51, 65, 85, 0.7);
+}
+
+.schedule-view-switcher {
+  display: inline-flex;
+  background: rgba(226, 232, 240, 0.8);
+  padding: 0.25rem;
+  border-radius: 0.625rem;
+  gap: 0.25rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.dark .schedule-view-switcher {
+  background: rgba(30, 41, 59, 0.8);
+}
+
+.schedule-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.dark .schedule-tab-btn {
+  color: #94a3b8;
+}
+
+.schedule-tab-btn.active {
+  background: #ffffff;
+  color: var(--theme-color-primary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.dark .schedule-tab-btn.active {
+  background: #334155;
+  color: var(--theme-color-info);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.schedule-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.schedule-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(203, 213, 225, 0.8);
+  background: #ffffff;
+  color: #334155;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.dark .schedule-btn {
+  background: #1e293b;
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+.schedule-btn:hover {
+  background: #f8fafc;
+  border-color: var(--theme-color-primary);
+  transform: translateY(-1px);
+}
+
+.dark .schedule-btn:hover {
+  background: #334155;
+  border-color: var(--theme-color-info);
+}
+
+.schedule-btn-primary {
+  background: var(--theme-color-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--theme-color-primary) !important;
+}
+
+.dark .schedule-btn-primary {
+  background: var(--theme-color-primary) !important;
+  border-color: var(--theme-color-info) !important;
+}
+
+.schedule-btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+/* ریسپانسیو ابزارها و سوئیچر برنامه هفتگی در موبایل */
+@media (max-width: 680px) {
+  .schedule-wrapper {
+    overflow-x: clip !important;
+    max-width: 100% !important;
+  }
+  .schedule-toolbar {
+    padding: 0.55rem;
+    gap: 0.65rem;
+  }
+  .schedule-view-switcher {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25rem;
+    padding: 0.25rem;
+  }
+  .schedule-tab-btn {
+    padding: 0.45rem 0.25rem;
+    font-size: 0.77rem;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    gap: 0.25rem;
+  }
+  .schedule-tab-btn svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+  }
+  .schedule-actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.45rem;
+  }
+  .schedule-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.45rem 0.35rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 400px) {
+  .schedule-tab-btn {
+    font-size: 0.72rem;
+    padding: 0.4rem 0.15rem;
+    gap: 0.2rem;
+  }
+  .schedule-tab-btn svg {
+    display: none;
+  }
+}
+
+/* کانتینر جدول هفتگی */
+.schedule-table-card {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(10px);
+}
+
+.dark .schedule-table-card {
+  background: rgba(15, 23, 42, 0.55);
+  border-color: rgba(51, 65, 85, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.schedule-table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: center;
+  font-size: 0.9rem;
+  min-width: 760px;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  border-left: 1px solid rgba(226, 232, 240, 0.8);
+  padding: 0.85rem 0.6rem;
+  vertical-align: middle;
+}
+
+.dark .schedule-table th,
+.dark .schedule-table td {
+  border-color: rgba(51, 65, 85, 0.6);
+}
+
+.schedule-table th:last-child,
+.schedule-table td:last-child {
+  border-left: none;
+}
+
+.schedule-table tr:last-child td {
+  border-bottom: none;
+}
+
+.schedule-table th {
+  background: rgba(248, 250, 252, 0.9);
+  color: #334155;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 1rem 0.75rem;
+}
+
+.dark .schedule-table th {
+  background: rgba(30, 41, 59, 0.9);
+  color: #e2e8f0;
+}
+
+.schedule-col-today {
+  background: rgba(0, 102, 164, 0.06) !important;
+}
+
+.dark .schedule-col-today {
+  background: rgba(0, 165, 148, 0.12) !important;
+}
+
+.today-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  background: var(--theme-color-info);
+  color: #ffffff;
+  padding: 0.15rem 0.45rem;
+  border-radius: 9999px;
+  margin-right: 0.3rem;
+  vertical-align: middle;
+}
+
+/* هایلایت سطر ساعت جاری در جدول */
+.schedule-row-now {
+  background: rgba(0, 102, 164, 0.04) !important;
+}
+
+.dark .schedule-row-now {
+  background: rgba(0, 165, 148, 0.08) !important;
+}
+
+.schedule-row-now .schedule-time-cell {
+  background: rgba(0, 102, 164, 0.14) !important;
+  color: var(--theme-color-primary) !important;
+  font-weight: 800 !important;
+}
+
+.dark .schedule-row-now .schedule-time-cell {
+  background: rgba(0, 165, 148, 0.25) !important;
+  color: #38bdf8 !important;
+}
+
+.now-pulse-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 0.68rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  margin-top: 0.35rem;
+  animation: pulseNow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  direction: rtl;
+}
+
+@keyframes pulseNow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(0.96); }
+}
+
+.upcoming-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: var(--theme-color-info);
+  color: #ffffff;
+  font-size: 0.68rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  margin-top: 0.35rem;
+  direction: rtl;
+}
+
+.schedule-row-upcoming {
+  background: rgba(0, 165, 148, 0.03) !important;
+}
+
+.dark .schedule-row-upcoming {
+  background: rgba(0, 165, 148, 0.06) !important;
+}
+
+.schedule-row-upcoming .schedule-time-cell {
+  background: rgba(0, 165, 148, 0.1) !important;
+  color: var(--theme-color-info) !important;
+  font-weight: 700 !important;
+}
+
+/* هایلایت سلول کلاسی که دقیقاً هم‌اکنون در حال برگزاری است */
+.schedule-row-now td.schedule-cell-today-active .course-badge-box {
+  box-shadow: 0 0 0 3px var(--theme-color-primary), 0 8px 22px rgba(0, 102, 164, 0.35) !important;
+  transform: translateY(-2px);
+}
+
+.dark .schedule-row-now td.schedule-cell-today-active .course-badge-box {
+  box-shadow: 0 0 0 3px var(--theme-color-info), 0 8px 24px rgba(0, 165, 148, 0.5) !important;
+}
+
+.schedule-time-cell {
+  background: transparent;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: inherit;
+  white-space: nowrap;
+  width: 125px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.schedule-time-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.7rem;
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--color-base-500) 22%, var(--color-base));
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 55%, transparent);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  direction: rtl;
+}
+
+.schedule-time-badge .time-main {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--color-base-content);
+  white-space: nowrap;
+}
+
+.dark .schedule-time-cell {
+  background: transparent;
+}
+
+.course-cell-slot {
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+.course-badge-box {
+  width: 100%;
+  border-radius: 0.75rem;
+  padding: 0.75rem 0.6rem;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.course-badge-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.dark .course-badge-box:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.course-badge-box .course-title {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.35;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.course-badge-box .course-prof {
+  font-size: 0.775rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  opacity: 0.9;
+}
+
+.course-badge-box .course-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.725rem;
+  gap: 0.3rem;
+  margin-top: 0.15rem;
+}
+
+.course-loc-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.35rem;
+  font-weight: 500;
+}
+
+.dark .course-loc-tag {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.course-code-tag {
+  font-family: monospace;
+  direction: ltr !important;
+  font-size: 0.7rem;
+  opacity: 0.85;
+}
+
+/* =========================================================
+   🌿 کلاس‌های رنگی دروس منطبق بر تم Sarv UI
+   ========================================================= */
+
+/* تم آبی Sarv UI (روش‌های تولید و مبانی برق) */
+.course-theme-blue {
+  background: rgba(0, 102, 164, 0.12);
+  border: 1px solid rgba(0, 102, 164, 0.35);
+  color: #005285;
+}
+.dark .course-theme-blue {
+  background: rgba(0, 102, 164, 0.25);
+  border-color: rgba(56, 189, 248, 0.45);
+  color: #7dd3fc;
+}
+
+/* تم فیروزه‌ای Sarv UI (معادلات دیفرانسیل) */
+.course-theme-green {
+  background: rgba(0, 165, 148, 0.12);
+  border: 1px solid rgba(0, 165, 148, 0.35);
+  color: #00695c;
+}
+.dark .course-theme-green {
+  background: rgba(0, 165, 148, 0.25);
+  border-color: rgba(45, 212, 191, 0.45);
+  color: #5eead4;
+}
+
+/* تم سبز زنده Sarv UI (نظریه احتمال و کاربردها) */
+.course-theme-cyan {
+  background: rgba(70, 201, 58, 0.12);
+  border: 1px solid rgba(70, 201, 58, 0.35);
+  color: #166534;
+}
+.dark .course-theme-cyan {
+  background: rgba(70, 201, 58, 0.22);
+  border-color: rgba(70, 201, 58, 0.45);
+  color: #86efac;
+}
+
+/* تم اکسنت صورتی/سرخابی Sarv UI (اندیشه اسلامی ۲) */
+.course-theme-purple {
+  background: rgba(254, 40, 162, 0.1);
+  border: 1px solid rgba(254, 40, 162, 0.3);
+  color: #9d174d;
+}
+.dark .course-theme-purple {
+  background: rgba(254, 40, 162, 0.22);
+  border-color: rgba(244, 114, 182, 0.45);
+  color: #fbcfe8;
+}
+
+/* تم قرمز مرجانی Sarv UI */
+.course-theme-red {
+  background: rgba(255, 71, 87, 0.12);
+  border: 1px solid rgba(255, 71, 87, 0.35);
+  color: #9f1239;
+}
+.dark .course-theme-red {
+  background: rgba(255, 71, 87, 0.22);
+  border-color: rgba(251, 113, 133, 0.45);
+  color: #fecdd3;
+}
+
+/* تم زرد طلایی Sarv UI (مبانی مهندسی برق) */
+.course-theme-amber {
+  background: rgba(255, 186, 0, 0.12);
+  border: 1px solid rgba(255, 186, 0, 0.35);
+  color: #854d0e;
+}
+.dark .course-theme-amber {
+  background: rgba(255, 186, 0, 0.22);
+  border-color: rgba(253, 224, 71, 0.45);
+  color: #fef08a;
+}
+
+/* تم سرخابی اکسنت Sarv UI (استاتیک و مقاومت مصالح) */
+.course-theme-pink {
+  background: rgba(254, 40, 162, 0.1);
+  border: 1px solid rgba(254, 40, 162, 0.32);
+  color: #9d174d;
+}
+.dark .course-theme-pink {
+  background: rgba(254, 40, 162, 0.22);
+  border-color: rgba(244, 114, 182, 0.45);
+  color: #fbcfe8;
+}
+
+/* تم نارنجی مرجانی Sarv UI (محاسبات عددی) */
+.course-theme-orange {
+  background: rgba(216, 143, 88, 0.14);
+  border: 1px solid rgba(216, 143, 88, 0.35);
+  color: #9a3412;
+}
+.dark .course-theme-orange {
+  background: rgba(216, 143, 88, 0.25);
+  border-color: rgba(251, 146, 60, 0.45);
+  color: #fed7aa;
+}
+
+/* تم گرم و طلایی Sarv UI (مهارت‌های زندگی دانشجویی) */
+.course-theme-lavender {
+  background: rgba(70, 201, 58, 0.12);
+  border: 1px solid rgba(70, 201, 58, 0.35);
+  color: #166534;
+}
+.dark .course-theme-lavender {
+  background: rgba(70, 201, 58, 0.22);
+  border-color: rgba(70, 201, 58, 0.45);
+  color: #86efac;
+}
+
+/* نمای کارت‌های تفصیلی */
+.schedule-cards-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.course-card-detailed {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 1.1rem;
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.dark .course-card-detailed {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(51, 65, 85, 0.7);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.course-card-detailed:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -5px rgba(0, 0, 0, 0.08);
+  border-color: var(--theme-color-primary);
+}
+
+.dark .course-card-detailed:hover {
+  box-shadow: 0 12px 28px -5px rgba(0, 0, 0, 0.5);
+  border-color: var(--theme-color-info);
+}
+
+.course-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.course-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.dark .course-card-title {
+  color: #f8fafc;
+}
+
+.course-tag-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.course-card-info-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+}
+
+.course-card-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #475569;
+}
+
+.dark .course-card-info-item {
+  color: #cbd5e1;
+}
+
+.course-card-info-item svg {
+  flex-shrink: 0;
+  opacity: 0.8;
+  color: var(--theme-color-primary);
+}
+
+.dark .course-card-info-item svg {
+  color: var(--theme-color-info);
+}
+
+.course-card-footer {
+  margin-top: auto;
+  padding-top: 0.85rem;
+  border-top: 1px dashed rgba(203, 213, 225, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.dark .course-card-footer {
+  border-color: rgba(51, 65, 85, 0.8);
+}
+
+.code-copy-btn {
+  background: rgba(241, 245, 249, 0.8);
+  border: 1px solid rgba(203, 213, 225, 0.8);
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.5rem;
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #334155;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+  direction: ltr !important;
+}
+
+.dark .code-copy-btn {
+  background: rgba(15, 23, 42, 0.7);
+  border-color: rgba(51, 65, 85, 0.9);
+  color: #e2e8f0;
+}
+
+.code-copy-btn:hover {
+  background: var(--theme-color-primary);
+  color: #ffffff;
+  border-color: var(--theme-color-primary);
+}
+
+/* =========================================================
+   لیست تک‌خطی مدرن امتحانات با روزشمار داینامیک
+   ========================================================= */
+
+.schedule-exam-list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  width: 100%;
+}
+
+.exam-row {
+  display: grid;
+  grid-template-columns: 2.2fr 1.8fr 1.6fr 1.4fr;
+  align-items: center;
+  padding: 0.95rem 1.35rem;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 0.875rem;
+  gap: 1rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(8px);
+}
+
+.dark .exam-row {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(51, 65, 85, 0.7);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.exam-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.08);
+  border-color: var(--theme-color-primary);
+}
+
+.dark .exam-row:hover {
+  box-shadow: 0 8px 22px -4px rgba(0, 0, 0, 0.45);
+  border-color: var(--theme-color-info);
+}
+
+.exam-col-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.exam-status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.dot-blue { background: #0066a4; }
+.dot-amber { background: #ffba00; }
+.dot-pink { background: #fe28a2; }
+.dot-cyan { background: #00a594; }
+.dot-orange { background: #d88f58; }
+.dot-green { background: #46c93a; }
+
+.exam-name {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.dark .exam-name {
+  color: #f8fafc;
+}
+
+.exam-sub {
+  font-size: 0.76rem;
+  color: #64748b;
+  margin-top: 0.15rem;
+}
+
+.dark .exam-sub {
+  color: #94a3b8;
+}
+
+.exam-col-schedule {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  font-size: 0.865rem;
+  color: #334155;
+  font-weight: 600;
+}
+
+.dark .exam-col-schedule {
+  color: #cbd5e1;
+}
+
+.exam-date-box, .exam-time-box {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+
+.exam-date-box svg, .exam-time-box svg, .exam-col-loc svg {
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.exam-col-loc {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.835rem;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.dark .exam-col-loc {
+  color: #94a3b8;
+}
+
+.exam-col-countdown {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.exam-countdown-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(0, 102, 164, 0.1);
+  color: var(--theme-color-primary);
+  border: 1px solid rgba(0, 102, 164, 0.25);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  transition: all 0.2s ease;
+}
+
+.dark .exam-countdown-badge {
+  background: rgba(0, 165, 148, 0.18);
+  color: #5eead4;
+  border-color: rgba(0, 165, 148, 0.35);
+}
+
+.exam-countdown-badge.cd-urgent {
+  background: rgba(239, 68, 68, 0.12) !important;
+  color: #dc2626 !important;
+  border-color: rgba(239, 68, 68, 0.35) !important;
+}
+
+.dark .exam-countdown-badge.cd-urgent {
+  background: rgba(239, 68, 68, 0.25) !important;
+  color: #fca5a5 !important;
+}
+
+.exam-countdown-badge.cd-passed {
+  background: rgba(148, 163, 184, 0.12) !important;
+  color: #64748b !important;
+  border-color: rgba(148, 163, 184, 0.25) !important;
+}
+
+/* ریسپانسیو ردیف امتحانات در تبلت و موبایل */
+@media (max-width: 860px) {
+  .exam-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.1rem;
+  }
+  .exam-col-schedule {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .exam-col-countdown {
+    justify-content: flex-start;
+    margin-top: 0.25rem;
+  }
+}
+
+.schedule-toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #0f172a;
+  color: #ffffff;
+  padding: 0.75rem 1.4rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.dark .schedule-toast {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.schedule-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* =========================================================
+   🏠 استایل‌های اختصاصی صفحه اصلی مدرن (Home Modern Polish)
+   ========================================================= */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 1.5rem 0 3rem 0;
+}
+
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(0, 102, 164, 0.08) 0%, rgba(0, 165, 148, 0.08) 50%, rgba(254, 40, 162, 0.06) 100%);
+  border: 1px solid rgba(0, 102, 164, 0.2);
+  border-radius: 1.5rem;
+  padding: 2.25rem 2rem;
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.dark .home-hero {
+  background: linear-gradient(135deg, rgba(0, 102, 164, 0.2) 0%, rgba(0, 165, 148, 0.15) 50%, rgba(254, 40, 162, 0.12) 100%);
+  border-color: rgba(0, 165, 148, 0.25);
+  box-shadow: 0 12px 36px -12px rgba(0, 0, 0, 0.5);
+}
+
+.home-hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.home-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--theme-color-primary);
+  background: rgba(0, 102, 164, 0.12);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 102, 164, 0.2);
+}
+
+.dark .home-badge {
+  color: var(--theme-color-info);
+  background: rgba(0, 165, 148, 0.2);
+  border-color: rgba(0, 165, 148, 0.3);
+}
+
+.home-title {
+  font-size: 2.1rem !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+  margin: 0 !important;
+  background: linear-gradient(to left, var(--theme-color-primary), var(--theme-color-info));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .home-title {
+  background: linear-gradient(to left, #38bdf8, var(--theme-color-info), var(--theme-color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-desc {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #334155;
+  margin: 0;
+  max-width: 52rem;
+}
+
+.dark .home-desc {
+  color: #cbd5e1;
+}
+
+.home-media-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem auto 1.75rem auto;
+  width: 100%;
+}
+
+.home-media-box {
+  max-width: 260px;
+  width: 100%;
+  border-radius: 1.35rem;
+  overflow: hidden !important;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: radial-gradient(white, black);
+  isolation: isolate;
+  border: 2px solid rgba(0, 102, 164, 0.25);
+  box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #000000;
+}
+
+.home-media-box:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 36px -10px rgba(0, 102, 164, 0.35);
+  border-color: var(--theme-color-primary);
+}
+
+.dark .home-media-box {
+  border-color: rgba(0, 165, 148, 0.3);
+  box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.6);
+}
+
+.dark .home-media-box:hover {
+  border-color: var(--theme-color-info);
+  box-shadow: 0 16px 40px -10px rgba(0, 165, 148, 0.4);
+}
+
+.home-media-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 1.35rem;
+  overflow: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 1.25rem 0 1.75rem 0;
+}
+
+.home-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 0.65rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  line-height: 1.2;
+}
+
+.home-btn:active {
+  transform: scale(0.97);
+}
+
+.home-btn-github {
+  background: #1f2937 !important;
+  color: #ffffff !important;
+  border: 1px solid #374151 !important;
+}
+
+.dark .home-btn-github {
+  background: #111827 !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.home-btn-github:hover {
+  background: #000000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.home-btn-linkedin {
+  background: #0a66c2 !important;
+  color: #ffffff !important;
+  border: 1px solid #0a66c2 !important;
+}
+
+.home-btn-linkedin:hover {
+  background: #004182 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(10, 102, 194, 0.35);
+}
+
+/* تراز کامل و متقارن دکمه‌ها در موبایل */
+.home-btn svg,
+.home-btn .home-btn-icon {
+  flex-shrink: 0;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .home-actions {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+    margin: 1.25rem 0 1.75rem 0 !important;
+  }
+  .home-actions .home-btn {
+    width: 100% !important;
+    min-height: 44px !important;
+    height: 100% !important;
+    padding: 0.65rem 0.45rem !important;
+    font-size: 0.825rem !important;
+    text-align: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    gap: 0.45rem !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .home-actions .home-btn {
+    font-size: 0.76rem !important;
+    padding: 0.6rem 0.25rem !important;
+    gap: 0.35rem !important;
+  }
+  .home-actions .home-btn svg,
+  .home-actions .home-btn .home-btn-icon {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+/* بنر دسترسی سریع برنامه در صفحه اصلی */
+.schedule-featured-banner {
+  padding: 1.35rem 1.65rem;
+  background: linear-gradient(135deg, rgba(0, 102, 164, 0.08), rgba(0, 165, 148, 0.08));
+  border: 1px solid rgba(0, 102, 164, 0.25);
+  border-radius: 1.15rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  backdrop-filter: blur(8px);
+}
+
+.dark .schedule-featured-banner {
+  background: linear-gradient(135deg, rgba(0, 102, 164, 0.2), rgba(0, 165, 148, 0.16));
+  border-color: rgba(0, 165, 148, 0.35);
+}
+
+.schedule-featured-banner .banner-title {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--theme-color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.dark .schedule-featured-banner .banner-title {
+  color: #38bdf8;
+}
+
+.schedule-featured-banner .banner-sub {
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.dark .schedule-featured-banner .banner-sub {
+  color: #cbd5e1;
+}
+
+.schedule-featured-banner .banner-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--theme-color-primary);
+  color: #ffffff !important;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.625rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 14px rgba(0, 102, 164, 0.35);
+  transition: all 0.2s ease;
+}
+
+.schedule-featured-banner .banner-btn:hover {
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+}
+
+/* شبکه کارت‌های مباحث درسی در صفحه اصلی */
+.subjects-section-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 1.5rem 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1e293b;
+}
+
+.dark .subjects-section-title {
+  color: #f8fafc;
+}
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.subject-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 1rem;
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.dark .subject-card {
+  background: rgba(30, 41, 59, 0.45);
+  border-color: rgba(51, 65, 85, 0.75);
+}
+
+.subject-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -5px rgba(0, 0, 0, 0.08);
+  border-color: var(--theme-color-primary);
+}
+
+.dark .subject-card:hover {
+  box-shadow: 0 12px 28px -5px rgba(0, 0, 0, 0.5);
+  border-color: var(--theme-color-info);
+}
+
+.subject-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 102, 164, 0.1);
+  color: var(--theme-color-primary);
+  font-size: 1.35rem;
+}
+
+.dark .subject-card-icon {
+  background: rgba(0, 165, 148, 0.18);
+  color: var(--theme-color-info);
+}
+
+.subject-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1e293b;
+}
+
+.dark .subject-card-title {
+  color: #f8fafc;
+}
+
+.subject-card-desc {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.dark .subject-card-desc {
+  color: #94a3b8;
+}
+
+.subject-card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--theme-color-primary);
+}
+
+.dark .subject-card-footer {
+  color: var(--theme-color-info);
+}
+
+/* استایل لینک‌های ویکی هنوز ایجاد نشده (سبک اوبسیدین) */
+.unresolved-wikilink {
+  color: #94a3b8 !important;
+  border-bottom: 1px dashed rgba(148, 163, 184, 0.6) !important;
+  cursor: help;
+  padding: 0 0.15rem;
+  opacity: 0.85;
+}
+
+.dark .unresolved-wikilink {
+  color: #64748b !important;
+  border-bottom-color: rgba(100, 116, 139, 0.6) !important;
+}
+
+/* حالت پرینت */
+@media print {
+  header, nav, aside, footer, .schedule-toolbar, .schedule-actions, .home-actions {
+    display: none !important;
+  }
+  .schedule-wrapper, .home-container {
+    margin: 0 !important;
+  }
+  .schedule-table-card {
+    border: 1px solid #cbd5e1 !important;
+    box-shadow: none !important;
+  }
+  .course-badge-box {
+    border: 1px solid #94a3b8 !important;
+    box-shadow: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+/* =========================================================
+   💻 تم کامل سینتکس هایلایت مونوکای (Monokai Syntax Highlighting)
+   ========================================================= */
+pre, .codehilite, .highlight pre, pre:has(> code) {
+  background-color: #272822 !important;
+  color: #f8f8f2 !important;
+  border-radius: 0.85rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
+  direction: ltr !important;
+  text-align: left !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  padding: 1rem !important;
+  line-height: 1.55 !important;
+}
+
+pre code, .codehilite code, .highlight code {
+  background: transparent !important;
+  color: #f8f8f2 !important;
+  font-family: inherit !important;
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* رنگ‌های پالت مونوکای */
+.codehilite .hll, .highlight .hll { background-color: #49483e }
+.codehilite .c, .highlight .c, .codehilite .ch, .highlight .ch, .codehilite .cm, .highlight .cm, 
+.codehilite .c1, .highlight .c1, .codehilite .cs, .highlight .cs { color: #75715e; font-style: italic; } /* کامنت‌ها */
+.codehilite .k, .highlight .k, .codehilite .kd, .highlight .kd, .codehilite .kn, .highlight .kn, 
+.codehilite .kp, .highlight .kp, .codehilite .kr, .highlight .kr { color: #f92672; font-weight: bold; } /* کلمات کلیدی */
+.codehilite .kc, .highlight .kc { color: #66d9ef; font-weight: bold; } /* true, false, null */
+.codehilite .kt, .highlight .kt { color: #66d9ef; }
+.codehilite .s, .highlight .s, .codehilite .sa, .highlight .sa, .codehilite .sb, .highlight .sb, 
+.codehilite .sc, .highlight .sc, .codehilite .dl, .highlight .dl, .codehilite .sd, .highlight .sd, 
+.codehilite .s2, .highlight .s2, .codehilite .se, .highlight .se, .codehilite .sh, .highlight .sh, 
+.codehilite .si, .highlight .si, .codehilite .sx, .highlight .sx, .codehilite .sr, .highlight .sr, 
+.codehilite .s1, .highlight .s1, .codehilite .ss, .highlight .ss { color: #e6db74; } /* رشته‌ها و متن */
+.codehilite .m, .highlight .m, .codehilite .mb, .highlight .mb, .codehilite .mf, .highlight .mf, 
+.codehilite .mh, .highlight .mh, .codehilite .mi, .highlight .mi, .codehilite .il, .highlight .il, 
+.codehilite .mo, .highlight .mo { color: #ae81ff; } /* اعداد */
+.codehilite .na, .highlight .na { color: #a6e22e; }
+.codehilite .nc, .highlight .nc { color: #a6e22e; font-weight: bold; } /* کلاس‌ها */
+.codehilite .nd, .highlight .nd { color: #a6e22e; }
+.codehilite .ne, .highlight .ne { color: #a6e22e; font-weight: bold; }
+.codehilite .nf, .highlight .nf, .codehilite .fm, .highlight .fm { color: #a6e22e; } /* توابع */
+.codehilite .no, .highlight .no { color: #66d9ef; }
+.codehilite .nv, .highlight .nv, .codehilite .vc, .highlight .vc, .codehilite .vg, .highlight .vg, 
+.codehilite .vi, .highlight .vi, .codehilite .vm, .highlight .vm { color: #f8f8f2; } /* متغیرها */
+.codehilite .ow, .highlight .ow { color: #f92672; font-weight: bold; } /* عملگرها */
+.codehilite .p, .highlight .p { color: #f8f8f2; } /* پرانتزها و براکت‌ها */
+.codehilite .o, .highlight .o { color: #f92672; } /* عملگرهای ریاضی و منطقی */
+.codehilite .ge, .highlight .ge { font-style: italic; }
+.codehilite .gs, .highlight .gs { font-weight: bold; }
+
+/* =========================================================
+   📑 استایل کارت‌های شکیل برای فهرست مطالب (Resource Link Cards)
+   ========================================================= */
+.resource-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1rem 0 2rem 0;
+  padding: 0;
+  list-style: none !important;
+}
+
+.resource-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.95rem 1.25rem;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 0.875rem;
+  text-decoration: none !important;
+  color: #1e293b !important;
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+  gap: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.dark .resource-card {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(51, 65, 85, 0.75);
+  color: #f8fafc !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.resource-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--theme-color-primary);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 20px -4px rgba(0, 102, 164, 0.15);
+}
+
+.dark .resource-card:hover {
+  border-color: var(--theme-color-info);
+  background: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 8px 22px -4px rgba(0, 165, 148, 0.25);
+}
+
+.resource-card-main {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.resource-card-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 0.65rem;
+  background: rgba(0, 102, 164, 0.1);
+  color: var(--theme-color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.dark .resource-card-icon {
+  background: rgba(0, 165, 148, 0.18);
+  color: var(--theme-color-info);
+}
+
+.resource-card:hover .resource-card-icon {
+  transform: scale(1.08);
+}
+
+.resource-card-title {
+  font-weight: 600;
+  font-size: 0.93rem;
+  line-height: 1.5;
+  color: inherit;
+}
+
+.resource-card-side {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.resource-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  background: rgba(0, 102, 164, 0.08);
+  color: var(--theme-color-primary);
+  border: 1px solid rgba(0, 102, 164, 0.2);
+  white-space: nowrap;
+}
+
+.dark .resource-badge {
+  background: rgba(0, 165, 148, 0.15);
+  color: #5eead4;
+  border-color: rgba(0, 165, 148, 0.3);
+}
+
+.resource-badge-exam {
+  background: rgba(225, 29, 72, 0.1);
+  color: #e11d48;
+  border-color: rgba(225, 29, 72, 0.25);
+}
+
+.dark .resource-badge-exam {
+  background: rgba(255, 71, 87, 0.18);
+  color: #fca5a5;
+  border-color: rgba(255, 71, 87, 0.35);
+}
+
+.resource-open-icon {
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.resource-card:hover .resource-open-icon {
+  color: var(--theme-color-primary);
+  transform: translateX(-3px);
+}
+
+.dark .resource-card:hover .resource-open-icon {
+  color: var(--theme-color-info);
+}
+
+@media (max-width: 640px) {
+  .resource-card {
+    padding: 0.8rem 0.9rem;
+    gap: 0.65rem;
+  }
+  .resource-card-title {
+    font-size: 0.85rem;
+  }
+  .resource-badge {
+    font-size: 0.68rem;
+    padding: 0.15rem 0.45rem;
+  }
+}
+
+/* =========================================================
+   🎨 کارت‌های ویژه پروژه‌ها با تصویر (Project Cards with Image)
+   ========================================================= */
+.project-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 1.15rem;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(8px);
+}
+
+.dark .project-card {
+  background: rgba(30, 41, 59, 0.6);
+  border-color: rgba(51, 65, 85, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--theme-color-primary);
+  box-shadow: 0 14px 30px -8px rgba(0, 102, 164, 0.25);
+}
+
+.dark .project-card:hover {
+  border-color: var(--theme-color-info);
+  box-shadow: 0 14px 30px -8px rgba(0, 165, 148, 0.4);
+}
+
+.project-card-media {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: rgba(248, 250, 252, 0.9);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .project-card-media {
+  background: rgba(15, 23, 42, 0.8);
+  border-bottom-color: rgba(51, 65, 85, 0.7);
+}
+
+.project-card-media img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.75rem;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+
+.project-card:hover .project-card-media img {
+  transform: scale(1.04);
+}
+
+.project-card-body {
+  padding: 1.25rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.project-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.project-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.project-card-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.dark .project-card-title {
+  color: #f8fafc;
+}
+
+.project-card-desc {
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+
+.dark .project-card-desc {
+  color: #cbd5e1;
+}
+
+.project-card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.85rem;
+  border-top: 1px dashed rgba(226, 232, 240, 0.9);
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--theme-color-primary);
+}
+
+.dark .project-card-footer {
+  border-top-color: rgba(51, 65, 85, 0.7);
+  color: var(--theme-color-info);
+}
+
+.project-card-btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover .project-card-btn-text svg {
+  transform: translateX(-3px);
+}
+
+/* کلیک‌پذیری تمام سطح کارت */
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
+}
+
+/* =========================================================
+   📱 بازطراحی فوق‌العاده شکیل منوی موبایل (Premium Mobile Drawer)
+   ========================================================= */
+
+/* دکمه باز کردن منو در نوار بالای سایت */
+#menu-button {
+  background: rgba(0, 102, 164, 0.08) !important;
+  border: 1px solid rgba(0, 102, 164, 0.22) !important;
+  border-radius: 0.65rem !important;
+  padding: 0.35rem 0.75rem !important;
+  color: var(--theme-color-primary) !important;
+  font-weight: 700 !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
+}
+
+.dark #menu-button {
+  background: rgba(0, 165, 148, 0.16) !important;
+  border-color: rgba(0, 165, 148, 0.35) !important;
+  color: var(--theme-color-info) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+}
+
+#menu-button:active {
+  transform: scale(0.94);
+}
+
+/* ساختار تمام‌صفحه و تمیز پنجره دیالوگ منوی موبایل */
+dialog#bottom-sidebar {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100dvh !important;
+  max-width: 100vw !important;
+  max-height: 100dvh !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  outline: none !important;
+  transform: none !important;
+  background: rgba(15, 23, 42, 0.5) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  z-index: 99999 !important;
+  display: none;
+}
+
+dialog#bottom-sidebar[open] {
+  display: flex !important;
+  flex-direction: column !important;
+  animation: mobileNavFade 0.22s ease-out forwards;
+}
+
+@keyframes mobileNavFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.mobile-nav-sheet {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  direction: rtl;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  animation: mobileNavSlide 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.dark .mobile-nav-sheet {
+  background: #0f172a;
+}
+
+@keyframes mobileNavSlide {
+  from { transform: translateY(-12px); opacity: 0.9; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* هدر منوی موبایل */
+.mobile-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  background: rgba(248, 250, 252, 0.8);
+  backdrop-filter: blur(10px);
+  flex-shrink: 0;
+}
+
+.dark .mobile-nav-header {
+  background: rgba(30, 41, 59, 0.7);
+  border-bottom-color: rgba(51, 65, 85, 0.8);
+}
+
+.mobile-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mobile-nav-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 0.65rem;
+  background: rgba(0, 102, 164, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.dark .mobile-nav-logo {
+  background: rgba(0, 165, 148, 0.18);
+}
+
+.mobile-nav-title {
+  display: block;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.dark .mobile-nav-title {
+  color: #f8fafc;
+}
+
+.mobile-nav-subtitle {
+  display: block;
+  font-size: 0.72rem;
+  color: #64748b;
+  margin-top: 0.1rem;
+}
+
+.dark .mobile-nav-subtitle {
+  color: #94a3b8;
+}
+
+.mobile-nav-close-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 0.5rem;
+  background: rgba(241, 245, 249, 0.9);
+  border: 1px solid rgba(203, 213, 225, 0.8);
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dark .mobile-nav-close-btn {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: rgba(51, 65, 85, 0.9);
+  color: #cbd5e1;
+}
+
+.mobile-nav-close-btn:hover {
+  background: #fee2e2;
+  color: #ef4444;
+  transform: rotate(90deg);
+}
+
+.dark .mobile-nav-close-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+}
+
+/* بدنه اسکرول‌شونده */
+.mobile-nav-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.25rem 1.25rem 2rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.mobile-nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-nav-group-title {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding: 0 0.25rem;
+}
+
+.dark .mobile-nav-group-title {
+  color: #94a3b8;
+}
+
+.mobile-nav-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.mobile-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 0.85rem;
+  background: rgba(248, 250, 252, 0.8);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 0.75rem;
+  color: #334155 !important;
+  text-decoration: none !important;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.dark .mobile-nav-item {
+  background: rgba(30, 41, 59, 0.45);
+  border-color: rgba(51, 65, 85, 0.7);
+  color: #e2e8f0 !important;
+}
+
+.mobile-nav-item:hover, .mobile-nav-item.active {
+  background: rgba(0, 102, 164, 0.1) !important;
+  border-color: var(--theme-color-primary) !important;
+  color: var(--theme-color-primary) !important;
+  transform: translateY(-1px);
+}
+
+.dark .mobile-nav-item:hover, .dark .mobile-nav-item.active {
+  background: rgba(0, 165, 148, 0.18) !important;
+  border-color: var(--theme-color-info) !important;
+  color: var(--theme-color-info) !important;
+}
+
+.mobile-nav-item-icon {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  opacity: 0.85;
+}
+
+/* زیرلیست‌های دسته‌ها */
+.mobile-nav-sublist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: rgba(248, 250, 252, 0.5);
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  border-radius: 0.85rem;
+  padding: 0.4rem;
+}
+
+.dark .mobile-nav-sublist {
+  background: rgba(30, 41, 59, 0.3);
+  border-color: rgba(51, 65, 85, 0.6);
+}
+
+.mobile-nav-subitem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.6rem;
+  color: #475569 !important;
+  text-decoration: none !important;
+  font-size: 0.865rem;
+  font-weight: 600;
+  transition: all 0.18s ease;
+  gap: 0.5rem;
+}
+
+.dark .mobile-nav-subitem {
+  color: #cbd5e1 !important;
+}
+
+.mobile-nav-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #94a3b8;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.mobile-nav-subitem-text {
+  flex: 1;
+}
+
+.mobile-nav-arrow {
+  color: #94a3b8;
+  opacity: 0.6;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.mobile-nav-subitem:hover, .mobile-nav-subitem.active {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--theme-color-primary) !important;
+  padding-right: 1.05rem;
+}
+
+.dark .mobile-nav-subitem:hover, .dark .mobile-nav-subitem.active {
+  background: rgba(51, 65, 85, 0.6);
+  color: var(--theme-color-info) !important;
+}
+
+.mobile-nav-subitem:hover .mobile-nav-bullet, .mobile-nav-subitem.active .mobile-nav-bullet {
+  background: var(--theme-color-primary);
+  transform: scale(1.4);
+}
+
+.dark .mobile-nav-subitem:hover .mobile-nav-bullet, .dark .mobile-nav-subitem.active .mobile-nav-bullet {
+  background: var(--theme-color-info);
+}
+
+.mobile-nav-subitem:hover .mobile-nav-arrow {
+  opacity: 1;
+  transform: translateX(-3px);
+  color: var(--theme-color-primary);
+}
+
+.dark .mobile-nav-subitem:hover .mobile-nav-arrow {
+  color: var(--theme-color-info);
+}
+
+.mobile-nav-nested-group {
+  margin: 0.35rem 0.6rem;
+  padding-right: 0.6rem;
+  border-right: 2px solid rgba(203, 213, 225, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dark .mobile-nav-nested-group {
+  border-right-color: rgba(51, 65, 85, 0.8);
+}
+
+.mobile-nav-nested-title {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #64748b;
+  padding: 0.2rem 0.4rem;
+}
+
+.dark .mobile-nav-nested-title {
+  color: #94a3b8;
+}
+
+/* فوتر منوی موبایل */
+.mobile-nav-footer {
+  padding: 0.9rem 1.25rem;
+  border-top: 1px solid rgba(226, 232, 240, 0.9);
+  background: rgba(248, 250, 252, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  gap: 1rem;
+}
+
+.dark .mobile-nav-footer {
+  background: rgba(30, 41, 59, 0.7);
+  border-top-color: rgba(51, 65, 85, 0.8);
+}
+
+.mobile-nav-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mobile-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+  background: #1e293b;
+  color: #ffffff !important;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.mobile-social-linkedin {
+  background: #0a66c2 !important;
+}
+
+.mobile-social-link:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.mobile-nav-credits {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-weight: 500;
 }

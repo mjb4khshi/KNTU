@@ -4,13 +4,23 @@ import re
 _file_index = {}
 
 
+def _norm(s):
+    s = s.strip().lower()
+    s = s.replace('–', '-').replace('—', '-')
+    s = re.sub(r'\s+', ' ', s)
+    return s
+
+
 def on_files(files, config):
-    """نگاشتی از basename فایل (case-insensitive) به آبجکت File واقعی آن می‌سازد."""
+    """نگاشتی از basename فایل (case-insensitive و نرمال‌شده) به آبجکت File واقعی آن می‌سازد."""
     global _file_index
     _file_index = {}
     for f in files:
-        key = os.path.basename(f.src_uri).lower()
-        _file_index.setdefault(key, []).append(f)
+        base = os.path.basename(f.src_uri)
+        root, _ = os.path.splitext(base)
+        for candidate in [base.lower(), root.lower(), _norm(base), _norm(root)]:
+            if candidate:
+                _file_index.setdefault(candidate, []).append(f)
     return files
 
 
@@ -20,8 +30,19 @@ _MD_LINK_RE = re.compile(r'(!?\[[^\]]*\]\()([^)]+)(\))')
 
 
 def _resolve(name, current_file):
-    """فایل مقصد را با نام (بدون توجه به بزرگ/کوچکی حروف) پیدا و URL نسبی درست را برمی‌گرداند."""
-    matches = _file_index.get(os.path.basename(name.strip()).lower())
+    """فایل مقصد را با نام (بدون توجه به بزرگ/کوچکی حروف و نرمال‌سازی خط تیره و فواصل) پیدا می‌کند."""
+    raw = os.path.basename(name.strip())
+    candidates = [
+        raw.lower(),
+        raw.lower() + '.md',
+        _norm(raw),
+        _norm(raw) + '.md',
+    ]
+    matches = None
+    for cand in candidates:
+        if cand in _file_index:
+            matches = _file_index[cand]
+            break
     if not matches:
         return None
     if len(matches) > 1:
@@ -43,24 +64,27 @@ def _fix_backslashes(raw):
 
 
 def on_page_markdown(markdown, page, config, files):
-    # ۱) عکس‌های امبدشده به سبک اوبسیدین: ![[Group 1.png]]  یا  ![[Group 1.png|300]]
+    # ۱) عکس‌های امبدشده به سبک اوبسیدین: ![[Group 1.png]] یا ![[Group 1.png|300]]
     def _img_repl(m):
         name = m.group(1)
         url = _resolve(name, page.file)
         if url is None:
-            return m.group(0)   # پیدا نشد؛ دست‌نخورده بماند تا خودِ mkdocs هشدار بدهد
+            return m.group(0)
         alt = os.path.splitext(os.path.basename(name))[0]
         return f'![{alt}]({url})'
 
     markdown = _WIKI_EMBED_RE.sub(_img_repl, markdown)
 
-    # ۲) لینک‌های متنی به سبک اوبسیدین: [[صفحه]]  یا  [[صفحه|عنوان دلخواه]]
+    # ۲) لینک‌های متنی به سبک اوبسیدین: [[صفحه]] یا [[صفحه|عنوان دلخواه]]
     def _link_repl(m):
-        name, _anchor, alias = m.group(1), m.group(2), m.group(3)
+        name, anchor, alias = m.group(1), m.group(2), m.group(3)
         url = _resolve(name, page.file)
         if url is None:
-            return m.group(0)
-        return f'[{alias or name}]({url})'
+            # اگر هنوز فایلی برای این یادداشت ساخته نشده، مانند اوبسیدین نمایش داده شود تا خطای ۴۰۴ ایجاد نکند
+            label = alias or name
+            return f'<span class="unresolved-wikilink" title="یادداشت هنوز ایجاد نشده است">{label}</span>'
+        anchor_part = f'#{anchor}' if anchor else ''
+        return f'[{alias or name}]({url}{anchor_part})'
 
     markdown = _WIKI_LINK_RE.sub(_link_repl, markdown)
 

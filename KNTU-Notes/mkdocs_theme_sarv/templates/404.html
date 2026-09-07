@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="persian-dark">
+<head>
+  <meta charset="UTF-8">
+  <title>صفحه مورد نظر یافت نشد - ۴۰۴</title>
+  <link rel="stylesheet" href="{{ 'assets/css/sarv-tokens.css' | url }}">
+  <link rel="stylesheet" href="{{ 'assets/css/sarv-core.css' | url }}">
+  <link rel="stylesheet" href="{{ 'assets/css/sarv-components.css' | url }}">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .error-card {
+      max-width: 520px;
+      padding: 2.5rem 2rem;
+      border-radius: var(--radius-card);
+      background: color-mix(in oklab, var(--color-base) 85%, transparent);
+      border: 1px solid color-mix(in oklab, var(--color-base-500) 60%, transparent);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+    }
+    .error-code {
+      font-size: 5.5rem;
+      font-weight: 900;
+      line-height: 1;
+      color: var(--color-primary);
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-card">
+    <div class="error-code">۴۰۴</div>
+    <h2 style="font-weight:700; margin-bottom: 0.75rem;">صفحه مورد نظر پیدا نشد!</h2>
+    <p style="color: var(--color-neutral); margin-bottom: 2rem;">
+      ممکن است این یادداشت جابجا شده باشد، یا آدرس را اشتباه وارد کرده باشید.
+    </p>
+    <a href="{{ '' | url }}" class="btn btn-relief btn-primary">
+      بازگشت به صفحه اصلی
+    </a>
+  </div>
+</body>
+</html>

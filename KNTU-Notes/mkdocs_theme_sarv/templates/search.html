@@ -1,0 +1,124 @@
+<div id="sarv-search-modal" class="sarv-search-backdrop">
+  <div class="sarv-search-dialog">
+    <div class="sarv-search-header">
+      <div class="input-wrap w-full">
+        <div class="input-box">
+          <div class="input-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <input type="text" id="sarv-search-input" class="input-field" placeholder="جستجو در تمام جزوات، فرمول‌ها و مباحث..." autocomplete="off">
+          <button type="button" id="sarv-search-close" class="sarv-search-close-btn">
+            <kbd>ESC</kbd>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="sarv-search-results" class="sarv-search-results-box">
+      <div class="sarv-search-empty">عبارتی را برای جستجو وارد کنید...</div>
+    </div>
+
+    <div class="sarv-search-footer">
+      <span>راهنما: با کلیدهای <strong>Esc</strong> یا کلیک روی پس‌زمینه پنجره را ببندید.</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.sarv-search-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5rem 1rem 2rem 1rem;
+}
+.sarv-search-backdrop.is-open {
+  display: flex;
+}
+.sarv-search-dialog {
+  width: 100%;
+  max-width: 680px;
+  max-height: 80vh;
+  background: color-mix(in oklab, var(--color-base) 96%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 80%, transparent);
+  border-radius: var(--radius-card);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: searchFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes searchFadeIn {
+  from { opacity: 0; transform: scale(0.96) translateY(-10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.sarv-search-header {
+  padding: 1.25rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--color-base-500) 40%, transparent);
+}
+.sarv-search-close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 0.75rem;
+}
+.sarv-search-close-btn kbd {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  background: color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 90%, transparent);
+  color: var(--color-neutral);
+}
+.sarv-search-results-box {
+  padding: 1rem 1.25rem;
+  overflow-y: auto;
+  max-height: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.sarv-search-empty {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--color-neutral);
+  font-size: 0.9rem;
+}
+.sarv-search-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-button);
+  background: color-mix(in oklab, var(--color-base-500) 25%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+  text-decoration: none !important;
+  color: inherit;
+  transition: all 0.15s ease;
+}
+.sarv-search-item:hover {
+  border-color: var(--color-primary);
+  background: color-mix(in oklab, var(--color-primary) 12%, transparent);
+}
+.sarv-search-item-title {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--color-primary);
+}
+.sarv-search-item-snippet {
+  font-size: 0.8rem;
+  color: color-mix(in oklab, var(--color-base-content) 75%, transparent);
+  line-height: 1.5;
+}
+.sarv-search-footer {
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid color-mix(in oklab, var(--color-base-500) 40%, transparent);
+  font-size: 0.78rem;
+  color: var(--color-neutral);
+}
+</style>

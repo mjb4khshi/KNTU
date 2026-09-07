@@ -1,0 +1,1377 @@
+/* =========================================================
+   🌿 Sarv UI Components (Pure Solid Aesthetics, Zero Gradients)
+   Buttons, Inputs, Select, Badges, Checkboxes,
+   Schedule, Resource & Subject Cards
+   Designed & Built with care by MJ (v0.3.1)
+   ========================================================= */
+
+/* --- 1. Tactile 3D Buttons (btn-relief) --- */
+.btn {
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: var(--radius-button);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  border: none;
+  text-decoration: none !important;
+  padding: 0.5rem 1.15rem;
+  font-size: 0.875rem;
+  user-select: none;
+  line-height: 1.25rem;
+}
+
+.btn:hover {
+  filter: brightness(1.08);
+}
+.btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in oklab, currentColor 35%, transparent);
+}
+
+/* 3D Tactile Relief Style */
+.btn-relief {
+  background-color: var(--btn-bg, var(--color-primary));
+  color: var(--btn-color, var(--color-primary-content));
+  box-shadow: 0 4px 0 0 color-mix(in oklab, var(--btn-bg, var(--color-primary)) 65%, black);
+  transform: translateY(0);
+}
+.btn-relief:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 5.5px 0 0 color-mix(in oklab, var(--btn-bg, var(--color-primary)) 65%, black);
+}
+.btn-relief:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 transparent;
+}
+
+.btn-primary {
+  --btn-bg: var(--color-primary);
+  --btn-color: var(--color-primary-content, #ffffff);
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  border: 1px solid var(--btn-bg);
+}
+.btn-accent {
+  --btn-bg: var(--color-accent);
+  --btn-color: var(--color-accent-content, #ffffff);
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  border: 1px solid var(--btn-bg);
+}
+.btn-success {
+  --btn-bg: var(--color-success);
+  --btn-color: var(--color-success-content, #ffffff);
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+}
+.btn-warn {
+  --btn-bg: var(--color-warn);
+  --btn-color: var(--color-warn-content, #ffffff);
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+}
+.btn-danger {
+  --btn-bg: var(--color-danger);
+  --btn-color: var(--color-danger-content, #ffffff);
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+}
+.btn-neutral {
+  --btn-bg: color-mix(in oklab, var(--color-base-500) 40%, transparent);
+  --btn-color: var(--color-base-content);
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 70%, transparent);
+}
+.btn-neutral:hover {
+  background-color: color-mix(in oklab, var(--color-base-500) 70%, transparent);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.btn-accent:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 4px 14px color-mix(in oklab, var(--color-accent) 30%, transparent);
+}
+
+.btn-sm {
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  border-radius: calc(var(--radius-button) * 0.75);
+}
+.btn-sm.btn-relief {
+  box-shadow: 0 3px 0 0 color-mix(in oklab, var(--btn-bg, var(--color-primary)) 65%, black);
+}
+.btn-sm.btn-relief:hover {
+  box-shadow: 0 4px 0 0 color-mix(in oklab, var(--btn-bg, var(--color-primary)) 65%, black);
+}
+.btn-sm.btn-relief:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 0 transparent;
+}
+
+/* --- 2. Animated Center-Expanding Focus Input (.input-wrap) --- */
+.input-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  align-self: center;
+  justify-content: center;
+  color: var(--color-base-content);
+  transition: all 0.25s ease;
+  width: 100%;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: var(--radius-input);
+  background: color-mix(in oklab, var(--color-base-500) 45%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 70%, transparent);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  overflow: hidden;
+}
+
+.input-box::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  border-radius: var(--radius-input);
+  border-bottom: 2.5px solid var(--color-primary) !important;
+  box-sizing: border-box;
+  pointer-events: none;
+  clip-path: inset(0 50% 0 50%);
+  transition: clip-path 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 4;
+}
+
+.input-box:focus-within {
+  border-color: transparent;
+  background: color-mix(in oklab, var(--color-base-500) 70%, transparent);
+}
+
+.input-box:focus-within::after {
+  clip-path: inset(0 0% 0 0%);
+}
+
+.input-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.75rem;
+  color: var(--color-neutral);
+  pointer-events: none;
+}
+
+.input-field {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--color-base-content);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  padding: 0.55rem 0.5rem;
+  outline: none;
+  direction: rtl;
+}
+.input-field::placeholder {
+  color: var(--color-neutral);
+  opacity: 0.85;
+}
+
+.input-kbd {
+  margin-left: 0.65rem;
+  padding: 0.15rem 0.45rem;
+  font-size: 0.7rem;
+  background: color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 90%, transparent);
+  border-radius: 6px;
+  color: var(--color-neutral);
+  pointer-events: none;
+}
+
+/* --- 3. Custom Theme Switcher Dropdown (.select) --- */
+.sarv-select-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.sarv-select-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-button);
+  background: color-mix(in oklab, var(--color-base-500) 50%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 70%, transparent);
+  color: var(--color-base-content);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.825rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+.sarv-select-trigger:hover {
+  background: color-mix(in oklab, var(--color-base-500) 80%, transparent);
+  border-color: var(--color-primary);
+}
+
+.sarv-theme-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.sarv-select-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 180px;
+  max-height: 320px;
+  overflow-y: auto;
+  background: var(--color-base);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 80%, transparent);
+  border-radius: var(--radius-card);
+  padding: 0.4rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+}
+.sarv-select-menu.is-open {
+  display: flex;
+  animation: sarvDropdownFade 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes sarvDropdownFade {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sarv-select-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: calc(var(--radius-button) * 0.7);
+  color: var(--color-base-content);
+  font-size: 0.825rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.sarv-select-item:hover, .sarv-select-item.is-selected {
+  background: color-mix(in oklab, var(--color-primary) 15%, transparent);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* --- 4. Badges (.badge) --- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.72rem;
+  line-height: 1rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: var(--radius-badge);
+  gap: 0.3rem;
+}
+.badge-soft {
+  background: color-mix(in oklab, var(--badge-c, var(--color-primary)) 12%, transparent);
+  color: var(--badge-c, var(--color-primary));
+  border: 1px solid color-mix(in oklab, var(--badge-c, var(--color-primary)) 25%, transparent);
+}
+.badge-soft.badge-primary { --badge-c: var(--color-primary); }
+.badge-soft.badge-accent { --badge-c: var(--color-accent); }
+.badge-soft.badge-success { --badge-c: var(--color-success); }
+.badge-soft.badge-warn { --badge-c: var(--color-warn); }
+.badge-soft.badge-info { --badge-c: var(--color-info); }
+.badge-soft.badge-danger { --badge-c: var(--color-danger); }
+
+/* --- 5. Animated Task List Checkboxes --- */
+.task-list-item {
+  list-style-type: none !important;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0.4rem 0;
+}
+
+.sarv-checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-checkbox);
+  background: color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  border: 2px solid color-mix(in oklab, var(--color-base-500) 90%, transparent);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+.sarv-checkbox.is-checked {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.sarv-checkbox svg {
+  width: 13px;
+  height: 13px;
+  stroke: var(--color-primary-content);
+  stroke-width: 2.75;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cb-animate {
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  transition: stroke-dashoffset 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.is-checked .cb-animate {
+  stroke-dashoffset: 0;
+}
+
+/* --- 6. Schedule Page Components (Solid Modern Look) --- */
+.schedule-wrapper {
+  margin: 1.5rem 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.schedule-hero {
+  border: 1px solid color-mix(in oklab, var(--color-primary) 30%, transparent);
+  border-radius: var(--radius-card);
+  padding: 1.75rem;
+  background: color-mix(in oklab, var(--color-primary) 6%, var(--color-base));
+}
+.schedule-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: color-mix(in oklab, var(--color-primary) 12%, transparent);
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  margin-bottom: 0.75rem;
+  border: 1px solid color-mix(in oklab, var(--color-primary) 25%, transparent);
+}
+.schedule-hero-desc {
+  color: color-mix(in oklab, var(--color-base-content) 75%, transparent);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.schedule-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+.schedule-stat-card {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-card);
+  background: color-mix(in oklab, var(--color-base-500) 25%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 60%, transparent);
+}
+.schedule-stat-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+.schedule-stat-label {
+  font-size: 0.8rem;
+  color: var(--color-neutral);
+}
+
+.schedule-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.schedule-view-switcher {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: var(--radius-button);
+  background: color-mix(in oklab, var(--color-base-500) 40%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 60%, transparent);
+}
+.schedule-tab-btn {
+  padding: 0.4rem 1rem;
+  border-radius: calc(var(--radius-button) * 0.75);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: var(--color-base-content);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.schedule-tab-btn.active {
+  background: var(--color-primary);
+  color: var(--color-primary-content);
+}
+
+/* Schedule Hero & Stats */
+.schedule-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.schedule-hero {
+  background: color-mix(in oklab, var(--color-base-500) 25%, var(--color-base));
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 65%, transparent);
+  border-radius: 20px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+.schedule-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: color-mix(in oklab, var(--color-primary) 14%, transparent);
+  color: var(--color-primary);
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+}
+.schedule-hero h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0 0 0.65rem 0;
+  color: var(--color-base-content);
+}
+.schedule-hero-desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: color-mix(in oklab, var(--color-base-content) 75%, transparent);
+  margin: 0;
+}
+.schedule-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+.schedule-stat-card {
+  background: color-mix(in oklab, var(--color-base-500) 25%, var(--color-base));
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  border-radius: 16px;
+  padding: 1.15rem;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.schedule-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 20px -4px color-mix(in oklab, var(--color-primary) 20%, transparent);
+}
+.schedule-stat-num {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+.schedule-stat-label {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: color-mix(in oklab, var(--color-base-content) 70%, transparent);
+}
+
+/* Schedule Toolbar & View Switcher */
+.schedule-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: color-mix(in oklab, var(--color-base-500) 20%, var(--color-base));
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  padding: 0.65rem 0.85rem;
+  border-radius: 16px;
+}
+.schedule-view-switcher {
+  display: inline-flex;
+  background: color-mix(in oklab, var(--color-base-500) 40%, transparent);
+  padding: 0.25rem;
+  border-radius: 12px;
+  gap: 0.25rem;
+}
+.schedule-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.95rem;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: color-mix(in oklab, var(--color-base-content) 75%, transparent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+.schedule-tab-btn.active {
+  background: var(--color-base);
+  color: var(--color-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.schedule-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.schedule-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.95rem;
+  border-radius: var(--radius-button);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 70%, transparent);
+  background: color-mix(in oklab, var(--color-base-500) 30%, var(--color-base));
+  color: var(--color-base-content);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+.schedule-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.schedule-btn-primary {
+  background: var(--color-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--color-primary) !important;
+}
+.schedule-btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+.schedule-toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--color-base-content);
+  color: var(--color-base);
+  padding: 0.65rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+  z-index: 99999;
+}
+.schedule-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Schedule Table Card & Seamless Container (No double borders, no upper gap) */
+.schedule-table-card {
+  border-radius: var(--radius-card);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 65%, transparent);
+  background: var(--color-base);
+  overflow: hidden;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+.schedule-table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+.schedule-table {
+  width: 100%;
+  min-width: 960px;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  text-align: center;
+  font-size: 0.85rem;
+  display: table !important;
+}
+.schedule-table th, .schedule-table td {
+  padding: 0.75rem 0.6rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--color-base-500) 45%, transparent);
+  border-left: 1px solid color-mix(in oklab, var(--color-base-500) 45%, transparent);
+  min-width: 155px;
+  vertical-align: middle;
+}
+.schedule-table th:last-child, .schedule-table td:last-child {
+  border-left: none;
+}
+.schedule-table tr:last-child td {
+  border-bottom: none;
+}
+.schedule-table th:first-child, .schedule-table td:first-child {
+  width: 125px;
+  min-width: 125px;
+}
+.schedule-table th {
+  background: color-mix(in oklab, var(--color-primary) 8%, var(--color-base));
+  font-weight: 700;
+  color: var(--color-base-content);
+  padding: 0.95rem 0.75rem;
+  border-top: none;
+}
+/* Live Schedule & Active Highlights */
+th.schedule-col-today {
+  background: color-mix(in oklab, var(--color-primary) 18%, var(--color-base)) !important;
+  color: var(--color-primary) !important;
+  border-bottom: 2px solid var(--color-primary) !important;
+}
+td.schedule-col-today {
+  background: color-mix(in oklab, var(--color-primary) 8%, transparent) !important;
+}
+
+.today-tag {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.schedule-time-cell {
+  background: transparent !important;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.65rem 0.5rem !important;
+  width: 125px;
+}
+.schedule-time-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.75rem;
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--color-base-500) 22%, var(--color-base));
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 55%, transparent);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  direction: rtl;
+}
+.schedule-time-badge .time-main {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--color-base-content);
+  white-space: nowrap;
+}
+
+.schedule-row-now {
+  background: color-mix(in oklab, var(--color-primary) 10%, transparent) !important;
+}
+.schedule-row-now .schedule-time-cell {
+  background: color-mix(in oklab, var(--color-primary) 15%, var(--color-base)) !important;
+  color: var(--color-primary) !important;
+  font-weight: 800 !important;
+  border-right: 3px solid var(--color-primary) !important;
+}
+
+.now-pulse-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 0.68rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  margin-top: 0.35rem;
+  animation: pulseNow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  direction: rtl;
+}
+
+@keyframes pulseNow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.82; transform: scale(0.96); }
+}
+
+.schedule-row-upcoming {
+  background: color-mix(in oklab, var(--color-primary) 5%, transparent) !important;
+}
+.schedule-row-upcoming .schedule-time-cell {
+  background: color-mix(in oklab, var(--color-primary) 12%, var(--color-base)) !important;
+  color: var(--color-primary) !important;
+  font-weight: 700 !important;
+}
+
+.upcoming-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: color-mix(in oklab, var(--color-primary) 85%, black);
+  color: #ffffff;
+  font-size: 0.68rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  margin-top: 0.35rem;
+  direction: rtl;
+}
+
+/* هایلایت سلول کلاسی که دقیقاً در حال برگزاری است */
+.schedule-cell-today-active .course-badge-box,
+.schedule-row-now td.schedule-cell-today-active .course-badge-box {
+  border: 2px solid var(--color-primary) !important;
+  box-shadow: 0 0 0 3px var(--color-primary), 0 0 22px color-mix(in oklab, var(--color-primary) 45%, transparent) !important;
+  transform: translateY(-2px) scale(1.02);
+  background: color-mix(in oklab, var(--color-primary) 22%, var(--color-base)) !important;
+  position: relative;
+  z-index: 10;
+}
+
+.live-active-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 0.68rem;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+  width: fit-content;
+  animation: pulseNow 2s infinite;
+}
+
+/* Course Cell Slots (Consistent cell height across all days) */
+.course-cell-slot {
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+}
+
+/* Course Badges inside Schedule Table */
+.course-badge-box {
+  width: 100%;
+  min-height: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.75rem 0.7rem;
+  border-radius: 14px;
+  text-decoration: none !important;
+  color: inherit;
+  border: 1px solid color-mix(in oklab, var(--badge-theme, var(--color-primary)) 40%, transparent);
+  background: color-mix(in oklab, var(--badge-theme, var(--color-primary)) 12%, var(--color-base));
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  white-space: normal;
+  word-break: break-word;
+  text-align: right;
+  position: relative;
+}
+.course-badge-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+.dark .course-badge-box {
+  background: color-mix(in oklab, var(--badge-theme, var(--color-primary)) 20%, var(--color-base));
+  border-color: color-mix(in oklab, var(--badge-theme, var(--color-primary)) 50%, transparent);
+}
+.course-theme-blue { --badge-theme: #0284c7; }
+.course-theme-cyan { --badge-theme: #06b6d4; }
+.course-theme-green { --badge-theme: #10b981; }
+.course-theme-amber { --badge-theme: #d97706; }
+.course-theme-orange { --badge-theme: #ea580c; }
+.course-theme-pink { --badge-theme: #db2777; }
+.course-theme-lavender { --badge-theme: #9333ea; }
+.course-theme-purple { --badge-theme: #a855f7; }
+
+.course-badge-box .course-title {
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  color: var(--badge-theme, var(--color-primary));
+}
+.course-badge-box .course-prof {
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  opacity: 0.85;
+}
+.course-badge-box .course-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.72rem;
+  gap: 0.3rem;
+  margin-top: 0.25rem;
+}
+.course-loc-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: color-mix(in oklab, var(--color-base-500) 45%, transparent);
+  padding: 0.2rem 0.55rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.72rem;
+}
+.dark .course-loc-tag {
+  background: rgba(0, 0, 0, 0.25);
+}
+.course-code-tag {
+  font-family: monospace;
+  direction: ltr !important;
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+/* --- Detailed Course Cards (.schedule-cards-view) --- */
+.schedule-cards-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+.course-card-detailed {
+  background: color-mix(in oklab, var(--color-base-500) 25%, var(--color-base));
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 65%, transparent);
+  border-radius: 18px;
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+.course-card-detailed:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px -5px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-primary);
+}
+.course-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.course-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-base-content);
+  margin: 0;
+  line-height: 1.4;
+}
+.course-tag-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+.course-card-info-list {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  font-size: 0.875rem;
+}
+.course-card-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: color-mix(in oklab, var(--color-base-content) 85%, transparent);
+}
+.course-card-info-item svg {
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+.course-card-footer {
+  margin-top: auto;
+  padding-top: 0.85rem;
+  border-top: 1px dashed color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.code-copy-btn {
+  background: color-mix(in oklab, var(--color-base-500) 40%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 70%, transparent);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-button);
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: var(--color-base-content);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+  direction: ltr !important;
+}
+.code-copy-btn:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+/* --- Exam Schedule List (.schedule-exam-list-view) --- */
+.schedule-exam-list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+.exam-row {
+  display: grid;
+  grid-template-columns: 2.2fr 1.8fr 1.6fr 1.4fr;
+  align-items: center;
+  padding: 1rem 1.35rem;
+  background: color-mix(in oklab, var(--color-base-500) 25%, var(--color-base));
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 65%, transparent);
+  border-radius: 16px;
+  gap: 1rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+.exam-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-primary);
+}
+.exam-col-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.exam-status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+}
+.dot-blue { background: #0066a4; }
+.dot-amber { background: #d97706; }
+.dot-pink { background: #db2777; }
+.dot-cyan { background: #06b6d4; }
+.dot-orange { background: #ea580c; }
+.dot-green { background: #10b981; }
+
+.exam-name {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--color-base-content);
+  line-height: 1.3;
+}
+.exam-sub {
+  font-size: 0.76rem;
+  color: color-mix(in oklab, var(--color-base-content) 65%, transparent);
+  margin-top: 0.15rem;
+}
+.exam-col-schedule {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  font-size: 0.865rem;
+  color: var(--color-base-content);
+  font-weight: 600;
+}
+.exam-date-box, .exam-time-box {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+.exam-date-box svg, .exam-time-box svg, .exam-col-loc svg {
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+.exam-col-loc {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.835rem;
+  color: color-mix(in oklab, var(--color-base-content) 75%, transparent);
+  white-space: nowrap;
+}
+.exam-col-countdown {
+  display: flex;
+  justify-content: flex-end;
+}
+.exam-countdown-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background: color-mix(in oklab, var(--color-primary) 12%, transparent);
+  color: var(--color-primary);
+  border: 1px solid color-mix(in oklab, var(--color-primary) 30%, transparent);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  transition: all 0.2s ease;
+}
+.exam-countdown-badge.cd-urgent {
+  background: color-mix(in oklab, #ef4444 14%, transparent) !important;
+  color: #dc2626 !important;
+  border-color: color-mix(in oklab, #ef4444 40%, transparent) !important;
+}
+.exam-countdown-badge.cd-passed {
+  background: color-mix(in oklab, var(--color-base-500) 40%, transparent) !important;
+  color: var(--color-neutral) !important;
+  border-color: color-mix(in oklab, var(--color-base-500) 60%, transparent) !important;
+}
+@media (max-width: 860px) {
+  .exam-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.1rem;
+  }
+}
+
+/* --- Project Cards Grid (.project-card-grid) --- */
+.project-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 2.5rem 0;
+}
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: color-mix(in oklab, var(--color-base-500) 25%, var(--color-base));
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 65%, transparent);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: 0 14px 30px -8px color-mix(in oklab, var(--color-primary) 30%, transparent);
+}
+.project-card-media {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background: color-mix(in oklab, var(--color-base-500) 25%, var(--color-base));
+  overflow: hidden;
+  border-bottom: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.project-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+}
+.project-card:hover .project-card-media img {
+  transform: scale(1.04);
+}
+.project-card-body {
+  padding: 1.35rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  flex: 1;
+}
+.project-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.project-card-header .resource-badge {
+  font-size: 0.72rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 8px;
+}
+.project-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-base-content);
+  margin: 0;
+  line-height: 1.4;
+}
+.project-card-title a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+.project-card-desc {
+  font-size: 0.875rem;
+  color: color-mix(in oklab, var(--color-base-content) 75%, transparent);
+  line-height: 1.65;
+  margin: 0;
+  flex: 1;
+}
+.project-card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.85rem;
+  border-top: 1px dashed color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none !important;
+  position: relative;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+.project-card-footer:hover {
+  text-decoration: none !important;
+  color: var(--color-accent);
+}
+.project-card-btn-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: inherit;
+}
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
+}
+
+/* --- 7. Resource Link Cards (.resource-card) --- */
+.resource-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 1.5rem 0;
+}
+.resource-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-card);
+  background: color-mix(in oklab, var(--color-base-500) 25%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  text-decoration: none !important;
+  color: inherit;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.resource-card:hover {
+  transform: translateX(-4px);
+  border-color: var(--color-primary);
+  background: color-mix(in oklab, var(--color-primary) 8%, var(--color-base));
+}
+.resource-card-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.resource-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: color-mix(in oklab, var(--color-primary) 14%, transparent);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+.resource-card-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-base-content);
+}
+.resource-badge {
+  padding: 0.2rem 0.65rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  color: var(--color-base-content);
+}
+
+/* --- 8. Subject & Project Cards (.subjects-grid) --- */
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+}
+.subject-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.35rem;
+  border-radius: var(--radius-card);
+  background: color-mix(in oklab, var(--color-base-500) 25%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  text-decoration: none !important;
+  color: inherit;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subject-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.subject-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in oklab, currentColor 12%, transparent);
+  margin-bottom: 1rem;
+}
+.subject-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: var(--color-base-content);
+}
+.subject-card-desc {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: color-mix(in oklab, var(--color-base-content) 75%, transparent);
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+.subject-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* --- 9. Home Media Video Wrapper & Actions --- */
+.home-media-wrapper {
+  margin: 1.5rem auto 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.home-media-box {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.15);
+  border: 2px solid color-mix(in oklab, var(--color-primary) 35%, transparent);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-media-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 22px;
+}
+.home-actions {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+.home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-button);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none !important;
+  color: var(--color-base-content);
+  background: color-mix(in oklab, var(--color-base-500) 45%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 80%, transparent);
+  transition: all 0.2s ease;
+}
+.home-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+  background: color-mix(in oklab, var(--color-primary) 12%, transparent);
+  color: var(--color-primary);
+}
+
+/* Poster Card Container (Clean, Borderless, No Phantom Double Shadow) */
+.sarv-poster-card {
+  margin: 1.5rem 0;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  border: none !important;
+  background: transparent !important;
+  text-align: center;
+  box-shadow: none !important;
+}
+.sarv-poster-card img {
+  max-height: 340px;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+  border: none !important;
+  box-shadow: none !important;
+}

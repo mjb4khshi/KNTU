@@ -1,0 +1,194 @@
+<nav class="sarv-nav-sidebar">
+  <div class="sarv-nav-tree">
+    {% for item in nav %}
+      {% if item.is_page %}
+        <a href="{{ item.url | url }}" class="sarv-nav-link {% if item.active %}active{% endif %}">
+          <span class="sarv-nav-bullet"></span>
+          <span>{{ item.title }}</span>
+        </a>
+      {% elif item.is_section %}
+        <div class="sarv-nav-group {% if item.active %}is-open{% endif %}">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg>
+            </span>
+            <span class="sarv-nav-group-title">{{ item.title }}</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              {% for sub in item.children %}
+                {% if sub.is_page %}
+                  <a href="{{ sub.url | url }}" class="sarv-nav-sublink {% if sub.active %}active{% endif %}">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>{{ sub.title }}</span>
+                  </a>
+                {% elif sub.is_section %}
+                  <div class="sarv-nav-nested-group {% if sub.active %}is-open{% endif %}">
+                    <button type="button" class="sarv-nav-nested-header" onclick="this.parentElement.classList.toggle('is-open')">
+                      <span>{{ sub.title }}</span>
+                      <svg class="sarv-nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                    <div class="sarv-nav-subitems-wrap">
+                      <div class="sarv-nav-subitems-inner">
+                        {% for nested in sub.children %}
+                          {% if nested.is_page %}
+                            <a href="{{ nested.url | url }}" class="sarv-nav-sublink {% if nested.active %}active{% endif %}">
+                              <span class="sarv-nav-subbullet"></span>
+                              <span>{{ nested.title }}</span>
+                            </a>
+                          {% endif %}
+                        {% endfor %}
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</nav>
+
+<style>
+.sarv-nav-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.sarv-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: var(--radius-button);
+  color: color-mix(in oklab, var(--color-base-content) 85%, transparent);
+  text-decoration: none !important;
+  font-size: 0.86rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.sarv-nav-link:hover, .sarv-nav-link.active {
+  background: color-mix(in oklab, var(--color-primary) 12%, transparent);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+.sarv-nav-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--color-base-500) 80%, transparent);
+  transition: background 0.2s ease;
+}
+.sarv-nav-link.active .sarv-nav-bullet {
+  background: var(--color-primary);
+  box-shadow: 0 0 6px var(--color-primary);
+}
+.sarv-nav-group-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.65rem;
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-button);
+  color: var(--color-base-content);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: right;
+  transition: all 0.2s ease;
+}
+.sarv-nav-group-header:hover {
+  background: color-mix(in oklab, var(--color-base-500) 40%, transparent);
+}
+.sarv-nav-group-title {
+  flex: 1;
+}
+.sarv-nav-chevron {
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotate(180deg);
+}
+.sarv-nav-group.is-open > .sarv-nav-group-header .sarv-nav-chevron,
+.sarv-nav-nested-group.is-open > .sarv-nav-nested-header .sarv-nav-chevron {
+  transform: rotate(90deg);
+}
+
+/* Smooth Accordion Animation */
+.sarv-nav-subitems-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  margin-right: 1.15rem;
+  padding-right: 0.65rem;
+  border-right: 2px solid color-mix(in oklab, var(--color-base-500) 45%, transparent);
+}
+.sarv-nav-group.is-open > .sarv-nav-subitems-wrap,
+.sarv-nav-nested-group.is-open > .sarv-nav-subitems-wrap {
+  grid-template-rows: 1fr;
+}
+.sarv-nav-subitems-inner {
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 4px 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  opacity: 0;
+  transform: translateY(-5px);
+}
+.sarv-nav-group.is-open > .sarv-nav-subitems-wrap .sarv-nav-subitems-inner,
+.sarv-nav-nested-group.is-open > .sarv-nav-subitems-wrap .sarv-nav-subitems-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sarv-nav-sublink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: calc(var(--radius-button) * 0.7);
+  color: color-mix(in oklab, var(--color-base-content) 75%, transparent);
+  text-decoration: none !important;
+  font-size: 0.825rem;
+  transition: all 0.15s ease;
+}
+.sarv-nav-sublink:hover, .sarv-nav-sublink.active {
+  color: var(--color-primary);
+  background: color-mix(in oklab, var(--color-primary) 10%, transparent);
+  font-weight: 600;
+}
+.sarv-nav-subbullet {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--color-base-500) 70%, transparent);
+  transition: background 0.2s ease;
+}
+.sarv-nav-sublink.active .sarv-nav-subbullet {
+  background: var(--color-primary);
+}
+.sarv-nav-nested-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.35rem 0.65rem;
+  background: transparent;
+  border: none;
+  color: var(--color-base-content);
+  font-family: var(--font-sans);
+  font-size: 0.825rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: right;
+}
+</style>

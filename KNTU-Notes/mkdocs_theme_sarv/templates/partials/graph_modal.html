@@ -1,0 +1,89 @@
+<div id="sarv-global-graph-modal" class="sarv-modal-backdrop">
+  <div class="sarv-modal-content">
+    <div class="sarv-modal-header">
+      <div class="sarv-modal-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+        <span>گراف جامع ارتباطات تمام یادداشت‌ها (Global Knowledge Graph)</span>
+      </div>
+      <button type="button" id="sarv-close-global-graph" class="btn btn-sm btn-neutral">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="sarv-modal-body">
+      <div id="sarv-global-graph-box" class="sarv-global-graph-canvas">
+        <!-- Canvas injected by graph-engine.js -->
+      </div>
+    </div>
+
+    <div class="sarv-modal-footer">
+      <span class="sarv-graph-hint">💡 نکته: با اسکرول ماوس زوم کنید، با درگ کردن نودها را حرکت دهید و برای باز کردن یادداشت روی نود کلیک نمایید.</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.sarv-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.sarv-modal-backdrop.is-open {
+  display: flex;
+}
+.sarv-modal-content {
+  width: 100%;
+  max-width: 1100px;
+  height: 85vh;
+  background: color-mix(in oklab, var(--color-base) 94%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 80%, transparent);
+  border-radius: var(--radius-card);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalScaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes modalScaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.sarv-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+}
+.sarv-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-base-content);
+}
+.sarv-modal-body {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--color-base-500) 20%, transparent);
+}
+.sarv-global-graph-canvas {
+  width: 100%;
+  height: 100%;
+}
+.sarv-modal-footer {
+  padding: 0.75rem 1.5rem;
+  border-top: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+  font-size: 0.8rem;
+  color: var(--color-neutral);
+}
+</style>

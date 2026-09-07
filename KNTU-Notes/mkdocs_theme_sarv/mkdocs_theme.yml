@@ -1,0 +1,17 @@
+# mkdocs-theme-sarv Theme Configuration
+# Designed & Built with care by MJ (Sarv UI Design System)
+
+name: sarv
+language: fa
+direction: rtl
+default_theme: "persian-dark"
+show_title: true
+show_logo: true
+enable_graph: true
+enable_reading_time: true
+enable_backlinks: true
+enable_hover_preview: true
+enable_search: true
+
+static_templates:
+  - 404.html

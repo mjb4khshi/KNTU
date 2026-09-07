@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: mkdocs-theme-sarv
+Version: 0.1.0
+Summary: A modern, authentic MkDocs theme based on Sarv UI with Obsidian syntax & Graph View
+Home-page: https://github.com/mjb4khshi/mkdocs-theme-sarv
+Author: MJ
+Author-email: mjb4khshi@gmail.com
+Requires-Dist: mkdocs>=1.5.0
+Requires-Dist: pymdown-extensions>=10.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary

@@ -1,0 +1,2739 @@
+<!DOCTYPE html><html lang="fa" dir="rtl" data-theme="persian-dark"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>برنامه هفتگی - MJ'S KNTU Notes</title>
+  
+  
+  
+
+  <!-- Sarv Metadata for Graph, Search & Navigation -->
+  <meta name="sarv-site-root" content="../">
+  <meta name="sarv-search-url" content="../search/search_index.json">
+  <meta name="sarv-graph-url" content="../sarv-graph.json">
+  <meta name="sarv-current-page" content="schedule.md">
+  <meta name="sarv-current-url" content="schedule/">
+
+  <!-- Favicon -->
+  
+  <link rel="icon" href="../Group 1w.png">
+  
+
+  <!-- Sarv UI Theme CSS -->
+  <link rel="stylesheet" href="../assets/css/sarv-tokens.css">
+  <link rel="stylesheet" href="../assets/css/sarv-core.css">
+  <link rel="stylesheet" href="../assets/css/sarv-components.css">
+  <link rel="stylesheet" href="../assets/css/sarv-obsidian.css">
+  <link rel="stylesheet" href="../assets/css/sarv-pygments.css">
+
+  <!-- Extra CSS -->
+  
+
+  <!-- Immediate Early Theme & Layout Application -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('sarv-theme') || 'persian-dark';
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.setAttribute('datatheme', t);
+      if (t.includes('dark') || t === 'ocean-abyss' || t === 'cyberpunk' || t === 'emerald' || t === 'sunset' || t === 'tokyo-midnight' || t === 'coffee-roast' || t === 'crimson' || t === 'royal-purple' || t === 'nordic') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      var layoutMode = localStorage.getItem('sarv-layout-mode');
+      if (layoutMode === 'full') {
+        document.documentElement.classList.add('sarv-mode-fullwidth');
+      }
+    })();
+  </script>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+
+<body>
+  <!-- نوار پیشرفت مطالعه بالای صفحه -->
+  <div id="sarv-reading-progress"></div>
+
+  <!-- هدر -->
+  <header class="sarv-header">
+  <div class="sarv-header-container">
+    <!-- سمت راست: لوگو و نام سایت (کاملاً هم‌تراز با ستون ناوبری راست) -->
+    <a href=".." class="sarv-header-brand">
+      <div class="sarv-brand-logo">
+        
+        <img src="../Group 1w.png" alt="Logo">
+        
+      </div>
+      <span class="sarv-brand-title">MJ'S KNTU Notes</span>
+    </a>
+
+    <!-- مرکز: سرچ‌بار مینیمال با افکت فوکوس از مرکز سرو -->
+    <div class="sarv-header-search-wrap">
+      <div class="input-wrap w-full">
+        <div class="input-box">
+          <div class="input-icon">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          </div>
+          <input type="text" id="sarv-header-search-trigger" class="input-field" placeholder="جستجو در تمام جزوات و مباحث..." readonly="">
+          <div class="input-kbd">Ctrl+K</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- سمت چپ: اکشن‌ها، سوییچر تم و دکمه موبایل -->
+    <div class="sarv-header-actions">
+      <!-- دکمه گراف کل دانش -->
+      <button type="button" id="sarv-open-global-graph" class="btn btn-sm btn-accent sarv-graph-btn" title="مشاهده گراف ارتباطات تمام یادداشت‌ها">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg>
+        <span class="hidden-mobile">گراف شبکه</span>
+      </button>
+
+      <!-- دراپ‌داون سوییچ ۱۵ تم سرو -->
+      <div class="sarv-select-wrap">
+        <button type="button" id="sarv-theme-select-trigger" class="sarv-select-trigger">
+          <span id="sarv-current-theme-dot" class="sarv-theme-dot"></span>
+          <span id="sarv-current-theme-name">تم رنگی</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+        </button>
+
+        <div id="sarv-theme-select-menu" class="sarv-select-menu">
+          <div class="sarv-select-item" data-theme-id="persian-dark"><span class="sarv-theme-dot" style="background:#0066a4"></span> ایرانی تاریک</div>
+          <div class="sarv-select-item" data-theme-id="persian-light"><span class="sarv-theme-dot" style="background:#0066a4"></span> ایرانی روشن</div>
+          <div class="sarv-select-item" data-theme-id="ocean-abyss"><span class="sarv-theme-dot" style="background:#06b6d4"></span> اقیانوس ژرف</div>
+          <div class="sarv-select-item" data-theme-id="emerald"><span class="sarv-theme-dot" style="background:#10b981"></span> زمردین</div>
+          <div class="sarv-select-item" data-theme-id="cyberpunk"><span class="sarv-theme-dot" style="background:#00f0ff"></span> سایبرپانک</div>
+          <div class="sarv-select-item" data-theme-id="sunset"><span class="sarv-theme-dot" style="background:#ff5e36"></span> غروب آفتاب</div>
+          <div class="sarv-select-item" data-theme-id="matcha"><span class="sarv-theme-dot" style="background:#84cc16"></span> ماچا</div>
+          <div class="sarv-select-item" data-theme-id="nordic"><span class="sarv-theme-dot" style="background:#0284c7"></span> نوردیک</div>
+          <div class="sarv-select-item" data-theme-id="rose-gold"><span class="sarv-theme-dot" style="background:#e11d48"></span> رزگلد</div>
+          <div class="sarv-select-item" data-theme-id="tokyo-midnight"><span class="sarv-theme-dot" style="background:#8b5cf6"></span> شب‌های توکیو</div>
+          <div class="sarv-select-item" data-theme-id="coffee-roast"><span class="sarv-theme-dot" style="background:#d97706"></span> قهوه رست</div>
+          <div class="sarv-select-item" data-theme-id="crimson"><span class="sarv-theme-dot" style="background:#e11d48"></span> یاقوت سرخ</div>
+          <div class="sarv-select-item" data-theme-id="royal-purple"><span class="sarv-theme-dot" style="background:#8b5cf6"></span> بنفش سلطنتی</div>
+        </div>
+      </div>
+
+      <!-- دکمه سوییچ حالت کانتینتری و تمام‌عرض -->
+      <button type="button" id="sarv-layout-toggle" class="btn btn-sm btn-neutral sarv-layout-btn" title="تغییر عرض صفحه (کانتینتر / تمام‌عرض)">
+        <svg class="sarv-icon-expand" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" x2="14" y1="3" y2="10"></line><line x1="3" x2="10" y1="21" y2="14"></line></svg>
+        <svg class="sarv-icon-collapse" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><polyline points="4 14 10 14 10 20"></polyline><polyline points="20 10 14 10 14 4"></polyline><line x1="14" x2="21" y1="10" y2="3"></line><line x1="10" x2="3" y1="14" y2="21"></line></svg>
+      </button>
+
+      <!-- دکمه منوی موبایل -->
+      <button type="button" id="sarv-mobile-menu-btn" class="btn btn-sm btn-neutral sarv-mobile-toggle" aria-label="باز کردن منو" onclick="document.getElementById('sarv-mobile-drawer').classList.add('is-open')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+  <!-- محتوای اصلی -->
+  <div class="sarv-layout-container">
+  <!-- ستون راست: منوی ناوبری -->
+  <nav class="sarv-nav-sidebar">
+  <div class="sarv-nav-tree">
+    
+      
+        <a href=".." class="sarv-nav-link ">
+          <span class="sarv-nav-bullet"></span>
+          <span>خانه</span>
+        </a>
+      
+    
+      
+        <a href="./" class="sarv-nav-link active">
+          <span class="sarv-nav-bullet"></span>
+          <span>برنامه هفتگی</span>
+        </a>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">پروژه‌های دانشگاهی</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../projects/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فهرست پروژه‌ها</span>
+                  </a>
+                
+              
+                
+                  <a href="../projects/proji/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>شبیه‌ساز پرتابه Proji</span>
+                  </a>
+                
+              
+                
+                  <a href="../projects/economics-study/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>پژوهش اقتصاد نهادگرا</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">ادبیات فارسی</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../adabiat/%D8%A7%D9%86%D9%88%D8%A7%D8%B9%20%D8%B2%D8%A8%D8%A7%D9%86/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>ادبیات</span>
+                  </a>
+                
+              
+                
+                  <a href="../adabiat/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%81%D8%A7%D8%B1%D8%B3%DB%8C/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>تاریخچه زبان پارسی</span>
+                  </a>
+                
+              
+                
+                  <a href="../adabiat/%D8%AC%D8%AF%D8%A7%D9%84%20%D8%B3%D8%B9%D8%AF%DB%8C%20%D9%88%20%D9%85%D8%AF%D8%B9%DB%8C/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>جدال سعدی و مدعی</span>
+                  </a>
+                
+              
+                
+                  <a href="../adabiat/%D8%B4%DA%A9%D9%84%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C%20%D9%88%20%D9%BE%DB%8C%D8%AF%D8%A7%DB%8C%D8%B4%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%85%D9%84%D9%81%D9%88%D8%B8/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>شکل‌گیری و پیدایش زبان‌ ملفوظ</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">حساب دیفرانسیل و انتگرال</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../calculus/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فهرست مطالب درس ریاضی عمومی</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">اقتصاد کلان</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../macroeconomics/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>معرفی و فهرست فصول</span>
+                  </a>
+                
+              
+                
+                  <a href="../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B1%20-%20%DA%86%D8%A7%D8%B1%DA%86%D9%88%D8%A8%20%D9%86%D8%B8%D8%B1%DB%8C%20%D9%88%20%D9%85%D9%81%D8%A7%D9%87%DB%8C%D9%85%20%D8%A8%D9%86%DB%8C%D8%A7%D8%AF%DB%8C%D9%86/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فصل ۱: چارچوب نظری و مفاهیم بنیادین توسعه</span>
+                  </a>
+                
+              
+                
+                  <a href="../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B2%20-%20%D8%A7%D8%B7%D9%84%D8%B3%20%D8%A2%D9%85%D8%A7%D8%B1%DB%8C%20%D9%88%20%D9%BE%D9%88%D8%B3%D8%AA%D8%B1%D9%87%D8%A7%DB%8C%20%D8%AA%D8%A8%DB%8C%DB%8C%D9%86%DB%8C/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فصل ۲: اطلس آماری و پوسترهای تبیینی شاخص‌ها</span>
+                  </a>
+                
+              
+                
+                  <a href="../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B3%20-%20%D9%88%D8%A7%DA%A9%D8%A7%D9%88%DB%8C%20%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DB%8C%20%D9%88%20%D8%AA%D8%AC%D8%A7%D8%B1%D8%A8%20%DA%AF%D8%B0%D8%A7%D8%B1/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فصل ۳: واکاوی تاریخی و تجارب گذار اقتصادی در کشورهای منتخب</span>
+                  </a>
+                
+              
+                
+                  <a href="../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B4%20-%20%D9%85%D8%A7%D8%AA%D8%B1%DB%8C%D8%B3%20%D8%AA%D8%B7%D8%A8%DB%8C%D9%82%DB%8C%20%D9%88%20%D8%A7%D9%84%DA%AF%D9%88%D9%87%D8%A7%DB%8C%20%DA%AF%D8%B0%D8%A7%D8%B1/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فصل ۴: ماتریس تطبیقی و واکاوی راهبردی الگوهای گذار</span>
+                  </a>
+                
+              
+                
+                  <a href="../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B5%20-%20%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C%20%D9%85%D8%AF%D9%84%20%D9%BE%D9%84%D8%AA%D9%81%D8%B1%D9%85%DB%8C%20%DA%AF%D8%B0%D8%A7%D8%B1%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فصل ۵: طراحی مدل پلتفرمی گذار اقتصادی ایران</span>
+                  </a>
+                
+              
+                
+                  <a href="../macroeconomics/%D9%86%D8%AA%DB%8C%D8%AC%D9%87%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C%20%D9%88%20%D9%85%D9%86%D8%A7%D8%A8%D8%B9/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>نتیجه‌گیری کلان و فهرست منابع پژوهش</span>
+                  </a>
+                
+              
+                
+                  <a href="../macroeconomics/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D9%86%D9%87%D8%A7%D8%AF%DA%AF%D8%B1%D8%A7%20%D9%88%20%D8%AF%D9%88%D9%84%D8%AA%20%D8%AA%D9%88%D8%B3%D8%B9%D9%87%E2%80%8C%DA%AF%D8%B1%D8%A7/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>اقتصاد نهادگرا و دولت توسعه‌گرا</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">اقتصاد خرد</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../micro%20economics/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فهرست مطالب</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">دوره‌های آزاد و برنامه‌نویسی</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../out%20of%20kntu%20university/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>معرفی دوره‌ها</span>
+                  </a>
+                
+              
+                
+                  <div class="sarv-nav-nested-group ">
+                    <button type="button" class="sarv-nav-nested-header" onclick="this.parentElement.classList.toggle('is-open')">
+                      <span>جاوا اسکریپت</span>
+                      <svg class="sarv-nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                    </button>
+                    <div class="sarv-nav-subitems-wrap">
+                      <div class="sarv-nav-subitems-inner">
+                        
+                          
+                            <a href="../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/jonas/" class="sarv-nav-sublink ">
+                              <span class="sarv-nav-subbullet"></span>
+                              <span>🚀 برنامه ۲۱ روزه یادگیری JavaScript با دوره Jonas</span>
+                            </a>
+                          
+                        
+                          
+                        
+                          
+                        
+                          
+                        
+                      </div>
+                    </div>
+                  </div>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">فیزیک دانشگاهی</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../physics/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فهرست مطالب درس فیزیک ۱</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">برنامه‌نویسی دانشگاهی</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../programming/%D8%AC%D8%B2%D9%88%D9%87%20%DA%A9%D9%84%D8%A7%D8%B3%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C%20%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%A7%D8%B1%D8%B2%D8%A7%D9%86%DB%8C/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>جزوه کلاس برنامه‌نویسی استاد ارزانی</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+  </div>
+</nav>
+
+<style>
+.sarv-nav-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.sarv-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: var(--radius-button);
+  color: color-mix(in oklab, var(--color-base-content) 85%, transparent);
+  text-decoration: none !important;
+  font-size: 0.86rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.sarv-nav-link:hover, .sarv-nav-link.active {
+  background: color-mix(in oklab, var(--color-primary) 12%, transparent);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+.sarv-nav-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--color-base-500) 80%, transparent);
+  transition: background 0.2s ease;
+}
+.sarv-nav-link.active .sarv-nav-bullet {
+  background: var(--color-primary);
+  box-shadow: 0 0 6px var(--color-primary);
+}
+.sarv-nav-group-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.65rem;
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-button);
+  color: var(--color-base-content);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: right;
+  transition: all 0.2s ease;
+}
+.sarv-nav-group-header:hover {
+  background: color-mix(in oklab, var(--color-base-500) 40%, transparent);
+}
+.sarv-nav-group-title {
+  flex: 1;
+}
+.sarv-nav-chevron {
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotate(180deg);
+}
+.sarv-nav-group.is-open > .sarv-nav-group-header .sarv-nav-chevron,
+.sarv-nav-nested-group.is-open > .sarv-nav-nested-header .sarv-nav-chevron {
+  transform: rotate(90deg);
+}
+
+/* Smooth Accordion Animation */
+.sarv-nav-subitems-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  margin-right: 1.15rem;
+  padding-right: 0.65rem;
+  border-right: 2px solid color-mix(in oklab, var(--color-base-500) 45%, transparent);
+}
+.sarv-nav-group.is-open > .sarv-nav-subitems-wrap,
+.sarv-nav-nested-group.is-open > .sarv-nav-subitems-wrap {
+  grid-template-rows: 1fr;
+}
+.sarv-nav-subitems-inner {
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 4px 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  opacity: 0;
+  transform: translateY(-5px);
+}
+.sarv-nav-group.is-open > .sarv-nav-subitems-wrap .sarv-nav-subitems-inner,
+.sarv-nav-nested-group.is-open > .sarv-nav-subitems-wrap .sarv-nav-subitems-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sarv-nav-sublink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: calc(var(--radius-button) * 0.7);
+  color: color-mix(in oklab, var(--color-base-content) 75%, transparent);
+  text-decoration: none !important;
+  font-size: 0.825rem;
+  transition: all 0.15s ease;
+}
+.sarv-nav-sublink:hover, .sarv-nav-sublink.active {
+  color: var(--color-primary);
+  background: color-mix(in oklab, var(--color-primary) 10%, transparent);
+  font-weight: 600;
+}
+.sarv-nav-subbullet {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--color-base-500) 70%, transparent);
+  transition: background 0.2s ease;
+}
+.sarv-nav-sublink.active .sarv-nav-subbullet {
+  background: var(--color-primary);
+}
+.sarv-nav-nested-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.35rem 0.65rem;
+  background: transparent;
+  border: none;
+  color: var(--color-base-content);
+  font-family: var(--font-sans);
+  font-size: 0.825rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: right;
+}
+</style>
+
+  <!-- ستون وسط: محتوای اصلی یادداشت -->
+  <main class="sarv-main-content">
+    <article id="sarv-article">
+      <!-- نشانگر زمان مطالعه و تعداد کلمات -->
+      
+      <div class="sarv-reading-meta">
+        <span class="reading-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>زمان تقریبی مطالعه: 7 دقیقه</span>
+        </span>
+        <span class="reading-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>1238 کلمه</span>
+        </span>
+        <button type="button" class="reading-badge sarv-print-btn" onclick="window.print()" title="چاپ یا ذخیره نسخه تمیز PDF">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect width="12" height="8" x="6" y="14"></rect></svg>
+          <span>چاپ / PDF</span>
+        </button>
+      </div>
+      
+
+      <!-- بدنه محتوا -->
+      <div class="sarv-markdown-content">
+        <div class="schedule-wrapper">
+
+  <!-- بنر معرفی و اطلاعات ترم -->
+  <div class="schedule-hero">
+    <div class="schedule-hero-badge">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+      دانشگاه صنعتی خواجه نصیرالدین طوسی (KNTU)
+    </div>
+    <h1>برنامه هفتگی و واحدهای اخذ شده قطعی</h1>
+    <p class="schedule-hero-desc">
+      نتیجه رسمی ثبت‌نام نیمسال اول سال تحصیلی ۰۵-۰۶ در سیستم جامع گلستان • مهندسی صنایع و سیستم‌ها • معدل معیار: ۱۸.۹۲. برای مشاهده زمان‌بندی جلسات، مکان‌ها، اساتید، کدهای انتخابی و تقویم امتحانات پایان‌ترم از بخش‌های زیر استفاده کنید.
+    </p>
+  </div>
+
+  <!-- کارت‌های آمار ترم -->
+  <div class="schedule-stats-grid">
+    <div class="schedule-stat-card">
+      <div class="schedule-stat-num">۶</div>
+      <div class="schedule-stat-label">عنوان درس اخذ شده</div>
+    </div>
+    <div class="schedule-stat-card">
+      <div class="schedule-stat-num">۱۶</div>
+      <div class="schedule-stat-label">تعداد واحد قطعی ترم</div>
+    </div>
+    <div class="schedule-stat-card">
+      <div class="schedule-stat-num">۱۵</div>
+      <div class="schedule-stat-label">ساعت کلاس در هفته (۱۰ جلسه)</div>
+    </div>
+    <div class="schedule-stat-card">
+      <div class="schedule-stat-num">۵</div>
+      <div class="schedule-stat-label">روز کلاس‌دار (شنبه تا چهارشنبه)</div>
+    </div>
+  </div>
+
+  <!-- نوار ابزار، سوئیچر نما و دکمه‌های عملیات -->
+  <div class="schedule-toolbar">
+    <div class="schedule-view-switcher">
+      <button class="schedule-tab-btn active" id="tabTableBtn" onclick="switchScheduleView('table')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M3 15h18"></path><path d="M9 3v18"></path><path d="M15 3v18"></path></svg>
+        جدول هفتگی
+      </button>
+      <button class="schedule-tab-btn" id="tabCardsBtn" onclick="switchScheduleView('cards')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="14" rx="1"></rect><rect width="7" height="7" x="3" y="14" rx="1"></rect></svg>
+        کارت‌های دروس (۶)
+      </button>
+      <button class="schedule-tab-btn" id="tabExamsBtn" onclick="switchScheduleView('exams')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+        برنامه امتحانات (۶)
+      </button>
+    </div>
+
+    <div class="schedule-actions">
+      <button class="schedule-btn schedule-btn-primary" onclick="copyScheduleShareLink()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" x2="12" y1="2" y2="15"></line></svg>
+        اشتراک‌گذاری با دوستان
+      </button>
+      <button class="schedule-btn" onclick="window.print()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect width="12" height="8" x="6" y="14"></rect></svg>
+        چاپ / PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- نمای اول: جدول هفتگی تایم‌لاین -->
+  <div id="scheduleTableView" class="schedule-table-card">
+    <div class="schedule-table-wrapper">
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th style="width: 110px;">زمان</th>
+            <th id="col-sat">شنبه</th>
+            <th id="col-sun">یکشنبه</th>
+            <th id="col-mon">دوشنبه</th>
+            <th id="col-tue">سه‌شنبه</th>
+            <th id="col-wed">چهارشنبه</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- ساعت 09:00 الی 10:30 (نوبت صبح) -->
+          <tr id="row-time-0900" data-start="540" data-end="630">
+            <td class="schedule-time-cell">
+              <div class="schedule-time-badge">
+                <span class="time-main">۰۹:۰۰ – ۱۰:۳۰</span>
+              </div>
+            </td>
+            <!-- شنبه -->
+            <td data-day="sat"><div class="course-cell-slot"></div></td>
+            <!-- یکشنبه -->
+            <td data-day="sun">
+              <div class="course-badge-box course-theme-blue">
+                <div class="course-title">
+                  <span>معادلات دیفرانسیل</span>
+                </div>
+                <div class="course-prof">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  اساتید گروه آموزشی
+                </div>
+                <div class="course-meta">
+                  <span class="course-loc-tag">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    مکانیک-کلاس
+                  </span>
+                </div>
+              </div>
+            </td>
+            <!-- دوشنبه -->
+            <td data-day="mon"><div class="course-cell-slot"></div></td>
+            <!-- سه‌شنبه -->
+            <td data-day="tue">
+              <div class="course-badge-box course-theme-blue">
+                <div class="course-title">
+                  <span>معادلات دیفرانسیل</span>
+                </div>
+                <div class="course-prof">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  اساتید گروه آموزشی
+                </div>
+                <div class="course-meta">
+                  <span class="course-loc-tag">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    مکانیک-کلاس
+                  </span>
+                </div>
+              </div>
+            </td>
+            <!-- چهارشنبه -->
+            <td data-day="wed"><div class="course-cell-slot"></div></td>
+          </tr>
+
+          <!-- ساعت 13:30 الی 15:00 (نوبت ظهر) -->
+          <tr id="row-time-1330" data-start="810" data-end="900">
+            <td class="schedule-time-cell">
+              <div class="schedule-time-badge">
+                <span class="time-main">۱۳:۳۰ – ۱۵:۰۰</span>
+              </div>
+            </td>
+            <!-- شنبه -->
+            <td data-day="sat"><div class="course-cell-slot"></div></td>
+            <!-- یکشنبه -->
+            <td data-day="sun"><div class="course-cell-slot"></div></td>
+            <!-- دوشنبه: نظریه احتمال (بخش اول) -->
+            <td data-day="mon">
+              <div class="course-badge-box course-theme-cyan">
+                <div class="course-title">
+                  <span>نظریه احتمال و کاربردها</span>
+                </div>
+                <div class="course-prof">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  اساتید گروه آموزشی
+                </div>
+                <div class="course-meta">
+                  <span class="course-loc-tag">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    ۱۳:۳۰ الی ۱۵:۰۰
+                  </span>
+                </div>
+              </div>
+            </td>
+            <!-- سه‌شنبه -->
+            <td data-day="tue"><div class="course-cell-slot"></div></td>
+            <!-- چهارشنبه -->
+            <td data-day="wed"><div class="course-cell-slot"></div></td>
+          </tr>
+
+          <!-- ساعت 15:00 الی 16:30 (نوبت عصر اول) -->
+          <tr id="row-time-1500" data-start="900" data-end="990">
+            <td class="schedule-time-cell">
+              <div class="schedule-time-badge">
+                <span class="time-main">۱۵:۰۰ – ۱۶:۳۰</span>
+              </div>
+            </td>
+            <!-- شنبه -->
+            <td data-day="sat">
+              <div class="course-badge-box course-theme-amber">
+                <div class="course-title">
+                  <span>مبانی مهندسی برق</span>
+                </div>
+                <div class="course-prof">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  اساتید گروه آموزشی
+                </div>
+              </div>
+            </td>
+            <!-- یکشنبه -->
+            <td data-day="sun">
+              <div class="course-badge-box course-theme-orange">
+                <div class="course-title">
+                  <span>محاسبات عددی</span>
+                </div>
+                <div class="course-prof">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  اساتید گروه آموزشی
+                </div>
+                <div class="course-meta">
+                  <span class="course-loc-tag">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    ساختمان آموزشی صنایع
+                  </span>
+                </div>
+              </div>
+            </td>
+            <!-- دوشنبه: نظریه احتمال (بخش دوم) -->
+            <td data-day="mon">
+              <div class="course-badge-box course-theme-cyan">
+                <div class="course-title">
+                  <span>نظریه احتمال و کاربردها</span>
+                </div>
+                <div class="course-prof">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  اساتید گروه آموزشی
+                </div>
+                <div class="course-meta">
+                  <span class="course-loc-tag">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    ۱۵:۰۰ الی ۱۶:۳۰
+                  </span>
+                </div>
+              </div>
+            </td>
+            <!-- سه‌شنبه -->
+            <td data-day="tue"><div class="course-cell-slot"></div></td>
+            <!-- چهارشنبه -->
+            <td data-day="wed">
+              <div class="course-badge-box course-theme-amber">
+                <div class="course-title">
+                  <span>مبانی مهندسی برق</span>
+                </div>
+                <div class="course-prof">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  اساتید گروه آموزشی
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <!-- ساعت 16:30 الی 18:00 (نوبت عصر دوم) -->
+          <tr id="row-time-1630" data-start="990" data-end="1080">
+            <td class="schedule-time-cell">
+              <div class="schedule-time-badge">
+                <span class="time-main">۱۶:۳۰ – ۱۸:۰۰</span>
+              </div>
+            </td>
+            <!-- شنبه -->
+            <td data-day="sat">
+              <div class="course-badge-box course-theme-pink">
+                <div class="course-title">
+                  <span>استاتیک و مقاومت مصالح</span>
+                </div>
+                <div class="course-prof">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  اساتید گروه آموزشی
+                </div>
+              </div>
+            </td>
+            <!-- یکشنبه -->
+            <td data-day="sun"><div class="course-cell-slot"></div></td>
+            <!-- دوشنبه -->
+            <td data-day="mon">
+              <div class="course-badge-box course-theme-pink">
+                <div class="course-title">
+                  <span>استاتیک و مقاومت مصالح</span>
+                </div>
+                <div class="course-prof">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  اساتید گروه آموزشی
+                </div>
+              </div>
+            </td>
+            <!-- سه‌شنبه -->
+            <td data-day="tue">
+              <div class="course-badge-box course-theme-lavender">
+                <div class="course-title">
+                  <span>مهارت‌های زندگی دانشجویی</span>
+                </div>
+                <div class="course-prof">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  اکبری سکینه
+                </div>
+                <div class="course-meta">
+                  <span class="course-loc-tag">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    ساختمان آموزشی صنایع
+                  </span>
+                </div>
+              </div>
+            </td>
+            <!-- چهارشنبه -->
+            <td data-day="wed"><div class="course-cell-slot"></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- نمای دوم: کارت‌های جامع دروس -->
+  <div id="scheduleCardsView" class="schedule-cards-view" style="display: none;">
+
+    <!-- ۱. معادلات دیفرانسیل -->
+    <div class="course-card-detailed">
+      <div class="course-card-header">
+        <h3 class="course-card-title">معادلات دیفرانسیل</h3>
+        <span class="course-tag-pill course-theme-blue">علوم پایه • ۳ واحد</span>
+      </div>
+      <ul class="course-card-info-list">
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>استاد: <strong>اساتید گروه آموزشی</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>یکشنبه و سه‌شنبه: <strong>۰۹:۰۰ الی ۱۰:۳۰</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>مکان: <strong>مکانیک-کلاس</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+          <span>تاریخ امتحان: <strong>۱۴۰۵/۱۱/۰۵ (۱۰:۳۰ - ۱۲:۳۰)</strong></span>
+        </li>
+      </ul>
+      <div class="course-card-footer">
+        <span style="font-size: 0.8rem; color: #64748b;">کد درس و گروه:</span>
+        <button class="code-copy-btn" onclick="copyText('5712095_51', 'کد معادلات دیفرانسیل')">
+          <span>5712095_51</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ۲. مبانی مهندسی برق -->
+    <div class="course-card-detailed">
+      <div class="course-card-header">
+        <h3 class="course-card-title">مبانی مهندسی برق</h3>
+        <span class="course-tag-pill course-theme-amber">تخصصی الزامی • ۳ واحد</span>
+      </div>
+      <ul class="course-card-info-list">
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>استاد: <strong>اساتید گروه آموزشی</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>شنبه و چهارشنبه: <strong>۱۵:۰۰ الی ۱۶:۳۰</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>مکان: <strong>دانشکده مهندسی</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+          <span>تاریخ امتحان: <strong>۱۴۰۵/۱۰/۲۳ (۱۰:۳۰ - ۱۲:۳۰)</strong></span>
+        </li>
+      </ul>
+      <div class="course-card-footer">
+        <span style="font-size: 0.8rem; color: #64748b;">کد درس و گروه:</span>
+        <button class="code-copy-btn" onclick="copyText('6660102_60', 'کد مبانی برق')">
+          <span>6660102_60</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ۳. استاتیک و مقاومت مصالح -->
+    <div class="course-card-detailed">
+      <div class="course-card-header">
+        <h3 class="course-card-title">استاتیک و مقاومت مصالح</h3>
+        <span class="course-tag-pill course-theme-pink">دروس اصلی • ۳ واحد</span>
+      </div>
+      <ul class="course-card-info-list">
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>استاد: <strong>اساتید گروه آموزشی</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>شنبه و دوشنبه: <strong>۱۶:۳۰ الی ۱۸:۰۰</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>مکان: <strong>دانشکده مهندسی</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+          <span>تاریخ امتحان: <strong>۱۴۰۵/۱۰/۲۸ (۱۰:۳۰ - ۱۲:۳۰)</strong></span>
+        </li>
+      </ul>
+      <div class="course-card-footer">
+        <span style="font-size: 0.8rem; color: #64748b;">کد درس و گروه:</span>
+        <button class="code-copy-btn" onclick="copyText('6660131_60', 'کد استاتیک و مقاومت مصالح')">
+          <span>6660131_60</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ۴. نظریه احتمال و کاربردها -->
+    <div class="course-card-detailed">
+      <div class="course-card-header">
+        <h3 class="course-card-title">نظریه احتمال و کاربردها</h3>
+        <span class="course-tag-pill course-theme-cyan">علوم پایه • ۳ واحد</span>
+      </div>
+      <ul class="course-card-info-list">
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>استاد: <strong>اساتید گروه آموزشی</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>دوشنبه: <strong>۱۳:۳۰ الی ۱۶:۳۰ (یک و نیم تا چهار و نیم)</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>مکان: <strong>دانشکده مهندسی</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+          <span>تاریخ امتحان: <strong>۱۴۰۵/۱۰/۲۰ (۱۰:۳۰ - ۱۲:۳۰)</strong></span>
+        </li>
+      </ul>
+      <div class="course-card-footer">
+        <span style="font-size: 0.8rem; color: #64748b;">کد درس و گروه:</span>
+        <button class="code-copy-btn" onclick="copyText('6660255_60', 'کد نظریه احتمال')">
+          <span>6660255_60</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ۵. محاسبات عددی -->
+    <div class="course-card-detailed">
+      <div class="course-card-header">
+        <h3 class="course-card-title">محاسبات عددی</h3>
+        <span class="course-tag-pill course-theme-orange">علوم پایه • ۲ واحد</span>
+      </div>
+      <ul class="course-card-info-list">
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>استاد: <strong>اساتید گروه آموزشی</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>یکشنبه: <strong>۱۵:۰۰ الی ۱۶:۳۰</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>مکان: <strong>ساختمان آموزشی صنایع</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+          <span>تاریخ امتحان: <strong>۱۴۰۵/۱۰/۱۹ (۱۰:۳۰ - ۱۲:۳۰)</strong></span>
+        </li>
+      </ul>
+      <div class="course-card-footer">
+        <span style="font-size: 0.8rem; color: #64748b;">کد درس و گروه:</span>
+        <button class="code-copy-btn" onclick="copyText('5714098_52', 'کد محاسبات عددی')">
+          <span>5714098_52</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ۶. مهارت‌های زندگی دانشجویی -->
+    <div class="course-card-detailed">
+      <div class="course-card-header">
+        <h3 class="course-card-title">مهارت‌های زندگی دانشجویی</h3>
+        <span class="course-tag-pill course-theme-lavender">عمومی • ۲ واحد</span>
+      </div>
+      <ul class="course-card-info-list">
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>استاد: <strong>اکبری سکینه</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>سه‌شنبه: <strong>۱۶:۳۰ الی ۱۸:۰۰</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>مکان: <strong>ساختمان آموزشی صنایع</strong></span>
+        </li>
+        <li class="course-card-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+          <span>تاریخ امتحان: <strong>۱۴۰۵/۱۱/۰۵ (۱۳:۳۰ - ۱۶:۳۰)</strong></span>
+        </li>
+      </ul>
+      <div class="course-card-footer">
+        <span style="font-size: 0.8rem; color: #64748b;">کد درس و گروه:</span>
+        <button class="code-copy-btn" onclick="copyText('5505050_59', 'کد مهارت‌های زندگی')">
+          <span>5505050_59</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- نمای سوم: برنامه امتحانات پایان‌ترم (لیست تک‌خطی مدرن با روزشمار) -->
+  <div id="scheduleExamsView" class="schedule-exam-list-view" style="display: none;">
+
+    <!-- امتحان ۱ -->
+    <div class="exam-row" data-date="2027-01-09T10:30:00+03:30">
+      <div class="exam-col-info">
+        <span class="exam-status-dot dot-orange"></span>
+        <div>
+          <div class="exam-name">محاسبات عددی</div>
+          <div class="exam-sub">۲ واحد • علوم پایه • کد ۵۷۱۴۰۹۸_۵۲</div>
+        </div>
+      </div>
+      <div class="exam-col-schedule">
+        <div class="exam-date-box">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+          <span>۱۹ دی ۱۴۰۵</span>
+        </div>
+        <div class="exam-time-box">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>۱۰:۳۰ – ۱۲:۳۰</span>
+        </div>
+      </div>
+      <div class="exam-col-loc">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <span>ساختمان آموزشی صنایع</span>
+      </div>
+      <div class="exam-col-countdown">
+        <span class="exam-countdown-badge">در حال محاسبه...</span>
+      </div>
+    </div>
+
+    <!-- امتحان ۲ -->
+    <div class="exam-row" data-date="2027-01-10T10:30:00+03:30">
+      <div class="exam-col-info">
+        <span class="exam-status-dot dot-cyan"></span>
+        <div>
+          <div class="exam-name">نظریه احتمال و کاربردها</div>
+          <div class="exam-sub">۳ واحد • علوم پایه • کد ۶۶۶۰۲۵۵_۶۰</div>
+        </div>
+      </div>
+      <div class="exam-col-schedule">
+        <div class="exam-date-box">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+          <span>۲۰ دی ۱۴۰۵</span>
+        </div>
+        <div class="exam-time-box">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>۱۰:۳۰ – ۱۲:۳۰</span>
+        </div>
+      </div>
+      <div class="exam-col-loc">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <span>دانشکده مهندسی</span>
+      </div>
+      <div class="exam-col-countdown">
+        <span class="exam-countdown-badge">در حال محاسبه...</span>
+      </div>
+    </div>
+
+    <!-- امتحان ۳ -->
+    <div class="exam-row" data-date="2027-01-13T10:30:00+03:30">
+      <div class="exam-col-info">
+        <span class="exam-status-dot dot-amber"></span>
+        <div>
+          <div class="exam-name">مبانی مهندسی برق</div>
+          <div class="exam-sub">۳ واحد • تخصصی الزامی • کد ۶۶۶۰۱۰۲_۶۰</div>
+        </div>
+      </div>
+      <div class="exam-col-schedule">
+        <div class="exam-date-box">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+          <span>۲۳ دی ۱۴۰۵</span>
+        </div>
+        <div class="exam-time-box">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>۱۰:۳۰ – ۱۲:۳۰</span>
+        </div>
+      </div>
+      <div class="exam-col-loc">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <span>دانشکده مهندسی</span>
+      </div>
+      <div class="exam-col-countdown">
+        <span class="exam-countdown-badge">در حال محاسبه...</span>
+      </div>
+    </div>
+
+    <!-- امتحان ۴ -->
+    <div class="exam-row" data-date="2027-01-18T10:30:00+03:30">
+      <div class="exam-col-info">
+        <span class="exam-status-dot dot-pink"></span>
+        <div>
+          <div class="exam-name">استاتیک و مقاومت مصالح</div>
+          <div class="exam-sub">۳ واحد • دروس اصلی • کد ۶۶۶۰۱۳۱_۶۰</div>
+        </div>
+      </div>
+      <div class="exam-col-schedule">
+        <div class="exam-date-box">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+          <span>۲۸ دی ۱۴۰۵</span>
+        </div>
+        <div class="exam-time-box">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>۱۰:۳۰ – ۱۲:۳۰</span>
+        </div>
+      </div>
+      <div class="exam-col-loc">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <span>دانشکده مهندسی</span>
+      </div>
+      <div class="exam-col-countdown">
+        <span class="exam-countdown-badge">در حال محاسبه...</span>
+      </div>
+    </div>
+
+    <!-- امتحان ۵ -->
+    <div class="exam-row" data-date="2027-01-25T10:30:00+03:30">
+      <div class="exam-col-info">
+        <span class="exam-status-dot dot-blue"></span>
+        <div>
+          <div class="exam-name">معادلات دیفرانسیل</div>
+          <div class="exam-sub">۳ واحد • علوم پایه • کد ۵۷۱۲۰۹۵_۵۱</div>
+        </div>
+      </div>
+      <div class="exam-col-schedule">
+        <div class="exam-date-box">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+          <span>۵ بهمن ۱۴۰۵</span>
+        </div>
+        <div class="exam-time-box">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>۱۰:۳۰ – ۱۲:۳۰ (صبح)</span>
+        </div>
+      </div>
+      <div class="exam-col-loc">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <span>مکانیک-کلاس</span>
+      </div>
+      <div class="exam-col-countdown">
+        <span class="exam-countdown-badge">در حال محاسبه...</span>
+      </div>
+    </div>
+
+    <!-- امتحان ۶ -->
+    <div class="exam-row" data-date="2027-01-25T13:30:00+03:30">
+      <div class="exam-col-info">
+        <span class="exam-status-dot dot-green"></span>
+        <div>
+          <div class="exam-name">مهارت‌های زندگی دانشجویی</div>
+          <div class="exam-sub">۲ واحد • عمومی • کد ۵۵۰۵۰۵۰_۵۹ • استاد اکبری</div>
+        </div>
+      </div>
+      <div class="exam-col-schedule">
+        <div class="exam-date-box">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+          <span>۵ بهمن ۱۴۰۵</span>
+        </div>
+        <div class="exam-time-box">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>۱۳:۳۰ – ۱۶:۳۰ (عصر)</span>
+        </div>
+      </div>
+      <div class="exam-col-loc">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <span>ساختمان آموزشی صنایع</span>
+      </div>
+      <div class="exam-col-countdown">
+        <span class="exam-countdown-badge">در حال محاسبه...</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- پاپ‌آپ اطلاع‌رسانی کپی -->
+  <div id="scheduleToast" class="schedule-toast">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="toastMessage">با موفقیت کپی شد!</span>
+  </div>
+
+</div>
+
+<script>
+// تغییر حالت نمایش بین جدول، کارت‌ها و امتحانات
+function switchScheduleView(viewType) {
+  const tableView = document.getElementById('scheduleTableView');
+  const cardsView = document.getElementById('scheduleCardsView');
+  const examsView = document.getElementById('scheduleExamsView');
+  const tabTableBtn = document.getElementById('tabTableBtn');
+  const tabCardsBtn = document.getElementById('tabCardsBtn');
+  const tabExamsBtn = document.getElementById('tabExamsBtn');
+
+  // مخفی‌سازی همه
+  tableView.style.display = 'none';
+  cardsView.style.display = 'none';
+  examsView.style.display = 'none';
+  tabTableBtn.classList.remove('active');
+  tabCardsBtn.classList.remove('active');
+  tabExamsBtn.classList.remove('active');
+
+  if (viewType === 'table') {
+    tableView.style.display = 'block';
+    tabTableBtn.classList.add('active');
+    highlightCurrentDayAndTime();
+  } else if (viewType === 'cards') {
+    cardsView.style.display = 'grid';
+    tabCardsBtn.classList.add('active');
+  } else if (viewType === 'exams') {
+    examsView.style.display = 'flex';
+    tabExamsBtn.classList.add('active');
+    updateExamCountdowns();
+  }
+}
+
+// کپی لینک صفحه برای اشتراک‌گذاری
+function copyScheduleShareLink() {
+  const url = window.location.href;
+  navigator.clipboard.writeText(url).then(() => {
+    showToast('لینک صفحه برای ارسال به دوستان کپی شد!');
+  }).catch(() => {
+    const input = document.createElement('input');
+    input.value = url;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand('copy');
+    document.body.removeChild(input);
+    showToast('لینک صفحه برای ارسال به دوستان کپی شد!');
+  });
+}
+
+// کپی متن با بازخورد
+function copyText(text, label) {
+  navigator.clipboard.writeText(text).then(() => {
+    showToast(`${label} (${text}) کپی شد!`);
+  }).catch(() => {
+    showToast(`${text} کپی شد!`);
+  });
+}
+
+// نمایش اعلان Toast
+function showToast(msg) {
+  const toast = document.getElementById('scheduleToast');
+  const msgEl = document.getElementById('toastMessage');
+  if (!toast || !msgEl) return;
+  msgEl.innerText = msg;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2400);
+}
+
+// تبدیل ارقام انگلیسی به فارسی
+function toPersianDigits(str) {
+  if (str =<mark class="sarv-highlight"> null || str </mark>= undefined) return '';
+  const farsiDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+  return str.toString().replace(/\d/g, function(d) {
+    return farsiDigits[d];
+  });
+}
+
+// روزشمار هوشمند امتحانات پایان‌ترم
+function updateExamCountdowns() {
+  const now = new Date();
+  const examRows = document.querySelectorAll('.exam-row');
+
+  examRows.forEach(function(row) {
+    const dateStr = row.getAttribute('data-date');
+    if (!dateStr) return;
+    const examDate = new Date(dateStr);
+    const diffMs = examDate.getTime() - now.getTime();
+    const badge = row.querySelector('.exam-countdown-badge');
+    if (!badge) return;
+
+    badge.classList.remove('cd-urgent', 'cd-passed');
+
+    if (diffMs <= -3 * 3600 * 1000) {
+      badge.textContent = 'برگزار شده';
+      badge.classList.add('cd-passed');
+    } else if (diffMs <= 0) {
+      badge.textContent = 'در حال برگزاری ⏳';
+      badge.classList.add('cd-urgent');
+    } else {
+      const totalHours = Math.floor(diffMs / (1000 * 60 * 60));
+      const totalDays = Math.floor(totalHours / 24);
+      const remainingHours = totalHours % 24;
+
+      if (totalDays > 0) {
+        if (totalDays <= 3) {
+          badge.textContent = toPersianDigits(totalDays) + ' روز و ' + toPersianDigits(remainingHours) + ' ساعت مانده';
+          badge.classList.add('cd-urgent');
+        } else {
+          badge.textContent = toPersianDigits(totalDays) + ' روز مانده';
+        }
+      } else if (totalHours > 0) {
+        badge.textContent = toPersianDigits(totalHours) + ' ساعت مانده';
+        badge.classList.add('cd-urgent');
+      } else {
+        const remainingMinutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+        badge.textContent = toPersianDigits(Math.max(1, remainingMinutes)) + ' دقیقه مانده';
+        badge.classList.add('cd-urgent');
+      }
+    }
+  });
+}
+
+function switchScheduleView(view) {
+  const tableView = document.getElementById('scheduleTableView');
+  const cardsView = document.getElementById('scheduleCardsView');
+  const examsView = document.getElementById('scheduleExamsView');
+  const tabTableBtn = document.getElementById('tabTableBtn');
+  const tabCardsBtn = document.getElementById('tabCardsBtn');
+  const tabExamsBtn = document.getElementById('tabExamsBtn');
+
+  if (tableView) tableView.style.display = view === 'table' ? 'block' : 'none';
+  if (cardsView) cardsView.style.display = view === 'cards' ? 'grid' : 'none';
+  if (examsView) examsView.style.display = view =<mark class="sarv-highlight"> 'exams' ? 'flex' : 'none';
+
+  if (tabTableBtn) tabTableBtn.classList.toggle('active', view </mark>= 'table');
+  if (tabCardsBtn) tabCardsBtn.classList.toggle('active', view =<mark class="sarv-highlight"> 'cards');
+  if (tabExamsBtn) tabExamsBtn.classList.toggle('active', view </mark>= 'exams');
+
+  if (view === 'exams') {
+    updateExamCountdowns();
+  }
+}
+window.switchScheduleView = switchScheduleView;
+
+// تشخیص و هایلایت ستون روز جاری و سطر ساعت جاری
+function highlightCurrentDayAndTime() {
+  const now = new Date();
+  const dayIndex = now.getDay(); // 0: Sun, 1: Mon, 2: Tue, 3: Wed, 4: Thu, 5: Fri, 6: Sat
+  const currentMinutes = now.getHours() * 60 + now.getMinutes();
+
+  const dayMap = {
+    6: 'sat',
+    0: 'sun',
+    1: 'mon',
+    2: 'tue',
+    3: 'wed'
+  };
+
+  const todayKey = dayMap[dayIndex];
+
+  // هایلایت ستون روز جاری در جدول
+  if (todayKey) {
+    const colHeader = document.getElementById('col-' + todayKey);
+    if (colHeader && !colHeader.querySelector('.today-tag')) {
+      colHeader.classList.add('schedule-col-today');
+      const tag = document.createElement('span');
+      tag.className = 'today-tag';
+      tag.textContent = 'امروز';
+      colHeader.appendChild(tag);
+    }
+    document.querySelectorAll('td[data-day="' + todayKey + '"]').forEach(function(td) {
+      td.classList.add('schedule-col-today');
+    });
+  }
+
+  // پاک کردن نشانگرهای قبلی سطرها
+  document.querySelectorAll('.schedule-row-now, .schedule-row-upcoming').forEach(function(row) {
+    row.classList.remove('schedule-row-now', 'schedule-row-upcoming');
+    const badge = row.querySelector('.now-pulse-badge, .upcoming-badge');
+    if (badge) badge.remove();
+  });
+  document.querySelectorAll('.schedule-cell-today-active').forEach(function(cell) {
+    cell.classList.remove('schedule-cell-today-active');
+  });
+
+  // تعریف بازه‌های سطرهای ساعت جدول
+  const timeSlots = [
+    { id: 'row-time-0900', start: 540, end: 630 },  // 09:00 - 10:30
+    { id: 'row-time-1330', start: 810, end: 900 },  // 13:30 - 15:00
+    { id: 'row-time-1500', start: 900, end: 990 },  // 15:00 - 16:30
+    { id: 'row-time-1630', start: 990, end: 1080 }  // 16:30 - 18:00
+  ];
+
+  let matched = false;
+  for (let i = 0; i < timeSlots.length; i++) {
+    const slot = timeSlots[i];
+    // اگر ساعت جاری دقیقا در بازه این سطر باشد
+    if (currentMinutes >= slot.start && currentMinutes <= slot.end) {
+      const tr = document.getElementById(slot.id);
+      if (tr) {
+        tr.classList.add('schedule-row-now');
+        const timeCell = tr.querySelector('.schedule-time-cell');
+        if (timeCell && !timeCell.querySelector('.now-pulse-badge')) {
+          const badge = document.createElement('div');
+          badge.className = 'now-pulse-badge';
+          badge.textContent = 'هم‌اکنون';
+          timeCell.appendChild(badge);
+        }
+
+        // اگر امروز روز کلاس‌دار باشد، خانه درس فعال هم درخشان شود
+        if (todayKey) {
+          const activeCell = tr.querySelector('td[data-day="' + todayKey + '"]');
+          if (activeCell && activeCell.querySelector('.course-badge-box')) {
+            activeCell.classList.add('schedule-cell-today-active');
+          }
+        }
+      }
+      matched = true;
+      break;
+    }
+  }
+
+  // اگر هنوز در طول روز است و در کلاس جاری نیستیم، نوبت بعدی را در روز کلاس مشخص کن
+  if (!matched && todayKey) {
+    for (let i = 0; i < timeSlots.length; i++) {
+      const slot = timeSlots[i];
+      if (currentMinutes < slot.start) {
+        const tr = document.getElementById(slot.id);
+        if (tr) {
+          tr.classList.add('schedule-row-upcoming');
+          const timeCell = tr.querySelector('.schedule-time-cell');
+          if (timeCell && !timeCell.querySelector('.upcoming-badge')) {
+            const badge = document.createElement('div');
+            badge.className = 'upcoming-badge';
+            badge.textContent = 'نوبت بعدی';
+            timeCell.appendChild(badge);
+          }
+        }
+        break;
+      }
+    }
+  }
+}
+
+// اجرای اولیه هنگام بارگذاری صفحه و به‌روزرسانی متناوب
+document.addEventListener('DOMContentLoaded', function() {
+  highlightCurrentDayAndTime();
+  updateExamCountdowns();
+  setInterval(function() {
+    highlightCurrentDayAndTime();
+    updateExamCountdowns();
+  }, 30000);
+});
+</script>
+      </div>
+
+      <!-- بخش بک‌لینک‌ها (پیوندهای ورودی به سبک ابسیدین) -->
+      
+
+      <!-- ناوبری صفحه قبلی و بعدی -->
+      
+      <div class="sarv-page-nav">
+        
+        <a href=".." class="btn btn-relief btn-neutral sarv-nav-btn prev">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          <div class="sarv-nav-text">
+            <span class="sarv-nav-sub">صفحه قبل</span>
+            <span class="sarv-nav-title">خانه</span>
+          </div>
+        </a>
+        
+
+        
+        <a href="../projects/" class="btn btn-relief btn-neutral sarv-nav-btn next">
+          <div class="sarv-nav-text">
+            <span class="sarv-nav-sub">صفحه بعد</span>
+            <span class="sarv-nav-title">فهرست پروژه‌ها</span>
+          </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"></path></svg>
+        </a>
+        
+      </div>
+      
+    </article>
+  </main>
+
+  <!-- ستون چپ: فهرست تیترها (TOC) و گراف محلی -->
+  <aside class="sarv-toc-sidebar">
+    <div class="sarv-toc-container">
+  <!-- فهرست عناوین صفحه -->
+  
+
+  <!-- گراف ارتباطات این یادداشت (Local Graph) -->
+  <div class="sarv-local-graph-box-wrapper">
+    <div class="sarv-local-graph-header">
+      <div class="sarv-toc-title">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg>
+        <span>ارتباطات این یادداشت</span>
+      </div>
+    </div>
+    <div id="sarv-local-graph-box" class="sarv-local-graph-canvas-container">
+      <div class="sarv-graph-placeholder">در حال بارگذاری گراف پیوندها...</div>
+    </div>
+  </div>
+</div>
+
+<style>
+.sarv-toc-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.sarv-toc-box {
+  background: color-mix(in oklab, var(--color-base) 75%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 45%, transparent);
+  border-radius: var(--radius-card);
+  padding: 1rem;
+}
+.sarv-toc-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-base-content);
+  margin-bottom: 0.75rem;
+}
+.sarv-toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.sarv-toc-item.depth-2 { padding-right: 0; }
+.sarv-toc-item.depth-3 { padding-right: 0.75rem; }
+.sarv-toc-item.depth-4 { padding-right: 1.25rem; }
+.sarv-toc-link {
+  display: block;
+  font-size: 0.8rem;
+  color: color-mix(in oklab, var(--color-base-content) 70%, transparent);
+  text-decoration: none !important;
+  line-height: 1.5;
+  transition: all 0.18s ease;
+  border-right: 2px solid transparent;
+  padding: 0.25rem 0.5rem 0.25rem 0.25rem;
+  border-radius: 6px 0 0 6px;
+}
+.sarv-toc-link:hover {
+  color: var(--color-primary);
+  border-right-color: var(--color-primary);
+  background: color-mix(in oklab, var(--color-primary) 8%, transparent);
+}
+.sarv-toc-link.active {
+  color: var(--color-primary) !important;
+  font-weight: 700 !important;
+  border-right: 3px solid var(--color-primary) !important;
+  background: color-mix(in oklab, var(--color-primary) 12%, transparent) !important;
+}
+
+/* Local Graph Box in Sidebar (Harmonious Theme Integration) */
+.sarv-local-graph-box-wrapper {
+  background: color-mix(in oklab, var(--color-base) 75%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 45%, transparent);
+  border-radius: var(--radius-card);
+  padding: 0.85rem;
+  overflow: hidden;
+}
+.sarv-local-graph-canvas-container {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background: color-mix(in oklab, var(--color-base-500) 18%, var(--color-base));
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.sarv-graph-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 0.75rem;
+  color: var(--color-neutral);
+}
+</style>
+
+<script>
+(function() {
+  function setupTocScrollspy() {
+    const links = document.querySelectorAll('.sarv-toc-link');
+    if (!links.length) return;
+
+    const headingEntries = [];
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        const id = decodeURIComponent(href.slice(1));
+        const el = document.getElementById(id);
+        if (el) {
+          headingEntries.push({ id, el, link });
+        }
+      }
+    });
+
+    if (!headingEntries.length) return;
+
+    function onScroll() {
+      const scrollY = window.scrollY;
+      const headerOffset = 110;
+      let activeEntry = headingEntries[0];
+
+      for (let i = 0; i < headingEntries.length; i++) {
+        const top = headingEntries[i].el.getBoundingClientRect().top + scrollY;
+        if (scrollY + headerOffset >= top - 25) {
+          activeEntry = headingEntries[i];
+        } else {
+          break;
+        }
+      }
+
+      headingEntries.forEach(entry => {
+        if (entry === activeEntry) {
+          entry.link.classList.add('active');
+        } else {
+          entry.link.classList.remove('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupTocScrollspy);
+  } else {
+    setupTocScrollspy();
+  }
+})();
+</script>
+  </aside>
+</div>
+
+<style>
+.sarv-page-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid color-mix(in oklab, var(--color-base-500) 40%, transparent);
+}
+.sarv-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-card);
+  text-decoration: none !important;
+}
+.sarv-nav-text {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+.sarv-nav-sub {
+  font-size: 0.72rem;
+  color: var(--color-neutral);
+}
+.sarv-nav-title {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--color-base-content);
+}
+.sarv-nav-btn.next .sarv-nav-text {
+  text-align: left;
+}
+</style>
+
+  <!-- فوتر -->
+  <footer class="sarv-footer">
+  <div class="sarv-footer-content">
+    <!-- متن کپی رایت و معرفی -->
+    <div class="sarv-footer-info">
+      
+      <p class="sarv-copyright">ساخته شده با مقادیر فراوان چای و حوصله بسیار توسط MJBakhshi</p>
+      
+      <p class="sarv-credit">
+        طراحی شده با دیزاین‌سیستم <strong>Sarv UI v0.3.1</strong> و معماری بومی تم برای MkDocs
+      </p>
+    </div>
+
+    <!-- شبکه‌های اجتماعی -->
+    <div class="sarv-footer-socials">
+      <a href="https://github.com/mjb4khshi" target="_blank" rel="noopener noreferrer" class="sarv-social-link" title="گیت‌هاب">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"></path></svg>
+      </a>
+      <a href="https://linkedin.com/in/mjb4khshi" target="_blank" rel="noopener noreferrer" class="sarv-social-link" title="لینکدین">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style>
+.sarv-footer {
+  margin-top: auto;
+  border-top: 1px solid color-mix(in oklab, var(--color-base-500) 40%, transparent);
+  background: color-mix(in oklab, var(--color-base) 85%, transparent);
+  padding: 1.75rem 1.5rem;
+}
+.sarv-footer-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.sarv-footer-info p {
+  margin: 0.15rem 0;
+  font-size: 0.85rem;
+}
+.sarv-credit {
+  color: var(--color-neutral);
+  font-size: 0.78rem !important;
+}
+.sarv-footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  direction: ltr;
+}
+.sarv-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: color-mix(in oklab, var(--color-base-500) 45%, transparent);
+  color: var(--color-base-content);
+  transition: all 0.2s ease;
+  text-decoration: none !important;
+}
+.sarv-social-link:hover {
+  background: var(--color-primary);
+  color: var(--color-primary-content);
+  transform: translateY(-2px);
+}
+</style>
+
+  <!-- کشوی مدرن موبایل -->
+  <div id="sarv-mobile-drawer" class="sarv-drawer-fullscreen" onclick="if(event.target===this)this.classList.remove('is-open')">
+  <div class="sarv-drawer-fullscreen-inner" onclick="event.stopPropagation()">
+    <!-- هدر منوی تمام‌صفحه -->
+    <div class="sarv-drawer-header">
+      <div class="sarv-drawer-brand">
+        <div class="sarv-drawer-logo">
+          
+          <img src="../Group 1w.png" alt="Logo" width="30" height="30">
+          
+        </div>
+        <div>
+          <span class="sarv-drawer-title">MJ'S KNTU Notes</span>
+          <span class="sarv-drawer-subtitle">سامانه یکپارچه یادداشت‌ها و جزوات</span>
+        </div>
+      </div>
+      <button type="button" class="btn btn-sm btn-neutral sarv-drawer-close" aria-label="بستن منو" onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+    </div>
+
+    <!-- بدنه اسکرول‌شونده منو -->
+    <div class="sarv-drawer-body">
+      <!-- ۱. جستجوی سریع -->
+      <div class="sarv-drawer-search-wrap" onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open'); document.getElementById('sarv-search-modal').classList.add('is-open'); setTimeout(() =&gt; document.getElementById('sarv-search-input')?.focus(), 60);">
+        <div class="input-wrap w-full">
+          <div class="input-box">
+            <div class="input-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+            </div>
+            <input type="text" class="input-field" placeholder="جستجو در تمام جزوات و مباحث..." readonly="">
+            <div class="input-kbd">جستجو</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ۲. دکمه گراف کل یادداشت‌ها -->
+      <div class="sarv-drawer-quick-actions">
+        <button type="button" class="btn btn-accent w-full sarv-drawer-action-btn" onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open'); document.getElementById('sarv-open-global-graph')?.click();">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg>
+          <span>مشاهده گراف ارتباطات یادداشت‌ها</span>
+        </button>
+      </div>
+
+      <!-- ۳. سوییچ ۱۵ تم رنگی سرو (سلکتور کامپکت) -->
+      <div class="sarv-drawer-section">
+        <div class="sarv-drawer-section-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a7 7 0 0 0 0 14v6a1 1 0 0 0 1-1 9 9 0 0 0 8-9c0-5-4-9-9-10Z"></path></svg>
+          <span>انتخاب تم رنگی</span>
+        </div>
+        <div class="sarv-compact-select-wrap">
+          <select id="sarv-mobile-theme-select" class="sarv-compact-select" onchange="window.SarvThemes.applyTheme(this.value)">
+            <option value="persian-dark">🇮🇷 ایرانی تاریک (پیش‌فرض)</option>
+            <option value="persian-light">🇮🇷 ایرانی روشن</option>
+            <option value="ocean-abyss">🌊 اقیانوس ژرف (Ocean Abyss)</option>
+            <option value="emerald">🌿 زمردین (Emerald)</option>
+            <option value="cyberpunk">⚡ سایبرپانک (Cyberpunk)</option>
+            <option value="sunset">🌅 غروب آفتاب (Sunset)</option>
+            <option value="matcha">🍵 ماچا (Matcha)</option>
+            <option value="nordic">❄️ نوردیک (Nordic)</option>
+            <option value="rose-gold">🌸 رزگلد (Rose Gold)</option>
+            <option value="tokyo-midnight">🌌 شب‌های توکیو (Tokyo)</option>
+            <option value="coffee-roast">☕ قهوه رست (Coffee)</option>
+            <option value="crimson">💎 یاقوت سرخ (Crimson)</option>
+            <option value="royal-purple">👑 بنفش سلطنتی (Royal)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ۴. بخش‌های اصلی -->
+      <div class="sarv-drawer-section">
+        <div class="sarv-drawer-section-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span>بخش‌های اصلی</span>
+        </div>
+        <div class="sarv-drawer-grid">
+          
+            
+              <a href=".." class="sarv-drawer-card " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                <div class="sarv-drawer-card-icon">
+                  
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                  
+                </div>
+                <span>خانه</span>
+              </a>
+            
+          
+            
+              <a href="./" class="sarv-drawer-card active" onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                <div class="sarv-drawer-card-icon">
+                  
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                  
+                </div>
+                <span>برنامه هفتگی</span>
+              </a>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      </div>
+
+      <!-- ۵. فهرست دروس و دسته‌بندی‌ها -->
+      <div class="sarv-drawer-section">
+        <div class="sarv-drawer-section-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path><path d="M6 6h10"></path><path d="M6 10h10"></path></svg>
+          <span>دسته‌بندی‌ها و دروس</span>
+        </div>
+        <div class="sarv-drawer-list">
+          
+            
+          
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>پروژه‌های دانشگاهی</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../projects/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فهرست پروژه‌ها</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../projects/proji/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>شبیه‌ساز پرتابه Proji</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../projects/economics-study/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>پژوهش اقتصاد نهادگرا</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>ادبیات فارسی</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../adabiat/%D8%A7%D9%86%D9%88%D8%A7%D8%B9%20%D8%B2%D8%A8%D8%A7%D9%86/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>ادبیات</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../adabiat/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%81%D8%A7%D8%B1%D8%B3%DB%8C/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>تاریخچه زبان پارسی</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../adabiat/%D8%AC%D8%AF%D8%A7%D9%84%20%D8%B3%D8%B9%D8%AF%DB%8C%20%D9%88%20%D9%85%D8%AF%D8%B9%DB%8C/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>جدال سعدی و مدعی</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../adabiat/%D8%B4%DA%A9%D9%84%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C%20%D9%88%20%D9%BE%DB%8C%D8%AF%D8%A7%DB%8C%D8%B4%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%85%D9%84%D9%81%D9%88%D8%B8/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>شکل‌گیری و پیدایش زبان‌ ملفوظ</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>حساب دیفرانسیل و انتگرال</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../calculus/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فهرست مطالب درس ریاضی عمومی</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>اقتصاد کلان</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../macroeconomics/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>معرفی و فهرست فصول</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B1%20-%20%DA%86%D8%A7%D8%B1%DA%86%D9%88%D8%A8%20%D9%86%D8%B8%D8%B1%DB%8C%20%D9%88%20%D9%85%D9%81%D8%A7%D9%87%DB%8C%D9%85%20%D8%A8%D9%86%DB%8C%D8%A7%D8%AF%DB%8C%D9%86/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فصل ۱: چارچوب نظری و مفاهیم بنیادین توسعه</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B2%20-%20%D8%A7%D8%B7%D9%84%D8%B3%20%D8%A2%D9%85%D8%A7%D8%B1%DB%8C%20%D9%88%20%D9%BE%D9%88%D8%B3%D8%AA%D8%B1%D9%87%D8%A7%DB%8C%20%D8%AA%D8%A8%DB%8C%DB%8C%D9%86%DB%8C/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فصل ۲: اطلس آماری و پوسترهای تبیینی شاخص‌ها</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B3%20-%20%D9%88%D8%A7%DA%A9%D8%A7%D9%88%DB%8C%20%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DB%8C%20%D9%88%20%D8%AA%D8%AC%D8%A7%D8%B1%D8%A8%20%DA%AF%D8%B0%D8%A7%D8%B1/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فصل ۳: واکاوی تاریخی و تجارب گذار اقتصادی در کشورهای منتخب</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B4%20-%20%D9%85%D8%A7%D8%AA%D8%B1%DB%8C%D8%B3%20%D8%AA%D8%B7%D8%A8%DB%8C%D9%82%DB%8C%20%D9%88%20%D8%A7%D9%84%DA%AF%D9%88%D9%87%D8%A7%DB%8C%20%DA%AF%D8%B0%D8%A7%D8%B1/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فصل ۴: ماتریس تطبیقی و واکاوی راهبردی الگوهای گذار</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B5%20-%20%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C%20%D9%85%D8%AF%D9%84%20%D9%BE%D9%84%D8%AA%D9%81%D8%B1%D9%85%DB%8C%20%DA%AF%D8%B0%D8%A7%D8%B1%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فصل ۵: طراحی مدل پلتفرمی گذار اقتصادی ایران</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../macroeconomics/%D9%86%D8%AA%DB%8C%D8%AC%D9%87%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C%20%D9%88%20%D9%85%D9%86%D8%A7%D8%A8%D8%B9/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>نتیجه‌گیری کلان و فهرست منابع پژوهش</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../macroeconomics/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D9%86%D9%87%D8%A7%D8%AF%DA%AF%D8%B1%D8%A7%20%D9%88%20%D8%AF%D9%88%D9%84%D8%AA%20%D8%AA%D9%88%D8%B3%D8%B9%D9%87%E2%80%8C%DA%AF%D8%B1%D8%A7/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>اقتصاد نهادگرا و دولت توسعه‌گرا</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>اقتصاد خرد</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../micro%20economics/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فهرست مطالب</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>دوره‌های آزاد و برنامه‌نویسی</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../out%20of%20kntu%20university/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>معرفی دوره‌ها</span>
+                      </a>
+                    
+                  
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>فیزیک دانشگاهی</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../physics/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فهرست مطالب درس فیزیک ۱</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>برنامه‌نویسی دانشگاهی</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../programming/%D8%AC%D8%B2%D9%88%D9%87%20%DA%A9%D9%84%D8%A7%D8%B3%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C%20%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%A7%D8%B1%D8%B2%D8%A7%D9%86%DB%8C/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>جزوه کلاس برنامه‌نویسی استاد ارزانی</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Full-Screen Mobile Drawer with Soft Blur */
+.sarv-drawer-fullscreen {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100000;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background: color-mix(in oklab, var(--color-base) 92%, transparent);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: scale(1.02);
+  display: flex;
+  flex-direction: column;
+}
+.sarv-drawer-fullscreen.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+.sarv-drawer-fullscreen-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.sarv-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+}
+.sarv-drawer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+.sarv-drawer-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: color-mix(in oklab, var(--color-primary) 15%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sarv-drawer-title {
+  display: block;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-base-content);
+}
+.sarv-drawer-subtitle {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-neutral);
+}
+.sarv-drawer-body {
+  padding: 1.25rem 1.5rem 3rem 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  flex: 1;
+}
+.sarv-drawer-search-wrap {
+  cursor: pointer;
+}
+.sarv-drawer-quick-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+.sarv-drawer-action-btn {
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+}
+.sarv-drawer-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-neutral);
+  margin-bottom: 0.75rem;
+}
+.sarv-compact-select-wrap {
+  position: relative;
+  width: 100%;
+}
+.sarv-compact-select {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  background: color-mix(in oklab, var(--color-base-500) 45%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 75%, transparent);
+  border-radius: var(--radius-button);
+  padding: 0.7rem 1rem 0.7rem 2.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-base-content);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+.sarv-compact-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-primary) 20%, transparent);
+}
+.sarv-compact-select option {
+  background: var(--color-base);
+  color: var(--color-base-content);
+  padding: 0.5rem;
+}
+.sarv-compact-select-wrap::after {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--color-neutral);
+  pointer-events: none;
+}
+.sarv-drawer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+.sarv-drawer-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-button);
+  background: color-mix(in oklab, var(--color-base-500) 40%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  text-decoration: none !important;
+  color: var(--color-base-content);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+.sarv-drawer-card:hover, .sarv-drawer-card.active {
+  border-color: var(--color-primary);
+  background: color-mix(in oklab, var(--color-primary) 12%, transparent);
+  color: var(--color-primary);
+}
+.sarv-drawer-card-icon {
+  color: var(--color-primary);
+}
+.sarv-drawer-group {
+  margin-bottom: 0.5rem;
+}
+.sarv-drawer-group-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  background: color-mix(in oklab, var(--color-base-500) 30%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+  border-radius: var(--radius-button);
+  color: var(--color-base-content);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  text-align: right;
+}
+.sarv-drawer-chevron {
+  transition: transform 0.25s ease;
+  transform: rotate(180deg);
+}
+.sarv-drawer-group.is-open .sarv-drawer-chevron {
+  transform: rotate(90deg);
+}
+.sarv-drawer-sublist {
+  display: none;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 4px;
+  padding-right: 0.75rem;
+  border-right: 2px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+}
+.sarv-drawer-group.is-open .sarv-drawer-sublist {
+  display: flex;
+}
+.sarv-drawer-sublink {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 8px;
+  color: color-mix(in oklab, var(--color-base-content) 80%, transparent);
+  text-decoration: none !important;
+  font-size: 0.825rem;
+}
+.sarv-drawer-sublink:hover, .sarv-drawer-sublink.active {
+  color: var(--color-primary);
+  background: color-mix(in oklab, var(--color-primary) 10%, transparent);
+}
+.sarv-drawer-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--color-base-500) 80%, transparent);
+}
+.sarv-drawer-sublink.active .sarv-drawer-bullet {
+  background: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .sarv-drawer-fullscreen-inner {
+    max-width: 100% !important;
+  }
+  .sarv-drawer-header {
+    padding: 1rem 1.15rem !important;
+  }
+  .sarv-drawer-body {
+    padding: 1rem 1.15rem 4rem 1.15rem !important;
+  }
+  .sarv-drawer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}
+</style>
+
+  <!-- مودال گراف کل دانش -->
+  <div id="sarv-global-graph-modal" class="sarv-modal-backdrop">
+  <div class="sarv-modal-content">
+    <div class="sarv-modal-header">
+      <div class="sarv-modal-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg>
+        <span>گراف جامع ارتباطات تمام یادداشت‌ها (Global Knowledge Graph)</span>
+      </div>
+      <button type="button" id="sarv-close-global-graph" class="btn btn-sm btn-neutral">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+    </div>
+
+    <div class="sarv-modal-body">
+      <div id="sarv-global-graph-box" class="sarv-global-graph-canvas">
+        <!-- Canvas injected by graph-engine.js -->
+      </div>
+    </div>
+
+    <div class="sarv-modal-footer">
+      <span class="sarv-graph-hint">💡 نکته: با اسکرول ماوس زوم کنید، با درگ کردن نودها را حرکت دهید و برای باز کردن یادداشت روی نود کلیک نمایید.</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.sarv-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.sarv-modal-backdrop.is-open {
+  display: flex;
+}
+.sarv-modal-content {
+  width: 100%;
+  max-width: 1100px;
+  height: 85vh;
+  background: color-mix(in oklab, var(--color-base) 94%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 80%, transparent);
+  border-radius: var(--radius-card);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalScaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes modalScaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.sarv-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+}
+.sarv-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-base-content);
+}
+.sarv-modal-body {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--color-base-500) 20%, transparent);
+}
+.sarv-global-graph-canvas {
+  width: 100%;
+  height: 100%;
+}
+.sarv-modal-footer {
+  padding: 0.75rem 1.5rem;
+  border-top: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+  font-size: 0.8rem;
+  color: var(--color-neutral);
+}
+</style>
+
+  <!-- مودال جستجوی سریع -->
+  <div id="sarv-search-modal" class="sarv-search-backdrop">
+  <div class="sarv-search-dialog">
+    <div class="sarv-search-header">
+      <div class="input-wrap w-full">
+        <div class="input-box">
+          <div class="input-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          </div>
+          <input type="text" id="sarv-search-input" class="input-field" placeholder="جستجو در تمام جزوات، فرمول‌ها و مباحث..." autocomplete="off">
+          <button type="button" id="sarv-search-close" class="sarv-search-close-btn">
+            <kbd>ESC</kbd>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="sarv-search-results" class="sarv-search-results-box">
+      <div class="sarv-search-empty">عبارتی را برای جستجو وارد کنید...</div>
+    </div>
+
+    <div class="sarv-search-footer">
+      <span>راهنما: با کلیدهای <strong>Esc</strong> یا کلیک روی پس‌زمینه پنجره را ببندید.</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.sarv-search-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5rem 1rem 2rem 1rem;
+}
+.sarv-search-backdrop.is-open {
+  display: flex;
+}
+.sarv-search-dialog {
+  width: 100%;
+  max-width: 680px;
+  max-height: 80vh;
+  background: color-mix(in oklab, var(--color-base) 96%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 80%, transparent);
+  border-radius: var(--radius-card);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: searchFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes searchFadeIn {
+  from { opacity: 0; transform: scale(0.96) translateY(-10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.sarv-search-header {
+  padding: 1.25rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--color-base-500) 40%, transparent);
+}
+.sarv-search-close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 0.75rem;
+}
+.sarv-search-close-btn kbd {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  background: color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 90%, transparent);
+  color: var(--color-neutral);
+}
+.sarv-search-results-box {
+  padding: 1rem 1.25rem;
+  overflow-y: auto;
+  max-height: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.sarv-search-empty {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--color-neutral);
+  font-size: 0.9rem;
+}
+.sarv-search-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-button);
+  background: color-mix(in oklab, var(--color-base-500) 25%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+  text-decoration: none !important;
+  color: inherit;
+  transition: all 0.15s ease;
+}
+.sarv-search-item:hover {
+  border-color: var(--color-primary);
+  background: color-mix(in oklab, var(--color-primary) 12%, transparent);
+}
+.sarv-search-item-title {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--color-primary);
+}
+.sarv-search-item-snippet {
+  font-size: 0.8rem;
+  color: color-mix(in oklab, var(--color-base-content) 75%, transparent);
+  line-height: 1.5;
+}
+.sarv-search-footer {
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid color-mix(in oklab, var(--color-base-500) 40%, transparent);
+  font-size: 0.78rem;
+  color: var(--color-neutral);
+}
+</style>
+
+  <!-- دکمه شناور بازگشت به بالا -->
+  <button type="button" id="sarv-back-to-top" class="btn btn-accent sarv-back-to-top" title="بازگشت به بالای صفحه">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m18 15-6-6-6 6"></path></svg>
+  </button>
+
+  <style>
+  .sarv-back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 990;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  </style>
+
+  <!-- اسکریپت‌های تم سرو -->
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/copy-code.js"></script>
+  <script src="../assets/js/checkbox-anim.js"></script>
+  <script src="../assets/js/reading-progress.js"></script>
+  <script src="../assets/js/graph-engine.js"></script>
+  <script src="../assets/js/hover-preview.js"></script>
+  <script src="../assets/js/mermaid-theme.js"></script>
+  <script src="../assets/js/schedule.js"></script>
+  <script src="../assets/js/search.js"></script>
+
+  <!-- اسکریپت‌های افزوده (KaTeX / MathJax / ...) -->
+  
+  <script src="../javascripts/mathjax.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <script src="../javascripts/translate.js"></script>
+  
+  <script src="../search/main.js"></script>
+  
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

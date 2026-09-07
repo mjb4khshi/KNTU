@@ -2,18 +2,11 @@ site_name: MJ'S KNTU Notes
 copyright: "ساخته شده با مقادیر فراوان چای و حوصله بسیار توسط MJBakhshi"
 
 theme:
-  name: shadcn
+  name: sarv
   language: fa
-  custom_dir: overrides          # برای override کردن footer.html
   show_title: true
-  show_stargazers: false
-  icon: Group 1w.png              # نکته: کلید درست "icon" است نه "logo"
+  icon: Group 1w.png
   favicon: Group 1w.png
-  accent: "oklch(64.5% 0.246 16.439)"
-  katex_options: {}
-  pygments_style:
-    light: shadcn-light
-    dark: github-dark
 
 extra:
   generator: false
@@ -23,12 +16,8 @@ extra:
 
 extra_javascript:
   - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - javascripts/translate.js
-
-extra_css:
-  - extra.css
 
 plugins:
   - search
@@ -39,14 +28,20 @@ plugins:
   - awesome-pages
 
 hooks:
-  - hooks/fix_obsidian_links.py    # فایل جدید، توضیح در بخش ۴
+  - mkdocs_theme_sarv/hooks/obsidian_engine.py
 
 markdown_extensions:
+  - md_in_html
   - admonition
   - wikilinks
   - pymdownx.details
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
