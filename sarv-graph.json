@@ -503,7 +503,7 @@
       "title": "فهرست پروژه‌ها",
       "url": "projects/",
       "folder": "projects",
-      "words": 138,
+      "words": 258,
       "isHub": true,
       "radius": 7.5
     },
@@ -515,11 +515,25 @@
       "words": 255
     },
     {
+      "id": "projects/kntu-card.md",
+      "title": "طراحی کارت دانشجویی دانشگاه",
+      "url": "projects/kntu-card/",
+      "folder": "projects",
+      "words": 291
+    },
+    {
       "id": "projects/proji.md",
       "title": "شبیه‌ساز پرتابه Proji",
       "url": "projects/proji/",
       "folder": "projects",
       "words": 364
+    },
+    {
+      "id": "projects/sarvestan.md",
+      "title": "سروستان (سامانه هوشمند دانشجویی)",
+      "url": "projects/sarvestan/",
+      "folder": "projects",
+      "words": 359
     }
   ],
   "links": [
@@ -1006,13 +1020,37 @@
     },
     {
       "source": "projects/index.md",
+      "target": "projects/kntu-card.md",
+      "type": "folder",
+      "folder": "projects"
+    },
+    {
+      "source": "projects/index.md",
       "target": "projects/proji.md",
       "type": "folder",
       "folder": "projects"
     },
     {
+      "source": "projects/index.md",
+      "target": "projects/sarvestan.md",
+      "type": "folder",
+      "folder": "projects"
+    },
+    {
       "source": "projects/economics-study.md",
+      "target": "projects/kntu-card.md",
+      "type": "folder",
+      "folder": "projects"
+    },
+    {
+      "source": "projects/kntu-card.md",
       "target": "projects/proji.md",
+      "type": "folder",
+      "folder": "projects"
+    },
+    {
+      "source": "projects/proji.md",
+      "target": "projects/sarvestan.md",
       "type": "folder",
       "folder": "projects"
     },
@@ -1382,7 +1420,7 @@
       "title": "فهرست پروژه‌ها",
       "url": "projects/",
       "folder": "projects",
-      "summary": "# پروژه‌های دانشگاهی و پژوهشی ## مجموعه شبیه‌سازها، ابزارهای تعاملی و مطالعات ساختاری توسعه  <div class=\"admonition note\"> <p class=\"admonition-title\">درباره این بخش</p> <p> در این..."
+      "summary": "# پروژه‌های دانشگاهی و پژوهشی ## مجموعه سامانه‌های هوشمند، دیزاین‌سیستم، شبیه‌سازها و مطالعات توسعه  <div class=\"admonition note\"> <p class=\"admonition-title\">درباره این بخش</p> <p..."
     },
     "projects/economics-study/": {
       "id": "projects/economics-study.md",
@@ -1391,12 +1429,26 @@
       "folder": "projects",
       "summary": "# پژوهش اقتصاد نهادگرا و دولت توسعه‌گرا ## واکاوی تطبیقی تجارب گذار اقتصادی و بازطراحی الگوی بومی ایران  <div class=\"sarv-poster-card\">   <img src=\"../assets/economics-poster.png\"..."
     },
+    "projects/kntu-card/": {
+      "id": "projects/kntu-card.md",
+      "title": "طراحی کارت دانشجویی دانشگاه",
+      "url": "projects/kntu-card/",
+      "folder": "projects",
+      "summary": "# طراحی کارت دانشجویی دانشگاه صنعتی خواجه نصیرالدین طوسی ## کانسپت مدرن هویت بصری، کارت هوشمند چندمنظوره و دیزاین فرم‌لس  <div class=\"sarv-poster-card\" style=\"text-align: center; m..."
+    },
     "projects/proji/": {
       "id": "projects/proji.md",
       "title": "شبیه‌ساز پرتابه Proji",
       "url": "projects/proji/",
       "folder": "projects",
       "summary": "# شبیه‌ساز سه‌بعدی حرکت پرتابه (Proji) ## 3D Projectile Motion Simulator  <div class=\"sarv-poster-card\" style=\"text-align: center; margin: 1.5rem 0;\">   <img src=\"../assets/proji-b..."
+    },
+    "projects/sarvestan/": {
+      "id": "projects/sarvestan.md",
+      "title": "سروستان (سامانه هوشمند دانشجویی)",
+      "url": "projects/sarvestan/",
+      "folder": "projects",
+      "summary": "# سامانه هوشمند دانشجویی سروستان (Sarvestan) ## اکوسیستم نسل دوم دانشگاهی؛ تلفیق اپلیکیشن اندروید، افزونه مرورگر و دیزاین‌سیستم Sarv UI  <div class=\"sarv-poster-card\" style=\"text-a..."
     }
   }
 }
