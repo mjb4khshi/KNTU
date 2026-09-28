@@ -342,7 +342,69 @@ def on_post_build(config):
     docs_dir = config.get('docs_dir')
     
     try:
-        # ۱) فیلتر کردن و یکتاسازی یال‌های واقعی گراف (بدون لینک‌های تصنعی و زنجیره‌ای)
+        # ۱) شناسایی نود صفحه اصلی (خانه) و اتصال خودکار به نوت اصلی هر پوشه/درس
+        home_node = next((n for n in _graph_nodes if n['id'] in ('index.md', 'index.html') or n.get('url') in ('', '/', 'index.html')), None)
+        if home_node:
+            home_node['isHome'] = True
+            home_node['radius'] = 9.0
+
+            # گروه‌بندی یادداشت‌ها بر اساس پوشه اصلی هر درس
+            course_folders = {}
+            for node in _graph_nodes:
+                if node.get('isResource') or node.get('isExternal'):
+                    continue
+                f = node.get('folder', 'عمومی')
+                if f and f not in ('عمومی', 'پیوندهای خارجی'):
+                    top_folder = f.split('/')[0]
+                    course_folders.setdefault(top_folder, []).append(node['id'])
+
+            for folder_name, nids in course_folders.items():
+                # اولویت ۱: index.md یا index.html در ریشه این پوشه
+                primary_id = None
+                for nid in nids:
+                    norm_nid = nid.replace('\\', '/')
+                    if norm_nid == f"{folder_name}/index.md" or norm_nid == f"{folder_name}/index.html":
+                        primary_id = nid
+                        break
+                # اولویت ۲: اگر کارتی از صفحه اصلی به نودی در این پوشه وصل است
+                if not primary_id:
+                    for l in _graph_links:
+                        if l['source'] == home_node['id'] and l.get('target') in nids:
+                            primary_id = l['target']
+                            break
+                # اولویت ۳: فایل‌های شامل فهرست یا مطالب در پوشه
+                if not primary_id:
+                    for nid in nids:
+                        base = os.path.basename(nid).lower()
+                        if 'فهرست' in base or 'مطالب' in base:
+                            primary_id = nid
+                            break
+                # اولویت ۴: نودی با کوتاه‌ترین عمق و مسیر در پوشه
+                if not primary_id and nids:
+                    primary_id = sorted(nids, key=lambda x: (len(x.split('/')), len(x)))[0]
+
+                if primary_id and primary_id != home_node['id']:
+                    for n in _graph_nodes:
+                        if n['id'] == primary_id:
+                            n['isHub'] = True
+                    if not any(l['source'] == home_node['id'] and l['target'] == primary_id for l in _graph_links):
+                        _graph_links.append({
+                            'source': home_node['id'],
+                            'target': primary_id,
+                            'type': 'hub'
+                        })
+
+            # همچنین اتصال خانه به صفحات کلیدی ریشه مانند برنامه هفتگی و برچسب‌ها
+            for special_id in ('schedule.md', 'tags.md'):
+                if any(n['id'] == special_id for n in _graph_nodes):
+                    if not any(l['source'] == home_node['id'] and l['target'] == special_id for l in _graph_links):
+                        _graph_links.append({
+                            'source': home_node['id'],
+                            'target': special_id,
+                            'type': 'hub'
+                        })
+
+        # ۲) فیلتر کردن و یکتاسازی یال‌های واقعی گراف (بدون لینک‌های تصنعی و زنجیره‌ای)
         clean_links = []
         seen = set()
         node_ids = set(n['id'] for n in _graph_nodes)
@@ -356,7 +418,7 @@ def on_post_build(config):
                     seen.add(pair)
                     clean_links.append(link)
 
-        # ۲) محاسبه درجه اتصال هر نود (Degree) جهت تعیین طبیعی اندازه نودها (سبک اصیل ابسیدین)
+        # ۳) محاسبه درجه اتصال هر نود (Degree) جهت تعیین طبیعی اندازه نودها (سبک اصیل ابسیدین)
         node_degrees = {}
         for link in clean_links:
             node_degrees[link['source']] = node_degrees.get(link['source'], 0) + 1
@@ -366,7 +428,7 @@ def on_post_build(config):
             deg = node_degrees.get(node['id'], 0)
             node['degree'] = deg
             if node.get('isHome'):
-                node['radius'] = 8.5
+                node['radius'] = 9.0
             elif node.get('isExternal'):
                 node['radius'] = 4.2
             elif deg >= 4:
@@ -391,12 +453,20 @@ def on_post_build(config):
             with open(os.path.join(site_dir, 'sarv-tags.json'), 'w', encoding='utf-8') as f:
                 json.dump(_tag_registry, f, ensure_ascii=False, indent=2)
 
-        # ذخیره همزمان در docs_dir تا در سرور زنده محلی (mkdocs serve) نیز بلافاصله در دسترس باشد
-        if docs_dir:
-            with open(os.path.join(docs_dir, 'sarv-graph.json'), 'w', encoding='utf-8') as f:
-                json.dump(graph_payload, f, ensure_ascii=False, indent=2)
-            with open(os.path.join(docs_dir, 'sarv-tags.json'), 'w', encoding='utf-8') as f:
-                json.dump(_tag_registry, f, ensure_ascii=False, indent=2)
+        # ذخیره در docs_dir فقط در زمان build (نه در حین mkdocs serve تا لوپ ری‌لود فایل‌واچر ایجاد نشود)
+        import sys
+        is_serving = any('serve' in str(arg).lower() for arg in sys.argv)
+        if docs_dir and not is_serving:
+            docs_graph_path = os.path.join(docs_dir, 'sarv-graph.json')
+            new_graph_str = json.dumps(graph_payload, ensure_ascii=False, indent=2)
+            with open(docs_graph_path, 'w', encoding='utf-8') as f:
+                f.write(new_graph_str)
+
+            docs_tags_path = os.path.join(docs_dir, 'sarv-tags.json')
+            new_tags_str = json.dumps(_tag_registry, ensure_ascii=False, indent=2)
+            with open(docs_tags_path, 'w', encoding='utf-8') as f:
+                f.write(new_tags_str)
 
     except Exception as e:
         print(f"[Sarv Theme] Error writing sarv-graph.json: {e}")
+

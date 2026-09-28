@@ -7,9 +7,9 @@
       "folder": "عمومی",
       "tags": [],
       "words": 297,
-      "degree": 6,
-      "isHub": true,
-      "radius": 7.0
+      "isHome": true,
+      "radius": 9.0,
+      "degree": 16
     },
     {
       "id": "ext:16790dcb",
@@ -44,7 +44,7 @@
       "folder": "عمومی",
       "tags": [],
       "words": 1238,
-      "degree": 0,
+      "degree": 1,
       "radius": 4.8
     },
     {
@@ -54,7 +54,7 @@
       "folder": "عمومی",
       "tags": [],
       "words": 979,
-      "degree": 0,
+      "degree": 1,
       "radius": 4.8
     },
     {
@@ -74,6 +74,7 @@
       "folder": "adabiat",
       "tags": [],
       "words": 354,
+      "isHub": true,
       "degree": 1,
       "radius": 4.8
     },
@@ -104,8 +105,8 @@
       "folder": "calculus",
       "tags": [],
       "words": 130,
-      "degree": 10,
       "isHub": true,
+      "degree": 10,
       "radius": 7.0
     },
     {
@@ -237,22 +238,9 @@
         "فروبنیوس",
         "دانشگاه"
       ],
-      "words": 487,
-      "degree": 1,
+      "words": 470,
+      "degree": 0,
       "radius": 4.8
-    },
-    {
-      "id": "ext:f413f40a",
-      "title": "جزوه دست‌نویس کامل معادلات دیفرانسیل (سرفصل‌ه",
-      "url": "https://drive.google.com/",
-      "folder": "پیوندهای خارجی",
-      "isResource": true,
-      "isExternal": true,
-      "type": "external",
-      "badge": "جزوه کلاسی",
-      "radius": 4.2,
-      "words": 0,
-      "degree": 3
     },
     {
       "id": "macroeconomics/index.md",
@@ -261,8 +249,8 @@
       "folder": "macroeconomics",
       "tags": [],
       "words": 248,
-      "degree": 6,
       "isHub": true,
+      "degree": 7,
       "radius": 7.0
     },
     {
@@ -342,7 +330,8 @@
       "folder": "mapping",
       "tags": [],
       "words": 73,
-      "degree": 0,
+      "isHub": true,
+      "degree": 1,
       "radius": 4.8
     },
     {
@@ -352,7 +341,8 @@
       "folder": "micro economics",
       "tags": [],
       "words": 32,
-      "degree": 2,
+      "isHub": true,
+      "degree": 3,
       "radius": 5.8
     },
     {
@@ -393,7 +383,8 @@
         "ریاضیات",
         "دانشگاه"
       ],
-      "words": 192,
+      "words": 438,
+      "isHub": true,
       "degree": 1,
       "radius": 4.8
     },
@@ -404,8 +395,9 @@
       "folder": "out of kntu university",
       "tags": [],
       "words": 12,
-      "degree": 1,
-      "radius": 4.8
+      "isHub": true,
+      "degree": 2,
+      "radius": 5.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/jonas.md",
@@ -648,8 +640,8 @@
       "folder": "physics",
       "tags": [],
       "words": 83,
-      "degree": 6,
       "isHub": true,
+      "degree": 7,
       "radius": 7.0
     },
     {
@@ -737,6 +729,7 @@
       "folder": "programming",
       "tags": [],
       "words": 886,
+      "isHub": true,
       "degree": 1,
       "radius": 4.8
     },
@@ -747,8 +740,8 @@
       "folder": "projects",
       "tags": [],
       "words": 258,
-      "degree": 4,
       "isHub": true,
+      "degree": 5,
       "radius": 7.0
     },
     {
@@ -858,7 +851,8 @@
         "تنش_کرنش",
         "دانشگاه"
       ],
-      "words": 510,
+      "words": 498,
+      "isHub": true,
       "degree": 1,
       "radius": 4.8
     }
@@ -940,11 +934,6 @@
       "type": "external"
     },
     {
-      "source": "calculus/معادلات دیفرانسیل.md",
-      "target": "ext:f413f40a",
-      "type": "external"
-    },
-    {
       "source": "macroeconomics/index.md",
       "target": "macroeconomics/فصل ۱ - چارچوب نظری و مفاهیم بنیادین.md",
       "type": "card"
@@ -982,11 +971,6 @@
     {
       "source": "micro economics/index.md",
       "target": "ext:f7dd4fe8",
-      "type": "external"
-    },
-    {
-      "source": "numerical-analysis/index.md",
-      "target": "ext:f413f40a",
       "type": "external"
     },
     {
@@ -1180,9 +1164,54 @@
       "type": "external"
     },
     {
-      "source": "statics/index.md",
-      "target": "ext:f413f40a",
-      "type": "external"
+      "source": "index.md",
+      "target": "macroeconomics/index.md",
+      "type": "hub"
+    },
+    {
+      "source": "index.md",
+      "target": "mapping/index.md",
+      "type": "hub"
+    },
+    {
+      "source": "index.md",
+      "target": "micro economics/index.md",
+      "type": "hub"
+    },
+    {
+      "source": "index.md",
+      "target": "numerical-analysis/index.md",
+      "type": "hub"
+    },
+    {
+      "source": "index.md",
+      "target": "out of kntu university/index.md",
+      "type": "hub"
+    },
+    {
+      "source": "index.md",
+      "target": "physics/فهرست مطالب.md",
+      "type": "hub"
+    },
+    {
+      "source": "index.md",
+      "target": "projects/index.md",
+      "type": "hub"
+    },
+    {
+      "source": "index.md",
+      "target": "statics/index.md",
+      "type": "hub"
+    },
+    {
+      "source": "index.md",
+      "target": "schedule.md",
+      "type": "hub"
+    },
+    {
+      "source": "index.md",
+      "target": "tags.md",
+      "type": "hub"
     }
   ],
   "pages": {

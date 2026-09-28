@@ -61,53 +61,8 @@
 
 ### 📂 جزوات کلاسی و منابع درسی
 
-<div class="resource-list">
-
-  <a class="resource-card" href="https://drive.google.com/" target="_blank" rel="noopener">
-    <div class="resource-card-main">
-      <div class="resource-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-      </div>
-      <span class="resource-card-title">جزوه مدون استاتیک دانشگاه خواجه نصیر (بخش اول: تعادل و خرپاها)</span>
-    </div>
-    <div class="resource-card-side">
-      <span class="resource-badge">جزوه درسی</span>
-      <span class="resource-open-icon">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-      </span>
-    </div>
-  </a>
-
-  <a class="resource-card" href="https://drive.google.com/" target="_blank" rel="noopener">
-    <div class="resource-card-main">
-      <div class="resource-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-      </div>
-      <span class="resource-card-title">جزوه مدون مقاومت مصالح (بخش دوم: تنش، کرنش و خمش تیرها)</span>
-    </div>
-    <div class="resource-card-side">
-      <span class="resource-badge">جزوه درسی</span>
-      <span class="resource-open-icon">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-      </span>
-    </div>
-  </a>
-
-  <a class="resource-card" href="https://drive.google.com/" target="_blank" rel="noopener">
-    <div class="resource-card-main">
-      <div class="resource-card-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
-      </div>
-      <span class="resource-card-title">مجموعه تمرینات کلاسی و مسائل تحلیلی حل‌شده امتحانی</span>
-    </div>
-    <div class="resource-card-side">
-      <span class="resource-badge resource-badge-exam">تمرینات</span>
-      <span class="resource-open-icon">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-      </span>
-    </div>
-  </a>
-
-</div>
+> [!TIP]
+> جزوات دست‌نویس کلاسی، خلاصه فرمول‌ها و بانک تمرینات درس استاتیک و مقاومت مصالح به زودی در این قسمت بارگذاری خواهند شد.
 
 #استاتیک #مقاومت_مصالح #مهندسی #سازه #تنش_کرنش #دانشگاه
+
