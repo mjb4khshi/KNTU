@@ -122,29 +122,51 @@
     }
 
     startSimulation() {
-      let iterations = 0;
-      const maxIter = this.options.isLocal ? 350 : 500;
-      
+      this.alpha = 1.0;
+      this.decay = this.options.isLocal ? 0.985 : 0.988;
+      this.minAlpha = 0.0015;
+
       const step = () => {
-        this.tick();
+        if (this.draggedNode) {
+          this.alpha = Math.max(this.alpha, 0.45);
+        } else {
+          this.alpha *= this.decay;
+        }
+
+        if (this.alpha > this.minAlpha || this.draggedNode) {
+          this.tick(this.alpha);
+        }
+
         this.draw();
-        iterations++;
-        if (iterations < maxIter || this.draggedNode) {
+
+        if (this.alpha > this.minAlpha || this.draggedNode) {
           this.animId = requestAnimationFrame(step);
+        } else {
+          this.animId = null;
         }
       };
+
       if (this.animId) cancelAnimationFrame(this.animId);
       this.animId = requestAnimationFrame(step);
     }
 
-    tick() {
+    wake(energy = 0.5) {
+      this.alpha = Math.max(this.alpha || 0, energy);
+      if (!this.animId) {
+        this.startSimulation();
+      }
+    }
+
+    tick(alpha = 1.0) {
       const cx = this.width / 2;
       const cy = this.height / 2;
+      const effectiveAlpha = Math.max(0.12, alpha);
 
       // 1. Center Gravity
       this.nodes.forEach(node => {
+        if (node === this.draggedNode) return;
         const isCenter = node.id === this.options.centerNodeId;
-        const grav = isCenter ? 0.025 : 0.005;
+        const grav = (isCenter ? 0.03 : 0.006) * effectiveAlpha;
         node.vx += (cx - node.x) * grav;
         node.vy += (cy - node.y) * grav;
       });
@@ -160,26 +182,34 @@
           const dy = b.y - a.y;
           const dist = Math.sqrt(dx * dx + dy * dy) || 1;
           if (dist < repelDist) {
-            const force = (repelDist - dist) / (dist * 18);
-            a.vx -= dx * force;
-            a.vy -= dy * force;
-            b.vx += dx * force;
-            b.vy += dy * force;
+            const force = ((repelDist - dist) / (dist * 16)) * effectiveAlpha;
+            if (a !== this.draggedNode) {
+              a.vx -= dx * force;
+              a.vy -= dy * force;
+            }
+            if (b !== this.draggedNode) {
+              b.vx += dx * force;
+              b.vy += dy * force;
+            }
           }
         }
       }
 
-      // 3. Link Spring Tension
-      const desiredDist = this.options.isLocal ? 55 : 48;
+      // 3. Link Spring Tension (Pull neighbor nodes dynamically!)
+      const desiredDist = this.options.isLocal ? 55 : 50;
       this.resolvedLinks.forEach(link => {
         const dx = link.target.x - link.source.x;
         const dy = link.target.y - link.source.y;
         const dist = Math.sqrt(dx * dx + dy * dy) || 1;
-        const force = (dist - desiredDist) * 0.04;
-        link.source.vx += (dx / dist) * force;
-        link.source.vy += (dy / dist) * force;
-        link.target.vx -= (dx / dist) * force;
-        link.target.vy -= (dy / dist) * force;
+        const force = (dist - desiredDist) * 0.06 * effectiveAlpha;
+        if (link.source !== this.draggedNode) {
+          link.source.vx += (dx / dist) * force;
+          link.source.vy += (dy / dist) * force;
+        }
+        if (link.target !== this.draggedNode) {
+          link.target.vx -= (dx / dist) * force;
+          link.target.vy -= (dy / dist) * force;
+        }
       });
 
       // 4. Update Position & Velocity Damping
@@ -401,17 +431,20 @@
         if (isDragging) {
           dragDistance += Math.hypot(e.clientX - startX, e.clientY - startY);
           if (this.draggedNode) {
-            this.draggedNode.x = (mx - this.offsetX) / this.scale;
-            this.draggedNode.y = (my - this.offsetY) / this.scale;
-            this.draggedNode.vx = 0;
-            this.draggedNode.vy = 0;
+            const nextX = (mx - this.offsetX) / this.scale;
+            const nextY = (my - this.offsetY) / this.scale;
+            this.draggedNode.vx = (nextX - this.draggedNode.x) * 0.6;
+            this.draggedNode.vy = (nextY - this.draggedNode.y) * 0.6;
+            this.draggedNode.x = nextX;
+            this.draggedNode.y = nextY;
+            this.wake(0.45);
           } else {
             this.offsetX += e.clientX - startX;
             this.offsetY += e.clientY - startY;
+            this.draw();
           }
           startX = e.clientX;
           startY = e.clientY;
-          this.draw();
         } else {
           const node = getNodeAt(mx, my);
           if (node !== this.hoveredNode) {
@@ -440,13 +473,17 @@
         startY = e.clientY;
         if (node) {
           this.draggedNode = node;
+          this.wake(0.5);
         }
         this.canvas.style.cursor = 'grabbing';
       });
 
       window.addEventListener('mouseup', () => {
         isDragging = false;
-        this.draggedNode = null;
+        if (this.draggedNode) {
+          this.draggedNode = null;
+          this.wake(0.4);
+        }
         if (this.canvas) {
           this.canvas.style.cursor = this.hoveredNode ? 'pointer' : 'grab';
         }
@@ -485,6 +522,9 @@
           touchStartY = e.touches[0].clientY;
           touchDragDistance = 0;
           this.draggedNode = node || null;
+          if (node) {
+            this.wake(0.5);
+          }
         } else if (e.touches.length === 2) {
           this.draggedNode = null;
           initialPinchDistance = Math.hypot(
@@ -508,17 +548,20 @@
           const my = curY - rect.top;
 
           if (this.draggedNode) {
-            this.draggedNode.x = (mx - this.offsetX) / this.scale;
-            this.draggedNode.y = (my - this.offsetY) / this.scale;
-            this.draggedNode.vx = 0;
-            this.draggedNode.vy = 0;
+            const nextX = (mx - this.offsetX) / this.scale;
+            const nextY = (my - this.offsetY) / this.scale;
+            this.draggedNode.vx = (nextX - this.draggedNode.x) * 0.6;
+            this.draggedNode.vy = (nextY - this.draggedNode.y) * 0.6;
+            this.draggedNode.x = nextX;
+            this.draggedNode.y = nextY;
+            this.wake(0.45);
           } else {
             this.offsetX += dx;
             this.offsetY += dy;
+            this.draw();
           }
           touchStartX = curX;
           touchStartY = curY;
-          this.draw();
         } else if (e.touches.length === 2 && initialPinchDistance) {
           const curDist = Math.hypot(
             e.touches[0].clientX - e.touches[1].clientX,
@@ -537,6 +580,10 @@
           // If tap without drag on a node, navigate!
           if (touchDragDistance < 10 && this.draggedNode) {
             navigateToNode(this.draggedNode);
+          }
+          if (this.draggedNode) {
+            this.draggedNode = null;
+            this.wake(0.4);
           }
           this.draggedNode = null;
           initialPinchDistance = null;
