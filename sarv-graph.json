@@ -5,582 +5,944 @@
       "title": "خانه",
       "url": "./",
       "folder": "عمومی",
-      "words": 247,
-      "isHome": true,
-      "radius": 9.0
+      "tags": [],
+      "words": 297,
+      "degree": 6,
+      "isHub": true,
+      "radius": 7.0
+    },
+    {
+      "id": "ext:16790dcb",
+      "title": "گیت‌هاب (GitHub)",
+      "url": "https://github.com/mjb4khshi/",
+      "folder": "پیوندهای خارجی",
+      "isResource": true,
+      "isExternal": true,
+      "type": "external",
+      "badge": "خارجی",
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
+    },
+    {
+      "id": "ext:81929968",
+      "title": "لینکدین (LinkedIn)",
+      "url": "https://www.linkedin.com/in/mjb4khshi/",
+      "folder": "پیوندهای خارجی",
+      "isResource": true,
+      "isExternal": true,
+      "type": "external",
+      "badge": "خارجی",
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "schedule.md",
       "title": "برنامه هفتگی",
       "url": "schedule/",
       "folder": "عمومی",
-      "words": 1238
+      "tags": [],
+      "words": 1238,
+      "degree": 0,
+      "radius": 4.8
+    },
+    {
+      "id": "tags.md",
+      "title": "برچسب‌ها",
+      "url": "tags/",
+      "folder": "عمومی",
+      "tags": [],
+      "words": 979,
+      "degree": 0,
+      "radius": 4.8
     },
     {
       "id": "adabiat/انواع زبان.md",
       "title": "ادبیات",
       "url": "adabiat/%D8%A7%D9%86%D9%88%D8%A7%D8%B9%20%D8%B2%D8%A8%D8%A7%D9%86/",
       "folder": "adabiat",
+      "tags": [],
       "words": 160,
-      "isHub": true,
-      "radius": 7.5
+      "degree": 0,
+      "radius": 4.8
     },
     {
       "id": "adabiat/تاریخچه زبان فارسی.md",
       "title": "تاریخچه زبان پارسی",
       "url": "adabiat/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%81%D8%A7%D8%B1%D8%B3%DB%8C/",
       "folder": "adabiat",
-      "words": 354
+      "tags": [],
+      "words": 354,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "adabiat/جدال سعدی و مدعی.md",
       "title": "جدال سعدی و مدعی",
       "url": "adabiat/%D8%AC%D8%AF%D8%A7%D9%84%20%D8%B3%D8%B9%D8%AF%DB%8C%20%D9%88%20%D9%85%D8%AF%D8%B9%DB%8C/",
       "folder": "adabiat",
-      "words": 2141
+      "tags": [],
+      "words": 2141,
+      "degree": 0,
+      "radius": 4.8
     },
     {
       "id": "adabiat/شکل‌گیری و پیدایش زبان ملفوظ.md",
       "title": "شکل‌گیری و پیدایش زبان‌ ملفوظ",
       "url": "adabiat/%D8%B4%DA%A9%D9%84%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C%20%D9%88%20%D9%BE%DB%8C%D8%AF%D8%A7%DB%8C%D8%B4%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%85%D9%84%D9%81%D9%88%D8%B8/",
       "folder": "adabiat",
-      "words": 235
+      "tags": [],
+      "words": 235,
+      "degree": 0,
+      "radius": 4.8
     },
     {
       "id": "calculus/فهرست مطالب.md",
-      "title": "فهرست مطالب درس ریاضی عمومی",
+      "title": "فهرست مطالب ریاضی عمومی",
       "url": "calculus/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/",
       "folder": "calculus",
+      "tags": [],
       "words": 130,
+      "degree": 10,
       "isHub": true,
-      "radius": 7.5
+      "radius": 7.0
     },
     {
       "id": "ext:ac309733",
-      "title": "به دست آوردن تابع پادمشتق و انتگرال نامعین به کمک مساحت زیرنمودار",
+      "title": "به دست آوردن تابع پادمشتق و انتگرال نامعین به",
       "url": "https://drive.google.com/file/d/124Rs5f_sHIg-Jo9xi-VgdaFnyeSENy09/view?usp=sharing",
-      "folder": "calculus",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "یادداشت تحلیلی",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "ext:aa6fe671",
-      "title": "حل انتگرال با روش جانشانی هذلولوی/هیپربولیک (ابداعی و غیررسمی)",
+      "title": "حل انتگرال با روش جانشانی هذلولوی/هیپربولیک (",
       "url": "https://drive.google.com/file/d/1edSMpAEQIUAn0yHQ6-m6Bpasq4yYt0Rq/view",
-      "folder": "calculus",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "روش ابداعی",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "ext:30236b33",
       "title": "فرمول جمع سینوس ضرایب زاویه خاص \\sum \\sin(kx)",
       "url": "https://drive.google.com/file/d/1m5pz6yAPzAJ5IDeY2_loKzCVjD3UOkrf/view",
-      "folder": "calculus",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "اثبات فرمول",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "ext:7bd743b1",
-      "title": "شرایط خاص برای همگرایی توابع با انتگرال کران‌دار!",
+      "title": "شرایط خاص برای همگرایی توابع با انتگرال کران‌",
       "url": "https://drive.google.com/file/d/1KNETOgtWl8ZAoANcE_Co7Aqg4VpBXZuw/view",
-      "folder": "calculus",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "همگرایی توابع",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "ext:f196e2fd",
       "title": "حل تمرین انتگرال کسری \\int \\frac{1}{x^4+1} dx",
       "url": "https://drive.google.com/file/d/1z3vJgqqaV6ZNrgDRHMgR5NEZn2z58bbr/view",
-      "folder": "calculus",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "حل مسئله",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "ext:70f4351e",
       "title": "تمرین سری اول — مشتق، قضایا و اعداد مختلط",
       "url": "https://drive.google.com/file/d/1byVBJx-okdoC_80-d5wO0YbI-i9dCOo_/view",
-      "folder": "calculus",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "سری ۱",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "ext:fb929b6d",
-      "title": "تمرین سری دوم — مشتق، قضایا، اعداد مختلط و سری تیلور - مکلارن",
+      "title": "تمرین سری دوم — مشتق، قضایا، اعداد مختلط و سر",
       "url": "https://drive.google.com/file/d/1RGRh9l9dJY5sThqOPg2s7GdhOk-TY9_V/view?usp=sharing",
-      "folder": "calculus",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "سری ۲",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "ext:0eb8cde8",
-      "title": "تمرین سری سوم — انتگرال نامعین و روش‌های ادغام",
+      "title": "تمرین سری سوم — انتگرال نامعین و روش‌های ادغا",
       "url": "https://drive.google.com/file/d/1aJCpNBixGhlZ_wp1PhWIOqDpmVM3CiBI/view?usp=sharing",
-      "folder": "calculus",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "سری ۳",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "ext:da6a0683",
-      "title": "سؤالات امتحان پایان‌ترم همراه با پاسخ‌برگ تشریحی",
+      "title": "سؤالات امتحان پایان‌ترم همراه با پاسخ‌برگ تشر",
       "url": "https://drive.google.com/file/d/1FOvshPoIZtnqeaEl3Ww0PcdMtR3gu2A2/view",
-      "folder": "calculus",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "پایان‌ترم",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
+    },
+    {
+      "id": "calculus/معادلات دیفرانسیل.md",
+      "title": "معادلات دیفرانسیل",
+      "url": "calculus/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D8%AA%20%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84/",
+      "folder": "calculus",
+      "tags": [
+        "معادلات_دیفرانسیل",
+        "ریاضیات",
+        "لاپلاس",
+        "فروبنیوس",
+        "دانشگاه"
+      ],
+      "words": 487,
+      "degree": 1,
+      "radius": 4.8
+    },
+    {
+      "id": "ext:f413f40a",
+      "title": "جزوه دست‌نویس کامل معادلات دیفرانسیل (سرفصل‌ه",
+      "url": "https://drive.google.com/",
+      "folder": "پیوندهای خارجی",
+      "isResource": true,
+      "isExternal": true,
+      "type": "external",
+      "badge": "جزوه کلاسی",
+      "radius": 4.2,
+      "words": 0,
+      "degree": 3
     },
     {
       "id": "macroeconomics/index.md",
       "title": "معرفی و فهرست فصول",
       "url": "macroeconomics/",
       "folder": "macroeconomics",
+      "tags": [],
       "words": 248,
+      "degree": 6,
       "isHub": true,
-      "radius": 7.5
+      "radius": 7.0
     },
     {
       "id": "macroeconomics/اقتصاد نهادگرا و دولت توسعه‌گرا.md",
       "title": "اقتصاد نهادگرا و دولت توسعه‌گرا",
       "url": "macroeconomics/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D9%86%D9%87%D8%A7%D8%AF%DA%AF%D8%B1%D8%A7%20%D9%88%20%D8%AF%D9%88%D9%84%D8%AA%20%D8%AA%D9%88%D8%B3%D8%B9%D9%87%E2%80%8C%DA%AF%D8%B1%D8%A7/",
       "folder": "macroeconomics",
-      "words": 10412
+      "tags": [],
+      "words": 10412,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "macroeconomics/فصل ۱ - چارچوب نظری و مفاهیم بنیادین.md",
       "title": "فصل ۱: چارچوب نظری و مفاهیم بنیادین توسعه",
       "url": "macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B1%20-%20%DA%86%D8%A7%D8%B1%DA%86%D9%88%D8%A8%20%D9%86%D8%B8%D8%B1%DB%8C%20%D9%88%20%D9%85%D9%81%D8%A7%D9%87%DB%8C%D9%85%20%D8%A8%D9%86%DB%8C%D8%A7%D8%AF%DB%8C%D9%86/",
       "folder": "macroeconomics",
-      "words": 849
+      "tags": [],
+      "words": 849,
+      "degree": 2,
+      "radius": 5.8
     },
     {
       "id": "macroeconomics/فصل ۲ - اطلس آماری و پوسترهای تبیینی.md",
       "title": "فصل ۲: اطلس آماری و پوسترهای تبیینی شاخص‌ها",
       "url": "macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B2%20-%20%D8%A7%D8%B7%D9%84%D8%B3%20%D8%A2%D9%85%D8%A7%D8%B1%DB%8C%20%D9%88%20%D9%BE%D9%88%D8%B3%D8%AA%D8%B1%D9%87%D8%A7%DB%8C%20%D8%AA%D8%A8%DB%8C%DB%8C%D9%86%DB%8C/",
       "folder": "macroeconomics",
-      "words": 2445
+      "tags": [],
+      "words": 2445,
+      "degree": 2,
+      "radius": 5.8
     },
     {
       "id": "macroeconomics/فصل ۳ - واکاوی تاریخی و تجارب گذار.md",
       "title": "فصل ۳: واکاوی تاریخی و تجارب گذار اقتصادی در کشورهای منتخب",
       "url": "macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B3%20-%20%D9%88%D8%A7%DA%A9%D8%A7%D9%88%DB%8C%20%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DB%8C%20%D9%88%20%D8%AA%D8%AC%D8%A7%D8%B1%D8%A8%20%DA%AF%D8%B0%D8%A7%D8%B1/",
       "folder": "macroeconomics",
-      "words": 2212
+      "tags": [],
+      "words": 2212,
+      "degree": 2,
+      "radius": 5.8
     },
     {
       "id": "macroeconomics/فصل ۴ - ماتریس تطبیقی و الگوهای گذار.md",
       "title": "فصل ۴: ماتریس تطبیقی و واکاوی راهبردی الگوهای گذار",
       "url": "macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B4%20-%20%D9%85%D8%A7%D8%AA%D8%B1%DB%8C%D8%B3%20%D8%AA%D8%B7%D8%A8%DB%8C%D9%82%DB%8C%20%D9%88%20%D8%A7%D9%84%DA%AF%D9%88%D9%87%D8%A7%DB%8C%20%DA%AF%D8%B0%D8%A7%D8%B1/",
       "folder": "macroeconomics",
-      "words": 1269
+      "tags": [],
+      "words": 1269,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "macroeconomics/فصل ۵ - طراحی مدل پلتفرمی گذار ایران.md",
       "title": "فصل ۵: طراحی مدل پلتفرمی گذار اقتصادی ایران",
       "url": "macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B5%20-%20%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C%20%D9%85%D8%AF%D9%84%20%D9%BE%D9%84%D8%AA%D9%81%D8%B1%D9%85%DB%8C%20%DA%AF%D8%B0%D8%A7%D8%B1%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86/",
       "folder": "macroeconomics",
-      "words": 1529
+      "tags": [],
+      "words": 1529,
+      "degree": 2,
+      "radius": 5.8
     },
     {
       "id": "macroeconomics/نتیجه‌گیری و منابع.md",
       "title": "نتیجه‌گیری کلان و فهرست منابع پژوهش",
       "url": "macroeconomics/%D9%86%D8%AA%DB%8C%D8%AC%D9%87%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C%20%D9%88%20%D9%85%D9%86%D8%A7%D8%A8%D8%B9/",
       "folder": "macroeconomics",
-      "words": 705
+      "tags": [],
+      "words": 705,
+      "degree": 1,
+      "radius": 4.8
+    },
+    {
+      "id": "mapping/index.md",
+      "title": "جزوه و مطالب درس نقشه‌برداری",
+      "url": "mapping/",
+      "folder": "mapping",
+      "tags": [],
+      "words": 73,
+      "degree": 0,
+      "radius": 4.8
     },
     {
       "id": "micro economics/index.md",
       "title": "فهرست مطالب",
       "url": "micro%20economics/",
       "folder": "micro economics",
+      "tags": [],
       "words": 32,
-      "isHub": true,
-      "radius": 7.5
+      "degree": 2,
+      "radius": 5.8
     },
     {
       "id": "ext:c3067edf",
       "title": "صورت سؤالات تمرین سری اول اقتصاد خرد",
       "url": "https://drive.google.com/file/d/1CZhWtys2IHdpXBLKBajDBkrpi4G7SDve/view?usp=sharing",
-      "folder": "micro economics",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "تمرین سری ۱",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "ext:f7dd4fe8",
       "title": "تمرین سری اول — پاسخ‌نامه و گزارش تحویلی",
       "url": "https://drive.google.com/file/d/1bD1fSm6itFMykcNMd1PtKWA3m91OaCBj/view?usp=sharing",
-      "folder": "micro economics",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "پاسخنامه تحویلی",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
+    },
+    {
+      "id": "numerical-analysis/index.md",
+      "title": "درس محاسبات عددی و تحلیل الگوریتم‌ها",
+      "url": "numerical-analysis/",
+      "folder": "numerical-analysis",
+      "tags": [
+        "محاسبات_عددی",
+        "روش_های_عددی",
+        "الگوریتم",
+        "ریاضیات",
+        "دانشگاه"
+      ],
+      "words": 192,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/index.md",
       "title": "معرفی دوره‌ها",
       "url": "out%20of%20kntu%20university/",
       "folder": "out of kntu university",
+      "tags": [],
       "words": 12,
-      "isHub": true,
-      "radius": 7.5
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/jonas.md",
       "title": "🚀 برنامه ۲۱ روزه یادگیری JavaScript با دوره Jonas",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/jonas/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت",
+      "tags": [],
       "words": 519,
-      "isHub": true,
-      "radius": 7.5
+      "degree": 3,
+      "radius": 5.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/DOM & events/selecting and manipulating Elements.md",
       "title": "سلکت کردن یک عنصر در فایل HTML با آیدی یا کلاس یا نوع",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/DOM%20%26%20events/selecting%20and%20manipulating%20Elements/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/DOM & events",
+      "tags": [],
       "words": 93,
-      "isHub": true,
-      "radius": 7.5
+      "degree": 0,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/== vs ===.md",
       "title": "عملگرهای مقایسه تساوی",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/%3D%3D%20vs%20%3D%3D%3D/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
+      "tags": [],
       "words": 175,
-      "isHub": true,
-      "radius": 7.5
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/Falsy  truthy values.md",
       "title": "Falsy  truthy values",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/Falsy%20%20truthy%20values/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
-      "words": 103
+      "tags": [],
+      "words": 103,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/Fundamentals – Part 1.md",
       "title": "📘 Fundamentals – Part 1",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/Fundamentals%20%E2%80%93%20Part%201/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
-      "words": 191
+      "tags": [],
+      "words": 191,
+      "degree": 11,
+      "isHub": true,
+      "radius": 7.0
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/Logical Operators & switch.md",
       "title": "عملگرهای منطقی",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/Logical%20Operators%20%26%20switch/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
-      "words": 115
+      "tags": [],
+      "words": 115,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/conditional (Ternary) Operator.md",
       "title": "عبارت شرطی",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/conditional%20%28Ternary%29%20Operator/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
-      "words": 88
+      "tags": [],
+      "words": 88,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/data-types.md",
       "title": "انواع داده",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/data-types/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
-      "words": 288
+      "tags": [],
+      "words": 288,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/if-else-statements.md",
       "title": "🔀 شرط‌ها در JavaScript: if / else",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/if-else-statements/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
-      "words": 122
+      "tags": [],
+      "words": 122,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/operators.md",
       "title": "عملگرها",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/operators/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
-      "words": 296
+      "tags": [],
+      "words": 296,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/template literals.md",
       "title": "📌 Template Literals در JavaScript",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/template%20literals/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
-      "words": 159
+      "tags": [],
+      "words": 159,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/type conversion.md",
       "title": "🔄 تبدیل نوع‌ها در JavaScript",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/type%20conversion/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
-      "words": 309
+      "tags": [],
+      "words": 309,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/variables.md",
       "title": "Variables",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/variables/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
-      "words": 473
+      "tags": [
+        "js",
+        "web"
+      ],
+      "words": 473,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Array Operations (methods).md",
       "title": "عملگر های آرایه(متد)",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Array%20Operations%20%28methods%29/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
+      "tags": [],
       "words": 362,
-      "isHub": true,
-      "radius": 7.5
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Arrays.md",
       "title": "آرایه ها",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Arrays/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
-      "words": 230
+      "tags": [],
+      "words": 230,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Functions.md",
       "title": "توابع در جاوا اسکریپت",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Functions/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
-      "words": 223
+      "tags": [
+        "بسیار_مهم"
+      ],
+      "words": 223,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Fundamentals – Part 2.md",
       "title": "📘 Fundamentals – Part 2",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Fundamentals%20%E2%80%93%20Part%202/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
-      "words": 79
+      "tags": [],
+      "words": 79,
+      "degree": 8,
+      "isHub": true,
+      "radius": 7.0
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/loops.md",
       "title": "حلقه ها",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/loops/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
-      "words": 25
+      "tags": [],
+      "words": 25,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/object methods(functions).md",
       "title": "متدهای شی در جاوا اسکریپت",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/object%20methods%28functions%29/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
-      "words": 167
+      "tags": [
+        "methods"
+      ],
+      "words": 167,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/objects.md",
       "title": "شیء در جاوا اسکریپت",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/objects/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
-      "words": 190
+      "tags": [
+        "notation",
+        "dot",
+        "bracket",
+        "object"
+      ],
+      "words": 190,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/strict mode.md",
       "title": "Strict mode",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/strict%20mode/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
-      "words": 19
+      "tags": [],
+      "words": 19,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/this.md",
       "title": "واژه کلیدی this",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/this/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
-      "words": 79
+      "tags": [],
+      "words": 79,
+      "degree": 0,
+      "radius": 4.8
     },
     {
       "id": "physics/فهرست مطالب.md",
       "title": "فهرست مطالب درس فیزیک ۱",
       "url": "physics/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/",
       "folder": "physics",
+      "tags": [],
       "words": 83,
+      "degree": 6,
       "isHub": true,
-      "radius": 7.5
+      "radius": 7.0
     },
     {
       "id": "ext:4d0b3473",
-      "title": "مسئله جذاب قطار و کبوتر (سینماتیک و حرکت نسبی)",
+      "title": "مسئله جذاب قطار و کبوتر (سینماتیک و حرکت نسبی",
       "url": "https://drive.google.com/file/d/1NwF-rKFhdzgBea14mWfoy_jh_hrxNrtm/view?usp=drive_link",
-      "folder": "physics",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "سینماتیک",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "ext:55a4f49c",
-      "title": "تمرین لوله‌ها و توپ (برخورد و حرکت در مسیرهای مقید)",
+      "title": "تمرین لوله‌ها و توپ (برخورد و حرکت در مسیرهای",
       "url": "https://drive.google.com/file/d/18kEiNr5-SfrUipeSslqtRF23w7igf61i/view?usp=drive_link",
-      "folder": "physics",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "دینامیک",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "ext:b8cb9ced",
       "title": "تمرین برخورد با دیوار و دو توپ",
       "url": "https://drive.google.com/file/d/11FjLJLDuzVVQBNcSQD0qOWb0B1OlfWSR/view?usp=sharing",
-      "folder": "physics",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "برخورد و تکانه",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "ext:68cb699b",
-      "title": "مسئله بهینه‌سازی: حالت بهینه راه رفتن یا دویدن زیر باران",
+      "title": "مسئله بهینه‌سازی: حالت بهینه راه رفتن یا دوید",
       "url": "https://drive.google.com/file/d/17UtdKJpdPIqBYW9dFHHobA5yfEnUekc5/view?usp=sharing",
-      "folder": "physics",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "مدل‌سازی فیزیکی",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "ext:76b5316b",
       "title": "زاویه برد بیشینه برای پرتابه روی سطح شیب‌دار",
       "url": "https://drive.google.com/file/d/1b1aVjLtCW0L6cCHIfPwkJUXj4FYAx2Jp/view?usp=sharing",
-      "folder": "physics",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "حرکت پرتابه‌ای",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "ext:d9503e73",
       "title": "تمرینات دینامیک و حرکت دورانی مقدماتی",
       "url": "https://drive.google.com/file/d/1RONdqsSDTlXCKgnMybIJ9xItozscRIhD/view?usp=sharing",
-      "folder": "physics",
+      "folder": "پیوندهای خارجی",
       "isResource": true,
-      "type": "resource",
+      "isExternal": true,
+      "type": "external",
       "badge": "دوران و تکانه زاویه‌ای",
-      "radius": 4.5,
-      "words": 0
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "programming/جزوه کلاس برنامه‌نویسی استاد ارزانی.md",
       "title": "جزوه کلاس برنامه‌نویسی استاد ارزانی",
       "url": "programming/%D8%AC%D8%B2%D9%88%D9%87%20%DA%A9%D9%84%D8%A7%D8%B3%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C%20%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%A7%D8%B1%D8%B2%D8%A7%D9%86%DB%8C/",
       "folder": "programming",
+      "tags": [],
       "words": 886,
-      "isHub": true,
-      "radius": 7.5
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "projects/index.md",
       "title": "فهرست پروژه‌ها",
       "url": "projects/",
       "folder": "projects",
+      "tags": [],
       "words": 258,
+      "degree": 4,
       "isHub": true,
-      "radius": 7.5
+      "radius": 7.0
     },
     {
       "id": "projects/economics-study.md",
       "title": "پژوهش اقتصاد نهادگرا",
       "url": "projects/economics-study/",
       "folder": "projects",
-      "words": 255
+      "tags": [],
+      "words": 255,
+      "degree": 5,
+      "isHub": true,
+      "radius": 7.0
     },
     {
       "id": "projects/kntu-card.md",
       "title": "طراحی کارت دانشجویی دانشگاه",
       "url": "projects/kntu-card/",
       "folder": "projects",
-      "words": 291
+      "tags": [],
+      "words": 291,
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "projects/proji.md",
       "title": "شبیه‌ساز پرتابه Proji",
       "url": "projects/proji/",
       "folder": "projects",
-      "words": 364
+      "tags": [],
+      "words": 364,
+      "degree": 2,
+      "radius": 5.8
+    },
+    {
+      "id": "ext:f769c2a1",
+      "title": "github.com/mjb4khshi/proji",
+      "url": "https://github.com/mjb4khshi/proji",
+      "folder": "پیوندهای خارجی",
+      "isResource": true,
+      "isExternal": true,
+      "type": "external",
+      "badge": "خارجی",
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
     },
     {
       "id": "projects/sarvestan.md",
       "title": "سروستان (سامانه هوشمند دانشجویی)",
       "url": "projects/sarvestan/",
       "folder": "projects",
-      "words": 359
+      "tags": [],
+      "words": 359,
+      "degree": 4,
+      "isHub": true,
+      "radius": 7.0
+    },
+    {
+      "id": "ext:2d92a259",
+      "title": "mjb4khshi.github.io/sarvestan",
+      "url": "https://mjb4khshi.github.io/sarvestan",
+      "folder": "پیوندهای خارجی",
+      "isResource": true,
+      "isExternal": true,
+      "type": "external",
+      "badge": "خارجی",
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
+    },
+    {
+      "id": "ext:d1030fca",
+      "title": "github.com/mjb4khshi/sarvestan",
+      "url": "https://github.com/mjb4khshi/sarvestan",
+      "folder": "پیوندهای خارجی",
+      "isResource": true,
+      "isExternal": true,
+      "type": "external",
+      "badge": "خارجی",
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
+    },
+    {
+      "id": "ext:e3d53322",
+      "title": "@s4rvest4n",
+      "url": "https://t.me/s4rvest4n",
+      "folder": "پیوندهای خارجی",
+      "isResource": true,
+      "isExternal": true,
+      "type": "external",
+      "badge": "خارجی",
+      "radius": 4.2,
+      "words": 0,
+      "degree": 1
+    },
+    {
+      "id": "statics/index.md",
+      "title": "درس استاتیک و مقاومت مصالح",
+      "url": "statics/",
+      "folder": "statics",
+      "tags": [
+        "استاتیک",
+        "مقاومت_مصالح",
+        "مهندسی",
+        "سازه",
+        "تنش_کرنش",
+        "دانشگاه"
+      ],
+      "words": 510,
+      "degree": 1,
+      "radius": 4.8
     }
   ],
   "links": [
     {
+      "source": "index.md",
+      "target": "ext:16790dcb",
+      "type": "external"
+    },
+    {
+      "source": "index.md",
+      "target": "ext:81929968",
+      "type": "external"
+    },
+    {
+      "source": "index.md",
+      "target": "calculus/فهرست مطالب.md",
+      "type": "card"
+    },
+    {
+      "source": "index.md",
+      "target": "macroeconomics/اقتصاد نهادگرا و دولت توسعه‌گرا.md",
+      "type": "card"
+    },
+    {
+      "source": "index.md",
+      "target": "programming/جزوه کلاس برنامه‌نویسی استاد ارزانی.md",
+      "type": "card"
+    },
+    {
+      "source": "index.md",
+      "target": "adabiat/تاریخچه زبان فارسی.md",
+      "type": "card"
+    },
+    {
       "source": "calculus/فهرست مطالب.md",
       "target": "ext:ac309733",
-      "type": "resource"
+      "type": "external"
     },
     {
       "source": "calculus/فهرست مطالب.md",
       "target": "ext:aa6fe671",
-      "type": "resource"
+      "type": "external"
     },
     {
       "source": "calculus/فهرست مطالب.md",
       "target": "ext:30236b33",
-      "type": "resource"
+      "type": "external"
     },
     {
       "source": "calculus/فهرست مطالب.md",
       "target": "ext:7bd743b1",
-      "type": "resource"
+      "type": "external"
     },
     {
       "source": "calculus/فهرست مطالب.md",
       "target": "ext:f196e2fd",
-      "type": "resource"
+      "type": "external"
     },
     {
       "source": "calculus/فهرست مطالب.md",
       "target": "ext:70f4351e",
-      "type": "resource"
+      "type": "external"
     },
     {
       "source": "calculus/فهرست مطالب.md",
       "target": "ext:fb929b6d",
-      "type": "resource"
+      "type": "external"
     },
     {
       "source": "calculus/فهرست مطالب.md",
       "target": "ext:0eb8cde8",
-      "type": "resource"
+      "type": "external"
     },
     {
       "source": "calculus/فهرست مطالب.md",
       "target": "ext:da6a0683",
-      "type": "resource"
+      "type": "external"
+    },
+    {
+      "source": "calculus/معادلات دیفرانسیل.md",
+      "target": "ext:f413f40a",
+      "type": "external"
     },
     {
       "source": "macroeconomics/index.md",
@@ -615,12 +977,17 @@
     {
       "source": "micro economics/index.md",
       "target": "ext:c3067edf",
-      "type": "resource"
+      "type": "external"
     },
     {
       "source": "micro economics/index.md",
       "target": "ext:f7dd4fe8",
-      "type": "resource"
+      "type": "external"
+    },
+    {
+      "source": "numerical-analysis/index.md",
+      "target": "ext:f413f40a",
+      "type": "external"
     },
     {
       "source": "out of kntu university/index.md",
@@ -725,406 +1092,97 @@
     {
       "source": "physics/فهرست مطالب.md",
       "target": "ext:4d0b3473",
-      "type": "resource"
+      "type": "external"
     },
     {
       "source": "physics/فهرست مطالب.md",
       "target": "ext:55a4f49c",
-      "type": "resource"
+      "type": "external"
     },
     {
       "source": "physics/فهرست مطالب.md",
       "target": "ext:b8cb9ced",
-      "type": "resource"
+      "type": "external"
     },
     {
       "source": "physics/فهرست مطالب.md",
       "target": "ext:68cb699b",
-      "type": "resource"
+      "type": "external"
     },
     {
       "source": "physics/فهرست مطالب.md",
       "target": "ext:76b5316b",
-      "type": "resource"
+      "type": "external"
     },
     {
       "source": "physics/فهرست مطالب.md",
       "target": "ext:d9503e73",
-      "type": "resource"
+      "type": "external"
     },
     {
-      "source": "projects/economics-study.md",
-      "target": "macroeconomics/فصل ۱ - چارچوب نظری و مفاهیم بنیادین.md",
+      "source": "projects/index.md",
+      "target": "projects/sarvestan.md",
       "type": "card"
     },
     {
-      "source": "projects/economics-study.md",
-      "target": "macroeconomics/فصل ۲ - اطلس آماری و پوسترهای تبیینی.md",
+      "source": "projects/index.md",
+      "target": "projects/kntu-card.md",
       "type": "card"
     },
     {
-      "source": "projects/economics-study.md",
-      "target": "macroeconomics/فصل ۳ - واکاوی تاریخی و تجارب گذار.md",
+      "source": "projects/index.md",
+      "target": "projects/proji.md",
       "type": "card"
-    },
-    {
-      "source": "projects/economics-study.md",
-      "target": "macroeconomics/فصل ۵ - طراحی مدل پلتفرمی گذار ایران.md",
-      "type": "card"
-    },
-    {
-      "source": "adabiat/انواع زبان.md",
-      "target": "adabiat/تاریخچه زبان فارسی.md",
-      "type": "folder",
-      "folder": "adabiat"
-    },
-    {
-      "source": "adabiat/انواع زبان.md",
-      "target": "adabiat/جدال سعدی و مدعی.md",
-      "type": "folder",
-      "folder": "adabiat"
-    },
-    {
-      "source": "adabiat/انواع زبان.md",
-      "target": "adabiat/شکل‌گیری و پیدایش زبان ملفوظ.md",
-      "type": "folder",
-      "folder": "adabiat"
-    },
-    {
-      "source": "adabiat/تاریخچه زبان فارسی.md",
-      "target": "adabiat/جدال سعدی و مدعی.md",
-      "type": "folder",
-      "folder": "adabiat"
-    },
-    {
-      "source": "adabiat/جدال سعدی و مدعی.md",
-      "target": "adabiat/شکل‌گیری و پیدایش زبان ملفوظ.md",
-      "type": "folder",
-      "folder": "adabiat"
-    },
-    {
-      "source": "macroeconomics/index.md",
-      "target": "macroeconomics/اقتصاد نهادگرا و دولت توسعه‌گرا.md",
-      "type": "folder",
-      "folder": "macroeconomics"
-    },
-    {
-      "source": "macroeconomics/اقتصاد نهادگرا و دولت توسعه‌گرا.md",
-      "target": "macroeconomics/فصل ۱ - چارچوب نظری و مفاهیم بنیادین.md",
-      "type": "folder",
-      "folder": "macroeconomics"
-    },
-    {
-      "source": "macroeconomics/فصل ۱ - چارچوب نظری و مفاهیم بنیادین.md",
-      "target": "macroeconomics/فصل ۲ - اطلس آماری و پوسترهای تبیینی.md",
-      "type": "folder",
-      "folder": "macroeconomics"
-    },
-    {
-      "source": "macroeconomics/فصل ۲ - اطلس آماری و پوسترهای تبیینی.md",
-      "target": "macroeconomics/فصل ۳ - واکاوی تاریخی و تجارب گذار.md",
-      "type": "folder",
-      "folder": "macroeconomics"
-    },
-    {
-      "source": "macroeconomics/فصل ۳ - واکاوی تاریخی و تجارب گذار.md",
-      "target": "macroeconomics/فصل ۴ - ماتریس تطبیقی و الگوهای گذار.md",
-      "type": "folder",
-      "folder": "macroeconomics"
-    },
-    {
-      "source": "macroeconomics/فصل ۴ - ماتریس تطبیقی و الگوهای گذار.md",
-      "target": "macroeconomics/فصل ۵ - طراحی مدل پلتفرمی گذار ایران.md",
-      "type": "folder",
-      "folder": "macroeconomics"
-    },
-    {
-      "source": "macroeconomics/فصل ۵ - طراحی مدل پلتفرمی گذار ایران.md",
-      "target": "macroeconomics/نتیجه‌گیری و منابع.md",
-      "type": "folder",
-      "folder": "macroeconomics"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/== vs ===.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/Falsy  truthy values.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/== vs ===.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/Logical Operators & switch.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/== vs ===.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/conditional (Ternary) Operator.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/== vs ===.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/data-types.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/== vs ===.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/if-else-statements.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/== vs ===.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/operators.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/== vs ===.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/template literals.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/== vs ===.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/type conversion.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/== vs ===.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/variables.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/Logical Operators & switch.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/conditional (Ternary) Operator.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/conditional (Ternary) Operator.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/data-types.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/data-types.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/if-else-statements.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/if-else-statements.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/operators.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/operators.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/template literals.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/template literals.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/type conversion.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/type conversion.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/variables.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Array Operations (methods).md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Arrays.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Array Operations (methods).md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Functions.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Array Operations (methods).md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/loops.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Array Operations (methods).md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/object methods(functions).md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Array Operations (methods).md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/objects.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Array Operations (methods).md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/strict mode.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Array Operations (methods).md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/this.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Arrays.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Functions.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/loops.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/object methods(functions).md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/object methods(functions).md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/objects.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/objects.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/strict mode.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
-    },
-    {
-      "source": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/strict mode.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/this.md",
-      "type": "folder",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
     },
     {
       "source": "projects/index.md",
       "target": "projects/economics-study.md",
-      "type": "folder",
-      "folder": "projects"
-    },
-    {
-      "source": "projects/index.md",
-      "target": "projects/kntu-card.md",
-      "type": "folder",
-      "folder": "projects"
-    },
-    {
-      "source": "projects/index.md",
-      "target": "projects/proji.md",
-      "type": "folder",
-      "folder": "projects"
-    },
-    {
-      "source": "projects/index.md",
-      "target": "projects/sarvestan.md",
-      "type": "folder",
-      "folder": "projects"
+      "type": "card"
     },
     {
       "source": "projects/economics-study.md",
-      "target": "projects/kntu-card.md",
-      "type": "folder",
-      "folder": "projects"
+      "target": "macroeconomics/فصل ۱ - چارچوب نظری و مفاهیم بنیادین.md",
+      "type": "card"
     },
     {
-      "source": "projects/kntu-card.md",
-      "target": "projects/proji.md",
-      "type": "folder",
-      "folder": "projects"
+      "source": "projects/economics-study.md",
+      "target": "macroeconomics/فصل ۲ - اطلس آماری و پوسترهای تبیینی.md",
+      "type": "card"
+    },
+    {
+      "source": "projects/economics-study.md",
+      "target": "macroeconomics/فصل ۳ - واکاوی تاریخی و تجارب گذار.md",
+      "type": "card"
+    },
+    {
+      "source": "projects/economics-study.md",
+      "target": "macroeconomics/فصل ۵ - طراحی مدل پلتفرمی گذار ایران.md",
+      "type": "card"
     },
     {
       "source": "projects/proji.md",
-      "target": "projects/sarvestan.md",
-      "type": "folder",
-      "folder": "projects"
+      "target": "ext:f769c2a1",
+      "type": "external"
     },
     {
-      "source": "index.md",
-      "target": "adabiat/انواع زبان.md",
-      "type": "hub",
-      "folder": "adabiat"
+      "source": "projects/sarvestan.md",
+      "target": "ext:2d92a259",
+      "type": "external"
     },
     {
-      "source": "index.md",
-      "target": "calculus/فهرست مطالب.md",
-      "type": "hub",
-      "folder": "calculus"
+      "source": "projects/sarvestan.md",
+      "target": "ext:d1030fca",
+      "type": "external"
     },
     {
-      "source": "index.md",
-      "target": "macroeconomics/index.md",
-      "type": "hub",
-      "folder": "macroeconomics"
+      "source": "projects/sarvestan.md",
+      "target": "ext:e3d53322",
+      "type": "external"
     },
     {
-      "source": "index.md",
-      "target": "micro economics/index.md",
-      "type": "hub",
-      "folder": "micro economics"
-    },
-    {
-      "source": "index.md",
-      "target": "out of kntu university/index.md",
-      "type": "hub",
-      "folder": "out of kntu university"
-    },
-    {
-      "source": "index.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/jonas.md",
-      "type": "hub",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت"
-    },
-    {
-      "source": "index.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/DOM & events/selecting and manipulating Elements.md",
-      "type": "hub",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/DOM & events"
-    },
-    {
-      "source": "index.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/== vs ===.md",
-      "type": "hub",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
-    },
-    {
-      "source": "index.md",
-      "target": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Array Operations (methods).md",
-      "type": "hub",
-      "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
-    },
-    {
-      "source": "index.md",
-      "target": "physics/فهرست مطالب.md",
-      "type": "hub",
-      "folder": "physics"
-    },
-    {
-      "source": "index.md",
-      "target": "programming/جزوه کلاس برنامه‌نویسی استاد ارزانی.md",
-      "type": "hub",
-      "folder": "programming"
-    },
-    {
-      "source": "index.md",
-      "target": "projects/index.md",
-      "type": "hub",
-      "folder": "projects"
+      "source": "statics/index.md",
+      "target": "ext:f413f40a",
+      "type": "external"
     }
   ],
   "pages": {
@@ -1133,20 +1191,31 @@
       "title": "خانه",
       "url": "./",
       "folder": "عمومی",
-      "summary": "# خانه  <div class=\"home-media-wrapper\">   <div class=\"home-media-box\">     <video src=\"photo_2026-09-04_20-05-34.mp4\" autoplay loop muted playsinline class=\"home-media-video\"></vi..."
+      "tags": [],
+      "summary": "# خانه  ___SARV_STASH_0___   ___SARV_STASH_1___     ___SARV_STASH_2______SARV_STASH_3___   ___SARV_STASH_4___ ___SARV_STASH_5___  سلام من **محمدجواد بخشی** هستم و اینجا هم آرشیو من..."
     },
     "schedule/": {
       "id": "schedule.md",
       "title": "برنامه هفتگی",
       "url": "schedule/",
       "folder": "عمومی",
-      "summary": "<div class=\"schedule-wrapper\">    <!-- بنر معرفی و اطلاعات ترم -->   <div class=\"schedule-hero\">     <div class=\"schedule-hero-badge\">       <svg width=\"14\" height=\"14\" viewBox=\"0..."
+      "tags": [],
+      "summary": "___SARV_STASH_3___    ___SARV_STASH_4___   ___SARV_STASH_5___     ___SARV_STASH_6___       ___SARV_STASH_7______SARV_STASH_8______SARV_STASH_9______SARV_STASH_10___       دانشگاه ص..."
+    },
+    "tags/": {
+      "id": "tags.md",
+      "title": "برچسب‌ها",
+      "url": "tags/",
+      "folder": "عمومی",
+      "tags": [],
+      "summary": "# 🏷️ برچسب‌ها و تگ‌های یادداشت‌ها ## دسترسی موضوعی و خوشه‌بندی یادداشت‌ها بر اساس برچسب‌های ابسیدین  ___SARV_STASH_5___   ___SARV_STASH_6___     ___SARV_STASH_7___۰___SARV_STASH_8_..."
     },
     "adabiat/%D8%A7%D9%86%D9%88%D8%A7%D8%B9%20%D8%B2%D8%A8%D8%A7%D9%86/": {
       "id": "adabiat/انواع زبان.md",
       "title": "ادبیات",
       "url": "adabiat/%D8%A7%D9%86%D9%88%D8%A7%D8%B9%20%D8%B2%D8%A8%D8%A7%D9%86/",
       "folder": "adabiat",
+      "tags": [],
       "summary": "# ادبیات  ## هجا  ساختار هجا در زبان فارسی 1-کوتاه: صامت (حروف) +مصوت 2-بلند: صامت+مصوت+صامت 3-کشیده: صامت+مصوت+صامت+صامت  ## زبان  به هر نشانه ای گفته می‌شود که بتواند محتوا معانی..."
     },
     "adabiat/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%81%D8%A7%D8%B1%D8%B3%DB%8C/": {
@@ -1154,6 +1223,7 @@
       "title": "تاریخچه زبان پارسی",
       "url": "adabiat/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%81%D8%A7%D8%B1%D8%B3%DB%8C/",
       "folder": "adabiat",
+      "tags": [],
       "summary": "# تاریخچه زبان پارسی ## شاخه‌های زبان‌شناسی  ### در زمانی(تاریخی)  مثال: مر کتاب را به او دادم==>کتاب را به او دادم==>کتابُ به او دادم. **توصیف زبان در مراحل سیر تاریخی خودش** اغلب..."
     },
     "adabiat/%D8%AC%D8%AF%D8%A7%D9%84%20%D8%B3%D8%B9%D8%AF%DB%8C%20%D9%88%20%D9%85%D8%AF%D8%B9%DB%8C/": {
@@ -1161,6 +1231,7 @@
       "title": "جدال سعدی و مدعی",
       "url": "adabiat/%D8%AC%D8%AF%D8%A7%D9%84%20%D8%B3%D8%B9%D8%AF%DB%8C%20%D9%88%20%D9%85%D8%AF%D8%B9%DB%8C/",
       "folder": "adabiat",
+      "tags": [],
       "summary": "یکی در صورتِ درویشان نه بر صفتِ ایشان در محفلی دیدم نشسته و شُنعتی در پیوسته و دفترِ شکایتی باز کرده و ذمِّ توانگران آغاز کرده. سخن بدین‌جا رسانیده که درویش را دستِ قدرت بسته‌است و..."
     },
     "adabiat/%D8%B4%DA%A9%D9%84%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C%20%D9%88%20%D9%BE%DB%8C%D8%AF%D8%A7%DB%8C%D8%B4%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%85%D9%84%D9%81%D9%88%D8%B8/": {
@@ -1168,27 +1239,45 @@
       "title": "شکل‌گیری و پیدایش زبان‌ ملفوظ",
       "url": "adabiat/%D8%B4%DA%A9%D9%84%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C%20%D9%88%20%D9%BE%DB%8C%D8%AF%D8%A7%DB%8C%D8%B4%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%85%D9%84%D9%81%D9%88%D8%B8/",
       "folder": "adabiat",
+      "tags": [],
       "summary": "# شکل‌گیری و پیدایش زبان‌ ملفوظ  ## دال و مدلول  مثال: دال-->درخت. مدلول-->مصداق بیرونی درخت یا همون تصویرش  ## منبع مطالعه زبان  دو منبع زیر قطعی نیستند ولی کمک‌کننده هستند.  ###..."
     },
     "calculus/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/": {
       "id": "calculus/فهرست مطالب.md",
-      "title": "فهرست مطالب درس ریاضی عمومی",
+      "title": "فهرست مطالب ریاضی عمومی",
       "url": "calculus/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/",
       "folder": "calculus",
-      "summary": "# فهرست مطالب درس ریاضی عمومی ## نیمسال پاییز ۱۴۰۴  ### 💡 فعالیت‌های خودجوش و مباحث ابداعی  <div class=\"resource-list\">    <a class=\"resource-card\" href=\"https://drive.google.com/f..."
+      "tags": [],
+      "summary": "# فهرست مطالب درس ریاضی عمومی ## نیمسال پاییز ۱۴۰۴  ### 💡 فعالیت‌های خودجوش و مباحث ابداعی  ___SARV_STASH_0___    ___SARV_STASH_1___     ___SARV_STASH_2___       ___SARV_STASH_3___..."
+    },
+    "calculus/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D8%AA%20%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84/": {
+      "id": "calculus/معادلات دیفرانسیل.md",
+      "title": "معادلات دیفرانسیل",
+      "url": "calculus/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D8%AA%20%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84/",
+      "folder": "calculus",
+      "tags": [
+        "معادلات_دیفرانسیل",
+        "ریاضیات",
+        "لاپلاس",
+        "فروبنیوس",
+        "دانشگاه"
+      ],
+      "summary": "# درس معادلات دیفرانسیل و کاربردهای آن ## مباحث تحلیلی، روش‌های حل کلاسیک و کاربردهای مهندسی  !!! note \tاین بخش به یادداشت‌ها، روش‌های تحلیلی حل معادلات و بانک مسائل درس **معادلات..."
     },
     "macroeconomics/": {
       "id": "macroeconomics/index.md",
       "title": "معرفی و فهرست فصول",
       "url": "macroeconomics/",
       "folder": "macroeconomics",
-      "summary": "# اقتصاد نهادگرا و دولت توسعه‌گرا ## واکاوی تطبیقی تجارب گذار اقتصادی و بازطراحی الگوی بومی ایران  <div class=\"admonition note\"> <p class=\"admonition-title\">شناسنامه پژوهش</p> <p>..."
+      "tags": [],
+      "summary": "# اقتصاد نهادگرا و دولت توسعه‌گرا ## واکاوی تطبیقی تجارب گذار اقتصادی و بازطراحی الگوی بومی ایران  ___SARV_STASH_0___ ___SARV_STASH_1___شناسنامه پژوهش___SARV_STASH_2___ ___SARV_STA..."
     },
     "macroeconomics/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D9%86%D9%87%D8%A7%D8%AF%DA%AF%D8%B1%D8%A7%20%D9%88%20%D8%AF%D9%88%D9%84%D8%AA%20%D8%AA%D9%88%D8%B3%D8%B9%D9%87%E2%80%8C%DA%AF%D8%B1%D8%A7/": {
       "id": "macroeconomics/اقتصاد نهادگرا و دولت توسعه‌گرا.md",
       "title": "اقتصاد نهادگرا و دولت توسعه‌گرا",
       "url": "macroeconomics/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D9%86%D9%87%D8%A7%D8%AF%DA%AF%D8%B1%D8%A7%20%D9%88%20%D8%AF%D9%88%D9%84%D8%AA%20%D8%AA%D9%88%D8%B3%D8%B9%D9%87%E2%80%8C%DA%AF%D8%B1%D8%A7/",
       "folder": "macroeconomics",
+      "tags": [],
       "summary": "# اقتصاد نهادگرا و دولت توسعه‌گرا جستاری بر کارنامه ۵ دولت توسعه‌گرا و واکاوی ویژه بحران ساختاری در ایران  عنوان پژوهش: اقتصاد نهادگرا و دولت توسعه‌گرا  پژوهشگران: محمّدجواد بخشی ا..."
     },
     "macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B1%20-%20%DA%86%D8%A7%D8%B1%DA%86%D9%88%D8%A8%20%D9%86%D8%B8%D8%B1%DB%8C%20%D9%88%20%D9%85%D9%81%D8%A7%D9%87%DB%8C%D9%85%20%D8%A8%D9%86%DB%8C%D8%A7%D8%AF%DB%8C%D9%86/": {
@@ -1196,6 +1285,7 @@
       "title": "فصل ۱: چارچوب نظری و مفاهیم بنیادین توسعه",
       "url": "macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B1%20-%20%DA%86%D8%A7%D8%B1%DA%86%D9%88%D8%A8%20%D9%86%D8%B8%D8%B1%DB%8C%20%D9%88%20%D9%85%D9%81%D8%A7%D9%87%DB%8C%D9%85%20%D8%A8%D9%86%DB%8C%D8%A7%D8%AF%DB%8C%D9%86/",
       "folder": "macroeconomics",
+      "tags": [],
       "summary": "# فصل ۱: چارچوب نظری و مفاهیم بنیادین توسعه  ## فصل **نخست**: چارچوب نظری و مفاهیم بنیادین توسعه  در ادبیات اقتصاد سیاسی و توسعه، تبیین چگونگی جهش ناگهانی برخی جوامع و در مقابل، در..."
     },
     "macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B2%20-%20%D8%A7%D8%B7%D9%84%D8%B3%20%D8%A2%D9%85%D8%A7%D8%B1%DB%8C%20%D9%88%20%D9%BE%D9%88%D8%B3%D8%AA%D8%B1%D9%87%D8%A7%DB%8C%20%D8%AA%D8%A8%DB%8C%DB%8C%D9%86%DB%8C/": {
@@ -1203,6 +1293,7 @@
       "title": "فصل ۲: اطلس آماری و پوسترهای تبیینی شاخص‌ها",
       "url": "macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B2%20-%20%D8%A7%D8%B7%D9%84%D8%B3%20%D8%A2%D9%85%D8%A7%D8%B1%DB%8C%20%D9%88%20%D9%BE%D9%88%D8%B3%D8%AA%D8%B1%D9%87%D8%A7%DB%8C%20%D8%AA%D8%A8%DB%8C%DB%8C%D9%86%DB%8C/",
       "folder": "macroeconomics",
+      "tags": [],
       "summary": "# فصل ۲: اطلس آماری و پوسترهای تبیینی شاخص‌ها  ## فصل دوم: اطلس آماری و پوستر‌های تبیینی شاخص‌ها  ### چارچوب متدولوژی و انتخاب داده‌ها  هدف این فصل، ارائهٔ شناسنامه آماری و مستندات..."
     },
     "macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B3%20-%20%D9%88%D8%A7%DA%A9%D8%A7%D9%88%DB%8C%20%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DB%8C%20%D9%88%20%D8%AA%D8%AC%D8%A7%D8%B1%D8%A8%20%DA%AF%D8%B0%D8%A7%D8%B1/": {
@@ -1210,6 +1301,7 @@
       "title": "فصل ۳: واکاوی تاریخی و تجارب گذار اقتصادی در کشورهای منتخب",
       "url": "macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B3%20-%20%D9%88%D8%A7%DA%A9%D8%A7%D9%88%DB%8C%20%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DB%8C%20%D9%88%20%D8%AA%D8%AC%D8%A7%D8%B1%D8%A8%20%DA%AF%D8%B0%D8%A7%D8%B1/",
       "folder": "macroeconomics",
+      "tags": [],
       "summary": "# فصل ۳: واکاوی تاریخی و تجارب گذار اقتصادی در کشورهای منتخب  ## فصل سوم: واکاوی تاریخی و تجارب گذار اقتصادی در کشورهای منتخب  ### **کره جنوبی: مکانیسم رانت مشروط و جهش صادرات‌محور..."
     },
     "macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B4%20-%20%D9%85%D8%A7%D8%AA%D8%B1%DB%8C%D8%B3%20%D8%AA%D8%B7%D8%A8%DB%8C%D9%82%DB%8C%20%D9%88%20%D8%A7%D9%84%DA%AF%D9%88%D9%87%D8%A7%DB%8C%20%DA%AF%D8%B0%D8%A7%D8%B1/": {
@@ -1217,6 +1309,7 @@
       "title": "فصل ۴: ماتریس تطبیقی و واکاوی راهبردی الگوهای گذار",
       "url": "macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B4%20-%20%D9%85%D8%A7%D8%AA%D8%B1%DB%8C%D8%B3%20%D8%AA%D8%B7%D8%A8%DB%8C%D9%82%DB%8C%20%D9%88%20%D8%A7%D9%84%DA%AF%D9%88%D9%87%D8%A7%DB%8C%20%DA%AF%D8%B0%D8%A7%D8%B1/",
       "folder": "macroeconomics",
+      "tags": [],
       "summary": "# فصل ۴: ماتریس تطبیقی و واکاوی راهبردی الگوهای گذار  ## فصل چهارم: ماتریس تطبیقی و واکاوی راهبردی الگوهای گذار  برای درک عمیق‌تر سازوکارهای حاکم بر توسعه و مدیریت منابع در کشورهای..."
     },
     "macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B5%20-%20%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C%20%D9%85%D8%AF%D9%84%20%D9%BE%D9%84%D8%AA%D9%81%D8%B1%D9%85%DB%8C%20%DA%AF%D8%B0%D8%A7%D8%B1%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86/": {
@@ -1224,6 +1317,7 @@
       "title": "فصل ۵: طراحی مدل پلتفرمی گذار اقتصادی ایران",
       "url": "macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B5%20-%20%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C%20%D9%85%D8%AF%D9%84%20%D9%BE%D9%84%D8%AA%D9%81%D8%B1%D9%85%DB%8C%20%DA%AF%D8%B0%D8%A7%D8%B1%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86/",
       "folder": "macroeconomics",
+      "tags": [],
       "summary": "# فصل ۵: طراحی مدل پلتفرمی گذار اقتصادی ایران  ## فصل پنجم: طراحی مدل پلتفرمی گذار اقتصادی ایران (چارچوب پیشنهادی)  ### مقدمه و تبیین مسئله از دیدگاه مهندسی سیستم‌ها  با تکیه بر آم..."
     },
     "macroeconomics/%D9%86%D8%AA%DB%8C%D8%AC%D9%87%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C%20%D9%88%20%D9%85%D9%86%D8%A7%D8%A8%D8%B9/": {
@@ -1231,27 +1325,53 @@
       "title": "نتیجه‌گیری کلان و فهرست منابع پژوهش",
       "url": "macroeconomics/%D9%86%D8%AA%DB%8C%D8%AC%D9%87%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C%20%D9%88%20%D9%85%D9%86%D8%A7%D8%A8%D8%B9/",
       "folder": "macroeconomics",
+      "tags": [],
       "summary": "# نتیجه‌گیری کلان و فهرست منابع پژوهش  ## نتیجه‌گیری کلان و سنتز نهادی پژوهش  پژوهش حاضر با هدف کالبدشکافی ریشه‌های انسداد توسعه در اقتصاد ایران و تبیین آن در چارچوب اقتصاد نهادگرا..."
+    },
+    "mapping/": {
+      "id": "mapping/index.md",
+      "title": "جزوه و مطالب درس نقشه‌برداری",
+      "url": "mapping/",
+      "folder": "mapping",
+      "tags": [],
+      "summary": "# جزوه و مطالب درس نقشه‌برداری  !!! note \tاین بخش به نوت‌ها، محاسبات و مباحث مرتبط با درس **نقشه‌برداری** اختصاص دارد.  مباحث و جزوات این درس به زودی تکمیل و بارگذاری خواهند شد.  #..."
     },
     "micro%20economics/": {
       "id": "micro economics/index.md",
       "title": "فهرست مطالب",
       "url": "micro%20economics/",
       "folder": "micro economics",
-      "summary": "# فهرست مطالب درس اقتصاد خرد ## نیمسال پاییز ۱۴۰۴  ### 📊 تمرین‌ها و تکالیف  <div class=\"resource-list\">    <a class=\"resource-card\" href=\"https://drive.google.com/file/d/1CZhWtys2I..."
+      "tags": [],
+      "summary": "# فهرست مطالب درس اقتصاد خرد ## نیمسال پاییز ۱۴۰۴  ### 📊 تمرین‌ها و تکالیف  ___SARV_STASH_0___    ___SARV_STASH_1___     ___SARV_STASH_2___       ___SARV_STASH_3___         ___SARV..."
+    },
+    "numerical-analysis/": {
+      "id": "numerical-analysis/index.md",
+      "title": "درس محاسبات عددی و تحلیل الگوریتم‌ها",
+      "url": "numerical-analysis/",
+      "folder": "numerical-analysis",
+      "tags": [
+        "محاسبات_عددی",
+        "روش_های_عددی",
+        "الگوریتم",
+        "ریاضیات",
+        "دانشگاه"
+      ],
+      "summary": "# درس محاسبات عددی و تحلیل الگوریتم‌ها ## روش‌های تقریبی حل معادلات، درونیابی، مشتق‌گیری و انتگرال‌گیری عددی  !!! note \tاین صفحه به نوت‌ها، تشریح روش‌های حل، الگوریتم‌ها و پیاده‌سا..."
     },
     "out%20of%20kntu%20university/": {
       "id": "out of kntu university/index.md",
       "title": "معرفی دوره‌ها",
       "url": "out%20of%20kntu%20university/",
       "folder": "out of kntu university",
-      "summary": "#مطالب خارج از دانشگاه خواجه نصیرالدین طوسی  [[jonas]] نوت‌های جاوا اسکریپت..."
+      "tags": [],
+      "summary": "# مطالب خارج از دانشگاه خواجه نصیرالدین طوسی  [[jonas]] نوت‌های جاوا اسکریپت..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/jonas/": {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/jonas.md",
       "title": "🚀 برنامه ۲۱ روزه یادگیری JavaScript با دوره Jonas",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/jonas/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت",
+      "tags": [],
       "summary": "# 🚀 برنامه ۲۱ روزه یادگیری JavaScript با دوره Jonas  ## 🧠 توضیحات - روزانه: ۳–۴ ساعت ویدیو + ۳–۴ ساعت تمرین   - جمعه‌ها: مرور، جبران، یا تمرین پروژه‌ای سبک   - شروع: دوشنبه ۷ مهر ۱..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/DOM%20%26%20events/selecting%20and%20manipulating%20Elements/": {
@@ -1259,13 +1379,15 @@
       "title": "سلکت کردن یک عنصر در فایل HTML با آیدی یا کلاس یا نوع",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/DOM%20%26%20events/selecting%20and%20manipulating%20Elements/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/DOM & events",
-      "summary": "# سلکت کردن یک عنصر در فایل HTML با آیدی یا کلاس یا نوع ```js const input = document.querySelector('.guess'); ``` در پرانتر میشه نوع یا آیدی هم گذاشت دقیقا مثل سلکت در سی اس اس ```..."
+      "tags": [],
+      "summary": "# سلکت کردن یک عنصر در فایل HTML با آیدی یا کلاس یا نوع ___SARV_STASH_0___ در پرانتر میشه نوع یا آیدی هم گذاشت دقیقا مثل سلکت در سی اس اس ___SARV_STASH_1___ با این روش هم محتوای مت..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/%3D%3D%20vs%20%3D%3D%3D/": {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/== vs ===.md",
       "title": "عملگرهای مقایسه تساوی",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/%3D%3D%20vs%20%3D%3D%3D/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
+      "tags": [],
       "summary": "# عملگرهای مقایسه تساوی برای بررسی تساوی دو مقدار ما باید از عملگرهای == و === استفاده کنیم.(حتما به خاطر داری که = در واقع عملگری برای انتساب مقداره و اصلا مقایسه ای نیست) در == م..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/Falsy%20%20truthy%20values/": {
@@ -1273,13 +1395,15 @@
       "title": "Falsy  truthy values",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/Falsy%20%20truthy%20values/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
-      "summary": "### ✅ ترجمهٔ اصطلاح‌ها:  |اصطلاح انگلیسی|ترجمهٔ فارسی پیشنهادی|توضیح| |---|---|---| |**Truthy**|«دارای ارزش درست» یا «مقدار درست‌شونده»|مقداری که وقتی به Boolean تبدیل بشه، `true`..."
+      "tags": [],
+      "summary": "### ✅ ترجمهٔ اصطلاح‌ها:  |اصطلاح انگلیسی|ترجمهٔ فارسی پیشنهادی|توضیح| |---|---|---| |**Truthy**|«دارای ارزش درست» یا «مقدار درست‌شونده»|مقداری که وقتی به Boolean تبدیل بشه، ___SARV..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/Fundamentals%20%E2%80%93%20Part%201/": {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/Fundamentals – Part 1.md",
       "title": "📘 Fundamentals – Part 1",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/Fundamentals%20%E2%80%93%20Part%201/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
+      "tags": [],
       "summary": "# 📘 Fundamentals – Part 1  > ✨ این نوت اصلیه برای لینک دادن به مباحث جزئی این بخش از دوره Jonas. هر لینک با یه ایموجی و توضیح کوتاه همراهه تا هم مرور راحت باشه، هم حس شخصی حفظ بشه...."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/Logical%20Operators%20%26%20switch/": {
@@ -1287,6 +1411,7 @@
       "title": "عملگرهای منطقی",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/Logical%20Operators%20%26%20switch/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
+      "tags": [],
       "summary": "# عملگرهای منطقی ## AND && این عملگر در واقع برای ترکیب دو مقدار بولینه تنها در صورتی مقدار درست برمیگردونه که جفت مقادیر true باشن ## OR || این عملگر تنها در صورتی مقدار نادرست می..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/conditional%20%28Ternary%29%20Operator/": {
@@ -1294,6 +1419,7 @@
       "title": "عبارت شرطی",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/conditional%20%28Ternary%29%20Operator/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
+      "tags": [],
       "summary": "# عبارت شرطی یه چیز خیلی کاربردی و خفن جی اس مدرنه که اجازه میده توی یه خط یه قالب شرطی جم و جور انجام بدیم در واقع خروجیش یه مقداره و این یه عبارت به حساب میاد مثال و نوع استفاده:..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/data-types/": {
@@ -1301,6 +1427,7 @@
       "title": "انواع داده",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/data-types/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
+      "tags": [],
       "summary": "# انواع داده   > یا اولیه و بدوی هستند یا شیء که خب ما اینجا با شیء کاری نداریم فعلا پس بیخیالش میشیم ## انواع داده های بدوی(7 تا) ### شماره یا عدد همواره شناورن یعنی اعشار دارن حت..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/if-else-statements/": {
@@ -1308,13 +1435,15 @@
       "title": "🔀 شرط‌ها در JavaScript: if / else",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/if-else-statements/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
-      "summary": "# 🔀 شرط‌ها در JavaScript: if / else  ## 🔹 تعریف ساختار `if/else` برای اجرای کد بر اساس شرایط استفاده می‌شود. اگر شرط برقرار باشد، بخش `if` اجرا می‌شود؛ در غیر این صورت، بخش `else`...."
+      "tags": [],
+      "summary": "# 🔀 شرط‌ها در JavaScript: if / else  ## 🔹 تعریف ساختار ___SARV_STASH_2___ برای اجرای کد بر اساس شرایط استفاده می‌شود. اگر شرط برقرار باشد، بخش ___SARV_STASH_3___ اجرا می‌شود؛ در غی..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/operators/": {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/operators.md",
       "title": "عملگرها",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/operators/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
+      "tags": [],
       "summary": "# عملگرها مثالش مثل جمع و ضرب و تقسیم typeof: نوع داده و نه متغیر(این مهمه که بدونی) رو مشخص میکنه و برای مثال  console.log(typeof true); جواب boolean و خب از اونجایی که متغیر در و..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/template%20literals/": {
@@ -1322,41 +1451,52 @@
       "title": "📌 Template Literals در JavaScript",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/template%20literals/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
-      "summary": "# 📌 Template Literals در JavaScript  ## 🔹 تعریف Template Literal نوعی رشته است که با علامت backtick (`` ` ``) نوشته می‌شود و امکانات بیشتری نسبت به `'` یا `\"` دارد.  ```js const na..."
+      "tags": [],
+      "summary": "# 📌 Template Literals در JavaScript  ## 🔹 تعریف Template Literal نوعی رشته است که با علامت backtick (`___SARV_STASH_5___ `___SARV_STASH_6___'___SARV_STASH_7___\"` دارد.  ___SARV_STA..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/type%20conversion/": {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/type conversion.md",
       "title": "🔄 تبدیل نوع‌ها در JavaScript",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/type%20conversion/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
-      "summary": "# 🔄 تبدیل نوع‌ها در JavaScript  ## 🔢 تبدیل به عدد ```js Number(مقدار) ````  ## 📝 تبدیل به رشته  ```js String(مقدار) ```  ## 🔘 تبدیل به بولین (درستی/نادرستی)  ```js Boolean(مقدار) `..."
+      "tags": [],
+      "summary": "# 🔄 تبدیل نوع‌ها در JavaScript  ## 🔢 تبدیل به عدد ___SARV_STASH_0___`  ## 📝 تبدیل به رشته  ___SARV_STASH_1___  ## 🔘 تبدیل به بولین (درستی/نادرستی)  ___SARV_STASH_2___  # 🔄 تبدیل‌ها..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/variables/": {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/variables.md",
       "title": "Variables",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/variables/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1",
-      "summary": "## camel case یه استاندارد جاوا اسکریپت واسه نامگذاری متغیره که بخش اول رو با حرف کوچیک و بعد جداسازی هر قسمت رو با یه حرف بزرگ انجام میدیم مثلا یه چنین چیزی: ```JS let firstName =..."
+      "tags": [
+        "js",
+        "web"
+      ],
+      "summary": "## camel case یه استاندارد جاوا اسکریپت واسه نامگذاری متغیره که بخش اول رو با حرف کوچیک و بعد جداسازی هر قسمت رو با یه حرف بزرگ انجام میدیم مثلا یه چنین چیزی: ___SARV_STASH_0___  #..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Array%20Operations%20%28methods%29/": {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Array Operations (methods).md",
       "title": "عملگر های آرایه(متد)",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Array%20Operations%20%28methods%29/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
-      "summary": "# عملگر های آرایه(متد) عملگرهایی هستن که روی آرایه ها اعمال میشن و میشه با اون‌ها آرایه‌ها رو ویرایش کرد. ## عملگر push  این متد در واقع یک عضو یا عنصر به آخر آرایه اضافه میکنه ```..."
+      "tags": [],
+      "summary": "# عملگر های آرایه(متد) عملگرهایی هستن که روی آرایه ها اعمال میشن و میشه با اون‌ها آرایه‌ها رو ویرایش کرد. ## عملگر push  این متد در واقع یک عضو یا عنصر به آخر آرایه اضافه میکنه ___..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Arrays/": {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Arrays.md",
       "title": "آرایه ها",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Arrays/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
-      "summary": "# آرایه ها آرایه ها اساسا یک نوع غیر بدوی از داده ها هستند که میتوان چندین داده را در آنجا ذخیره و سپس به سادگی به تمامی آنها دسترسی پیدا کرد. ## تعریف آرایه: ```js const friends =..."
+      "tags": [],
+      "summary": "# آرایه ها آرایه ها اساسا یک نوع غیر بدوی از داده ها هستند که میتوان چندین داده را در آنجا ذخیره و سپس به سادگی به تمامی آنها دسترسی پیدا کرد. ## تعریف آرایه: ___SARV_STASH_0___ یا..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Functions/": {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Functions.md",
       "title": "توابع در جاوا اسکریپت",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Functions/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
+      "tags": [
+        "بسیار_مهم"
+      ],
       "summary": "# توابع در جاوا اسکریپت تابع یک مقدار به حساب میاد سر همون میشه توی متغیر ذخیرش کرد. ## function declarations **این نوع تابع حتی میتونه قبل اینکه تعریف بشه فراخوانی بشه برعکس بقیه*..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Fundamentals%20%E2%80%93%20Part%202/": {
@@ -1364,6 +1504,7 @@
       "title": "📘 Fundamentals – Part 2",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Fundamentals%20%E2%80%93%20Part%202/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
+      "tags": [],
       "summary": "# 📘 Fundamentals – Part 2  > ✨ این نوت اصلیه برای لینک دادن به مباحث جزئی این بخش از دوره Jonas. هر لینک با یه ایموجی و توضیح کوتاه همراهه تا هم مرور راحت باشه، هم حس شخصی حفظ بشه...."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/loops/": {
@@ -1371,13 +1512,17 @@
       "title": "حلقه ها",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/loops/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
-      "summary": "# حلقه ها ## for ```js for (let index = 0; index < 10 ; index++) {   console.log(`چاپ این رشته برای بار ${index+1} ام`) } ``` بخش اول ساختار کنترلی ما به متغیری مربوط میشه که قراره..."
+      "tags": [],
+      "summary": "# حلقه ها ## for ___SARV_STASH_0___ بخش اول ساختار کنترلی ما به متغیری مربوط میشه که قراره طی حلقه عوض شه و باهاش کنترل کنیم دفعات رو بخش دوم شرطیه که قبل هربار رخ دادن حلقه بررسی..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/object%20methods%28functions%29/": {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/object methods(functions).md",
       "title": "متدهای شی در جاوا اسکریپت",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/object%20methods%28functions%29/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
+      "tags": [
+        "methods"
+      ],
       "summary": "# متدهای شی در جاوا اسکریپت همانطور که توی آرایه ها(که در واقع خودشون نوعی شی هستن)ما متد ها و توابعی برای اعمال کار داشتیم، در اشیا هم همینطوره ولی باید توباع رو خودمون درون شی تع..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/objects/": {
@@ -1385,34 +1530,44 @@
       "title": "شیء در جاوا اسکریپت",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/objects/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
-      "summary": "# شیء در جاوا اسکریپت شیء رو می‌شه یه جورایی گروهی از متغیرها دونست که به یک گروه نسبت داده شدن. آرایه‌ها در نگاه عمیق‌تر نوعی شیء به حساب میان ## تعریف شی ```js const MJ = { first..."
+      "tags": [
+        "notation",
+        "dot",
+        "bracket",
+        "object"
+      ],
+      "summary": "# شیء در جاوا اسکریپت شیء رو می‌شه یه جورایی گروهی از متغیرها دونست که به یک گروه نسبت داده شدن. آرایه‌ها در نگاه عمیق‌تر نوعی شیء به حساب میان ## تعریف شی ___SARV_STASH_0___ اساسا..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/strict%20mode/": {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/strict mode.md",
       "title": "Strict mode",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/strict%20mode/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
-      "summary": "حالتیه که واسه توسعه فعال میکنن که باگ کمتری بخوری ```js 'use strict'; ``` همین اول فایل بذار و تمام..."
+      "tags": [],
+      "summary": "حالتیه که واسه توسعه فعال میکنن که باگ کمتری بخوری ___SARV_STASH_0___ همین اول فایل بذار و تمام..."
     },
     "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/this/": {
       "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/this.md",
       "title": "واژه کلیدی this",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/this/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2",
-      "summary": "# واژه کلیدی this ## در آبجکت ها در آبجکت ها این کلمه کلیدی به آبجکت فعلی اشاره دارد در واقع هاردکدینگ رو کاهش میده و کد یا متد یا تابع ما رو عمومی تر میکنه. مثال: ```js const mark..."
+      "tags": [],
+      "summary": "# واژه کلیدی this ## در آبجکت ها در آبجکت ها این کلمه کلیدی به آبجکت فعلی اشاره دارد در واقع هاردکدینگ رو کاهش میده و کد یا متد یا تابع ما رو عمومی تر میکنه. مثال: ___SARV_STASH_0_..."
     },
     "physics/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/": {
       "id": "physics/فهرست مطالب.md",
       "title": "فهرست مطالب درس فیزیک ۱",
       "url": "physics/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/",
       "folder": "physics",
-      "summary": "# فهرست مطالب درس فیزیک ۱ ## نیمسال پاییز ۱۴۰۴  ### 🎯 تمرین‌ها و مسائل حل‌شده  <div class=\"resource-list\">    <a class=\"resource-card\" href=\"https://drive.google.com/file/d/1NwF-rK..."
+      "tags": [],
+      "summary": "# فهرست مطالب درس فیزیک ۱ ## نیمسال پاییز ۱۴۰۴  ### 🎯 تمرین‌ها و مسائل حل‌شده  ___SARV_STASH_0___    ___SARV_STASH_1___     ___SARV_STASH_2___       ___SARV_STASH_3___         ___S..."
     },
     "programming/%D8%AC%D8%B2%D9%88%D9%87%20%DA%A9%D9%84%D8%A7%D8%B3%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C%20%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%A7%D8%B1%D8%B2%D8%A7%D9%86%DB%8C/": {
       "id": "programming/جزوه کلاس برنامه‌نویسی استاد ارزانی.md",
       "title": "جزوه کلاس برنامه‌نویسی استاد ارزانی",
       "url": "programming/%D8%AC%D8%B2%D9%88%D9%87%20%DA%A9%D9%84%D8%A7%D8%B3%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C%20%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%A7%D8%B1%D8%B2%D8%A7%D9%86%DB%8C/",
       "folder": "programming",
+      "tags": [],
       "summary": "**به همت محمدجواد بخشی ایرج و رفقای هوش مصنوعیش**  # جلسه ۱: از فلوچارت تا کد — جمع دو عدد  ## 🎯 هدف جلسه  آشنایی با ساختار پایه یک برنامه: **ورودی → پردازش → خروجی**  فلوچارت‌هایی..."
     },
     "projects/": {
@@ -1420,35 +1575,243 @@
       "title": "فهرست پروژه‌ها",
       "url": "projects/",
       "folder": "projects",
-      "summary": "# پروژه‌های دانشگاهی و پژوهشی ## مجموعه سامانه‌های هوشمند، دیزاین‌سیستم، شبیه‌سازها و مطالعات توسعه  <div class=\"admonition note\"> <p class=\"admonition-title\">درباره این بخش</p> <p..."
+      "tags": [],
+      "summary": "# پروژه‌های دانشگاهی و پژوهشی ## مجموعه سامانه‌های هوشمند، دیزاین‌سیستم، شبیه‌سازها و مطالعات توسعه  ___SARV_STASH_0___ ___SARV_STASH_1___درباره این بخش___SARV_STASH_2___ ___SARV_S..."
     },
     "projects/economics-study/": {
       "id": "projects/economics-study.md",
       "title": "پژوهش اقتصاد نهادگرا",
       "url": "projects/economics-study/",
       "folder": "projects",
-      "summary": "# پژوهش اقتصاد نهادگرا و دولت توسعه‌گرا ## واکاوی تطبیقی تجارب گذار اقتصادی و بازطراحی الگوی بومی ایران  <div class=\"sarv-poster-card\">   <img src=\"../assets/economics-poster.png\"..."
+      "tags": [],
+      "summary": "# پژوهش اقتصاد نهادگرا و دولت توسعه‌گرا ## واکاوی تطبیقی تجارب گذار اقتصادی و بازطراحی الگوی بومی ایران  ___SARV_STASH_0___   ___SARV_STASH_1___ ___SARV_STASH_2___  ___SARV_STASH_3..."
     },
     "projects/kntu-card/": {
       "id": "projects/kntu-card.md",
       "title": "طراحی کارت دانشجویی دانشگاه",
       "url": "projects/kntu-card/",
       "folder": "projects",
-      "summary": "# طراحی کارت دانشجویی دانشگاه صنعتی خواجه نصیرالدین طوسی ## کانسپت مدرن هویت بصری، کارت هوشمند چندمنظوره و دیزاین فرم‌لس  <div class=\"sarv-poster-card\" style=\"text-align: center; m..."
+      "tags": [],
+      "summary": "# طراحی کارت دانشجویی دانشگاه صنعتی خواجه نصیرالدین طوسی ## کانسپت مدرن هویت بصری، کارت هوشمند چندمنظوره و دیزاین فرم‌لس  ___SARV_STASH_0___   ___SARV_STASH_1___ ___SARV_STASH_2___..."
     },
     "projects/proji/": {
       "id": "projects/proji.md",
       "title": "شبیه‌ساز پرتابه Proji",
       "url": "projects/proji/",
       "folder": "projects",
-      "summary": "# شبیه‌ساز سه‌بعدی حرکت پرتابه (Proji) ## 3D Projectile Motion Simulator  <div class=\"sarv-poster-card\" style=\"text-align: center; margin: 1.5rem 0;\">   <img src=\"../assets/proji-b..."
+      "tags": [],
+      "summary": "# شبیه‌ساز سه‌بعدی حرکت پرتابه (Proji) ## 3D Projectile Motion Simulator  ___SARV_STASH_1___   ___SARV_STASH_2___ ___SARV_STASH_3___  ___SARV_STASH_4___ ___SARV_STASH_5___اطلاعات و..."
     },
     "projects/sarvestan/": {
       "id": "projects/sarvestan.md",
       "title": "سروستان (سامانه هوشمند دانشجویی)",
       "url": "projects/sarvestan/",
       "folder": "projects",
-      "summary": "# سامانه هوشمند دانشجویی سروستان (Sarvestan) ## اکوسیستم نسل دوم دانشگاهی؛ تلفیق اپلیکیشن اندروید، افزونه مرورگر و دیزاین‌سیستم Sarv UI  <div class=\"sarv-poster-card\" style=\"text-a..."
+      "tags": [],
+      "summary": "# سامانه هوشمند دانشجویی سروستان (Sarvestan) ## اکوسیستم نسل دوم دانشگاهی؛ تلفیق اپلیکیشن اندروید، افزونه مرورگر و دیزاین‌سیستم Sarv UI  ___SARV_STASH_0___   ___SARV_STASH_1___ ___..."
+    },
+    "statics/": {
+      "id": "statics/index.md",
+      "title": "درس استاتیک و مقاومت مصالح",
+      "url": "statics/",
+      "folder": "statics",
+      "tags": [
+        "استاتیک",
+        "مقاومت_مصالح",
+        "مهندسی",
+        "سازه",
+        "تنش_کرنش",
+        "دانشگاه"
+      ],
+      "summary": "# درس استاتیک و مقاومت مصالح ## تحلیل تعادل سازه‌ها، بررسی تنش، کرنش و رفتار مکانیکی مصالح  !!! note \tاین صفحه به یادداشت‌ها، جزوات کلاسی، خلاصه فرمول‌ها و بانک تمرین‌های درس **است..."
     }
+  },
+  "tags": {
+    "معادلات_دیفرانسیل": [
+      {
+        "id": "calculus/معادلات دیفرانسیل.md",
+        "title": "معادلات دیفرانسیل",
+        "url": "calculus/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D8%AA%20%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84/",
+        "folder": "calculus"
+      }
+    ],
+    "ریاضیات": [
+      {
+        "id": "calculus/معادلات دیفرانسیل.md",
+        "title": "معادلات دیفرانسیل",
+        "url": "calculus/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D8%AA%20%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84/",
+        "folder": "calculus"
+      },
+      {
+        "id": "numerical-analysis/index.md",
+        "title": "درس محاسبات عددی و تحلیل الگوریتم‌ها",
+        "url": "numerical-analysis/",
+        "folder": "numerical-analysis"
+      }
+    ],
+    "لاپلاس": [
+      {
+        "id": "calculus/معادلات دیفرانسیل.md",
+        "title": "معادلات دیفرانسیل",
+        "url": "calculus/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D8%AA%20%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84/",
+        "folder": "calculus"
+      }
+    ],
+    "فروبنیوس": [
+      {
+        "id": "calculus/معادلات دیفرانسیل.md",
+        "title": "معادلات دیفرانسیل",
+        "url": "calculus/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D8%AA%20%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84/",
+        "folder": "calculus"
+      }
+    ],
+    "دانشگاه": [
+      {
+        "id": "calculus/معادلات دیفرانسیل.md",
+        "title": "معادلات دیفرانسیل",
+        "url": "calculus/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D8%AA%20%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84/",
+        "folder": "calculus"
+      },
+      {
+        "id": "numerical-analysis/index.md",
+        "title": "درس محاسبات عددی و تحلیل الگوریتم‌ها",
+        "url": "numerical-analysis/",
+        "folder": "numerical-analysis"
+      },
+      {
+        "id": "statics/index.md",
+        "title": "درس استاتیک و مقاومت مصالح",
+        "url": "statics/",
+        "folder": "statics"
+      }
+    ],
+    "محاسبات_عددی": [
+      {
+        "id": "numerical-analysis/index.md",
+        "title": "درس محاسبات عددی و تحلیل الگوریتم‌ها",
+        "url": "numerical-analysis/",
+        "folder": "numerical-analysis"
+      }
+    ],
+    "روش_های_عددی": [
+      {
+        "id": "numerical-analysis/index.md",
+        "title": "درس محاسبات عددی و تحلیل الگوریتم‌ها",
+        "url": "numerical-analysis/",
+        "folder": "numerical-analysis"
+      }
+    ],
+    "الگوریتم": [
+      {
+        "id": "numerical-analysis/index.md",
+        "title": "درس محاسبات عددی و تحلیل الگوریتم‌ها",
+        "url": "numerical-analysis/",
+        "folder": "numerical-analysis"
+      }
+    ],
+    "js": [
+      {
+        "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/variables.md",
+        "title": "Variables",
+        "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/variables/",
+        "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
+      }
+    ],
+    "web": [
+      {
+        "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1/variables.md",
+        "title": "Variables",
+        "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/variables/",
+        "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part1"
+      }
+    ],
+    "بسیار_مهم": [
+      {
+        "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/Functions.md",
+        "title": "توابع در جاوا اسکریپت",
+        "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Functions/",
+        "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
+      }
+    ],
+    "methods": [
+      {
+        "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/object methods(functions).md",
+        "title": "متدهای شی در جاوا اسکریپت",
+        "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/object%20methods%28functions%29/",
+        "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
+      }
+    ],
+    "notation": [
+      {
+        "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/objects.md",
+        "title": "شیء در جاوا اسکریپت",
+        "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/objects/",
+        "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
+      }
+    ],
+    "dot": [
+      {
+        "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/objects.md",
+        "title": "شیء در جاوا اسکریپت",
+        "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/objects/",
+        "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
+      }
+    ],
+    "bracket": [
+      {
+        "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/objects.md",
+        "title": "شیء در جاوا اسکریپت",
+        "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/objects/",
+        "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
+      }
+    ],
+    "object": [
+      {
+        "id": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2/objects.md",
+        "title": "شیء در جاوا اسکریپت",
+        "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/objects/",
+        "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
+      }
+    ],
+    "استاتیک": [
+      {
+        "id": "statics/index.md",
+        "title": "درس استاتیک و مقاومت مصالح",
+        "url": "statics/",
+        "folder": "statics"
+      }
+    ],
+    "مقاومت_مصالح": [
+      {
+        "id": "statics/index.md",
+        "title": "درس استاتیک و مقاومت مصالح",
+        "url": "statics/",
+        "folder": "statics"
+      }
+    ],
+    "مهندسی": [
+      {
+        "id": "statics/index.md",
+        "title": "درس استاتیک و مقاومت مصالح",
+        "url": "statics/",
+        "folder": "statics"
+      }
+    ],
+    "سازه": [
+      {
+        "id": "statics/index.md",
+        "title": "درس استاتیک و مقاومت مصالح",
+        "url": "statics/",
+        "folder": "statics"
+      }
+    ],
+    "تنش_کرنش": [
+      {
+        "id": "statics/index.md",
+        "title": "درس استاتیک و مقاومت مصالح",
+        "url": "statics/",
+        "folder": "statics"
+      }
+    ]
   }
 }
