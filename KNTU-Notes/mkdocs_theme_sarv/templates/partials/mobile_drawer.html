@@ -113,6 +113,35 @@
                         <span class="sarv-drawer-bullet"></span>
                         <span>{{ sub.title }}</span>
                       </a>
+                    {% elif sub.is_section %}
+                      <div class="sarv-drawer-nested-group {% if sub.active %}is-open{% endif %}" style="margin-right: 0.5rem; margin-top: 0.35rem;">
+                        <button type="button" class="sarv-drawer-group-btn" style="font-size: 0.82rem; padding: 0.45rem 0.65rem;" onclick="this.parentElement.classList.toggle('is-open')">
+                          <span>{{ sub.title }}</span>
+                          <svg class="sarv-drawer-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+                        </button>
+                        <div class="sarv-drawer-sublist">
+                          {% for nested in sub.children %}
+                            {% if nested.is_page %}
+                              <a href="{{ nested.url | url }}" class="sarv-drawer-sublink {% if nested.active %}active{% endif %}" onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                <span class="sarv-drawer-bullet"></span>
+                                <span>{{ nested.title }}</span>
+                              </a>
+                            {% elif nested.is_section %}
+                              <div class="sarv-drawer-nested-group" style="margin-right: 0.5rem;">
+                                <div style="font-size: 0.75rem; font-weight: bold; color: var(--color-neutral); padding: 0.25rem 0.5rem;">{{ nested.title }}</div>
+                                {% for deep in nested.children %}
+                                  {% if deep.is_page %}
+                                    <a href="{{ deep.url | url }}" class="sarv-drawer-sublink {% if deep.active %}active{% endif %}" onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>{{ deep.title }}</span>
+                                    </a>
+                                  {% endif %}
+                                {% endfor %}
+                              </div>
+                            {% endif %}
+                          {% endfor %}
+                        </div>
+                      </div>
                     {% endif %}
                   {% endfor %}
                 </div>

@@ -33,9 +33,9 @@ title: خانه
     <div class="subject-card-icon" style="color: var(--theme-color-info);">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16"/><path d="M7 15l4-8 4 8"/><path d="M8 12h6"/></svg>
     </div>
-    <h3 class="subject-card-title">حساب دیفرانسیل و انتگرال</h3>
+    <h3 class="subject-card-title">ریاضیات و معادلات دیفرانسیل</h3>
     <p class="subject-card-desc">
-      مباحث تابع، حد و پیوستگی، مشتق‌گیری، کاربردهای مشتق، انتگرال‌های معین و نامعین به همراه فرمول‌های تحلیلی.
+      حساب دیفرانسیل و انتگرال، حد و مشتق، انتگرال‌های معین به همراه معادلات دیفرانسیل مرتبه اول و دوم و لاپلاس.
     </p>
     <div class="subject-card-footer">
       <span>مشاهده سرفصل‌ها</span>
@@ -58,7 +58,37 @@ title: خانه
     </div>
   </a>
 
-  <!-- ۳. اقتصاد کلان -->
+  <!-- ۳. استاتیک و مقاومت مصالح -->
+  <a href="statics/" class="subject-card">
+    <div class="subject-card-icon" style="color: #f59e0b;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    </div>
+    <h3 class="subject-card-title">استاتیک و مقاومت مصالح</h3>
+    <p class="subject-card-desc">
+      تعادل اجسام صلب، تحلیل خرپاها و قاب‌ها، دیاگرام‌های برش و خمش، تنش و کرنش، پیچش و دایره مور.
+    </p>
+    <div class="subject-card-footer">
+      <span>مشاهده جزوات</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transform: scaleX(-1);"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </div>
+  </a>
+
+  <!-- ۴. محاسبات عددی -->
+  <a href="numerical-analysis/" class="subject-card">
+    <div class="subject-card-icon" style="color: var(--color-accent, #fe28a2);">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="12" y1="8" x2="12" y2="16"/></svg>
+    </div>
+    <h3 class="subject-card-title">محاسبات عددی</h3>
+    <p class="subject-card-desc">
+      روش‌های حل معادلات غیرخطی، درونیابی و برازش منحنی، مشتق و انتگرال‌گیری عددی و حل عددی ODE.
+    </p>
+    <div class="subject-card-footer">
+      <span>مشاهده سرفصل‌ها</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transform: scaleX(-1);"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </div>
+  </a>
+
+  <!-- ۵. اقتصاد کلان -->
   <a href="macroeconomics/اقتصاد نهادگرا و دولت توسعه‌گرا/" class="subject-card">
     <div class="subject-card-icon" style="color: var(--theme-color-warn);">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
@@ -73,7 +103,7 @@ title: خانه
     </div>
   </a>
 
-  <!-- ۴. اقتصاد خرد -->
+  <!-- ۶. اقتصاد خرد -->
   <a href="micro economics/" class="subject-card">
     <div class="subject-card-icon" style="color: var(--theme-color-secondary);">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
@@ -88,7 +118,7 @@ title: خانه
     </div>
   </a>
 
-  <!-- ۵. برنامه‌نویسی دانشگاهی -->
+  <!-- ۷. برنامه‌نویسی دانشگاهی -->
   <a href="programming/جزوه کلاس برنامه‌نویسی استاد ارزانی/" class="subject-card">
     <div class="subject-card-icon" style="color: var(--theme-color-primary);">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
@@ -103,7 +133,7 @@ title: خانه
     </div>
   </a>
 
-  <!-- ۵. ادبیات فارسی -->
+  <!-- ۸. ادبیات فارسی -->
   <a href="adabiat/تاریخچه زبان فارسی/" class="subject-card">
     <div class="subject-card-icon" style="color: var(--theme-color-accent);">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
@@ -118,7 +148,7 @@ title: خانه
     </div>
   </a>
 
-  <!-- ۶. دوره‌های برنامه‌نویسی و فرانت‌اند -->
+  <!-- ۹. دوره‌های برنامه‌نویسی و فرانت‌اند -->
   <a href="out of kntu university/" class="subject-card">
     <div class="subject-card-icon" style="color: var(--theme-color-success);">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>

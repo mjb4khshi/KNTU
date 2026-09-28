@@ -12,8 +12,9 @@
     try {
       const metaUrl = document.querySelector('meta[name="sarv-graph-url"]')?.getAttribute('content');
       const siteRoot = document.querySelector('meta[name="sarv-site-root"]')?.getAttribute('content') || './';
-      const url = metaUrl || (siteRoot.replace(/\/+$/, '') + '/sarv-graph.json');
-      const res = await fetch(url);
+      const baseUrl = metaUrl || (siteRoot.replace(/\/+$/, '') + '/sarv-graph.json');
+      const url = baseUrl.includes('?') ? baseUrl : baseUrl + '?t=' + Date.now();
+      const res = await fetch(url, { cache: 'no-cache' });
       if (res.ok) {
         graphData = await res.json();
         return graphData;
@@ -222,7 +223,7 @@
         const isDimmed = this.hoveredNode && !isHighlighted;
         const isFolder = link.type === 'folder';
         const isHubLink = link.type === 'hub';
-        const isResourceLink = link.type === 'resource';
+        const isResourceLink = link.type === 'resource' || link.type === 'external';
 
         ctx.beginPath();
         if (isResourceLink) {
@@ -270,7 +271,7 @@
         const isHovered = node === this.hoveredNode;
         const isConnected = this.connectedToHovered.has(node);
         const isDimmed = this.hoveredNode && !isHovered && !isConnected;
-        const isResource = !!node.isResource;
+        const isResource = !!node.isResource || !!node.isExternal || node.type === 'external' || node.type === 'resource';
         const isHub = !!node.isHub;
         const isHome = !!node.isHome;
 
@@ -337,6 +338,9 @@
           ctx.fillStyle = textColor;
           ctx.globalAlpha = labelAlpha;
           let label = node.title || node.id;
+          if (isResource) {
+            label = '🔗 ' + label;
+          }
           if (isHovered) {
             if (node.badge) {
               label += ' [' + node.badge + ']';
@@ -355,6 +359,16 @@
       let isDragging = false;
       let startX = 0;
       let startY = 0;
+      let dragDistance = 0;
+
+      // Touch handling state
+      let initialPinchDistance = null;
+      let initialScale = 1;
+      let touchStartX = 0;
+      let touchStartY = 0;
+      let touchDragDistance = 0;
+
+      this.canvas.style.touchAction = 'none';
 
       const getNodeAt = (x, y) => {
         const adjX = (x - this.offsetX) / this.scale;
@@ -362,16 +376,30 @@
         return this.nodes.find(n => {
           const dx = n.x - adjX;
           const dy = n.y - adjY;
-          return Math.sqrt(dx * dx + dy * dy) <= n.radius + 6;
+          return Math.sqrt(dx * dx + dy * dy) <= (n.radius || 6) + 8;
         });
       };
 
+      const navigateToNode = (node) => {
+        if (!node || !node.url) return;
+        if (node.url.startsWith('http://') || node.url.startsWith('https://')) {
+          window.open(node.url, '_blank', 'noopener,noreferrer');
+          return;
+        }
+        const siteRoot = getSiteRoot();
+        const cleanLoc = (node.url || '').replace(/^\/+/, '');
+        const dest = siteRoot.endsWith('/') ? siteRoot + cleanLoc : siteRoot + '/' + cleanLoc;
+        window.location.href = dest;
+      };
+
+      // Mouse Events
       this.canvas.addEventListener('mousemove', e => {
         const rect = this.canvas.getBoundingClientRect();
         const mx = e.clientX - rect.left;
         const my = e.clientY - rect.top;
 
         if (isDragging) {
+          dragDistance += Math.hypot(e.clientX - startX, e.clientY - startY);
           if (this.draggedNode) {
             this.draggedNode.x = (mx - this.offsetX) / this.scale;
             this.draggedNode.y = (my - this.offsetY) / this.scale;
@@ -380,9 +408,9 @@
           } else {
             this.offsetX += e.clientX - startX;
             this.offsetY += e.clientY - startY;
-            startX = e.clientX;
-            startY = e.clientY;
           }
+          startX = e.clientX;
+          startY = e.clientY;
           this.draw();
         } else {
           const node = getNodeAt(mx, my);
@@ -407,6 +435,7 @@
         const my = e.clientY - rect.top;
         const node = getNodeAt(mx, my);
         isDragging = true;
+        dragDistance = 0;
         startX = e.clientX;
         startY = e.clientY;
         if (node) {
@@ -424,19 +453,17 @@
       });
 
       this.canvas.addEventListener('click', e => {
+        // If moved more than 6px, user was dragging, NOT clicking!
+        if (dragDistance > 6) {
+          dragDistance = 0;
+          return;
+        }
         const rect = this.canvas.getBoundingClientRect();
         const mx = e.clientX - rect.left;
         const my = e.clientY - rect.top;
         const node = getNodeAt(mx, my);
-        if (node && node.url) {
-          if (node.url.startsWith('http://') || node.url.startsWith('https://')) {
-            window.open(node.url, '_blank', 'noopener,noreferrer');
-            return;
-          }
-          const siteRoot = getSiteRoot();
-          const cleanLoc = (node.url || '').replace(/^\/+/, '');
-          const dest = siteRoot.endsWith('/') ? siteRoot + cleanLoc : siteRoot + '/' + cleanLoc;
-          window.location.href = dest;
+        if (node) {
+          navigateToNode(node);
         }
       });
 
@@ -446,6 +473,89 @@
         this.scale = Math.min(3.5, Math.max(0.35, this.scale * zoomFactor));
         this.draw();
       }, { passive: false });
+
+      // Touch Events for Android & iOS Touchscreens
+      this.canvas.addEventListener('touchstart', e => {
+        if (e.touches.length === 1) {
+          const rect = this.canvas.getBoundingClientRect();
+          const mx = e.touches[0].clientX - rect.left;
+          const my = e.touches[0].clientY - rect.top;
+          const node = getNodeAt(mx, my);
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+          touchDragDistance = 0;
+          this.draggedNode = node || null;
+        } else if (e.touches.length === 2) {
+          this.draggedNode = null;
+          initialPinchDistance = Math.hypot(
+            e.touches[0].clientX - e.touches[1].clientX,
+            e.touches[0].clientY - e.touches[1].clientY
+          );
+          initialScale = this.scale;
+        }
+      }, { passive: true });
+
+      this.canvas.addEventListener('touchmove', e => {
+        if (e.touches.length === 1) {
+          const rect = this.canvas.getBoundingClientRect();
+          const curX = e.touches[0].clientX;
+          const curY = e.touches[0].clientY;
+          const dx = curX - touchStartX;
+          const dy = curY - touchStartY;
+          touchDragDistance += Math.hypot(dx, dy);
+
+          const mx = curX - rect.left;
+          const my = curY - rect.top;
+
+          if (this.draggedNode) {
+            this.draggedNode.x = (mx - this.offsetX) / this.scale;
+            this.draggedNode.y = (my - this.offsetY) / this.scale;
+            this.draggedNode.vx = 0;
+            this.draggedNode.vy = 0;
+          } else {
+            this.offsetX += dx;
+            this.offsetY += dy;
+          }
+          touchStartX = curX;
+          touchStartY = curY;
+          this.draw();
+        } else if (e.touches.length === 2 && initialPinchDistance) {
+          const curDist = Math.hypot(
+            e.touches[0].clientX - e.touches[1].clientX,
+            e.touches[0].clientY - e.touches[1].clientY
+          );
+          if (curDist > 0) {
+            const factor = curDist / initialPinchDistance;
+            this.scale = Math.min(3.5, Math.max(0.35, initialScale * factor));
+            this.draw();
+          }
+        }
+      }, { passive: true });
+
+      this.canvas.addEventListener('touchend', e => {
+        if (e.touches.length === 0) {
+          // If tap without drag on a node, navigate!
+          if (touchDragDistance < 10 && this.draggedNode) {
+            navigateToNode(this.draggedNode);
+          }
+          this.draggedNode = null;
+          initialPinchDistance = null;
+        } else if (e.touches.length === 1) {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+          initialPinchDistance = null;
+        }
+      }, { passive: true });
+
+      // Window Resize Listener
+      window.addEventListener('resize', () => {
+        this.resize();
+        this.draw();
+      });
+
+      window.addEventListener('sarv-theme-changed', () => {
+        this.draw();
+      });
     }
   }
 

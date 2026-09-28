@@ -1246,6 +1246,27 @@ td.schedule-col-today {
   background: color-mix(in oklab, var(--color-base-500) 60%, transparent);
   color: var(--color-base-content);
 }
+.resource-card-side {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+.resource-open-icon {
+  color: var(--color-neutral);
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+.resource-card:hover .resource-open-icon {
+  color: var(--color-primary);
+  transform: translateX(-3px);
+}
+.resource-badge-exam {
+  background: rgba(225, 29, 72, 0.12) !important;
+  color: #e11d48 !important;
+  border-color: rgba(225, 29, 72, 0.25) !important;
+}
 
 /* --- 8. Subject & Project Cards (.subjects-grid) --- */
 .subjects-grid {
@@ -1355,6 +1376,26 @@ td.schedule-col-today {
   border-color: var(--color-primary);
   background: color-mix(in oklab, var(--color-primary) 12%, transparent);
   color: var(--color-primary);
+}
+.home-btn-github {
+  background: #1f2937 !important;
+  color: #ffffff !important;
+  border-color: #374151 !important;
+}
+.home-btn-github:hover {
+  background: #111827 !important;
+  border-color: var(--color-primary) !important;
+  color: #ffffff !important;
+}
+.home-btn-linkedin {
+  background: #0a66c2 !important;
+  color: #ffffff !important;
+  border-color: #004182 !important;
+}
+.home-btn-linkedin:hover {
+  background: #004182 !important;
+  border-color: #0a66c2 !important;
+  color: #ffffff !important;
 }
 
 /* Poster Card Container (Clean, Borderless, No Phantom Double Shadow) */
