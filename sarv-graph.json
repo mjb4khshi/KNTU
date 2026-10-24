@@ -89,6 +89,16 @@
       "radius": 4.8
     },
     {
+      "id": "calculus/orthogonal-trajectories.md",
+      "title": "مسیرهای متعامد",
+      "url": "calculus/orthogonal-trajectories/",
+      "folder": "calculus",
+      "tags": [],
+      "words": 1649,
+      "degree": 0,
+      "radius": 4.8
+    },
+    {
       "id": "calculus/فهرست مطالب.md",
       "title": "فهرست مطالب ریاضی عمومی",
       "url": "calculus/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/",
@@ -215,16 +225,6 @@
       "radius": 4.2,
       "words": 0,
       "degree": 1
-    },
-    {
-      "id": "calculus/مسیرهای متعامد.md",
-      "title": "مسیرهای متعامد",
-      "url": "calculus/%D9%85%D8%B3%DB%8C%D8%B1%D9%87%D8%A7%DB%8C%20%D9%85%D8%AA%D8%B9%D8%A7%D9%85%D8%AF/",
-      "folder": "calculus",
-      "tags": [],
-      "words": 1649,
-      "degree": 0,
-      "radius": 4.8
     },
     {
       "id": "calculus/معادلات دیفرانسیل.md",
@@ -1232,6 +1232,14 @@
       "tags": [],
       "summary": "# شکل‌گیری و پیدایش زبان‌ ملفوظ  ## دال و مدلول  مثال: دال-->درخت. مدلول-->مصداق بیرونی درخت یا همون تصویرش  ## منبع مطالعه زبان  دو منبع زیر قطعی نیستند ولی کمک‌کننده هستند.  ###..."
     },
+    "calculus/orthogonal-trajectories/": {
+      "id": "calculus/orthogonal-trajectories.md",
+      "title": "مسیرهای متعامد",
+      "url": "calculus/orthogonal-trajectories/",
+      "folder": "calculus",
+      "tags": [],
+      "summary": "# مسیرهای متعامد  ## آزمایشگاه تعاملی و شبیه‌ساز مسیرهای متعامد با ابزار زیر می‌توانید خانواده‌های مختلف منحنی‌ها را به همراه خانواده مسیرهای متعامد آن‌ها به صورت زنده و دوطرفه مشا..."
+    },
     "calculus/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/": {
       "id": "calculus/فهرست مطالب.md",
       "title": "فهرست مطالب ریاضی عمومی",
@@ -1239,14 +1247,6 @@
       "folder": "calculus",
       "tags": [],
       "summary": "# فهرست مطالب درس ریاضی عمومی ## نیمسال پاییز ۱۴۰۴  ### 💡 فعالیت‌های خودجوش و مباحث ابداعی  ___SARVSTASHX0X___    ___SARVSTASHX1X___     ___SARVSTASHX2X___       ___SARVSTASHX3X___..."
-    },
-    "calculus/%D9%85%D8%B3%DB%8C%D8%B1%D9%87%D8%A7%DB%8C%20%D9%85%D8%AA%D8%B9%D8%A7%D9%85%D8%AF/": {
-      "id": "calculus/مسیرهای متعامد.md",
-      "title": "مسیرهای متعامد",
-      "url": "calculus/%D9%85%D8%B3%DB%8C%D8%B1%D9%87%D8%A7%DB%8C%20%D9%85%D8%AA%D8%B9%D8%A7%D9%85%D8%AF/",
-      "folder": "calculus",
-      "tags": [],
-      "summary": "# مسیرهای متعامد  ## آزمایشگاه تعاملی و شبیه‌ساز مسیرهای متعامد با ابزار زیر می‌توانید خانواده‌های مختلف منحنی‌ها را به همراه خانواده مسیرهای متعامد آن‌ها به صورت زنده و دوطرفه مشا..."
     },
     "calculus/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D8%AA%20%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84/": {
       "id": "calculus/معادلات دیفرانسیل.md",
