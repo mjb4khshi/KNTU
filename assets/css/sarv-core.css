@@ -80,6 +80,7 @@
 html {
   direction: rtl;
   font-family: var(--font-sans);
+  font-variation-settings: "DSTY" 2;
   background-color: var(--color-base);
   color: var(--color-base-content);
   scroll-behavior: smooth;
@@ -97,6 +98,7 @@ body {
   color: var(--color-base-content);
   line-height: 1.85;
   font-size: 0.95rem;
+  font-variation-settings: "DSTY" 2;
 }
 
 ::selection {
