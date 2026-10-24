@@ -217,6 +217,16 @@
       "degree": 1
     },
     {
+      "id": "calculus/مسیرهای متعامد.md",
+      "title": "مسیرهای متعامد",
+      "url": "calculus/%D9%85%D8%B3%DB%8C%D8%B1%D9%87%D8%A7%DB%8C%20%D9%85%D8%AA%D8%B9%D8%A7%D9%85%D8%AF/",
+      "folder": "calculus",
+      "tags": [],
+      "words": 625,
+      "degree": 0,
+      "radius": 4.8
+    },
+    {
       "id": "calculus/معادلات دیفرانسیل.md",
       "title": "معادلات دیفرانسیل",
       "url": "calculus/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D8%AA%20%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84/",
@@ -1229,6 +1239,14 @@
       "folder": "calculus",
       "tags": [],
       "summary": "# فهرست مطالب درس ریاضی عمومی ## نیمسال پاییز ۱۴۰۴  ### 💡 فعالیت‌های خودجوش و مباحث ابداعی  ___SARVSTASHX0X___    ___SARVSTASHX1X___     ___SARVSTASHX2X___       ___SARVSTASHX3X___..."
+    },
+    "calculus/%D9%85%D8%B3%DB%8C%D8%B1%D9%87%D8%A7%DB%8C%20%D9%85%D8%AA%D8%B9%D8%A7%D9%85%D8%AF/": {
+      "id": "calculus/مسیرهای متعامد.md",
+      "title": "مسیرهای متعامد",
+      "url": "calculus/%D9%85%D8%B3%DB%8C%D8%B1%D9%87%D8%A7%DB%8C%20%D9%85%D8%AA%D8%B9%D8%A7%D9%85%D8%AF/",
+      "folder": "calculus",
+      "tags": [],
+      "summary": "# مسیرهای متعامد (Orthogonal Trajectories)  ## مفهوم هندسی و فیزیکی مسیرهای متعامد در هندسه تحلیلی و معادلات دیفرانسیل، اگر دسته‌ای از منحنی‌ها با رابطه $F(x, y, c) = 0$ مشخص شده ب..."
     },
     "calculus/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D8%AA%20%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84/": {
       "id": "calculus/معادلات دیفرانسیل.md",
