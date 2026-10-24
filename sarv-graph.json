@@ -9,7 +9,7 @@
       "words": 297,
       "isHome": true,
       "radius": 9.0,
-      "degree": 15
+      "degree": 14
     },
     {
       "id": "ext:16790dcb",
@@ -38,22 +38,12 @@
       "degree": 1
     },
     {
-      "id": "schedule.md",
-      "title": "برنامه هفتگی",
-      "url": "schedule/",
-      "folder": "عمومی",
-      "tags": [],
-      "words": 1238,
-      "degree": 1,
-      "radius": 4.8
-    },
-    {
       "id": "tags.md",
       "title": "برچسب‌ها",
       "url": "tags/",
       "folder": "عمومی",
       "tags": [],
-      "words": 979,
+      "words": 1035,
       "degree": 1,
       "radius": 4.8
     },
@@ -1179,11 +1169,6 @@
     },
     {
       "source": "index.md",
-      "target": "schedule.md",
-      "type": "hub"
-    },
-    {
-      "source": "index.md",
       "target": "tags.md",
       "type": "hub"
     }
@@ -1196,14 +1181,6 @@
       "folder": "عمومی",
       "tags": [],
       "summary": "# خانه  ___SARV_STASH_0___   ___SARV_STASH_1___     ___SARV_STASH_2______SARV_STASH_3___   ___SARV_STASH_4___ ___SARV_STASH_5___  سلام من **محمدجواد بخشی** هستم و اینجا هم آرشیو من..."
-    },
-    "schedule/": {
-      "id": "schedule.md",
-      "title": "برنامه هفتگی",
-      "url": "schedule/",
-      "folder": "عمومی",
-      "tags": [],
-      "summary": "___SARV_STASH_3___    ___SARV_STASH_4___   ___SARV_STASH_5___     ___SARV_STASH_6___       ___SARV_STASH_7______SARV_STASH_8______SARV_STASH_9______SARV_STASH_10___       دانشگاه ص..."
     },
     "tags/": {
       "id": "tags.md",

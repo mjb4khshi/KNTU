@@ -8,24 +8,8 @@
 @font-face {
   font-family: "Arad";
   src: url("../fonts/AradVF.woff2") format("woff2-variations"),
-       url("../fonts/Arad-Regular.woff2") format("woff2");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Arad";
-  src: url("../fonts/Arad-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Arad";
-  src: url("../fonts/Arad-Bold.woff2") format("woff2");
-  font-weight: 700;
+       url("../fonts/AradVF.woff2") format("woff2");
+  font-weight: 100 1000;
   font-style: normal;
   font-display: swap;
 }
@@ -81,6 +65,7 @@ html {
   direction: rtl;
   font-family: var(--font-sans);
   font-variation-settings: "DSTY" 2;
+  font-feature-settings: "tnum" 1, "ss01" 1;
   background-color: var(--color-base);
   color: var(--color-base-content);
   scroll-behavior: smooth;
@@ -99,6 +84,13 @@ body {
   line-height: 1.85;
   font-size: 0.95rem;
   font-variation-settings: "DSTY" 2;
+  font-feature-settings: "tnum" 1, "ss01" 1;
+}
+
+/* تضمین اعمال نقاط پیوسته و ارقام فارسی روی همه وزن‌های ضخیم و هدینگ‌ها */
+b, strong, h1, h2, h3, h4, h5, h6, th, [class*="bold"], .hero-title, .brand-title {
+  font-variation-settings: "DSTY" 2 !important;
+  font-feature-settings: "tnum" 1, "ss01" 1 !important;
 }
 
 ::selection {

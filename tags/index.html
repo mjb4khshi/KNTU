@@ -151,13 +151,6 @@
       
     
       
-        <a href="../schedule/" class="sarv-nav-link ">
-          <span class="sarv-nav-bullet"></span>
-          <span>برنامه هفتگی</span>
-        </a>
-      
-    
-      
         <a href="./" class="sarv-nav-link active">
           <span class="sarv-nav-bullet"></span>
           <span>برچسب‌ها</span>
@@ -909,7 +902,7 @@
         </span>
         <span class="reading-badge">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>979 کلمه</span>
+          <span>1035 کلمه</span>
         </span>
         <button type="button" class="reading-badge sarv-print-btn" onclick="window.print()" title="چاپ یا ذخیره نسخه تمیز PDF">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect width="12" height="8" x="6" y="14"></rect></svg>
@@ -1090,14 +1083,27 @@
     try {
       const siteRootMeta = document.querySelector('meta[name="sarv-site-root"]')?.getAttribute('content') || './';
       const cleanRoot = siteRootMeta.endsWith('/') ? siteRootMeta : siteRootMeta + '/';
-      const res = await fetch(cleanRoot + 'sarv-tags.json');
+      let res = await fetch(cleanRoot + 'sarv-tags.json');
+      if (!res.ok) {
+        res = await fetch('./sarv-tags.json');
+      }
+      if (!res.ok) {
+        res = await fetch('/KNTU/sarv-tags.json');
+      }
       if (res.ok) {
         tagsData = await res.json();
         renderTagsUI();
+      } else {
+        console.warn("Could not load tags from candidate paths.");
       }
     } catch(e) {
       console.warn("Could not load tags:", e);
     }
+  }
+
+  function toPersianDigits(num) {
+    const farsiDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+    return num.toString().replace(/\d/g, d => farsiDigits[d]);
   }
 
   function renderTagsUI() {
@@ -1110,8 +1116,8 @@
     const uniqueNotes = new Set();
     tags.forEach(t => tagsData[t].forEach(n => uniqueNotes.add(n.url)));
 
-    if (totalCountEl) totalCountEl.textContent = tags.length;
-    if (taggedNotesCountEl) taggedNotesCountEl.textContent = uniqueNotes.size;
+    if (totalCountEl) totalCountEl.textContent = toPersianDigits(tags.length);
+    if (taggedNotesCountEl) taggedNotesCountEl.textContent = toPersianDigits(uniqueNotes.size);
 
     cloudBox.innerHTML = '';
     tags.forEach(tag => {
@@ -1227,11 +1233,11 @@
       
       <div class="sarv-page-nav">
         
-        <a href="../schedule/" class="btn btn-relief btn-neutral sarv-nav-btn prev">
+        <a href=".." class="btn btn-relief btn-neutral sarv-nav-btn prev">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
           <div class="sarv-nav-text">
             <span class="sarv-nav-sub">صفحه قبل</span>
-            <span class="sarv-nav-title">برنامه هفتگی</span>
+            <span class="sarv-nav-title">خانه</span>
           </div>
         </a>
         
@@ -1628,17 +1634,6 @@
             
           
             
-              <a href="../schedule/" class="sarv-drawer-card " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
-                <div class="sarv-drawer-card-icon">
-                  
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
-                  
-                </div>
-                <span>برنامه هفتگی</span>
-              </a>
-            
-          
-            
               <a href="./" class="sarv-drawer-card active" onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
                 <div class="sarv-drawer-card-icon">
                   
@@ -1681,8 +1676,6 @@
           <span>دسته‌بندی‌ها و دروس</span>
         </div>
         <div class="sarv-drawer-list">
-          
-            
           
             
           
