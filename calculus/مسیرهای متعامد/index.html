@@ -910,7 +910,7 @@
         </span>
         <span class="reading-badge">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>۱,۶۳۳ کلمه</span>
+          <span>۱,۶۴۹ کلمه</span>
         </span>
         <button type="button" class="reading-badge sarv-print-btn" onclick="window.print()" title="چاپ یا ذخیره نسخه تمیز PDF">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect width="12" height="8" x="6" y="14"></rect></svg>
@@ -1064,16 +1064,16 @@
 </style>
 
 <script>
-(function() {
+function initOrthoSimulation() {
   const canvas = document.getElementById('orthoCanvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-
   const familySelect = document.getElementById('curveFamilySelect');
   const densitySlider = document.getElementById('densitySlider');
   const densityVal = document.getElementById('densityVal');
   const showTangentsCheck = document.getElementById('showTangentsCheck');
   const tooltip = document.getElementById('orthoTooltip');
+
+  if (!canvas || !familySelect || !densitySlider) return;
+  const ctx = canvas.getContext('2d');
 
   const W = canvas.width;
   const H = canvas.height;
@@ -1121,7 +1121,7 @@
 
     const family = familySelect.value;
     const count = parseInt(densitySlider.value, 10);
-    const showTangents = showTangentsCheck.checked;
+    const showTangents = showTangentsCheck ? showTangentsCheck.checked : true;
 
     if (family === 'parabolas') {
       // اصلی: y = c * x^2 (سهمی‌ها به رنگ آبی روشن)
@@ -1129,7 +1129,6 @@
       ctx.lineWidth = 2;
       for (let i = 1; i <= count; i++) {
         const c = (i * 0.25);
-        // سهمی رو به بالا و پایین
         [c, -c].forEach(valC => {
           ctx.beginPath();
           let started = false;
@@ -1182,7 +1181,6 @@
       ctx.lineWidth = 2;
       for (let i = 1; i <= count; i++) {
         const k = i * 1.5;
-        // شاخه‌های چپ و راست
         ctx.beginPath();
         for (let py = 0; py <= H; py += 2) {
           const my = toMathY(py);
@@ -1287,12 +1285,13 @@
         ctx.fill();
 
         // متن راهنما
-        tooltip.innerHTML = `نقطه: (${mx.toFixed(2)}, ${my.toFixed(2)}) | شیب منحنی ۱: ${m1.toFixed(2)} | شیب منحنی ۲: ${m2.toFixed(2)} | حاصل‌ضرب شیب‌ها: <strong>-۱.۰۰</strong> (تعامد کامل ۹۰°)`;
+        if (tooltip) {
+          tooltip.innerHTML = `نقطه: (${mx.toFixed(2)}, ${my.toFixed(2)}) | شیب منحنی ۱: ${m1.toFixed(2)} | شیب منحنی ۲: ${m2.toFixed(2)} | حاصل‌ضرب شیب‌ها: <strong>-۱.۰۰</strong> (تعامد کامل ۹۰°)`;
+        }
       }
     }
   }
 
-  // ماوس ایونت‌ها
   canvas.addEventListener('mousemove', e => {
     const rect = canvas.getBoundingClientRect();
     const scaleX = canvas.width / rect.width;
@@ -1305,13 +1304,21 @@
 
   familySelect.addEventListener('change', renderSimulation);
   densitySlider.addEventListener('input', e => {
-    densityVal.innerText = e.target.value;
+    if (densityVal) densityVal.innerText = e.target.value;
     renderSimulation();
   });
-  showTangentsCheck.addEventListener('change', renderSimulation);
+  if (showTangentsCheck) {
+    showTangentsCheck.addEventListener('change', renderSimulation);
+  }
 
   renderSimulation();
-})();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initOrthoSimulation);
+} else {
+  initOrthoSimulation();
+}
 </script>
 
 <hr>
@@ -2856,7 +2863,6 @@ $<span class="arithmatex">\(m_1 \cdot m_2 = -1 \implies m_2 = -\frac{1}{m_1}\)</
   <script src="../../assets/js/graph-engine.js"></script>
   <script src="../../assets/js/hover-preview.js"></script>
   <script src="../../assets/js/mermaid-theme.js"></script>
-  <script src="../../assets/js/schedule.js"></script>
   <script src="../../assets/js/search.js"></script>
 
   <!-- اسکریپت‌های افزوده (KaTeX / MathJax / ...) -->
