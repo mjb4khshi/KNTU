@@ -1,6 +1,6 @@
 /* =========================================================
    🌿 MathJax 3 Configuration for Sarv UI & Arithmatex
-   Supports inline $...$ and display $$...$$ formulas
+   Supports inline $...$ and display $$...$$ formulas everywhere
    ========================================================= */
 
 window.MathJax = {
@@ -11,13 +11,16 @@ window.MathJax = {
     processEnvironments: true
   },
   options: {
-    ignoreHtmlClass: ".*|",
-    processHtmlClass: "arithmatex"
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "tex2jax_process|arithmatex|sarv-markdown-content|resource-card-title|resource-card"
   }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
+function typesetSarvMath() {
   if (typeof MathJax !== "undefined" && MathJax.typesetPromise) {
-    MathJax.typesetPromise();
+    MathJax.typesetPromise().catch(err => console.warn("MathJax error:", err));
   }
-});
+}
+
+document.addEventListener("DOMContentLoaded", typesetSarvMath);
+window.addEventListener("load", typesetSarvMath);
