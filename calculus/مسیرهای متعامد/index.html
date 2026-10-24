@@ -906,11 +906,11 @@
       <div class="sarv-reading-meta">
         <span class="reading-badge">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          <span>زمان تقریبی مطالعه: ۴ دقیقه</span>
+          <span>زمان تقریبی مطالعه: ۱۰ دقیقه</span>
         </span>
         <span class="reading-badge">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>۶۲۵ کلمه</span>
+          <span>۱,۶۳۵ کلمه</span>
         </span>
         <button type="button" class="reading-badge sarv-print-btn" onclick="window.print()" title="چاپ یا ذخیره نسخه تمیز PDF">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect width="12" height="8" x="6" y="14"></rect></svg>
@@ -922,21 +922,414 @@
       <!-- بدنه محتوا -->
       <div class="sarv-markdown-content">
         <h1 id="orthogonal-trajectories">مسیرهای متعامد (Orthogonal Trajectories)<a class="headerlink" href="#orthogonal-trajectories" title="Permanent link">¶</a></h1>
-<h2 id="_1">مفهوم هندسی و فیزیکی مسیرهای متعامد<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h2 id="_1">آزمایشگاه تعاملی و شبیه‌ساز مسیرهای متعامد<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>با ابزار زیر می‌توانید خانواده‌های مختلف منحنی‌ها را به همراه خانواده مسیرهای متعامد آن‌ها به صورت زنده و دوطرفه مشاهده کنید، نقاط تقاطع را جابه‌جا کنید و تعامد خطوط مماس (<span class="arithmatex">\(m_1 \cdot m_2 = -1\)</span>) را به چشم ببینید:</p>
+<div class="ortho-sim-card">
+  <div class="ortho-sim-toolbar">
+    <div class="sim-ctrl-group">
+      <label for="curveFamilySelect">انتخاب خانواده منحنی:</label>
+      <select id="curveFamilySelect" class="sim-select">
+        <option value="parabolas">سهمی‌ها ($y = c x^2$) ⟂ بیضی‌ها ($x^2/2 + y^2 = k$)</option>
+        <option value="hyperbolas">هذلولی‌ها ($x y = c$) ⟂ هذلولی‌های مزدوج ($x^2 - y^2 = k$)</option>
+        <option value="circles">دایره‌های هم‌مرکز ($x^2 + y^2 = c^2$) ⟂ خطوط شعاعی ($y = k x$)</option>
+      </select>
+    </div>
+    <div class="sim-ctrl-group">
+      <label for="densitySlider">تعداد منحنی‌ها:</label>
+      <input type="range" id="densitySlider" min="3" max="10" value="6" class="sim-slider">
+      <span id="densityVal" class="sim-val">۶</span>
+    </div>
+    <div class="sim-ctrl-group">
+      <label class="sim-checkbox-label">
+        <span class="sarv-checkbox is-checked"><svg viewBox="0 0 24 24"><polyline class="cb-animate" points="20 6 9 17 4 12"></polyline></svg></span>
+        <span>نمایش خطوط مماس و زاویه قائمه</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="ortho-canvas-wrapper">
+    <canvas id="orthoCanvas" width="800" height="500"></canvas>
+    <div class="ortho-legend">
+      <div class="legend-item"><span class="legend-color legend-primary"></span><span>خانواده اصلی $F(x, y, c) = 0$</span></div>
+      <div class="legend-item"><span class="legend-color legend-ortho"></span><span>مسیرهای متعامد $G(x, y, k) = 0$</span></div>
+      <div class="legend-item"><span class="legend-color legend-tangent"></span><span>خطوط مماس (زاویه ۹۰°)</span></div>
+    </div>
+    <div class="ortho-tooltip" id="orthoTooltip">برای بررسی مماس‌ها، ماوس را روی صفحه حرکت دهید</div>
+  </div>
+</div>
+
+<style>
+.ortho-sim-card {
+  background: color-mix(in oklab, var(--color-base-500) 25%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 55%, transparent);
+  border-radius: var(--radius-card);
+  padding: 1.5rem;
+  margin: 1.5rem 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.ortho-sim-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--color-base-500) 40%, transparent);
+}
+.sim-ctrl-group {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.sim-select, .sim-slider {
+  background: var(--color-base);
+  color: var(--color-base-content);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 70%, transparent);
+  border-radius: var(--radius-button);
+  padding: 0.4rem 0.8rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  outline: none;
+}
+.sim-val {
+  min-width: 1.5rem;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+.sim-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+.ortho-canvas-wrapper {
+  position: relative;
+  border-radius: calc(var(--radius-card) - 6px);
+  overflow: hidden;
+  background: #090e17;
+  border: 1px solid #1e293b;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+#orthoCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: crosshair;
+}
+.ortho-legend {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 8px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #e2e8f0;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.legend-color {
+  width: 14px;
+  height: 4px;
+  border-radius: 2px;
+}
+.legend-primary { background: #38bdf8; box-shadow: 0 0 6px #38bdf8; }
+.legend-ortho { background: #f43f5e; box-shadow: 0 0 6px #f43f5e; }
+.legend-tangent { background: #22c55e; height: 10px; width: 10px; border-radius: 50%; }
+
+.ortho-tooltip {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  pointer-events: none;
+}
+</style>
+
+<script>
+(function() {
+  const canvas = document.getElementById('orthoCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const familySelect = document.getElementById('curveFamilySelect');
+  const densitySlider = document.getElementById('densitySlider');
+  const densityVal = document.getElementById('densityVal');
+  const showTangentsCheck = document.getElementById('showTangentsCheck');
+  const tooltip = document.getElementById('orthoTooltip');
+
+  const W = canvas.width;
+  const H = canvas.height;
+  const originX = W / 2;
+  const originY = H / 2;
+  const scale = 45; // پیکسل به ازای هر واحد ریاضی
+
+  let mouseX = originX + 2.5 * scale;
+  let mouseY = originY - 1.8 * scale;
+  let hasHover = false;
+
+  function toScreenX(x) { return originX + x * scale; }
+  function toScreenY(y) { return originY - y * scale; }
+  function toMathX(px) { return (px - originX) / scale; }
+  function toMathY(py) { return -(py - originY) / scale; }
+
+  function drawGrid() {
+    ctx.clearRect(0, 0, W, H);
+
+    // محورها
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = '#1e293b';
+    ctx.beginPath();
+    for (let x = -10; x <= 10; x++) {
+      ctx.moveTo(toScreenX(x), 0);
+      ctx.lineTo(toScreenX(x), H);
+    }
+    for (let y = -8; y <= 8; y++) {
+      ctx.moveTo(0, toScreenY(y));
+      ctx.lineTo(W, toScreenY(y));
+    }
+    ctx.stroke();
+
+    // محور مختصات اصلی
+    ctx.lineWidth = 1.5;
+    ctx.strokeStyle = '#475569';
+    ctx.beginPath();
+    ctx.moveTo(0, originY); ctx.lineTo(W, originY);
+    ctx.moveTo(originX, 0); ctx.lineTo(originX, H);
+    ctx.stroke();
+  }
+
+  function renderSimulation() {
+    drawGrid();
+
+    const family = familySelect.value;
+    const count = parseInt(densitySlider.value, 10);
+    const showTangents = showTangentsCheck.checked;
+
+    if (family === 'parabolas') {
+      // اصلی: y = c * x^2 (سهمی‌ها به رنگ آبی روشن)
+      ctx.strokeStyle = '#38bdf8';
+      ctx.lineWidth = 2;
+      for (let i = 1; i <= count; i++) {
+        const c = (i * 0.25);
+        // سهمی رو به بالا و پایین
+        [c, -c].forEach(valC => {
+          ctx.beginPath();
+          let started = false;
+          for (let px = 0; px <= W; px += 3) {
+            const mx = toMathX(px);
+            const my = valC * mx * mx;
+            const py = toScreenY(my);
+            if (!started) { ctx.moveTo(px, py); started = true; }
+            else { ctx.lineTo(px, py); }
+          }
+          ctx.stroke();
+        });
+      }
+
+      // متعامد: x^2 / (2k) + y^2 / k = 1 (بیضی‌ها به رنگ زرشکی/صورتی نئون)
+      ctx.strokeStyle = '#f43f5e';
+      ctx.lineWidth = 2;
+      for (let i = 1; i <= count; i++) {
+        const k = i * 1.4;
+        const a = Math.sqrt(2 * k) * scale;
+        const b = Math.sqrt(k) * scale;
+        ctx.beginPath();
+        ctx.ellipse(originX, originY, a, b, 0, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+
+    } else if (family === 'hyperbolas') {
+      // اصلی: x * y = c
+      ctx.strokeStyle = '#38bdf8';
+      ctx.lineWidth = 2;
+      for (let i = 1; i <= count; i++) {
+        const c = i * 0.8;
+        [c, -c].forEach(valC => {
+          ctx.beginPath();
+          let started = false;
+          for (let px = 0; px <= W; px += 2) {
+            const mx = toMathX(px);
+            if (Math.abs(mx) < 0.15) { started = false; continue; }
+            const my = valC / mx;
+            const py = toScreenY(my);
+            if (!started) { ctx.moveTo(px, py); started = true; }
+            else { ctx.lineTo(px, py); }
+          }
+          ctx.stroke();
+        });
+      }
+
+      // متعامد: x^2 - y^2 = k
+      ctx.strokeStyle = '#f43f5e';
+      ctx.lineWidth = 2;
+      for (let i = 1; i <= count; i++) {
+        const k = i * 1.5;
+        // شاخه‌های چپ و راست
+        ctx.beginPath();
+        for (let py = 0; py <= H; py += 2) {
+          const my = toMathY(py);
+          const xSq = k + my * my;
+          if (xSq >= 0) {
+            const mx = Math.sqrt(xSq);
+            ctx.lineTo(toScreenX(mx), py);
+          }
+        }
+        ctx.stroke();
+        ctx.beginPath();
+        for (let py = 0; py <= H; py += 2) {
+          const my = toMathY(py);
+          const xSq = k + my * my;
+          if (xSq >= 0) {
+            const mx = -Math.sqrt(xSq);
+            ctx.lineTo(toScreenX(mx), py);
+          }
+        }
+        ctx.stroke();
+      }
+
+    } else if (family === 'circles') {
+      // اصلی: دایره‌ها x^2 + y^2 = c^2
+      ctx.strokeStyle = '#38bdf8';
+      ctx.lineWidth = 2;
+      for (let i = 1; i <= count; i++) {
+        const r = (i * 0.8) * scale;
+        ctx.beginPath();
+        ctx.arc(originX, originY, r, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+
+      // متعامد: خطوط مستقیم شعاعی y = k * x
+      ctx.strokeStyle = '#f43f5e';
+      ctx.lineWidth = 2;
+      const angles = count * 2;
+      for (let i = 0; i < angles; i++) {
+        const th = (i / angles) * Math.PI;
+        ctx.beginPath();
+        ctx.moveTo(originX - Math.cos(th) * W, originY + Math.sin(th) * W);
+        ctx.lineTo(originX + Math.cos(th) * W, originY - Math.sin(th) * W);
+        ctx.stroke();
+      }
+    }
+
+    // ترسیم خطوط مماس متقاطع روی نقطه ماوس
+    if (showTangents) {
+      const mx = toMathX(mouseX);
+      const my = toMathY(mouseY);
+
+      if (Math.abs(mx) > 0.1 || Math.abs(my) > 0.1) {
+        let m1 = 0;
+        let m2 = 0;
+
+        if (family === 'parabolas') {
+          m1 = (2 * my) / (mx || 0.001); // شیب سهمی
+          m2 = -mx / (2 * (my || 0.001)); // شیب بیضی
+        } else if (family === 'hyperbolas') {
+          m1 = -my / (mx || 0.001);
+          m2 = mx / (my || 0.001);
+        } else if (family === 'circles') {
+          m1 = -mx / (my || 0.001);
+          m2 = my / (mx || 0.001);
+        }
+
+        // خط مماس اول
+        const len = 70;
+        const ang1 = Math.atan(m1);
+        ctx.strokeStyle = '#38bdf8';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(mouseX - Math.cos(ang1) * len, mouseY + Math.sin(ang1) * len);
+        ctx.lineTo(mouseX + Math.cos(ang1) * len, mouseY - Math.sin(ang1) * len);
+        ctx.stroke();
+
+        // خط مماس دوم (عمود بر اولی)
+        const ang2 = Math.atan(m2);
+        ctx.strokeStyle = '#f43f5e';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(mouseX - Math.cos(ang2) * len, mouseY + Math.sin(ang2) * len);
+        ctx.lineTo(mouseX + Math.cos(ang2) * len, mouseY - Math.sin(ang2) * len);
+        ctx.stroke();
+
+        // نماد زاویه قائمه (Square angle marker)
+        const markerSize = 14;
+        const u1x = Math.cos(ang1), u1y = -Math.sin(ang1);
+        const u2x = Math.cos(ang2), u2y = -Math.sin(ang2);
+        ctx.strokeStyle = '#22c55e';
+        ctx.lineWidth = 2.5;
+        ctx.beginPath();
+        ctx.moveTo(mouseX + u1x * markerSize, mouseY + u1y * markerSize);
+        ctx.lineTo(mouseX + (u1x + u2x) * markerSize, mouseY + (u1y + u2y) * markerSize);
+        ctx.lineTo(mouseX + u2x * markerSize, mouseY + u2y * markerSize);
+        ctx.stroke();
+
+        // نقطه تقاطع
+        ctx.fillStyle = '#22c55e';
+        ctx.beginPath();
+        ctx.arc(mouseX, mouseY, 6, 0, Math.PI * 2);
+        ctx.fill();
+
+        // متن راهنما
+        tooltip.innerHTML = `نقطه: (${mx.toFixed(2)}, ${my.toFixed(2)}) | شیب منحنی ۱: ${m1.toFixed(2)} | شیب منحنی ۲: ${m2.toFixed(2)} | حاصل‌ضرب شیب‌ها: <strong>-۱.۰۰</strong> (تعامد کامل ۹۰°)`;
+      }
+    }
+  }
+
+  // ماوس ایونت‌ها
+  canvas.addEventListener('mousemove', e => {
+    const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    mouseX = (e.clientX - rect.left) * scaleX;
+    mouseY = (e.clientY - rect.top) * scaleY;
+    hasHover = true;
+    renderSimulation();
+  });
+
+  familySelect.addEventListener('change', renderSimulation);
+  densitySlider.addEventListener('input', e => {
+    densityVal.innerText = e.target.value;
+    renderSimulation();
+  });
+  showTangentsCheck.addEventListener('change', renderSimulation);
+
+  renderSimulation();
+})();
+</script>
+
+<hr>
+<h2 id="_2">مفهوم هندسی و فیزیکی مسیرهای متعامد<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
 <p>در هندسه تحلیلی و معادلات دیفرانسیل، اگر دسته‌ای از منحنی‌ها با رابطه <span class="arithmatex">\(F(x, y, c) = 0\)</span> مشخص شده باشند، به دسته‌ای از منحنی‌ها مانند <span class="arithmatex">\(G(x, y, k) = 0\)</span> <strong>مسیرهای متعامد</strong> می‌گویند اگر در هر نقطه تقاطع، مماس‌های دو منحنی بر یکدیگر <strong>عمود</strong> باشند.</p>
 <div class="admonition note">
 <p class="admonition-title">شرط تعامد در مختصات دکارتی</p>
 <p>اگر شیب مماس بر منحنی اول <span class="arithmatex">\(m_1 = \frac{dy}{dx}\)</span> و شیب مماس بر منحنی دوم <span class="arithmatex">\(m_2\)</span> باشد، شرط تعامد عبارت است از:<br>
 $<span class="arithmatex">\(m_1 \cdot m_2 = -1 \implies m_2 = -\frac{1}{m_1}\)</span>$</p>
 </div>
-<h3 id="_2">کاربردهای مهندسی و فیزیکی<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<h3 id="_3">کاربردهای مهندسی و فیزیکی<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
 <ol>
 <li><strong>خطوط میدان الکتریکی و خطوط هم‌پتانسیل:</strong> خطوط نیرو همواره بر سطوح هم‌پتانسیل عمودند.</li>
 <li><strong>جریان شاره‌ها (سیالات):</strong> خطوط جریان (Streamlines) بر خطوط پتانسیل سرعت عمود هستند.</li>
 <li><strong>انتقال حرارت:</strong> خطوط شار گرما بر منحنی‌های همدما (Isotherms) تعامد دارند.</li>
 </ol>
 <hr>
-<h2 id="_3">الگوریتم گام‌به‌گام محاسبه در مختصات دکارتی<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<h2 id="_4">الگوریتم گام‌به‌گام محاسبه در مختصات دکارتی<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
 <p>برای یافتن مسیرهای متعامد خانواده منحنی‌های <span class="arithmatex">\(F(x, y, c) = 0\)</span>:</p>
 <ol>
 <li><strong>مشتق‌گیری:</strong> نسبت به <span class="arithmatex">\(x\)</span> مشتق ضمنی بگیرید تا عبارتی شامل <span class="arithmatex">\(x\)</span>، <span class="arithmatex">\(y\)</span>، <span class="arithmatex">\(y'\)</span> و پارامتر <span class="arithmatex">\(c\)</span> به دست آید.</li>
@@ -947,7 +1340,7 @@ $<span class="arithmatex">\(m_1 \cdot m_2 = -1 \implies m_2 = -\frac{1}{m_1}\)</
 <li><strong>حل معادله دیفرانسیل جدید:</strong> با انتگرال‌گیری از این معادله، خانواده مسیرهای متعامد به دست می‌آید.</li>
 </ol>
 <hr>
-<h2 id="_4">الگوریتم محاسبه در مختصات قطبی<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<h2 id="_5">الگوریتم محاسبه در مختصات قطبی<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
 <p>اگر خانواده منحنی‌ها در مختصات قطبی به صورت <span class="arithmatex">\(F(r, \theta, c) = 0\)</span> داده شده باشند:</p>
 <ol>
 <li>نسبت به <span class="arithmatex">\(\theta\)</span> مشتق بگیرید و پارامتر <span class="arithmatex">\(c\)</span> را حذف کنید تا به رابطه زیر برسید:<br>
@@ -957,8 +1350,8 @@ $<span class="arithmatex">\(m_1 \cdot m_2 = -1 \implies m_2 = -\frac{1}{m_1}\)</
 <li>معادله جداشدنی حاصل را حل کنید.</li>
 </ol>
 <hr>
-<h2 id="_5">مثال‌های کاربردی و حل‌شده<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
-<h3 id="_6">مثال ۱: خانواده سهمی‌ها (مختصات دکارتی)<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<h2 id="_6">مثال‌های کاربردی و حل‌شده<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<h3 id="_7">مثال ۱: خانواده سهمی‌ها (مختصات دکارتی)<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
 <p>مسیرهای متعامد خانواده سهمی‌های <span class="arithmatex">\(y = c x^2\)</span> را بیابید.</p>
 <p><strong>پاسخ:</strong><br>
 1. مشتق نسبت به <span class="arithmatex">\(x\)</span>:<br>
@@ -975,7 +1368,7 @@ $<span class="arithmatex">\(m_1 \cdot m_2 = -1 \implies m_2 = -\frac{1}{m_1}\)</
 <p>مسیرهای متعامد خانواده <strong>سهمی‌ها</strong> (<span class="arithmatex">\(y = cx^2\)</span>)، خانواده <strong>بیضی‌هایی</strong> به مرکز مبدأ مختصات هستند.</p>
 </div>
 <hr>
-<h3 id="_7">مثال ۲: دایره‌های مماس بر محورها (مختصات قطبی)<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<h3 id="_8">مثال ۲: دایره‌های مماس بر محورها (مختصات قطبی)<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
 <p>مسیرهای متعامد خانواده دایره‌های <span class="arithmatex">\(r = c \cos\theta\)</span> را بیابید.</p>
 <p><strong>پاسخ:</strong><br>
 1. مشتق نسبت به <span class="arithmatex">\(\theta\)</span>:<br>
@@ -1039,19 +1432,23 @@ $<span class="arithmatex">\(m_1 \cdot m_2 = -1 \implies m_2 = -\frac{1}{m_1}\)</
         </li>
         
           <li class="sarv-toc-item depth-2">
-            <a href="#_1" class="sarv-toc-link">مفهوم هندسی و فیزیکی مسیرهای متعامد</a>
+            <a href="#_1" class="sarv-toc-link">آزمایشگاه تعاملی و شبیه‌ساز مسیرهای متعامد</a>
           </li>
         
           <li class="sarv-toc-item depth-2">
-            <a href="#_3" class="sarv-toc-link">الگوریتم گام‌به‌گام محاسبه در مختصات دکارتی</a>
+            <a href="#_2" class="sarv-toc-link">مفهوم هندسی و فیزیکی مسیرهای متعامد</a>
           </li>
         
           <li class="sarv-toc-item depth-2">
-            <a href="#_4" class="sarv-toc-link">الگوریتم محاسبه در مختصات قطبی</a>
+            <a href="#_4" class="sarv-toc-link">الگوریتم گام‌به‌گام محاسبه در مختصات دکارتی</a>
           </li>
         
           <li class="sarv-toc-item depth-2">
-            <a href="#_5" class="sarv-toc-link">مثال‌های کاربردی و حل‌شده</a>
+            <a href="#_5" class="sarv-toc-link">الگوریتم محاسبه در مختصات قطبی</a>
+          </li>
+        
+          <li class="sarv-toc-item depth-2">
+            <a href="#_6" class="sarv-toc-link">مثال‌های کاربردی و حل‌شده</a>
           </li>
         
       
