@@ -89,12 +89,12 @@
       "radius": 4.8
     },
     {
-      "id": "calculus/orthogonal-curves.md",
+      "id": "calculus/orthogonal-paths.md",
       "title": "مسیرهای متعامد",
-      "url": "calculus/orthogonal-curves/",
+      "url": "calculus/orthogonal-paths/",
       "folder": "calculus",
       "tags": [],
-      "words": 2576,
+      "words": 2555,
       "degree": 0,
       "radius": 4.8
     },
@@ -1232,10 +1232,10 @@
       "tags": [],
       "summary": "# شکل‌گیری و پیدایش زبان‌ ملفوظ  ## دال و مدلول  مثال: دال-->درخت. مدلول-->مصداق بیرونی درخت یا همون تصویرش  ## منبع مطالعه زبان  دو منبع زیر قطعی نیستند ولی کمک‌کننده هستند.  ###..."
     },
-    "calculus/orthogonal-curves/": {
-      "id": "calculus/orthogonal-curves.md",
+    "calculus/orthogonal-paths/": {
+      "id": "calculus/orthogonal-paths.md",
       "title": "مسیرهای متعامد",
-      "url": "calculus/orthogonal-curves/",
+      "url": "calculus/orthogonal-paths/",
       "folder": "calculus",
       "tags": [],
       "summary": "# مسیرهای متعامد  **مسیرهای متعامد (Orthogonal Trajectories)** به دو خانواده از منحنی‌ها در صفحه گفته می‌شود که در هر نقطه از تقاطعشان، بر یکدیگر عمود هستند؛ یعنی خطوط مماس بر این..."

@@ -11,8 +11,8 @@
   <meta name="sarv-site-root" content="../../">
   <meta name="sarv-search-url" content="../../search/search_index.json">
   <meta name="sarv-graph-url" content="../../sarv-graph.json">
-  <meta name="sarv-current-page" content="calculus/orthogonal-curves.md">
-  <meta name="sarv-current-url" content="calculus/orthogonal-curves/">
+  <meta name="sarv-current-page" content="calculus/orthogonal-paths.md">
+  <meta name="sarv-current-url" content="calculus/orthogonal-paths/">
 
   <!-- Favicon -->
   
@@ -52,12 +52,12 @@
             .gslide-desc { color: #666; user-select: text; }
             .gslide-image img { background: white; }
         </style>
-  <meta property="og:image" content="https://mjb4khshi.github.io/KNTU/assets/cards/calculus/orthogonal-curves.png">
+  <meta property="og:image" content="https://mjb4khshi.github.io/KNTU/assets/cards/calculus/orthogonal-paths.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:title" content="مسیرهای متعامد">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://mjb4khshi.github.io/KNTU/assets/cards/calculus/orthogonal-curves.png">
+  <meta name="twitter:image" content="https://mjb4khshi.github.io/KNTU/assets/cards/calculus/orthogonal-paths.png">
   <meta name="twitter:title" content="مسیرهای متعامد">
 </head>
 
@@ -910,7 +910,7 @@
         </span>
         <span class="reading-badge">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>۲,۵۷۶ کلمه</span>
+          <span>۲,۵۵۵ کلمه</span>
         </span>
         <button type="button" class="reading-badge sarv-print-btn" onclick="window.print()" title="چاپ یا ذخیره نسخه تمیز PDF">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect width="12" height="8" x="6" y="14"></rect></svg>
@@ -924,143 +924,8 @@
         <h1 id="_1">مسیرهای متعامد<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <p><strong>مسیرهای متعامد (Orthogonal Trajectories)</strong> به دو خانواده از منحنی‌ها در صفحه گفته می‌شود که در هر نقطه از تقاطعشان، بر یکدیگر عمود هستند؛ یعنی خطوط مماس بر این دو منحنی در نقطه برخورد، با هم زاویه ۹۰ درجه می‌سازند. این مفهوم در معادلات دیفرانسیل حلقه اتصال میان <strong>میدان‌های اسکالر</strong> (مثل دما، پتانسیل یا ارتفاع) و <strong>میدان‌های برداری</strong> (مثل جریان گرما، میدان الکتریکی یا مسیر حرکت سیال) است.</p>
 <hr>
-<h2 id="_2">۱. چرا در معادلات دیفرانسیل سراغ مسیرهای متعامد می‌رویم؟ (شهود فیزیکی و مهندسی)<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
-<p>در دنیای واقعی، طبیعت همیشه به دنبال «کوتاه‌ترین و پربازده‌ترین مسیر» برای تغییر حالت است. وقتی یک کمیت اسکالر مثل دما، فشار یا ولتاژ در فضا توزیع می‌شود، می‌توانیم نقاطی که مقدار یکسانی دارند را به هم وصل کنیم و یک خانواده از منحنی‌ها بسازیم (منحنی‌های هم‌تراز یا Level Curves).</p>
-<p>حالا سوال اصلی مهندسی اینجاست: <strong>اگر ذره‌ای، سیالی یا جریانی از انرژی در این محیط رها شود، روی چه مسیری حرکت می‌کند؟</strong></p>
-<p>از ریاضیات می‌دانیم که بردار گرادیان (<span class="arithmatex">\(\nabla \phi\)</span>) که جهت بیشترین نرخ تغییرات را نشان می‌دهد، همیشه بر منحنی‌های هم‌تراز (<span class="arithmatex">\(\phi(x,y) = c\)</span>) <strong>عمود</strong> است. بنابراین، جریان فیزیکی همواره عمود بر خطوط هم‌تراز جاری می‌شود. ما در معادلات دیفرانسیل به دنبال مسیرهای متعامد هستیم، زیرا در بسیاری از مسائل کاربردی یکی از این دو خانواده معلوم است و می‌خواهیم خانواده دیگر را تعیین کنیم:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">حوزه کاربرد</th>
-<th style="text-align: left;">خانواده منحنی‌های اول (معمولاً هم‌تراز)</th>
-<th style="text-align: left;">خانواده مسیرهای متعامد (خطوط جریان / میدان)</th>
-<th style="text-align: left;">دلیل اهمیت فیزیکی و مهندسی</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>الکترومغناطیس</strong></td>
-<td style="text-align: left;">خطوط هم‌پتانسیل (Equipotential Lines)</td>
-<td style="text-align: left;">خطوط میدان الکتریکی (Electric Field Lines)</td>
-<td style="text-align: left;">بار الکتریکی در راستای میدان (عمود بر سطوح هم‌پتانسیل) شتاب می‌گیرد. با داشتن معادله ولتاژ، مسیر حرکت بار را پیدا می‌کنیم.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>انتقال حرارت</strong></td>
-<td style="text-align: left;">خطوط هم‌دما (Isotherms)</td>
-<td style="text-align: left;">خطوط شار یا جریان گرما (Heat Flux Lines)</td>
-<td style="text-align: left;">طبق قانون رسانش فوریه، گرما از دمای بالاتر به پایین‌تر دقیقاً عمود بر خطوط هم‌دما جریان می‌یابد.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>مکانیک سیالات</strong></td>
-<td style="text-align: left;">خطوط هم‌پتانسیل سرعت (<span class="arithmatex">\(\phi = c\)</span>)</td>
-<td style="text-align: left;">خطوط جریان سیال (Streamlines - <span class="arithmatex">\(\psi = k\)</span>)</td>
-<td style="text-align: left;">در جریان‌های ایده‌آل و پتانسیل، تشکیل شبکه متعامد (Flow Net) برای تحلیل فشار و سرعت حول اجسام (نظیر ایرفویل) حیاتی است.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>نقشه‌برداری و توپوگرافی</strong></td>
-<td style="text-align: left;">خطوط تراز ارتفاعی (Contour Lines)</td>
-<td style="text-align: left;">خطوط بیشترین شیب ریزش آب (Steepest Descent)</td>
-<td style="text-align: left;">آب باران روی دامنه کوه در مسیری جاری می‌شود که در هر نقطه بر خطوط تراز ارتفاعی نقشه عمود است.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>هواشناسی</strong></td>
-<td style="text-align: left;">خطوط هم‌فشار (Isobars)</td>
-<td style="text-align: left;">جهت ایده‌آل گرادیان باد</td>
-<td style="text-align: left;">در غیاب نیروهای دورانی (کوریولیس)، باد از مراکز پرفشار به کم‌فشار عمود بر خطوط هم‌فشار می‌وزد.</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2 id="_3">۲. منطق ریاضی و ارتباط آن با معادلات دیفرانسیل<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
-<p>چرا این مبحث در درس <strong>معادلات دیفرانسیل</strong> مطرح می‌شود و نه صرفاً در هندسه تحلیلی؟ زیرا با دو خط یا دو منحنی منفرد سر و کار نداریم، بلکه با <strong>یک خانواده نامتناهی از منحنی‌ها</strong> مواجهیم که با یک پارامتر مانند <span class="arithmatex">\(c\)</span> مشخص می‌شوند: <span class="arithmatex">\(F(x, y, c) = 0\)</span>.</p>
-<p>برای اعمال شرط تعامد در سرتاسر صفحه، به ابزاری نیاز داریم که در هر نقطه <span class="arithmatex">\((x, y)\)</span>، شیب منحنیِ گذرنده از آن نقطه را فارغ از مقدار عددی پارامتر منحنی (<span class="arithmatex">\(c\)</span>) در اختیارمان بگذارد. این ابزار، <strong>معادله دیفرانسیل مرتبه اول</strong> یا همان <strong>میدان جهت (Direction Field)</strong> است.</p>
-<h3 id="_4">شرط تعامد در مختصات دکارتی<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
-<p>از هندسه تحلیلی می‌دانیم که دو خط در صفحه بر یکدیگر عمودند اگر و تنها اگر حاصل‌ضرب شیب‌های آن‌ها برابر با <span class="arithmatex">\(-1\)</span> باشد (<span class="arithmatex">\(m_1 \cdot m_2 = -1\)</span>).</p>
-<ul>
-<li>اگر شیب خط مماس بر منحنی خانواده اول در نقطه <span class="arithmatex">\((x, y)\)</span> برابر با رابطه زیر باشد:</li>
-</ul>
-<div class="arithmatex">\[\frac{dy}{dx} = f(x, y)\]</div>
-<ul>
-<li>آنگاه شیب مماس بر منحنی خانواده مسیرهای متعامد در همان نقطه باید قرینه و معکوس آن باشد:</li>
-</ul>
-<div class="arithmatex">\[\frac{dy}{dx} = -\frac{1}{f(x, y)} \quad \iff \quad \frac{dx}{dy} = -f(x, y)\]</div>
-<hr>
-<h2 id="_5">۳. الگوریتم گام‌به‌گام یافتن مسیرهای متعامد<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
-<p>برای تعیین مسیرهای متعامد یک خانواده از منحنی‌ها به معادله <span class="arithmatex">\(F(x, y, c) = 0\)</span>، سه مرحله اساسی را دنبال می‌کنیم:</p>
-<ol>
-<li><strong>مشتق‌گیری ضمنی و حذف کامل پارامتر <span class="arithmatex">\(c\)</span>:</strong><br>
-   از رابطه <span class="arithmatex">\(F(x, y, c) = 0\)</span> نسبت به <span class="arithmatex">\(x\)</span> مشتق ضمنی می‌گیریم. سپس با استفاده هم‌زمان از معادله اصلی و معادله حاصل از مشتق، پارامتر ثابت <span class="arithmatex">\(c\)</span> را کاملاً حذف می‌کنیم تا معادله دیفرانسیل خانواده اول به فرم <span class="arithmatex">\(\frac{dy}{dx} = f(x, y)\)</span> حاصل شود.</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">چرا حذف پارامتر <span class="arithmatex">\(c\)</span> الزامی است؟</p>
-<p>مقدار <span class="arithmatex">\(c\)</span> نشانگر هویت یک منحنی منفرد در خانواده است. معادله دیفرانسیل باید یک «قانون موضعی مستقل از منحنی خاص» باشد که تنها به مختصات نقطه <span class="arithmatex">\((x, y)\)</span> در صفحه وابسته است تا بتوان زاویه شیب را در همان نقطه ۹۰ درجه چرخاند.</p>
-</div>
-<ol>
-<li>
-<p><strong>اعمال شرط تعامد (دوران ۹۰ درجه‌ای میدان جهت):</strong><br>
-   در معادله دیفرانسیل به دست آمده، عبارت <span class="arithmatex">\(\frac{dy}{dx}\)</span> را به <span class="arithmatex">\(-\frac{dx}{dy}\)</span> (یا معادل آن <span class="arithmatex">\(-\frac{1}{f(x, y)}\)</span>) تبدیل می‌کنیم. این معادله جدید، معادله دیفرانسیل حاکم بر خانواده مسیرهای متعامد است.</p>
-</li>
-<li>
-<p><strong>حل معادله دیفرانسیل مسیرهای متعامد:</strong><br>
-   معادله دیفرانسیل مرحله دوم را به روش‌های استاندارد (تفکیک متغیرها، همگن، کامل، خطی یا عامل انتگرال‌ساز) حل می‌کنیم. ثابت انتگرال‌گیری جدید (<span class="arithmatex">\(k\)</span>)، پارامتر سازنده خانواده مسیرهای متعامد خواهد بود: <span class="arithmatex">\(G(x, y, k) = 0\)</span>.</p>
-</li>
-</ol>
-<hr>
-<h2 id="_6">۴. بررسی مثال‌های کلاسیک و کاربردی<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
-<h3 id="_7">مثال ۱: دایره‌های هم‌مرکز (شهودی‌ترین حالت)<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
-<p>خانواده دایره‌های هم‌مرکز به مرکز مبدأ با معادله <span class="arithmatex">\(x^2 + y^2 = c^2\)</span> را در نظر بگیرید (مشابه موج‌های دایروی در سطح آب یا سطوح هم‌پتانسیل یک بار نقطه‌ای یا سیم طویل):</p>
-<ul>
-<li><strong>گام اول (تشکیل معادله دیفرانسیل):</strong> نسبت به <span class="arithmatex">\(x\)</span> مشتق می‌گیریم:</li>
-</ul>
-<div class="arithmatex">\[2x + 2y \frac{dy}{dx} = 0 \implies \frac{dy}{dx} = -\frac{x}{y}\]</div>
-<p><em>(در این معادله، پارامتر <span class="arithmatex">\(c\)</span> حین مشتق‌گیری خودبه‌خود حذف شد).</em></p>
-<ul>
-<li><strong>گام دوم (اعمال شرط تعامد):</strong> شیب را قرینه و معکوس می‌کنیم:</li>
-</ul>
-<div class="arithmatex">\[\frac{dy}{dx} = \frac{y}{x}\]</div>
-<ul>
-<li><strong>گام سوم (حل معادله):</strong> معادله تفکیک‌پذیر حاصل را حل می‌کنیم:</li>
-</ul>
-<div class="arithmatex">\[\frac{dy}{y} = \frac{dx}{x} \implies \ln|y| = \ln|x| + \ln|k| \implies y = kx\]</div>
-<div class="admonition note">
-<p class="admonition-title">نتیجه هندسی</p>
-<p>مسیرهای متعامد بر دایره‌های هم‌مرکز، خانواده خطوط مستقیمی هستند که از مبدأ مختصات می‌گذرند (پرتوهای شعاعی یا Radial Lines).</p>
-</div>
-<hr>
-<h3 id="c">مثال ۲: خانواده سهمی‌ها (حالتی که <span class="arithmatex">\(c\)</span> در مشتق‌گیری باقی می‌ماند)<a class="headerlink" href="#c" title="Permanent link">¶</a></h3>
-<p>می‌خواهیم مسیرهای متعامد خانواده سهمی‌های <span class="arithmatex">\(y = c x^2\)</span> را پیدا کنیم:</p>
-<ul>
-<li><strong>گام اول (مشتق‌گیری و حذف <span class="arithmatex">\(c\)</span>):</strong> نسبت به <span class="arithmatex">\(x\)</span> مشتق می‌گیریم:</li>
-</ul>
-<div class="arithmatex">\[\frac{dy}{dx} = 2cx\]</div>
-<p>چون ثابت <span class="arithmatex">\(c\)</span> در معادله باقی مانده است، مقدار <span class="arithmatex">\(c = \frac{y}{x^2}\)</span> را از معادله اولیه استخراج کرده و جایگذاری می‌کنیم:</p>
-<div class="arithmatex">\[\frac{dy}{dx} = 2\left(\frac{y}{x^2}\right)x = \frac{2y}{x}\]</div>
-<ul>
-<li><strong>گام دوم (اعمال شرط تعامد):</strong></li>
-</ul>
-<div class="arithmatex">\[\frac{dy}{dx} = -\frac{x}{2y}\]</div>
-<ul>
-<li><strong>گام سوم (حل معادله دیفرانسیل):</strong> متغیرها را تفکیک نموده و انتگرال می‌گیریم:</li>
-</ul>
-<div class="arithmatex">\[2y \, dy = -x \, dx \implies y^2 = -\frac{1}{2}x^2 + k \implies \frac{x^2}{2k} + \frac{y^2}{k} = 1\]</div>
-<div class="admonition note">
-<p class="admonition-title">نتیجه هندسی</p>
-<p>مسیرهای متعامد بر این خانواده از سهمی‌ها، خانواده‌ای از <strong>بیضی‌های هم‌مرکز</strong> هستند که کانون‌های آن‌ها روی محور <span class="arithmatex">\(x\)</span> قرار دارد (نسبت نیم‌قطر بزرگ به کوچک برابر با <span class="arithmatex">\(\sqrt{2}\)</span> است).</p>
-</div>
-<hr>
-<h2 id="r-theta">۵. مسیرهای متعامد در مختصات قطبی <span class="arithmatex">\((r, \theta)\)</span><a class="headerlink" href="#r-theta" title="Permanent link">¶</a></h2>
-<p>هنگامی که معادله خانواده منحنی‌ها در مختصات قطبی به فرم <span class="arithmatex">\(F(r, \theta, c) = 0\)</span> داده شده باشد (نظیر دل‌وارها یا کاردیوئیدها، مارپیچ‌ها و گلبرگ‌ها)، دقت داشته باشید که عبارت <span class="arithmatex">\(\frac{dr}{d\theta}\)</span> نمایانگر شیب خط مماس بر منحنی نیست!</p>
-<p>زاویه مابین شعاع حامل (بردار موقعیت) و خط مماس بر منحنی قطبی با <span class="arithmatex">\(\psi\)</span> نام‌گذاری می‌شود که از رابطه زیر حاصل می‌آید:</p>
-<div class="arithmatex">\[\tan \psi = \frac{r}{\frac{dr}{d\theta}} = r \frac{d\theta}{dr}\]</div>
-<p>برای اینکه دو منحنی قطبی در محل برخورد با یکدیگر زاویه ۹۰ درجه بسازند، باید <span class="arithmatex">\(\tan \psi_2 = -\frac{1}{\tan \psi_1}\)</span> باشد. در نتیجه:</p>
-<div class="admonition tip">
-<p class="admonition-title">تبدیل شرط تعامد در دستگاه مختصات قطبی</p>
-<p>پس از حذف پارامتر <span class="arithmatex">\(c\)</span> و استخراج معادله دیفرانسیل اولیه به فرم <span class="arithmatex">\(\frac{dr}{d\theta} = g(r, \theta)\)</span>، برای نوشتن معادله دیفرانسیل مسیرهای متعامد، عبارت <span class="arithmatex">\(\frac{dr}{d\theta}\)</span> را با <strong><span class="arithmatex">\(-r^2 \frac{d\theta}{dr}\)</span></strong> (یا معادل آن <span class="arithmatex">\(-\frac{r^2}{g(r, \theta)}\)</span>) جایگزین می‌کنیم:</p>
-<div class="arithmatex">\[\frac{dr}{d\theta} = -\frac{r^2}{g(r, \theta)}\]</div>
-</div>
-<hr>
-<h2 id="_8">۶. شبیه‌ساز تعاملی مسیرهای متعامد<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
-<p>در ابزار زیر می‌توانید خانواده‌های مختلف منحنی‌ها (دایره‌ها و پرتوهای شعاعی، سهمی‌ها و بیضی‌ها، هذلولی‌های متعامد) را انتخاب کنید، تراکم منحنی‌ها را تغییر دهید، با حرکت ماوس روی صفحه نقطه تقاطع را جابه‌جا کنید و تعامد خطوط مماس (<span class="arithmatex">\(m_1 \cdot m_2 = -1\)</span>) را به همراه نماد زاویه قائمه به صورت زنده و شهودی مشاهده نمایید:</p>
+<h2 id="_2">آزمایشگاه و شبیه‌ساز تعاملی<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>در این ابزار تعاملی می‌توانید خانواده‌های مختلف منحنی‌ها (دایره‌ها و پرتوهای شعاعی، سهمی‌ها و بیضی‌ها، هذلولی‌های متعامد) را انتخاب کنید، تراکم منحنی‌ها را تغییر دهید، با حرکت ماوس روی صفحه یا لمس آن نقطه تقاطع را جابه‌جا کنید و تعامد خطوط مماس (<span class="arithmatex">\(m_1 \cdot m_2 = -1\)</span>) را به همراه نماد زاویه قائمه به صورت زنده و شهودی مشاهده نمایید:</p>
 <div class="ortho-sim-card">
   <div class="ortho-sim-toolbar">
     <div class="sim-ctrl-group">
@@ -1468,6 +1333,141 @@ if (document.readyState === 'loading') {
 </script>
 
 <hr>
+<h2 id="_3">شهود فیزیکی و کاربردهای مهندسی<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>در دنیای واقعی، طبیعت همیشه به دنبال «کوتاه‌ترین و پربازده‌ترین مسیر» برای تغییر حالت است. وقتی یک کمیت اسکالر مثل دما، فشار یا ولتاژ در فضا توزیع می‌شود، می‌توانیم نقاطی که مقدار یکسانی دارند را به هم وصل کنیم و یک خانواده از منحنی‌ها بسازیم (منحنی‌های هم‌تراز یا Level Curves).</p>
+<p>حالا سوال اصلی مهندسی اینجاست: <strong>اگر ذره‌ای، سیالی یا جریانی از انرژی در این محیط رها شود، روی چه مسیری حرکت می‌کند؟</strong></p>
+<p>از ریاضیات می‌دانیم که بردار گرادیان (<span class="arithmatex">\(\nabla \phi\)</span>) که جهت بیشترین نرخ تغییرات را نشان می‌دهد، همیشه بر منحنی‌های هم‌تراز (<span class="arithmatex">\(\phi(x,y) = c\)</span>) <strong>عمود</strong> است. بنابراین، جریان فیزیکی همواره عمود بر خطوط هم‌تراز جاری می‌شود. ما در معادلات دیفرانسیل به دنبال مسیرهای متعامد هستیم، زیرا در بسیاری از مسائل کاربردی یکی از این دو خانواده معلوم است و می‌خواهیم خانواده دیگر را تعیین کنیم:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">حوزه کاربرد</th>
+<th style="text-align: left;">خانواده منحنی‌های اول (معمولاً هم‌تراز)</th>
+<th style="text-align: left;">خانواده مسیرهای متعامد (خطوط جریان / میدان)</th>
+<th style="text-align: left;">دلیل اهمیت فیزیکی و مهندسی</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>الکترومغناطیس</strong></td>
+<td style="text-align: left;">خطوط هم‌پتانسیل (Equipotential Lines)</td>
+<td style="text-align: left;">خطوط میدان الکتریکی (Electric Field Lines)</td>
+<td style="text-align: left;">بار الکتریکی در راستای میدان (عمود بر سطوح هم‌پتانسیل) شتاب می‌گیرد. با داشتن معادله ولتاژ، مسیر حرکت بار را پیدا می‌کنیم.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>انتقال حرارت</strong></td>
+<td style="text-align: left;">خطوط هم‌دما (Isotherms)</td>
+<td style="text-align: left;">خطوط شار یا جریان گرما (Heat Flux Lines)</td>
+<td style="text-align: left;">طبق قانون رسانش فوریه، گرما از دمای بالاتر به پایین‌تر دقیقاً عمود بر خطوط هم‌دما جریان می‌یابد.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>مکانیک سیالات</strong></td>
+<td style="text-align: left;">خطوط هم‌پتانسیل سرعت (<span class="arithmatex">\(\phi = c\)</span>)</td>
+<td style="text-align: left;">خطوط جریان سیال (Streamlines - <span class="arithmatex">\(\psi = k\)</span>)</td>
+<td style="text-align: left;">در جریان‌های ایده‌آل و پتانسیل، تشکیل شبکه متعامد (Flow Net) برای تحلیل فشار و سرعت حول اجسام (نظیر ایرفویل) حیاتی است.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>نقشه‌برداری و توپوگرافی</strong></td>
+<td style="text-align: left;">خطوط تراز ارتفاعی (Contour Lines)</td>
+<td style="text-align: left;">خطوط بیشترین شیب ریزش آب (Steepest Descent)</td>
+<td style="text-align: left;">آب باران روی دامنه کوه در مسیری جاری می‌شود که در هر نقطه بر خطوط تراز ارتفاعی نقشه عمود است.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>هواشناسی</strong></td>
+<td style="text-align: left;">خطوط هم‌فشار (Isobars)</td>
+<td style="text-align: left;">جهت ایده‌آل گرادیان باد</td>
+<td style="text-align: left;">در غیاب نیروهای دورانی (کوریولیس)، باد از مراکز پرفشار به کم‌فشار عمود بر خطوط هم‌فشار می‌وزد.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="_4">منطق ریاضی و شرط تعامد<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<p>چرا این مبحث در درس <strong>معادلات دیفرانسیل</strong> مطرح می‌شود و نه صرفاً در هندسه تحلیلی؟ زیرا با دو خط یا دو منحنی منفرد سر و کار نداریم، بلکه با <strong>یک خانواده نامتناهی از منحنی‌ها</strong> مواجهیم که با یک پارامتر مانند <span class="arithmatex">\(c\)</span> مشخص می‌شوند: <span class="arithmatex">\(F(x, y, c) = 0\)</span>.</p>
+<p>برای اعمال شرط تعامد در سرتاسر صفحه، به ابزاری نیاز داریم که در هر نقطه <span class="arithmatex">\((x, y)\)</span>، شیب منحنیِ گذرنده از آن نقطه را فارغ از مقدار عددی پارامتر منحنی (<span class="arithmatex">\(c\)</span>) در اختیارمان بگذارد. این ابزار، <strong>معادله دیفرانسیل مرتبه اول</strong> یا همان <strong>میدان جهت (Direction Field)</strong> است.</p>
+<h3 id="_5">شرط تعامد در مختصات دکارتی<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<p>از هندسه تحلیلی می‌دانیم که دو خط در صفحه بر یکدیگر عمودند اگر و تنها اگر حاصل‌ضرب شیب‌های آن‌ها برابر با <span class="arithmatex">\(-1\)</span> باشد (<span class="arithmatex">\(m_1 \cdot m_2 = -1\)</span>).</p>
+<ul>
+<li>اگر شیب خط مماس بر منحنی خانواده اول در نقطه <span class="arithmatex">\((x, y)\)</span> برابر با رابطه زیر باشد:</li>
+</ul>
+<div class="arithmatex">\[\frac{dy}{dx} = f(x, y)\]</div>
+<ul>
+<li>آنگاه شیب مماس بر منحنی خانواده مسیرهای متعامد در همان نقطه باید قرینه و معکوس آن باشد:</li>
+</ul>
+<div class="arithmatex">\[\frac{dy}{dx} = -\frac{1}{f(x, y)} \quad \iff \quad \frac{dx}{dy} = -f(x, y)\]</div>
+<hr>
+<h2 id="_6">الگوریتم گام‌به‌گام محاسبه<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<p>برای تعیین مسیرهای متعامد یک خانواده از منحنی‌ها به معادله <span class="arithmatex">\(F(x, y, c) = 0\)</span>، سه مرحله اساسی را دنبال می‌کنیم:</p>
+<ol>
+<li><strong>مشتق‌گیری ضمنی و حذف کامل پارامتر <span class="arithmatex">\(c\)</span>:</strong><br>
+   از رابطه <span class="arithmatex">\(F(x, y, c) = 0\)</span> نسبت به <span class="arithmatex">\(x\)</span> مشتق ضمنی می‌گیریم. سپس با استفاده هم‌زمان از معادله اصلی و معادله حاصل از مشتق، پارامتر ثابت <span class="arithmatex">\(c\)</span> را کاملاً حذف می‌کنیم تا معادله دیفرانسیل خانواده اول به فرم <span class="arithmatex">\(\frac{dy}{dx} = f(x, y)\)</span> حاصل شود.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">چرا حذف پارامتر <span class="arithmatex">\(c\)</span> الزامی است؟</p>
+<p>مقدار <span class="arithmatex">\(c\)</span> نشانگر هویت یک منحنی منفرد در خانواده است. معادله دیفرانسیل باید یک «قانون موضعی مستقل از منحنی خاص» باشد که تنها به مختصات نقطه <span class="arithmatex">\((x, y)\)</span> در صفحه وابسته است تا بتوان زاویه شیب را در همان نقطه ۹۰ درجه چرخاند.</p>
+</div>
+<ol>
+<li>
+<p><strong>اعمال شرط تعامد (دوران ۹۰ درجه‌ای میدان جهت):</strong><br>
+   در معادله دیفرانسیل به دست آمده، عبارت <span class="arithmatex">\(\frac{dy}{dx}\)</span> را به <span class="arithmatex">\(-\frac{dx}{dy}\)</span> (یا معادل آن <span class="arithmatex">\(-\frac{1}{f(x, y)}\)</span>) تبدیل می‌کنیم. این معادله جدید، معادله دیفرانسیل حاکم بر خانواده مسیرهای متعامد است.</p>
+</li>
+<li>
+<p><strong>حل معادله دیفرانسیل مسیرهای متعامد:</strong><br>
+   معادله دیفرانسیل مرحله دوم را به روش‌های استاندارد (تفکیک متغیرها، همگن، کامل، خطی یا عامل انتگرال‌ساز) حل می‌کنیم. ثابت انتگرال‌گیری جدید (<span class="arithmatex">\(k\)</span>)، پارامتر سازنده خانواده مسیرهای متعامد خواهد بود: <span class="arithmatex">\(G(x, y, k) = 0\)</span>.</p>
+</li>
+</ol>
+<hr>
+<h2 id="_7">بررسی مثال‌های کلاسیک<a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
+<h3 id="_8">مثال دایره‌های هم‌مرکز (شهودی‌ترین حالت)<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<p>خانواده دایره‌های هم‌مرکز به مرکز مبدأ با معادله <span class="arithmatex">\(x^2 + y^2 = c^2\)</span> را در نظر بگیرید (مشابه موج‌های دایروی در سطح آب یا سطوح هم‌پتانسیل یک بار نقطه‌ای یا سیم طویل):</p>
+<ul>
+<li><strong>گام اول (تشکیل معادله دیفرانسیل):</strong> نسبت به <span class="arithmatex">\(x\)</span> مشتق می‌گیریم:</li>
+</ul>
+<div class="arithmatex">\[2x + 2y \frac{dy}{dx} = 0 \implies \frac{dy}{dx} = -\frac{x}{y}\]</div>
+<p><em>(در این معادله، پارامتر <span class="arithmatex">\(c\)</span> حین مشتق‌گیری خودبه‌خود حذف شد).</em></p>
+<ul>
+<li><strong>گام دوم (اعمال شرط تعامد):</strong> شیب را قرینه و معکوس می‌کنیم:</li>
+</ul>
+<div class="arithmatex">\[\frac{dy}{dx} = \frac{y}{x}\]</div>
+<ul>
+<li><strong>گام سوم (حل معادله):</strong> معادله تفکیک‌پذیر حاصل را حل می‌کنیم:</li>
+</ul>
+<div class="arithmatex">\[\frac{dy}{y} = \frac{dx}{x} \implies \ln|y| = \ln|x| + \ln|k| \implies y = kx\]</div>
+<div class="admonition note">
+<p class="admonition-title">نتیجه هندسی</p>
+<p>مسیرهای متعامد بر دایره‌های هم‌مرکز، خانواده خطوط مستقیمی هستند که از مبدأ مختصات می‌گذرند (پرتوهای شعاعی یا Radial Lines).</p>
+</div>
+<hr>
+<h3 id="c">مثال خانواده سهمی‌ها (حالتی که <span class="arithmatex">\(c\)</span> در مشتق‌گیری باقی می‌ماند)<a class="headerlink" href="#c" title="Permanent link">¶</a></h3>
+<p>می‌خواهیم مسیرهای متعامد خانواده سهمی‌های <span class="arithmatex">\(y = c x^2\)</span> را پیدا کنیم:</p>
+<ul>
+<li><strong>گام اول (مشتق‌گیری و حذف <span class="arithmatex">\(c\)</span>):</strong> نسبت به <span class="arithmatex">\(x\)</span> مشتق می‌گیریم:</li>
+</ul>
+<div class="arithmatex">\[\frac{dy}{dx} = 2cx\]</div>
+<p>چون ثابت <span class="arithmatex">\(c\)</span> در معادله باقی مانده است، مقدار <span class="arithmatex">\(c = \frac{y}{x^2}\)</span> را از معادله اولیه استخراج کرده و جایگذاری می‌کنیم:</p>
+<div class="arithmatex">\[\frac{dy}{dx} = 2\left(\frac{y}{x^2}\right)x = \frac{2y}{x}\]</div>
+<ul>
+<li><strong>گام دوم (اعمال شرط تعامد):</strong></li>
+</ul>
+<div class="arithmatex">\[\frac{dy}{dx} = -\frac{x}{2y}\]</div>
+<ul>
+<li><strong>گام سوم (حل معادله دیفرانسیل):</strong> متغیرها را تفکیک نموده و انتگرال می‌گیریم:</li>
+</ul>
+<div class="arithmatex">\[2y \, dy = -x \, dx \implies y^2 = -\frac{1}{2}x^2 + k \implies \frac{x^2}{2k} + \frac{y^2}{k} = 1\]</div>
+<div class="admonition note">
+<p class="admonition-title">نتیجه هندسی</p>
+<p>مسیرهای متعامد بر این خانواده از سهمی‌ها، خانواده‌ای از <strong>بیضی‌های هم‌مرکز</strong> هستند که کانون‌های آن‌ها روی محور <span class="arithmatex">\(x\)</span> قرار دارد (نسبت نیم‌قطر بزرگ به کوچک برابر با <span class="arithmatex">\(\sqrt{2}\)</span> است).</p>
+</div>
+<hr>
+<h2 id="_9">مسیرهای متعامد در مختصات قطبی<a class="headerlink" href="#_9" title="Permanent link">¶</a></h2>
+<p>هنگامی که معادله خانواده منحنی‌ها در مختصات قطبی به فرم <span class="arithmatex">\(F(r, \theta, c) = 0\)</span> داده شده باشد (نظیر دل‌وارها یا کاردیوئیدها، مارپیچ‌ها و گلبرگ‌ها)، دقت داشته باشید که عبارت <span class="arithmatex">\(\frac{dr}{d\theta}\)</span> نمایانگر شیب خط مماس بر منحنی نیست!</p>
+<p>زاویه مابین شعاع حامل (بردار موقعیت) و خط مماس بر منحنی قطبی با <span class="arithmatex">\(\psi\)</span> نام‌گذاری می‌شود که از رابطه زیر حاصل می‌آید:</p>
+<div class="arithmatex">\[\tan \psi = \frac{r}{\frac{dr}{d\theta}} = r \frac{d\theta}{dr}\]</div>
+<p>برای اینکه دو منحنی قطبی در محل برخورد با یکدیگر زاویه ۹۰ درجه بسازند، باید <span class="arithmatex">\(\tan \psi_2 = -\frac{1}{\tan \psi_1}\)</span> باشد. در نتیجه:</p>
+<div class="admonition tip">
+<p class="admonition-title">تبدیل شرط تعامد در دستگاه مختصات قطبی</p>
+<p>پس از حذف پارامتر <span class="arithmatex">\(c\)</span> و استخراج معادله دیفرانسیل اولیه به فرم <span class="arithmatex">\(\frac{dr}{d\theta} = g(r, \theta)\)</span>، برای نوشتن معادله دیفرانسیل مسیرهای متعامد، عبارت <span class="arithmatex">\(\frac{dr}{d\theta}\)</span> را با <strong><span class="arithmatex">\(-r^2 \frac{d\theta}{dr}\)</span></strong> (یا معادل آن <span class="arithmatex">\(-\frac{r^2}{g(r, \theta)}\)</span>) جایگزین می‌کنیم:</p>
+<div class="arithmatex">\[\frac{dr}{d\theta} = -\frac{r^2}{g(r, \theta)}\]</div>
+</div>
+<hr>
 <div class="admonition tip">
 <p class="admonition-title">یک دیدگاه فراتر (توابع همساز و نگاشت همدیس)</p>
 <p>اگر در ریاضیات مهندسی با <strong>توابع تحلیلی مختلط</strong> به فرم <span class="arithmatex">\(f(z) = u(x,y) + i v(x,y)\)</span> آشنا شوید، خواهید دید که به دلیل برقراری معادلات کوشی-ریمان:</p>
@@ -1523,27 +1523,27 @@ if (document.readyState === 'loading') {
         </li>
         
           <li class="sarv-toc-item depth-2">
-            <a href="#_2" class="sarv-toc-link">۱. چرا در معادلات دیفرانسیل سراغ مسیرهای متعامد می‌رویم؟ (شهود فیزیکی و مهندسی)</a>
+            <a href="#_2" class="sarv-toc-link">آزمایشگاه و شبیه‌ساز تعاملی</a>
           </li>
         
           <li class="sarv-toc-item depth-2">
-            <a href="#_3" class="sarv-toc-link">۲. منطق ریاضی و ارتباط آن با معادلات دیفرانسیل</a>
+            <a href="#_3" class="sarv-toc-link">شهود فیزیکی و کاربردهای مهندسی</a>
           </li>
         
           <li class="sarv-toc-item depth-2">
-            <a href="#_5" class="sarv-toc-link">۳. الگوریتم گام‌به‌گام یافتن مسیرهای متعامد</a>
+            <a href="#_4" class="sarv-toc-link">منطق ریاضی و شرط تعامد</a>
           </li>
         
           <li class="sarv-toc-item depth-2">
-            <a href="#_6" class="sarv-toc-link">۴. بررسی مثال‌های کلاسیک و کاربردی</a>
+            <a href="#_6" class="sarv-toc-link">الگوریتم گام‌به‌گام محاسبه</a>
           </li>
         
           <li class="sarv-toc-item depth-2">
-            <a href="#r-theta" class="sarv-toc-link">۵. مسیرهای متعامد در مختصات قطبی \((r, \theta)\)</a>
+            <a href="#_7" class="sarv-toc-link">بررسی مثال‌های کلاسیک</a>
           </li>
         
           <li class="sarv-toc-item depth-2">
-            <a href="#_8" class="sarv-toc-link">۶. شبیه‌ساز تعاملی مسیرهای متعامد</a>
+            <a href="#_9" class="sarv-toc-link">مسیرهای متعامد در مختصات قطبی</a>
           </li>
         
       
