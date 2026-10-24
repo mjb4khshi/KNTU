@@ -175,14 +175,27 @@ title: برچسب‌ها و تگ‌های یادداشت‌ها
     try {
       const siteRootMeta = document.querySelector('meta[name="sarv-site-root"]')?.getAttribute('content') || './';
       const cleanRoot = siteRootMeta.endsWith('/') ? siteRootMeta : siteRootMeta + '/';
-      const res = await fetch(cleanRoot + 'sarv-tags.json');
+      let res = await fetch(cleanRoot + 'sarv-tags.json');
+      if (!res.ok) {
+        res = await fetch('./sarv-tags.json');
+      }
+      if (!res.ok) {
+        res = await fetch('/KNTU/sarv-tags.json');
+      }
       if (res.ok) {
         tagsData = await res.json();
         renderTagsUI();
+      } else {
+        console.warn("Could not load tags from candidate paths.");
       }
     } catch(e) {
       console.warn("Could not load tags:", e);
     }
+  }
+
+  function toPersianDigits(num) {
+    const farsiDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+    return num.toString().replace(/\d/g, d => farsiDigits[d]);
   }
 
   function renderTagsUI() {
@@ -195,8 +208,8 @@ title: برچسب‌ها و تگ‌های یادداشت‌ها
     const uniqueNotes = new Set();
     tags.forEach(t => tagsData[t].forEach(n => uniqueNotes.add(n.url)));
 
-    if (totalCountEl) totalCountEl.textContent = tags.length;
-    if (taggedNotesCountEl) taggedNotesCountEl.textContent = uniqueNotes.size;
+    if (totalCountEl) totalCountEl.textContent = toPersianDigits(tags.length);
+    if (taggedNotesCountEl) taggedNotesCountEl.textContent = toPersianDigits(uniqueNotes.size);
 
     cloudBox.innerHTML = '';
     tags.forEach(tag => {
@@ -204,7 +217,7 @@ title: برچسب‌ها و تگ‌های یادداشت‌ها
       const pill = document.createElement('a');
       pill.className = 'sarv-tag-pill';
       pill.href = '#' + tag;
-      pill.innerHTML = `<span>#${tag}</span><span class="sarv-tag-count">${count}</span>`;
+      pill.innerHTML = `<span>#${tag}</span><span class="sarv-tag-count">${toPersianDigits(count)}</span>`;
       pill.onclick = (e) => {
         e.preventDefault();
         selectTag(tag);

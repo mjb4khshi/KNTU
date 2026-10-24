@@ -9,7 +9,7 @@
       "words": 297,
       "isHome": true,
       "radius": 9.0,
-      "degree": 16
+      "degree": 15
     },
     {
       "id": "ext:16790dcb",
@@ -260,7 +260,7 @@
       "folder": "macroeconomics",
       "tags": [],
       "words": 10412,
-      "degree": 1,
+      "degree": 0,
       "radius": 4.8
     },
     {
@@ -270,8 +270,8 @@
       "folder": "macroeconomics",
       "tags": [],
       "words": 849,
-      "degree": 2,
-      "radius": 5.8
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "macroeconomics/فصل ۲ - اطلس آماری و پوسترهای تبیینی.md",
@@ -280,8 +280,8 @@
       "folder": "macroeconomics",
       "tags": [],
       "words": 2445,
-      "degree": 2,
-      "radius": 5.8
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "macroeconomics/فصل ۳ - واکاوی تاریخی و تجارب گذار.md",
@@ -290,8 +290,8 @@
       "folder": "macroeconomics",
       "tags": [],
       "words": 2212,
-      "degree": 2,
-      "radius": 5.8
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "macroeconomics/فصل ۴ - ماتریس تطبیقی و الگوهای گذار.md",
@@ -310,8 +310,8 @@
       "folder": "macroeconomics",
       "tags": [],
       "words": 1529,
-      "degree": 2,
-      "radius": 5.8
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "macroeconomics/نتیجه‌گیری و منابع.md",
@@ -751,9 +751,8 @@
       "folder": "projects",
       "tags": [],
       "words": 255,
-      "degree": 5,
-      "isHub": true,
-      "radius": 7.0
+      "degree": 1,
+      "radius": 4.8
     },
     {
       "id": "projects/kntu-card.md",
@@ -867,21 +866,6 @@
       "source": "index.md",
       "target": "ext:81929968",
       "type": "external"
-    },
-    {
-      "source": "index.md",
-      "target": "calculus/فهرست مطالب.md",
-      "type": "card"
-    },
-    {
-      "source": "index.md",
-      "target": "macroeconomics/اقتصاد نهادگرا و دولت توسعه‌گرا.md",
-      "type": "card"
-    },
-    {
-      "source": "index.md",
-      "target": "programming/جزوه کلاس برنامه‌نویسی استاد ارزانی.md",
-      "type": "card"
     },
     {
       "source": "index.md",
@@ -1124,26 +1108,6 @@
       "type": "card"
     },
     {
-      "source": "projects/economics-study.md",
-      "target": "macroeconomics/فصل ۱ - چارچوب نظری و مفاهیم بنیادین.md",
-      "type": "card"
-    },
-    {
-      "source": "projects/economics-study.md",
-      "target": "macroeconomics/فصل ۲ - اطلس آماری و پوسترهای تبیینی.md",
-      "type": "card"
-    },
-    {
-      "source": "projects/economics-study.md",
-      "target": "macroeconomics/فصل ۳ - واکاوی تاریخی و تجارب گذار.md",
-      "type": "card"
-    },
-    {
-      "source": "projects/economics-study.md",
-      "target": "macroeconomics/فصل ۵ - طراحی مدل پلتفرمی گذار ایران.md",
-      "type": "card"
-    },
-    {
       "source": "projects/proji.md",
       "target": "ext:f769c2a1",
       "type": "external"
@@ -1162,6 +1126,11 @@
       "source": "projects/sarvestan.md",
       "target": "ext:e3d53322",
       "type": "external"
+    },
+    {
+      "source": "index.md",
+      "target": "calculus/فهرست مطالب.md",
+      "type": "hub"
     },
     {
       "source": "index.md",
@@ -1191,6 +1160,11 @@
     {
       "source": "index.md",
       "target": "physics/فهرست مطالب.md",
+      "type": "hub"
+    },
+    {
+      "source": "index.md",
+      "target": "programming/جزوه کلاس برنامه‌نویسی استاد ارزانی.md",
       "type": "hub"
     },
     {

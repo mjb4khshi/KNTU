@@ -1,6 +1,5 @@
 nav:
   - "خانه": index.md
-  - "برنامه هفتگی": schedule.md
   - "برچسب‌ها": tags.md
   - "پروژه‌های دانشگاهی": projects
   - ...

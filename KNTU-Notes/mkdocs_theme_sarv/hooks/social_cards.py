@@ -8,7 +8,7 @@ import logging
 log = logging.getLogger("mkdocs.plugins.social_cards")
 
 GENERATOR_SCRIPT = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "../tools/card-generator/generate.js")
+    os.path.join(os.path.dirname(__file__), "../../tools/card-generator/generate.js")
 )
 
 def on_pre_build(config):
