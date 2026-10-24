@@ -7,6 +7,7 @@
   
 
   <!-- Sarv Metadata for Graph, Search & Navigation -->
+  <script>var base_url = '..';</script>
   <meta name="sarv-site-root" content="../">
   <meta name="sarv-search-url" content="../search/search_index.json">
   <meta name="sarv-graph-url" content="../sarv-graph.json">
@@ -1125,7 +1126,7 @@
       const pill = document.createElement('a');
       pill.className = 'sarv-tag-pill';
       pill.href = '#' + tag;
-      pill.innerHTML = ___SARV_STASH_0___;
+      pill.innerHTML = `<span>#${tag}</span><span class="sarv-tag-count">${toPersianDigits(count)}</span>`;
       pill.onclick = (e) => {
         e.preventDefault();
         selectTag(tag);
@@ -1198,8 +1199,8 @@
 
     listEl.innerHTML = notes.map(n => {
       const dest = cleanRoot + (n.url || '').replace(/^\/+/, '');
-      const folderBadge = n.folder ? ___SARV_STASH_1___ : '';
-      const tagsBadges = (n.tags || []).map(t => ___SARV_STASH_2___).join('');
+      const folderBadge = n.folder ? `<div class="sarv-note-folder">📁 ${n.folder}</div>` : '';
+      const tagsBadges = (n.tags || []).map(t => `<span class="sarv-note-tag-badge">#${t}</span>`).join('');
       return `
         <a href="${dest}" class="sarv-note-card">
           <div class="sarv-note-title">📄 ${n.title}</div>
