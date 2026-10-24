@@ -28,6 +28,7 @@ plugins:
 
 hooks:
   - mkdocs_theme_sarv/hooks/obsidian_engine.py
+  - mkdocs_theme_sarv/hooks/social_cards.py
 
 markdown_extensions:
   - md_in_html
