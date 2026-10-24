@@ -326,13 +326,19 @@ def on_page_content(html, page, config, files):
     html = re.sub(r'<label class="task-list-control">.*?<\/label>|<input[^>]*type="checkbox"[^>]*>', _task_repl, html)
     return html
 
+def _to_farsi_digits(val):
+    farsi_digits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹']
+    return re.sub(r'\d', lambda m: farsi_digits[int(m.group(0))], str(val))
+
 def on_page_context(context, page, config, nav):
     """تزریق متادیتا، تگ‌ها و بک‌لینک‌ها به قالب صفحه"""
     current_url = page.file.url
     context['sarv_backlinks'] = _backlinks.get(current_url, [])
     context['sarv_tags'] = getattr(page, 'sarv_tags', [])
-    context['sarv_reading_mins'] = getattr(page, 'sarv_reading_mins', 2)
-    context['sarv_word_count'] = getattr(page, 'sarv_word_count', 300)
+    reading_mins = getattr(page, 'sarv_reading_mins', 2)
+    word_count = getattr(page, 'sarv_word_count', 300)
+    context['sarv_reading_mins'] = _to_farsi_digits(reading_mins)
+    context['sarv_word_count'] = _to_farsi_digits(f"{word_count:,}")
     return context
 
 def on_post_build(config):
