@@ -28,24 +28,23 @@ def _stash_code_blocks(text):
     stashed = []
     def _stash(m):
         stashed.append(m.group(0))
-        return f"___SARV_STASH_{len(stashed)-1}___"
+        return f"___SARVSTASHX{len(stashed)-1}X___"
 
-    # ۱. کدهای فنس‌شده (``` یا ~~~)
-    text = re.sub(r'(```[\s\S]*?```|~~~[\s\S]*?~~~)', _stash, text, flags=re.MULTILINE)
-    # ۲. کدهای درون خطی (`...`)
-    text = re.sub(r'(`[^`\n]+`)', _stash, text)
-    # ۳. تگ‌های اسکریپت و استایل
+    # ۱. تگ‌های کامل اسکریپت و استایل (اولویت اول برای دست‌نخورده ماندن جاوا اسکریپت)
     text = re.sub(r'(<(script|style)\b[^>]*>[\s\S]*?</\2>)', _stash, text, flags=re.IGNORECASE)
-    # ۴. تگ‌های HTML (جلوگیری از برخورد با کدهای رنگ مثل #fff و خصوصیات استایل)
+    # ۲. کدهای فنس‌شده (``` یا ~~~)
+    text = re.sub(r'(```[\s\S]*?```|~~~[\s\S]*?~~~)', _stash, text, flags=re.MULTILINE)
+    # ۳. کدهای درون خطی (`...`)
+    text = re.sub(r'(`[^`\n]+`)', _stash, text)
+    # ۴. سایر تگ‌های HTML
     text = re.sub(r'(<[^>]+>)', _stash, text)
     return text, stashed
 
 def _unstash_code_blocks(text, stashed):
-    """بازگردانی بدون تغییر کدهای محافظت‌شده"""
-    for i, block in enumerate(stashed):
-        text = text.replace(f"___SARV_STASH_{i}___", block)
+    """بازگردانی بدون تغییر کدهای محافظت‌شده به ترتیب معکوس"""
+    for i in range(len(stashed) - 1, -1, -1):
+        text = text.replace(f"___SARVSTASHX{i}X___", stashed[i])
     return text
-
 def on_files(files, config):
     """ایندکس کردن تمامی فایل‌ها برای تطبیق سریع نام‌های ویکی‌لینک"""
     global _file_index, _backlinks, _graph_nodes, _graph_links, _page_registry, _tag_registry
