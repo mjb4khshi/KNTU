@@ -20,140 +20,251 @@ tags:
 
 <div class="ortho-sim-card">
   <div class="ortho-sim-toolbar">
-    <div class="sim-ctrl-group">
+    <div class="sim-ctrl-group sim-select-group">
       <label for="curveFamilySelect">انتخاب خانواده منحنی:</label>
       <select id="curveFamilySelect" class="sim-select">
-        <option value="parabolas">سهمی‌ها ($y = c x^2$) ⟂ بیضی‌ها ($x^2/2 + y^2 = k$)</option>
-        <option value="hyperbolas">هذلولی‌ها ($x y = c$) ⟂ هذلولی‌های مزدوج ($x^2 - y^2 = k$)</option>
-        <option value="circles">دایره‌های هم‌مرکز ($x^2 + y^2 = c^2$) ⟂ خطوط شعاعی ($y = k x$)</option>
+        <option value="parabolas">سهمی‌ها (y = cx²) ⟂ بیضی‌ها (x²/2 + y² = k)</option>
+        <option value="hyperbolas">هذلولی‌ها (xy = c) ⟂ هذلولی‌های مزدوج (x² - y² = k)</option>
+        <option value="circles">دایره‌های هم‌مرکز (x² + y² = c²) ⟂ خطوط شعاعی (y = kx)</option>
       </select>
     </div>
-    <div class="sim-ctrl-group">
-      <label for="densitySlider">تعداد منحنی‌ها:</label>
-      <input type="range" id="densitySlider" min="3" max="10" value="6" class="sim-slider">
-      <span id="densityVal" class="sim-val">۶</span>
+    <div class="sim-toolbar-row">
+      <div class="sim-ctrl-group sim-slider-group">
+        <label for="densitySlider">تعداد منحنی‌ها:</label>
+        <div class="sim-slider-wrapper">
+          <input type="range" id="densitySlider" min="3" max="10" value="6" class="sim-slider">
+          <span id="densityVal" class="sim-val">۶</span>
+        </div>
+      </div>
+      <div class="sim-ctrl-group sim-checkbox-group">
+        <label class="sim-checkbox-label">
+          <input type="checkbox" id="showTangentsCheck" checked>
+          <span>نمایش خطوط مماس و زاویه قائمه</span>
+        </label>
+      </div>
     </div>
-    <div class="sim-ctrl-group">
-      <label class="sim-checkbox-label">
-        <input type="checkbox" id="showTangentsCheck" checked>
-        <span>نمایش خطوط مماس و زاویه قائمه</span>
-      </label>
+  </div>
+
+  <div class="ortho-legend-bar">
+    <div class="legend-item">
+      <span class="legend-color legend-primary"></span>
+      <span>خانواده اول $F(x, y, c) = 0$</span>
+    </div>
+    <div class="legend-item">
+      <span class="legend-color legend-ortho"></span>
+      <span>مسیرهای متعامد $G(x, y, k) = 0$</span>
+    </div>
+    <div class="legend-item">
+      <span class="legend-color legend-tangent"></span>
+      <span>خطوط مماس (زاویه ۹۰°)</span>
     </div>
   </div>
 
   <div class="ortho-canvas-wrapper">
-    <canvas id="orthoCanvas" width="800" height="500"></canvas>
-    <div class="ortho-legend">
-      <div class="legend-item"><span class="legend-color legend-primary"></span><span>خانواده اصلی $F(x, y, c) = 0$</span></div>
-      <div class="legend-item"><span class="legend-color legend-ortho"></span><span>مسیرهای متعامد $G(x, y, k) = 0$</span></div>
-      <div class="legend-item"><span class="legend-color legend-tangent"></span><span>خطوط مماس (زاویه ۹۰°)</span></div>
-    </div>
-    <div class="ortho-tooltip" id="orthoTooltip">برای بررسی مماس‌ها، ماوس را روی صفحه حرکت دهید</div>
+    <canvas id="orthoCanvas" width="800" height="520"></canvas>
+  </div>
+
+  <div class="ortho-status-box" id="orthoTooltip">
+    <div class="status-hint">برای بررسی مماس‌ها، ماوس را حرکت دهید یا روی تصویر لمس کنید</div>
   </div>
 </div>
 
 <style>
 .ortho-sim-card {
-  background: color-mix(in oklab, var(--color-base-500) 25%, transparent);
-  border: 1px solid color-mix(in oklab, var(--color-base-500) 55%, transparent);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--color-base-500) 20%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 45%, transparent);
   border-radius: var(--radius-card);
-  padding: 1.5rem;
+  padding: 0.85rem;
   margin: 1.5rem 0 2.5rem 0;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 0.85rem;
 }
+
+@media (min-width: 640px) {
+  .ortho-sim-card {
+    padding: 1.35rem;
+    gap: 1.1rem;
+  }
+}
+
 .ortho-sim-toolbar {
   display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--color-base-500) 35%, transparent);
+}
+
+.sim-toolbar-row {
+  display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid color-mix(in oklab, var(--color-base-500) 40%, transparent);
+  gap: 0.85rem;
+  width: 100%;
 }
+
 .sim-ctrl-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-width: 0;
+}
+
+.sim-select-group {
+  width: 100%;
+}
+
+.sim-slider-group {
+  flex: 1 1 180px;
+}
+
+.sim-checkbox-group {
+  flex: 0 1 auto;
+}
+
+.sim-slider-wrapper {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-size: 0.88rem;
-  font-weight: 600;
+  width: 100%;
 }
-.sim-select, .sim-slider {
+
+.sim-slider {
+  flex: 1;
+  min-width: 0;
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.sim-select {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   background: var(--color-base);
   color: var(--color-base-content);
   border: 1px solid color-mix(in oklab, var(--color-base-500) 70%, transparent);
   border-radius: var(--radius-button);
-  padding: 0.4rem 0.8rem;
+  padding: 0.5rem 0.75rem;
   font-family: inherit;
   font-size: 0.85rem;
   outline: none;
-}
-.sim-val {
-  min-width: 1.5rem;
-  color: var(--color-primary);
-  font-weight: 700;
-}
-.sim-checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
   cursor: pointer;
 }
+
+.sim-val {
+  min-width: 1.25rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-align: center;
+}
+
+.sim-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.ortho-legend-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem 1.2rem;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  box-sizing: border-box;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.legend-color {
+  width: 12px;
+  height: 4px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.legend-primary { background: #38bdf8; box-shadow: 0 0 5px #38bdf8; }
+.legend-ortho { background: #f43f5e; box-shadow: 0 0 5px #f43f5e; }
+.legend-tangent { background: #22c55e; height: 8px; width: 8px; border-radius: 50%; box-shadow: 0 0 5px #22c55e; }
+
 .ortho-canvas-wrapper {
   position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   border-radius: calc(var(--radius-card) - 6px);
   overflow: hidden;
   background: #090e17;
   border: 1px solid #1e293b;
   box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.4);
 }
+
 #orthoCanvas {
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 800 / 520;
   cursor: crosshair;
+  touch-action: none;
 }
-.ortho-legend {
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  background: rgba(15, 23, 42, 0.88);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 10px;
-  padding: 8px 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+
+.ortho-status-box {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 0.55rem 0.75rem;
   font-size: 0.8rem;
+  line-height: 1.5;
+  color: #94a3b8;
+  text-align: center;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+.status-telemetry {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem 0.8rem;
   color: #e2e8f0;
 }
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.legend-color {
-  width: 14px;
-  height: 4px;
-  border-radius: 2px;
-}
-.legend-primary { background: #38bdf8; box-shadow: 0 0 6px #38bdf8; }
-.legend-ortho { background: #f43f5e; box-shadow: 0 0 6px #f43f5e; }
-.legend-tangent { background: #22c55e; height: 10px; width: 10px; border-radius: 50%; }
 
-.ortho-tooltip {
-  position: absolute;
-  bottom: 12px;
-  left: 14px;
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  padding: 6px 12px;
-  font-size: 0.8rem;
-  color: #94a3b8;
-  pointer-events: none;
+.status-telemetry .highlight {
+  color: #22c55e;
+  font-weight: 700;
+}
+
+/* جلوگیری از سرریز جدول‌ها در موبایل */
+.sarv-article table,
+table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 </style>
 
@@ -164,7 +275,7 @@ function initOrthoSimulation() {
   const densitySlider = document.getElementById('densitySlider');
   const densityVal = document.getElementById('densityVal');
   const showTangentsCheck = document.getElementById('showTangentsCheck');
-  const tooltip = document.getElementById('orthoTooltip');
+  const statusBox = document.getElementById('orthoTooltip');
 
   if (!canvas || !familySelect || !densitySlider) return;
   const ctx = canvas.getContext('2d');
@@ -186,7 +297,7 @@ function initOrthoSimulation() {
   function drawGrid() {
     ctx.clearRect(0, 0, W, H);
 
-    // محورها
+    // محورهای فرعی شبکه
     ctx.lineWidth = 1;
     ctx.strokeStyle = '#1e293b';
     ctx.beginPath();
@@ -236,7 +347,7 @@ function initOrthoSimulation() {
         });
       }
 
-      // متعامد: x^2 / (2k) + y^2 / k = 1 (بیضی‌ها به رنگ زرشکی/صورتی نئون)
+      // متعامد: x^2 / (2k) + y^2 / k = 1 (بیضی‌ها به رنگ صورتی نئون)
       ctx.strokeStyle = '#f43f5e';
       ctx.lineWidth = 2;
       for (let i = 1; i <= count; i++) {
@@ -320,12 +431,12 @@ function initOrthoSimulation() {
       }
     }
 
-    // ترسیم خطوط مماس متقاطع روی نقطه ماوس
+    // ترسیم خطوط مماس متقاطع روی نقطه فعال
     if (showTangents) {
       const mx = toMathX(mouseX);
       const my = toMathY(mouseY);
 
-      if (Math.abs(mx) > 0.1 || Math.abs(my) > 0.1) {
+      if (Math.abs(mx) > 0.08 || Math.abs(my) > 0.08) {
         let m1 = 0;
         let m2 = 0;
 
@@ -377,31 +488,46 @@ function initOrthoSimulation() {
         ctx.arc(mouseX, mouseY, 6, 0, Math.PI * 2);
         ctx.fill();
 
-        // متن راهنما
-        if (tooltip) {
-          tooltip.innerHTML = `نقطه: (${mx.toFixed(2)}, ${my.toFixed(2)}) | شیب منحنی ۱: ${m1.toFixed(2)} | شیب منحنی ۲: ${m2.toFixed(2)} | حاصل‌ضرب شیب‌ها: <strong>-۱.۰۰</strong> (تعامد کامل ۹۰°)`;
+        // متن راهنما در نوار تله‌متری پایین
+        if (statusBox) {
+          statusBox.innerHTML = `
+            <div class="status-telemetry">
+              <span>نقطه: <strong>(${mx.toFixed(2)}, ${my.toFixed(2)})</strong></span>
+              <span>•</span>
+              <span>شیب ۱: <strong>${m1.toFixed(2)}</strong></span>
+              <span>•</span>
+              <span>شیب ۲: <strong>${m2.toFixed(2)}</strong></span>
+              <span>•</span>
+              <span class="highlight">تعامد قائمه: m₁·m₂ = -۱.۰۰ (۹۰°)</span>
+            </div>
+          `;
         }
       }
     }
   }
 
-  canvas.addEventListener('mousemove', e => {
+  function updatePointer(clientX, clientY) {
     const rect = canvas.getBoundingClientRect();
     const scaleX = canvas.width / rect.width;
     const scaleY = canvas.height / rect.height;
-    mouseX = (e.clientX - rect.left) * scaleX;
-    mouseY = (e.clientY - rect.top) * scaleY;
+    mouseX = (clientX - rect.left) * scaleX;
+    mouseY = (clientY - rect.top) * scaleY;
     renderSimulation();
+  }
+
+  canvas.addEventListener('mousemove', e => {
+    updatePointer(e.clientX, e.clientY);
   });
+
+  canvas.addEventListener('touchstart', e => {
+    if (e.touches && e.touches.length > 0) {
+      updatePointer(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  }, { passive: true });
 
   canvas.addEventListener('touchmove', e => {
     if (e.touches && e.touches.length > 0) {
-      const rect = canvas.getBoundingClientRect();
-      const scaleX = canvas.width / rect.width;
-      const scaleY = canvas.height / rect.height;
-      mouseX = (e.touches[0].clientX - rect.left) * scaleX;
-      mouseY = (e.touches[0].clientY - rect.top) * scaleY;
-      renderSimulation();
+      updatePointer(e.touches[0].clientX, e.touches[0].clientY);
     }
   }, { passive: true });
 
