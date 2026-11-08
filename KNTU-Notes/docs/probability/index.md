@@ -49,6 +49,21 @@ tags:
     </div>
   </a>
 
+  <a class="resource-card" href="جلسه دوم/">
+    <div class="resource-card-main">
+      <div class="resource-card-icon" style="color: #6366f1;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
+      </div>
+      <span class="resource-card-title">جلسه دوم: اثبات فرمول خانه چهارم جدول نمونه‌گیری — مسئله خط و توپ (Stars & Bars)</span>
+    </div>
+    <div class="resource-card-side">
+      <span class="resource-badge" style="background: rgba(99, 102, 241, 0.15); color: #6366f1; border-color: rgba(99, 102, 241, 0.3);">اثبات تحلیلی و شهودی</span>
+      <span class="resource-open-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </span>
+    </div>
+  </a>
+
 </div>
 
 ---

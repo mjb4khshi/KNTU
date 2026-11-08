@@ -19,6 +19,12 @@
       "title": "درس محاسبات عددی و تحلیل الگوریتم‌ها",
       "url": "numerical-analysis/",
       "folder": "numerical-analysis"
+    },
+    {
+      "id": "probability/جلسه دوم.md",
+      "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+      "folder": "probability"
     }
   ],
   "لاپلاس": [
@@ -49,6 +55,18 @@
       "title": "درس محاسبات عددی و تحلیل الگوریتم‌ها",
       "url": "numerical-analysis/",
       "folder": "numerical-analysis"
+    },
+    {
+      "id": "probability/جلسه اول.md",
+      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
+      "folder": "probability"
+    },
+    {
+      "id": "probability/جلسه دوم.md",
+      "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+      "folder": "probability"
     },
     {
       "id": "statics/index.md",
@@ -143,6 +161,102 @@
       "title": "شیء در جاوا اسکریپت",
       "url": "out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/objects/",
       "folder": "out of kntu university/JS نوت‌های جاوا اسکریپت/Fundamentals - Part2"
+    }
+  ],
+  "احتمال": [
+    {
+      "id": "probability/جلسه اول.md",
+      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
+      "folder": "probability"
+    },
+    {
+      "id": "probability/جلسه دوم.md",
+      "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+      "folder": "probability"
+    }
+  ],
+  "آمار": [
+    {
+      "id": "probability/جلسه اول.md",
+      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
+      "folder": "probability"
+    }
+  ],
+  "اصول_شمارش": [
+    {
+      "id": "probability/جلسه اول.md",
+      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
+      "folder": "probability"
+    },
+    {
+      "id": "probability/جلسه دوم.md",
+      "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+      "folder": "probability"
+    }
+  ],
+  "فضای_نمونه": [
+    {
+      "id": "probability/جلسه اول.md",
+      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
+      "folder": "probability"
+    }
+  ],
+  "ترکیبیات": [
+    {
+      "id": "probability/جلسه اول.md",
+      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
+      "folder": "probability"
+    },
+    {
+      "id": "probability/جلسه دوم.md",
+      "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+      "folder": "probability"
+    }
+  ],
+  "استت۱۱۰": [
+    {
+      "id": "probability/جلسه اول.md",
+      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
+      "folder": "probability"
+    },
+    {
+      "id": "probability/جلسه دوم.md",
+      "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+      "folder": "probability"
+    }
+  ],
+  "خط_و_توپ": [
+    {
+      "id": "probability/جلسه دوم.md",
+      "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+      "folder": "probability"
+    }
+  ],
+  "ستاره_و_میله": [
+    {
+      "id": "probability/جلسه دوم.md",
+      "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+      "folder": "probability"
+    }
+  ],
+  "چوب_و_ستاره": [
+    {
+      "id": "probability/جلسه دوم.md",
+      "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+      "folder": "probability"
     }
   ],
   "استاتیک": [
