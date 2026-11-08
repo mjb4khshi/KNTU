@@ -41,6 +41,13 @@
   function renderMermaid() {
     if (typeof mermaid === "undefined") return;
     try {
+      // Clean up any inner <code> wrapper created by superfences or plugins
+      document.querySelectorAll(".mermaid").forEach((el) => {
+        const code = el.querySelector("code");
+        if (code) {
+          el.textContent = code.textContent;
+        }
+      });
       mermaid.initialize(getMermaidConfig());
       mermaid.run({
         querySelector: ".mermaid",

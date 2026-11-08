@@ -1,6 +1,7 @@
 /* =========================================================
    🌿 MathJax 3 Configuration for Sarv UI & Arithmatex
    Supports inline $...$ and display $$...$$ formulas everywhere
+   Fixes Persian/RTL disconnected and reversed letters in \text{}
    ========================================================= */
 
 window.MathJax = {
@@ -16,9 +17,32 @@ window.MathJax = {
   }
 };
 
+function fixPersianMathJaxText() {
+  document.querySelectorAll("mjx-mtext").forEach((el) => {
+    let text = "";
+    el.childNodes.forEach((child) => {
+      if (child.classList && child.classList.contains("mjx-c20")) {
+        text += " ";
+      } else {
+        text += child.textContent;
+      }
+    });
+    if (text && /[\u0600-\u06FF]/.test(text)) {
+      el.innerHTML =
+        '<span style="direction: rtl; unicode-bidi: isolate; font-family: Arad, Vazirmatn, sans-serif; display: inline-block;">' +
+        text +
+        "</span>";
+    }
+  });
+}
+
 function typesetSarvMath() {
   if (typeof MathJax !== "undefined" && MathJax.typesetPromise) {
-    MathJax.typesetPromise().catch(err => console.warn("MathJax error:", err));
+    MathJax.typesetPromise()
+      .then(() => {
+        fixPersianMathJaxText();
+      })
+      .catch((err) => console.warn("MathJax error:", err));
   }
 }
 
