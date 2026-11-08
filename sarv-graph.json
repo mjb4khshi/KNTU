@@ -728,7 +728,7 @@
       "url": "probability/",
       "folder": "probability",
       "tags": [],
-      "words": 310,
+      "words": 308,
       "isHub": true,
       "degree": 3,
       "radius": 5.8
@@ -753,12 +753,14 @@
     },
     {
       "id": "probability/جلسه دوم.md",
-      "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+      "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
       "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
       "folder": "probability",
       "tags": [
         "احتمال",
         "اصول_شمارش",
+        "اثبات_داستانی",
+        "اتحاد_وندرموند",
         "خط_و_توپ",
         "ستاره_و_میله",
         "چوب_و_ستاره",
@@ -767,7 +769,7 @@
         "ریاضیات",
         "دانشگاه"
       ],
-      "words": 1249,
+      "words": 1931,
       "degree": 1,
       "radius": 4.8
     },
@@ -1650,12 +1652,14 @@
     },
     "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/": {
       "id": "probability/جلسه دوم.md",
-      "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+      "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
       "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
       "folder": "probability",
       "tags": [
         "احتمال",
         "اصول_شمارش",
+        "اثبات_داستانی",
+        "اتحاد_وندرموند",
         "خط_و_توپ",
         "ستاره_و_میله",
         "چوب_و_ستاره",
@@ -1664,7 +1668,7 @@
         "ریاضیات",
         "دانشگاه"
       ],
-      "summary": "# جلسه دوم: اثبات فرمول خط و توپ (Stars and Bars)  > **مسئله محوری:**   > در جدول چهارگانه نمونه‌گیری، اثبات سه خانه اول با اصل ضرب و تعریف جایگشت بدیهی است. اما خانه چهارم یعنی **..."
+      "summary": "# جلسه دوم: اثبات داستانی و فرمول خط و توپ  > **مسئله محوری:**   > در ریاضیات ترکیبیاتی، دو ابزار بسیار قدرتمند وجود دارند که محاسبات سنگین جبری را به شهودی عمیق و تفسیری تبدیل می‌..."
     },
     "programming/%D8%AC%D8%B2%D9%88%D9%87%20%DA%A9%D9%84%D8%A7%D8%B3%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C%20%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%A7%D8%B1%D8%B2%D8%A7%D9%86%DB%8C/": {
       "id": "programming/جزوه کلاس برنامه‌نویسی استاد ارزانی.md",
@@ -1754,7 +1758,7 @@
       },
       {
         "id": "probability/جلسه دوم.md",
-        "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+        "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
         "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
         "folder": "probability"
       }
@@ -1796,7 +1800,7 @@
       },
       {
         "id": "probability/جلسه دوم.md",
-        "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+        "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
         "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
         "folder": "probability"
       },
@@ -1904,7 +1908,7 @@
       },
       {
         "id": "probability/جلسه دوم.md",
-        "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+        "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
         "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
         "folder": "probability"
       }
@@ -1926,7 +1930,7 @@
       },
       {
         "id": "probability/جلسه دوم.md",
-        "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+        "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
         "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
         "folder": "probability"
       }
@@ -1948,7 +1952,7 @@
       },
       {
         "id": "probability/جلسه دوم.md",
-        "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+        "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
         "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
         "folder": "probability"
       }
@@ -1962,7 +1966,23 @@
       },
       {
         "id": "probability/جلسه دوم.md",
-        "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+        "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
+        "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+        "folder": "probability"
+      }
+    ],
+    "اثبات_داستانی": [
+      {
+        "id": "probability/جلسه دوم.md",
+        "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
+        "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+        "folder": "probability"
+      }
+    ],
+    "اتحاد_وندرموند": [
+      {
+        "id": "probability/جلسه دوم.md",
+        "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
         "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
         "folder": "probability"
       }
@@ -1970,7 +1990,7 @@
     "خط_و_توپ": [
       {
         "id": "probability/جلسه دوم.md",
-        "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+        "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
         "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
         "folder": "probability"
       }
@@ -1978,7 +1998,7 @@
     "ستاره_و_میله": [
       {
         "id": "probability/جلسه دوم.md",
-        "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+        "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
         "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
         "folder": "probability"
       }
@@ -1986,7 +2006,7 @@
     "چوب_و_ستاره": [
       {
         "id": "probability/جلسه دوم.md",
-        "title": "جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)",
+        "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
         "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
         "folder": "probability"
       }

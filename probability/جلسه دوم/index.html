@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="fa" dir="rtl" data-theme="persian-dark"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars) - MJ'S KNTU Notes</title>
+  <title>جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars) - MJ'S KNTU Notes</title>
   
   
   
@@ -55,10 +55,10 @@
   <meta property="og:image" content="https://mjb4khshi.github.io/KNTU/assets/cards/probability/جلسه دوم.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:title" content="جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)">
+  <meta property="og:title" content="جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://mjb4khshi.github.io/KNTU/assets/cards/probability/جلسه دوم.png">
-  <meta name="twitter:title" content="جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)">
+  <meta name="twitter:title" content="جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)">
 </head>
 
 <body>
@@ -735,7 +735,7 @@
                 
                   <a href="./" class="sarv-nav-sublink active">
                     <span class="sarv-nav-subbullet"></span>
-                    <span>جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)</span>
+                    <span>جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)</span>
                   </a>
                 
               
@@ -945,11 +945,11 @@
       <div class="sarv-reading-meta">
         <span class="reading-badge">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          <span>زمان تقریبی مطالعه: ۷ دقیقه</span>
+          <span>زمان تقریبی مطالعه: ۱۱ دقیقه</span>
         </span>
         <span class="reading-badge">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          <span>۱,۲۴۹ کلمه</span>
+          <span>۱,۹۳۱ کلمه</span>
         </span>
         <button type="button" class="reading-badge sarv-print-btn" onclick="window.print()" title="چاپ یا ذخیره نسخه تمیز PDF">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect width="12" height="8" x="6" y="14"></rect></svg>
@@ -960,17 +960,89 @@
 
       <!-- بدنه محتوا -->
       <div class="sarv-markdown-content">
-        <h1 id="stars-and-bars">جلسه دوم: اثبات فرمول خط و توپ (Stars and Bars)<a class="headerlink" href="#stars-and-bars" title="Permanent link">¶</a></h1>
+        <h1 id="_1">جلسه دوم: اثبات داستانی و فرمول خط و توپ<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
 <blockquote>
 <p><strong>مسئله محوری:</strong><br>
-در جدول چهارگانه نمونه‌گیری، اثبات سه خانه اول با اصل ضرب و تعریف جایگشت بدیهی است. اما خانه چهارم یعنی <strong>«انتخاب <span class="arithmatex">\(k\)</span> شیء از میان <span class="arithmatex">\(n\)</span> شیء متمایز با جایگذاری و بدون اهمیت ترتیب»</strong> فرمولی جالب دارد:</p>
-<div class="arithmatex">\[\binom{n + k - 1}{k} = \binom{n + k - 1}{n - 1}\]</div>
-<p>در این جلسه می‌خواهیم این فرمول را با <strong>تکنیک خط و توپ (یا چوب و ستاره)</strong> کالبدشکافی، اثبات و در انواع تیپ‌های مسئله حل کنیم.</p>
+در ریاضیات ترکیبیاتی، دو ابزار بسیار قدرتمند وجود دارند که محاسبات سنگین جبری را به شهودی عمیق و تفسیری تبدیل می‌کنند:<br>
+1. <strong>اثبات داستانی (Story Proof):</strong> اثبات تساوی‌ها از طریق روایت یک سناریوی شمارش به دو شیوه مستقل.<br>
+2. <strong>تکنیک خط و توپ (Stars and Bars):</strong> شاه‌کلید حل مسائل انتخاب با جایگذاری بدون ترتیب و شمارش جواب‌های صحیح معادلات جمعی.</p>
 </blockquote>
 <hr>
-<h2 id="_1">صورت مسئله و ترجمه جبری آن<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h2 id="story-proof">اثبات داستانی: جادوی شمارش با تفسیر (Story Proof)<a class="headerlink" href="#story-proof" title="Permanent link">¶</a></h2>
+<p>پروفسور جو بلیتزستین (Joe Blitzstein) در دانشگاه هاروارد تاکید ویژه‌ای روی این مفهوم دارد:</p>
+<blockquote>
+<p><strong>ایده اصلی اثبات داستانی چیست؟</strong><br>
+به جای اینکه خودمان را در باتلاق محاسبات جبری، فاکتوریل‌ها و ساده‌سازی‌های خسته‌کننده غرق کنیم، برای دو طرف یک تساوی یک <strong>«داستان یا سناریوی شمارش مشترک»</strong> تعریف می‌کنیم. اگر نشان دهیم سمت چپ و سمت راست تساوی در واقع <strong>یک پدیده واحد را به دو شیوه مختلف و معتبر می‌شمارند</strong>، تساوی بدون نیاز به حتی یک خط جبر اثبات می‌شود!</p>
+</blockquote>
+<hr>
+<h3 id="_2">مثال اول: تقارن در انتخاب و کنار گذاشتن<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<div class="arithmatex">\[\binom{n}{k} = \binom{n}{n - k}\]</div>
+<ul>
+<li><strong>داستان مسئله:</strong> فرض کنید یک گروه <span class="arithmatex">\(n\)</span> نفره داریم و می‌خواهیم یک تیم <span class="arithmatex">\(k\)</span> نفره برای یک پروژه انتخاب کنیم.</li>
+<li><strong>روایت اول (سمت چپ):</strong> مستقیماً به سراغ افراد می‌رویم و <span class="arithmatex">\(k\)</span> نفر را از بین <span class="arithmatex">\(n\)</span> نفر برمی‌گزینیم؛ تعداد حالات: <span class="arithmatex">\(\binom{n}{k}\)</span>.</li>
+<li><strong>روایت دوم (سمت راست):</strong> به جای مشخص کردن اعضای تیم، تصمیم می‌گیریم افرادی را انتخاب کنیم که در پروژه <strong>حضور ندارند</strong>! یعنی <span class="arithmatex">\(n - k\)</span> نفر را برای کنار گذاشته شدن انتخاب می‌کنیم و مابقی خودبه‌خود عضو تیم می‌شوند؛ تعداد حالات: <span class="arithmatex">\(\binom{n}{n - k}\)</span>.</li>
+<li><strong>نتیجه:</strong> هر انتخاب <span class="arithmatex">\(k\)</span> نفره دقیقاً متناظر با یک انتخاب <span class="arithmatex">\(n - k\)</span> نفره برای کنار رفتن است. پس هر دو طرف تساوی یک کمیت واحد را می‌شمارند.</li>
+</ul>
+<hr>
+<h3 id="_3">مثال دوم: انتخاب تیم به همراه سرگروه<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<div class="arithmatex">\[n \binom{n - 1}{k - 1} = k \binom{n}{k}\]</div>
+<ul>
+<li>
+<p><strong>داستان مسئله:</strong> از میان یک جامعه <span class="arithmatex">\(n\)</span> نفره، می‌خواهیم یک کمیته‌ی <span class="arithmatex">\(k\)</span> نفره تشکیل دهیم که <strong>دقیقاً یک نفر از اعضای آن به عنوان رئیس یا سرگروه</strong> تعیین شده باشد.</p>
+</li>
+<li>
+<p><strong>روایت اول (ابتدا تعیین سرگروه):</strong></p>
+</li>
+<li>اول از کل <span class="arithmatex">\(n\)</span> داوطلب، ۱ نفر را به عنوان سرگروه منصوب می‌کنیم: <span class="arithmatex">\(n\)</span> حالت.</li>
+<li>سپس از بین <span class="arithmatex">\(n - 1\)</span> داوطلب باقی‌مانده، <span class="arithmatex">\(k - 1\)</span> عضو عادی دیگر تیم را برمی‌گزینیم: <span class="arithmatex">\(\binom{n - 1}{k - 1}\)</span> حالت.</li>
+<li>
+<p>طبق اصل ضرب:<br>
+     $<span class="arithmatex">\(n \binom{n - 1}{k - 1}\)</span>$</p>
+</li>
+<li>
+<p><strong>روایت دوم (ابتدا انتخاب کل اعضای تیم):</strong></p>
+</li>
+<li>ابتدا کل کمیته‌ی <span class="arithmatex">\(k\)</span> نفره را از بین <span class="arithmatex">\(n\)</span> نفر انتخاب می‌کنیم: <span class="arithmatex">\(\binom{n}{k}\)</span> حالت.</li>
+<li>حالا از میان همین <span class="arithmatex">\(k\)</span> نفر انتخاب‌شده، ۱ نفر را به عنوان سرگروه مشخص می‌کنیم: <span class="arithmatex">\(k\)</span> حالت.</li>
+<li>
+<p>طبق اصل ضرب:<br>
+     $<span class="arithmatex">\(k \binom{n}{k}\)</span>$</p>
+</li>
+<li>
+<p><strong>نتیجه:</strong> چون هر دو روایت دقیقاً تعداد حالت‌های ساخت «یک کمیته <span class="arithmatex">\(k\)</span> نفره با یک سرگروه مشخص» را می‌شمارند، برابری دو طرف بدیهی است:<br>
+$<span class="arithmatex">\(n \binom{n - 1}{k - 1} = k \binom{n}{k} \quad \blacksquare\)</span>$</p>
+</li>
+</ul>
+<hr>
+<h3 id="vandermondes-identity">مثال سوم: اتحاد وندرموند (Vandermonde's Identity)<a class="headerlink" href="#vandermondes-identity" title="Permanent link">¶</a></h3>
+<div class="arithmatex">\[\binom{m + n}{k} = \sum_{j = 0}^{k} \binom{m}{j} \binom{n}{k - j}\]</div>
+<ul>
+<li>
+<p><strong>داستان مسئله:</strong> فرض کنید در یک دانشکده، <span class="arithmatex">\(m\)</span> دانشجوی مهندسی و <span class="arithmatex">\(n\)</span> دانشجوی علوم پایه داریم (در مجموع <span class="arithmatex">\(m + n\)</span> نفر). می‌خواهیم یک شورای دانشجویی <span class="arithmatex">\(k\)</span> نفره انتخاب کنیم.</p>
+</li>
+<li>
+<p><strong>روایت اول (بدون تفکیک گروهی):</strong><br>
+  بدون در نظر گرفتن رشته، مستقیماً از کل جمعیت <span class="arithmatex">\(m + n\)</span> نفره، یک تیم <span class="arithmatex">\(k\)</span> نفره انتخاب می‌کنیم:<br>
+  $<span class="arithmatex">\(\binom{m + n}{k}\)</span>$</p>
+</li>
+<li>
+<p><strong>روایت دوم (افراز بر اساس تعداد دانشجویان مهندسی):</strong><br>
+  تعداد دانشجویان مهندسی درون این تیم <span class="arithmatex">\(k\)</span> نفره می‌تواند از <span class="arithmatex">\(0\)</span> نفر تا حداکثر <span class="arithmatex">\(k\)</span> نفر متغیر باشد.<br>
+  اگر فرض کنیم دقیقاً <span class="arithmatex">\(j\)</span> نفر از اعضای شورا مهندس باشند (<span class="arithmatex">\(0 \le j \le k\)</span>)، پس الزاماً مابقی اعضا یعنی <span class="arithmatex">\(k - j\)</span> نفر باید از دانشجویان علوم پایه باشند:</p>
+</li>
+<li>انتخاب <span class="arithmatex">\(j\)</span> دانشجوی مهندسی از بین <span class="arithmatex">\(m\)</span> نفر: <span class="arithmatex">\(\binom{m}{j}\)</span></li>
+<li>انتخاب <span class="arithmatex">\(k - j\)</span> دانشجوی علوم پایه از بین <span class="arithmatex">\(n\)</span> نفر: <span class="arithmatex">\(\binom{n}{k - j}\)</span></li>
+<li>طبق اصل ضرب، تعداد حالات به ازای یک <span class="arithmatex">\(j\)</span> مشخص: <span class="arithmatex">\(\binom{m}{j} \binom{n}{k - j}\)</span></li>
+</ul>
+<p>چون این حالات به ازای مقادیر مختلف <span class="arithmatex">\(j\)</span> با هم <strong>ناسازگار و مجزا (Disjoint)</strong> هستند (یک شورا نمی‌تواند هم‌زمان هم دارای ۲ مهندس باشد و هم ۳ مهندس)، طبق اصل جمع کل حالات برابر است با حاصل‌جمع روی تمام مقادیر مجاز <span class="arithmatex">\(j\)</span>:<br>
+  $<span class="arithmatex">\(\sum_{j = 0}^{k} \binom{m}{j} \binom{n}{k - j}\)</span>$</p>
+<ul>
+<li><strong>نتیجه:</strong> هر دو روش یک مسئله واحد را شمرده‌اند؛ بنابراین اتحاد مشهور وندرموند بدون حتی یک خط عملیات فاکتوریلی اثبات می‌شود!</li>
+</ul>
+<hr>
+<h2 id="_4">صورت مسئله خط و توپ و ترجمه جبری آن<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
 <p>فرض کنید می‌خواهیم <span class="arithmatex">\(k\)</span> بار از میان <span class="arithmatex">\(n\)</span> گروه مختلف انتخاب انجام دهیم. ترتیب مهم نیست و هر گروه می‌تواند چندین بار (یا اصلاً) انتخاب شود.</p>
-<h3 id="_2">مدل‌سازی با معادله دیوفانتی<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<h3 id="_5">مدل‌سازی با معادله دیوفانتی<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
 <p>اگر فرض کنیم از گروه اول <span class="arithmatex">\(x_1\)</span> بار، از گروه دوم <span class="arithmatex">\(x_2\)</span> بار، ... و از گروه <span class="arithmatex">\(n\)</span>-ام <span class="arithmatex">\(x_n\)</span> بار انتخاب کنیم، مسئله دقیقاً معادل پیدا کردن <strong>تعداد پاسخ‌های صحیح و نامنفی</strong> معادله زیر است:</p>
 <div class="arithmatex">\[x_1 + x_2 + x_3 + \dots + x_n = k \quad , \quad x_i \in \{0, 1, 2, \dots\}\]</div>
 <ul>
@@ -990,7 +1062,7 @@
     style B fill:#1e293b,stroke:#6366f1,color:#fff
     style C fill:#0f172a,stroke:#475569,color:#e2e8f0
     style D fill:#059669,stroke:#34d399,color:#fff</code></pre>
-<h3 id="_3">گام‌های اثبات دقیق:<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<h3 id="_6">گام‌های اثبات دقیق:<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
 <ol>
 <li>
 <p><strong>نمایش اشیاء انتخابی با توپ‌ها (<span class="arithmatex">\(\bullet\)</span>):</strong><br>
@@ -1032,23 +1104,23 @@ $<span class="arithmatex">\(\bullet \bullet \mid \bullet \bullet \bullet \mid\)<
 <p>چون طبق ویژگی تقارن ترکیب‌ها داریم <span class="arithmatex">\(\binom{m}{r} = \binom{m}{m-r}\)</span>، این دو عبارت کاملاً برابرند:</p>
 <div class="arithmatex">\[\text{حالات کل} = \binom{n + k - 1}{k} = \binom{n + k - 1}{n - 1} \quad \blacksquare\]</div>
 <hr>
-<h2 id="_4">حالت متغیرهای اکیداً مثبت<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<h2 id="_7">حالت متغیرهای اکیداً مثبت<a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
 <p>گاهی در صورت مسئله قید می‌شود که <strong>«به هر سبد حداقل یک شیء برسد»</strong> (یا به هر فرد حداقل یک سهم تعلق گیرد):</p>
 <div class="arithmatex">\[x_1 + x_2 + \dots + x_n = k \quad , \quad x_i \ge 1 \quad (k \ge n)\]</div>
 <p>برای حل این حالت دو رویکرد زیبا وجود دارد:</p>
-<h3 id="_5">روش اول: تغییر متغیر جبری<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<h3 id="_8">روش اول: تغییر متغیر جبری<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
 <p>به ازای هر <span class="arithmatex">\(i\)</span> تعریف می‌کنیم <span class="arithmatex">\(y_i = x_i - 1\)</span>. چون <span class="arithmatex">\(x_i \ge 1\)</span>، پس <span class="arithmatex">\(y_i \ge 0\)</span> خواهد بود.<br>
 حال با جایگذاری در معادله اصلی:</p>
 <div class="arithmatex">\[(y_1 + 1) + (y_2 + 1) + \dots + (y_n + 1) = k \implies y_1 + y_2 + \dots + y_n = k - n\]</div>
 <p>حالا یک مسئله خط و توپ استاندارد با متغیرهای نامنفی (<span class="arithmatex">\(y_i \ge 0\)</span>) داریم که مجموع آن‌ها برابر با <span class="arithmatex">\(k - n\)</span> است. طبق فرمول اثبات‌شده:</p>
 <div class="arithmatex">\[\binom{n + (k - n) - 1}{(k - n)} = \binom{k - 1}{k - n} = \binom{k - 1}{n - 1}\]</div>
-<h3 id="_6">روش دوم: شهود فیزیکی فاصله‌ها<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<h3 id="_9">روش دوم: شهود فیزیکی فاصله‌ها<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
 <p><span class="arithmatex">\(k\)</span> توپ را با فاصله کنار هم می‌چینیم. بین این <span class="arithmatex">\(k\)</span> توپ، دقیقاً <strong><span class="arithmatex">\(k - 1\)</span> شکاف خالی</strong> وجود دارد:</p>
 <div class="arithmatex">\[\bullet \ \underset{1}{\wedge} \ \bullet \ \underset{2}{\wedge} \ \bullet \dots \bullet \ \underset{k-1}{\wedge} \ \bullet\]</div>
 <p>چون هیچ دسته‌ای نباید صفر باشد، نمی‌توانیم دو خط را در یک جا یا در ابتدا و انتها قرار دهیم؛ بلکه باید از بین این <span class="arithmatex">\(k - 1\)</span> شکاف موجود، مکان قرارگیری <span class="arithmatex">\(n - 1\)</span> خط را انتخاب کنیم:</p>
 <div class="arithmatex">\[\binom{k - 1}{n - 1}\]</div>
 <hr>
-<h2 id="_7">مقایسه جامع دو حالت خط و توپ<a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
+<h2 id="_10">مقایسه جامع دو حالت خط و توپ<a class="headerlink" href="#_10" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
@@ -1071,8 +1143,8 @@ $<span class="arithmatex">\(\bullet \bullet \mid \bullet \bullet \bullet \mid\)<
 </tbody>
 </table>
 <hr>
-<h2 id="_8">مثال‌های حل‌شده و تیپ‌های کاربردی<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
-<h3 id="_9">مثال ۱: بستنی‌فروشی با طعم‌های مختلف<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<h2 id="_11">مثال‌های حل‌شده و تیپ‌های کاربردی<a class="headerlink" href="#_11" title="Permanent link">¶</a></h2>
+<h3 id="_12">مثال ۱: بستنی‌فروشی با طعم‌های مختلف<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
 <p>می‌خواهیم یک ظرف بستنی با ۸ اسکوپ (<span class="arithmatex">\(k = 8\)</span>) از یک بستنی‌فروشی که ۵ طعم مختلف (<span class="arithmatex">\(n = 5\)</span>) ارائه می‌دهد سفارش دهیم. ترتیب اسکوپ‌ها مهم نیست. به چند روش این کار ممکن است؟</p>
 <blockquote>
 <p><strong>حل:</strong><br>
@@ -1081,7 +1153,7 @@ $<span class="arithmatex">\(x_1 + x_2 + x_3 + x_4 + x_5 = 8\)</span>$<br>
 $<span class="arithmatex">\(\text{تعداد حالات} = \binom{5 + 8 - 1}{8} = \binom{12}{8} = \binom{12}{4} = \frac{12 \times 11 \times 10 \times 9}{4 \times 3 \times 2 \times 1} = 495\)</span>$</p>
 </blockquote>
 <hr>
-<h3 id="_10">مثال ۲: توزیع نامتقارن با پیش‌شرط‌های حداقل<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<h3 id="_13">مثال ۲: توزیع نامتقارن با پیش‌شرط‌های حداقل<a class="headerlink" href="#_13" title="Permanent link">¶</a></h3>
 <p>فرض کنید ۱۲ سکه یکسان را می‌خواهیم بین ۳ کودک طوری تقسیم کنیم که کودک اول حداقل ۲ سکه، کودک دوم حداقل ۱ سکه و سومی حداقل ۳ سکه بگیرد.</p>
 <blockquote>
 <p><strong>حل:</strong><br>
@@ -1099,7 +1171,7 @@ $<span class="arithmatex">\(\text{تعداد حالات} = \binom{3 + 6 - 1}{6} 
 1. <strong>فرمیون‌ها (الکترون‌ها، پروتون‌ها و...):</strong> از اصل طرد پاولی پیروی می‌کنند؛ در هر تراز انرژی حداکثر یک ذره قرار می‌گیرد (متناظر با خانه <strong>بدون جایگذاری</strong> <span class="arithmatex">\(\binom{n}{k}\)</span>).<br>
 2. <strong>بوزون‌ها (فوتون‌ها، گلوئون‌ها و...):</strong> هیچ محدودیتی در تجمع ندارند و می‌توانند به تعداد دلخواه در یک تراز انرژی قرار گیرند (متناظر با همین خانه چهارم و فرمول خط و توپ <span class="arithmatex">\(\binom{n + k - 1}{k}\)</span>).</p>
 <hr>
-<p><a href="../../tags/#احتمال" class="sarv-tag" data-tag="احتمال">#احتمال</a> <a href="../../tags/#اصول_شمارش" class="sarv-tag" data-tag="اصول_شمارش">#اصول_شمارش</a> <a href="../../tags/#خط_و_توپ" class="sarv-tag" data-tag="خط_و_توپ">#خط_و_توپ</a> <a href="../../tags/#ستاره_و_میله" class="sarv-tag" data-tag="ستاره_و_میله">#ستاره_و_میله</a> <a href="../../tags/#چوب_و_ستاره" class="sarv-tag" data-tag="چوب_و_ستاره">#چوب_و_ستاره</a> <a href="../../tags/#ترکیبیات" class="sarv-tag" data-tag="ترکیبیات">#ترکیبیات</a> <a href="../../tags/#استت۱۱۰" class="sarv-tag" data-tag="استت۱۱۰">#استت۱۱۰</a> <a href="../../tags/#ریاضیات" class="sarv-tag" data-tag="ریاضیات">#ریاضیات</a> <a href="../../tags/#دانشگاه" class="sarv-tag" data-tag="دانشگاه">#دانشگاه</a></p>
+<p><a href="../../tags/#احتمال" class="sarv-tag" data-tag="احتمال">#احتمال</a> <a href="../../tags/#اصول_شمارش" class="sarv-tag" data-tag="اصول_شمارش">#اصول_شمارش</a> <a href="../../tags/#اثبات_داستانی" class="sarv-tag" data-tag="اثبات_داستانی">#اثبات_داستانی</a> <a href="../../tags/#اتحاد_وندرموند" class="sarv-tag" data-tag="اتحاد_وندرموند">#اتحاد_وندرموند</a> <a href="../../tags/#خط_و_توپ" class="sarv-tag" data-tag="خط_و_توپ">#خط_و_توپ</a> <a href="../../tags/#ستاره_و_میله" class="sarv-tag" data-tag="ستاره_و_میله">#ستاره_و_میله</a> <a href="../../tags/#چوب_و_ستاره" class="sarv-tag" data-tag="چوب_و_ستاره">#چوب_و_ستاره</a> <a href="../../tags/#ترکیبیات" class="sarv-tag" data-tag="ترکیبیات">#ترکیبیات</a> <a href="../../tags/#استت۱۱۰" class="sarv-tag" data-tag="استت۱۱۰">#استت۱۱۰</a> <a href="../../tags/#ریاضیات" class="sarv-tag" data-tag="ریاضیات">#ریاضیات</a> <a href="../../tags/#دانشگاه" class="sarv-tag" data-tag="دانشگاه">#دانشگاه</a></p>
       </div>
 
       <!-- بخش بک‌لینک‌ها (پیوندهای ورودی به سبک ابسیدین) -->
@@ -1145,11 +1217,15 @@ $<span class="arithmatex">\(\text{تعداد حالات} = \binom{3 + 6 - 1}{6} 
     <ul class="sarv-toc-list">
       
         <li class="sarv-toc-item depth-1">
-          <a href="#stars-and-bars" class="sarv-toc-link">جلسه دوم: اثبات فرمول خط و توپ (Stars and Bars)</a>
+          <a href="#_1" class="sarv-toc-link">جلسه دوم: اثبات داستانی و فرمول خط و توپ</a>
         </li>
         
           <li class="sarv-toc-item depth-2">
-            <a href="#_1" class="sarv-toc-link">صورت مسئله و ترجمه جبری آن</a>
+            <a href="#story-proof" class="sarv-toc-link">اثبات داستانی: جادوی شمارش با تفسیر (Story Proof)</a>
+          </li>
+        
+          <li class="sarv-toc-item depth-2">
+            <a href="#_4" class="sarv-toc-link">صورت مسئله خط و توپ و ترجمه جبری آن</a>
           </li>
         
           <li class="sarv-toc-item depth-2">
@@ -1157,15 +1233,15 @@ $<span class="arithmatex">\(\text{تعداد حالات} = \binom{3 + 6 - 1}{6} 
           </li>
         
           <li class="sarv-toc-item depth-2">
-            <a href="#_4" class="sarv-toc-link">حالت متغیرهای اکیداً مثبت</a>
+            <a href="#_7" class="sarv-toc-link">حالت متغیرهای اکیداً مثبت</a>
           </li>
         
           <li class="sarv-toc-item depth-2">
-            <a href="#_7" class="sarv-toc-link">مقایسه جامع دو حالت خط و توپ</a>
+            <a href="#_10" class="sarv-toc-link">مقایسه جامع دو حالت خط و توپ</a>
           </li>
         
           <li class="sarv-toc-item depth-2">
-            <a href="#_8" class="sarv-toc-link">مثال‌های حل‌شده و تیپ‌های کاربردی</a>
+            <a href="#_11" class="sarv-toc-link">مثال‌های حل‌شده و تیپ‌های کاربردی</a>
           </li>
         
           <li class="sarv-toc-item depth-2">
@@ -2074,7 +2150,7 @@ $<span class="arithmatex">\(\text{تعداد حالات} = \binom{3 + 6 - 1}{6} 
                     
                       <a href="./" class="sarv-drawer-sublink active" onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
                         <span class="sarv-drawer-bullet"></span>
-                        <span>جلسه دوم نظریه احتمال - اثبات فرمول خط و توپ (Stars and Bars)</span>
+                        <span>جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)</span>
                       </a>
                     
                   
