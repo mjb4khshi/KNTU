@@ -54,7 +54,7 @@ tags:
       <div class="resource-card-icon" style="color: #6366f1;">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>
       </div>
-      <span class="resource-card-title">جلسه دوم: اثبات فرمول خانه چهارم جدول نمونه‌گیری — مسئله خط و توپ (Stars & Bars)</span>
+      <span class="resource-card-title">جلسه دوم: اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars & Bars)</span>
     </div>
     <div class="resource-card-side">
       <span class="resource-badge" style="background: rgba(99, 102, 241, 0.15); color: #6366f1; border-color: rgba(99, 102, 241, 0.3);">اثبات تحلیلی و شهودی</span>
