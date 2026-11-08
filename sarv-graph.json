@@ -6,10 +6,10 @@
       "url": "./",
       "folder": "عمومی",
       "tags": [],
-      "words": 297,
+      "words": 321,
       "isHome": true,
       "radius": 9.0,
-      "degree": 14
+      "degree": 15
     },
     {
       "id": "ext:16790dcb",
@@ -723,6 +723,27 @@
       "degree": 1
     },
     {
+      "id": "probability/index.md",
+      "title": "درس نظریه احتمال و آمار مهندسی",
+      "url": "probability/",
+      "folder": "probability",
+      "tags": [],
+      "words": 291,
+      "isHub": true,
+      "degree": 2,
+      "radius": 5.8
+    },
+    {
+      "id": "probability/جلسه اول.md",
+      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
+      "folder": "probability",
+      "tags": [],
+      "words": 1665,
+      "degree": 1,
+      "radius": 4.8
+    },
+    {
       "id": "programming/جزوه کلاس برنامه‌نویسی استاد ارزانی.md",
       "title": "جزوه کلاس برنامه‌نویسی استاد ارزانی",
       "url": "programming/%D8%AC%D8%B2%D9%88%D9%87%20%DA%A9%D9%84%D8%A7%D8%B3%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C%20%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%A7%D8%B1%D8%B2%D8%A7%D9%86%DB%8C/",
@@ -1088,6 +1109,11 @@
       "type": "external"
     },
     {
+      "source": "probability/index.md",
+      "target": "probability/جلسه اول.md",
+      "type": "card"
+    },
+    {
       "source": "projects/index.md",
       "target": "projects/sarvestan.md",
       "type": "card"
@@ -1160,6 +1186,11 @@
     {
       "source": "index.md",
       "target": "physics/فهرست مطالب.md",
+      "type": "hub"
+    },
+    {
+      "source": "index.md",
+      "target": "probability/index.md",
       "type": "hub"
     },
     {
@@ -1559,6 +1590,22 @@
       "folder": "physics",
       "tags": [],
       "summary": "# فهرست مطالب درس فیزیک ۱ ## نیمسال پاییز ۱۴۰۴  ### 🎯 تمرین‌ها و مسائل حل‌شده  ___SARVSTASHX0X___    ___SARVSTASHX1X___     ___SARVSTASHX2X___       ___SARVSTASHX3X___         ___S..."
+    },
+    "probability/": {
+      "id": "probability/index.md",
+      "title": "درس نظریه احتمال و آمار مهندسی",
+      "url": "probability/",
+      "folder": "probability",
+      "tags": [],
+      "summary": "# درس نظریه احتمال و کاربردها ## مفاهیم بنیادین احتمال، اصول شمارش، متغیرهای تصادفی و مدل‌سازی عدم قطعیت  !!! note \"معرفی دوره\" \tاین بخش به یادداشت‌های جامع، شهودهای ریاضی، حل مسائ..."
+    },
+    "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/": {
+      "id": "probability/جلسه اول.md",
+      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
+      "folder": "probability",
+      "tags": [],
+      "summary": "# جلسه اول: آشنایی با احتمال و اصول بنیادین شمارش  > **جمله کلیدی:**   > «ریاضیات علم قطعیت است، در حالی که آمار و نظریه احتمال منطق و زبان رسمی برای فهم و مدل‌سازی **عدم قطعیت (Un..."
     },
     "programming/%D8%AC%D8%B2%D9%88%D9%87%20%DA%A9%D9%84%D8%A7%D8%B3%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C%20%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%A7%D8%B1%D8%B2%D8%A7%D9%86%DB%8C/": {
       "id": "programming/جزوه کلاس برنامه‌نویسی استاد ارزانی.md",
