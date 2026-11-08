@@ -148,7 +148,22 @@ title: خانه
     </div>
   </a>
 
-  <!-- ۹. دوره‌های برنامه‌نویسی و فرانت‌اند -->
+  <!-- ۹. نظریه احتمال و کاربردها -->
+  <a href="probability/" class="subject-card">
+    <div class="subject-card-icon" style="color: #6366f1;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+    </div>
+    <h3 class="subject-card-title">نظریه احتمال و کاربردها</h3>
+    <p class="subject-card-desc">
+      اصول شمارش، متغیرهای تصادفی، توزیع‌های آماری و مفاهیم الهام‌گرفته از دوره Stat 110 هاروارد.
+    </p>
+    <div class="subject-card-footer">
+      <span>مشاهده درس‌نامه‌ها</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transform: scaleX(-1);"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </div>
+  </a>
+
+  <!-- ۱۰. دوره‌های برنامه‌نویسی و فرانت‌اند -->
   <a href="out of kntu university/" class="subject-card">
     <div class="subject-card-icon" style="color: var(--theme-color-success);">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
