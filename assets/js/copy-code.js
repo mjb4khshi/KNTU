@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   preElements.forEach((el) => {
     const pre = el.tagName === "PRE" ? el : el.closest("pre");
     if (!pre) return;
+    if (pre.classList.contains("mermaid")) return; // Don't add header to mermaid diagrams!
 
     // Outer wrapper is .highlight or .codehilite if exists, else pre
     const container = pre.closest(".highlight, .codehilite") || pre;
@@ -25,8 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const match = classes.match(/(?:language-|lang-)([a-zA-Z0-9_-]+)/);
     if (match) {
       lang = match[1].toUpperCase();
-    } else if (classes.includes("mermaid")) {
-      lang = "MERMAID";
     }
 
     // Create Header
