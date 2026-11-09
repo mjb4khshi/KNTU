@@ -57,6 +57,12 @@
       "folder": "numerical-analysis"
     },
     {
+      "id": "probability/اصول سه‌گانه تفکر در احتمال.md",
+      "title": "اصول سه‌گانه تفکر و حل مسئله در احتمال - راهنمای بقا در استت ۱۱۰",
+      "url": "probability/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%87%E2%80%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AA%D9%81%DA%A9%D8%B1%20%D8%AF%D8%B1%20%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84/",
+      "folder": "probability"
+    },
+    {
       "id": "probability/جلسه اول.md",
       "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
       "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
@@ -165,6 +171,12 @@
   ],
   "احتمال": [
     {
+      "id": "probability/اصول سه‌گانه تفکر در احتمال.md",
+      "title": "اصول سه‌گانه تفکر و حل مسئله در احتمال - راهنمای بقا در استت ۱۱۰",
+      "url": "probability/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%87%E2%80%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AA%D9%81%DA%A9%D8%B1%20%D8%AF%D8%B1%20%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84/",
+      "folder": "probability"
+    },
+    {
       "id": "probability/جلسه اول.md",
       "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
       "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
@@ -174,40 +186,16 @@
       "id": "probability/جلسه دوم.md",
       "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
       "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
-      "folder": "probability"
-    }
-  ],
-  "آمار": [
-    {
-      "id": "probability/جلسه اول.md",
-      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
-      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
       "folder": "probability"
     }
   ],
   "اصول_شمارش": [
     {
-      "id": "probability/جلسه اول.md",
-      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
-      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
+      "id": "probability/اصول سه‌گانه تفکر در احتمال.md",
+      "title": "اصول سه‌گانه تفکر و حل مسئله در احتمال - راهنمای بقا در استت ۱۱۰",
+      "url": "probability/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%87%E2%80%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AA%D9%81%DA%A9%D8%B1%20%D8%AF%D8%B1%20%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84/",
       "folder": "probability"
     },
-    {
-      "id": "probability/جلسه دوم.md",
-      "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
-      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
-      "folder": "probability"
-    }
-  ],
-  "فضای_نمونه": [
-    {
-      "id": "probability/جلسه اول.md",
-      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
-      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
-      "folder": "probability"
-    }
-  ],
-  "ترکیبیات": [
     {
       "id": "probability/جلسه اول.md",
       "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
@@ -222,6 +210,74 @@
     }
   ],
   "استت۱۱۰": [
+    {
+      "id": "probability/اصول سه‌گانه تفکر در احتمال.md",
+      "title": "اصول سه‌گانه تفکر و حل مسئله در احتمال - راهنمای بقا در استت ۱۱۰",
+      "url": "probability/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%87%E2%80%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AA%D9%81%DA%A9%D8%B1%20%D8%AF%D8%B1%20%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84/",
+      "folder": "probability"
+    },
+    {
+      "id": "probability/جلسه اول.md",
+      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
+      "folder": "probability"
+    },
+    {
+      "id": "probability/جلسه دوم.md",
+      "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+      "folder": "probability"
+    }
+  ],
+  "مهارت_حل_مسئله": [
+    {
+      "id": "probability/اصول سه‌گانه تفکر در احتمال.md",
+      "title": "اصول سه‌گانه تفکر و حل مسئله در احتمال - راهنمای بقا در استت ۱۱۰",
+      "url": "probability/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%87%E2%80%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AA%D9%81%DA%A9%D8%B1%20%D8%AF%D8%B1%20%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84/",
+      "folder": "probability"
+    }
+  ],
+  "شهود_ریاضی": [
+    {
+      "id": "probability/اصول سه‌گانه تفکر در احتمال.md",
+      "title": "اصول سه‌گانه تفکر و حل مسئله در احتمال - راهنمای بقا در استت ۱۱۰",
+      "url": "probability/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%87%E2%80%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AA%D9%81%DA%A9%D8%B1%20%D8%AF%D8%B1%20%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84/",
+      "folder": "probability"
+    }
+  ],
+  "تفکر_آماری": [
+    {
+      "id": "probability/اصول سه‌گانه تفکر در احتمال.md",
+      "title": "اصول سه‌گانه تفکر و حل مسئله در احتمال - راهنمای بقا در استت ۱۱۰",
+      "url": "probability/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%87%E2%80%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AA%D9%81%DA%A9%D8%B1%20%D8%AF%D8%B1%20%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84/",
+      "folder": "probability"
+    }
+  ],
+  "هاروارد": [
+    {
+      "id": "probability/اصول سه‌گانه تفکر در احتمال.md",
+      "title": "اصول سه‌گانه تفکر و حل مسئله در احتمال - راهنمای بقا در استت ۱۱۰",
+      "url": "probability/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%87%E2%80%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AA%D9%81%DA%A9%D8%B1%20%D8%AF%D8%B1%20%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84/",
+      "folder": "probability"
+    }
+  ],
+  "آمار": [
+    {
+      "id": "probability/جلسه اول.md",
+      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
+      "folder": "probability"
+    }
+  ],
+  "فضای_نمونه": [
+    {
+      "id": "probability/جلسه اول.md",
+      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
+      "folder": "probability"
+    }
+  ],
+  "ترکیبیات": [
     {
       "id": "probability/جلسه اول.md",
       "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
