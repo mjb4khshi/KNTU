@@ -109,6 +109,21 @@ tags:
     </div>
   </a>
 
+  <a class="resource-card" href="جلسه سوم/">
+    <div class="resource-card-main">
+      <div class="resource-card-icon" style="color: #6366f1;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>
+      </div>
+      <span class="resource-card-title">جلسه سوم: مسئله روز تولد (Birthday Problem) و کاربرد در حمله روز تولد</span>
+    </div>
+    <div class="resource-card-side">
+      <span class="resource-badge" style="background: rgba(99, 102, 241, 0.15); color: #6366f1; border-color: rgba(99, 102, 241, 0.3);">پارادوکس کلاسیک و رمزنگاری</span>
+      <span class="resource-open-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </span>
+    </div>
+  </a>
+
 </div>
 
 ---

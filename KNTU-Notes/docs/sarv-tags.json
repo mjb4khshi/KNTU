@@ -75,6 +75,12 @@
       "folder": "probability"
     },
     {
+      "id": "probability/جلسه سوم.md",
+      "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+      "folder": "probability"
+    },
+    {
       "id": "statics/index.md",
       "title": "درس استاتیک و مقاومت مصالح",
       "url": "statics/",
@@ -187,6 +193,12 @@
       "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
       "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
       "folder": "probability"
+    },
+    {
+      "id": "probability/جلسه سوم.md",
+      "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+      "folder": "probability"
     }
   ],
   "اصول_شمارش": [
@@ -226,6 +238,12 @@
       "id": "probability/جلسه دوم.md",
       "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
       "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+      "folder": "probability"
+    },
+    {
+      "id": "probability/جلسه سوم.md",
+      "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
       "folder": "probability"
     }
   ],
@@ -289,6 +307,12 @@
       "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
       "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
       "folder": "probability"
+    },
+    {
+      "id": "probability/جلسه سوم.md",
+      "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+      "folder": "probability"
     }
   ],
   "اثبات_داستانی": [
@@ -328,6 +352,46 @@
       "id": "probability/جلسه دوم.md",
       "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
       "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+      "folder": "probability"
+    }
+  ],
+  "روز_تولد": [
+    {
+      "id": "probability/جلسه سوم.md",
+      "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+      "folder": "probability"
+    }
+  ],
+  "پارادوکس_روز_تولد": [
+    {
+      "id": "probability/جلسه سوم.md",
+      "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+      "folder": "probability"
+    }
+  ],
+  "رمزنگاری": [
+    {
+      "id": "probability/جلسه سوم.md",
+      "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+      "folder": "probability"
+    }
+  ],
+  "توابع_هش": [
+    {
+      "id": "probability/جلسه سوم.md",
+      "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+      "folder": "probability"
+    }
+  ],
+  "حمله_روز_تولد": [
+    {
+      "id": "probability/جلسه سوم.md",
+      "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
       "folder": "probability"
     }
   ],
