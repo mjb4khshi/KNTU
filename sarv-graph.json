@@ -728,9 +728,9 @@
       "url": "probability/",
       "folder": "probability",
       "tags": [],
-      "words": 390,
+      "words": 407,
       "isHub": true,
-      "degree": 4,
+      "degree": 5,
       "radius": 7.0
     },
     {
@@ -789,6 +789,26 @@
         "دانشگاه"
       ],
       "words": 1931,
+      "degree": 1,
+      "radius": 4.8
+    },
+    {
+      "id": "probability/جلسه سوم.md",
+      "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+      "folder": "probability",
+      "tags": [
+        "احتمال",
+        "روز_تولد",
+        "پارادوکس_روز_تولد",
+        "استت۱۱۰",
+        "رمزنگاری",
+        "توابع_هش",
+        "حمله_روز_تولد",
+        "ترکیبیات",
+        "دانشگاه"
+      ],
+      "words": 1796,
       "degree": 1,
       "radius": 4.8
     },
@@ -1170,6 +1190,11 @@
     {
       "source": "probability/index.md",
       "target": "probability/جلسه دوم.md",
+      "type": "card"
+    },
+    {
+      "source": "probability/index.md",
+      "target": "probability/جلسه سوم.md",
       "type": "card"
     },
     {
@@ -1711,6 +1736,24 @@
       ],
       "summary": "# جلسه دوم: اثبات داستانی و فرمول خط و توپ  > **مسئله محوری:**   > در ریاضیات ترکیبیاتی، دو ابزار بسیار قدرتمند وجود دارند که محاسبات سنگین جبری را به شهودی عمیق و تفسیری تبدیل می‌..."
     },
+    "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/": {
+      "id": "probability/جلسه سوم.md",
+      "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+      "folder": "probability",
+      "tags": [
+        "احتمال",
+        "روز_تولد",
+        "پارادوکس_روز_تولد",
+        "استت۱۱۰",
+        "رمزنگاری",
+        "توابع_هش",
+        "حمله_روز_تولد",
+        "ترکیبیات",
+        "دانشگاه"
+      ],
+      "summary": "# جلسه سوم: مسئله و پارادوکس روز تولد  > **مسئله کلاسیک:**   > در یک اتاق چند نفر باید حضور داشته باشند تا با احتمال حداقل **۵۰ درصد**، حداقل دو نفر دارای روز تولد یکسانی در سال با..."
+    },
     "programming/%D8%AC%D8%B2%D9%88%D9%87%20%DA%A9%D9%84%D8%A7%D8%B3%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C%20%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%A7%D8%B1%D8%B2%D8%A7%D9%86%DB%8C/": {
       "id": "programming/جزوه کلاس برنامه‌نویسی استاد ارزانی.md",
       "title": "جزوه کلاس برنامه‌نویسی استاد ارزانی",
@@ -1852,6 +1895,12 @@
         "folder": "probability"
       },
       {
+        "id": "probability/جلسه سوم.md",
+        "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+        "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+        "folder": "probability"
+      },
+      {
         "id": "statics/index.md",
         "title": "درس استاتیک و مقاومت مصالح",
         "url": "statics/",
@@ -1964,6 +2013,12 @@
         "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
         "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
         "folder": "probability"
+      },
+      {
+        "id": "probability/جلسه سوم.md",
+        "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+        "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+        "folder": "probability"
       }
     ],
     "اصول_شمارش": [
@@ -2003,6 +2058,12 @@
         "id": "probability/جلسه دوم.md",
         "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
         "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+        "folder": "probability"
+      },
+      {
+        "id": "probability/جلسه سوم.md",
+        "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+        "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
         "folder": "probability"
       }
     ],
@@ -2066,6 +2127,12 @@
         "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
         "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
         "folder": "probability"
+      },
+      {
+        "id": "probability/جلسه سوم.md",
+        "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+        "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+        "folder": "probability"
       }
     ],
     "اثبات_داستانی": [
@@ -2105,6 +2172,46 @@
         "id": "probability/جلسه دوم.md",
         "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
         "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+        "folder": "probability"
+      }
+    ],
+    "روز_تولد": [
+      {
+        "id": "probability/جلسه سوم.md",
+        "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+        "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+        "folder": "probability"
+      }
+    ],
+    "پارادوکس_روز_تولد": [
+      {
+        "id": "probability/جلسه سوم.md",
+        "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+        "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+        "folder": "probability"
+      }
+    ],
+    "رمزنگاری": [
+      {
+        "id": "probability/جلسه سوم.md",
+        "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+        "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+        "folder": "probability"
+      }
+    ],
+    "توابع_هش": [
+      {
+        "id": "probability/جلسه سوم.md",
+        "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+        "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+        "folder": "probability"
+      }
+    ],
+    "حمله_روز_تولد": [
+      {
+        "id": "probability/جلسه سوم.md",
+        "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+        "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
         "folder": "probability"
       }
     ],
