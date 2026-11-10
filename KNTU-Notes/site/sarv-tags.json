@@ -51,6 +51,12 @@
       "folder": "calculus"
     },
     {
+      "id": "glossary/index.md",
+      "title": "واژه‌نامه تخصصی اصطلاحات علمی و دانشگاهی",
+      "url": "glossary/",
+      "folder": "glossary"
+    },
+    {
       "id": "numerical-analysis/index.md",
       "title": "درس محاسبات عددی و تحلیل الگوریتم‌ها",
       "url": "numerical-analysis/",
@@ -85,6 +91,96 @@
       "title": "درس استاتیک و مقاومت مصالح",
       "url": "statics/",
       "folder": "statics"
+    }
+  ],
+  "واژه": [
+    {
+      "id": "glossary/index.md",
+      "title": "واژه‌نامه تخصصی اصطلاحات علمی و دانشگاهی",
+      "url": "glossary/",
+      "folder": "glossary"
+    }
+  ],
+  "اصطلاحات_تخصصی": [
+    {
+      "id": "glossary/index.md",
+      "title": "واژه‌نامه تخصصی اصطلاحات علمی و دانشگاهی",
+      "url": "glossary/",
+      "folder": "glossary"
+    }
+  ],
+  "آمار_و_احتمال": [
+    {
+      "id": "glossary/index.md",
+      "title": "واژه‌نامه تخصصی اصطلاحات علمی و دانشگاهی",
+      "url": "glossary/",
+      "folder": "glossary"
+    }
+  ],
+  "ترکیبیات": [
+    {
+      "id": "glossary/index.md",
+      "title": "واژه‌نامه تخصصی اصطلاحات علمی و دانشگاهی",
+      "url": "glossary/",
+      "folder": "glossary"
+    },
+    {
+      "id": "probability/جلسه اول.md",
+      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
+      "folder": "probability"
+    },
+    {
+      "id": "probability/جلسه دوم.md",
+      "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+      "folder": "probability"
+    },
+    {
+      "id": "probability/جلسه سوم.md",
+      "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+      "folder": "probability"
+    }
+  ],
+  "دیکشنری_علمی": [
+    {
+      "id": "glossary/index.md",
+      "title": "واژه‌نامه تخصصی اصطلاحات علمی و دانشگاهی",
+      "url": "glossary/",
+      "folder": "glossary"
+    }
+  ],
+  "استت۱۱۰": [
+    {
+      "id": "glossary/index.md",
+      "title": "واژه‌نامه تخصصی اصطلاحات علمی و دانشگاهی",
+      "url": "glossary/",
+      "folder": "glossary"
+    },
+    {
+      "id": "probability/اصول سه‌گانه تفکر در احتمال.md",
+      "title": "اصول سه‌گانه تفکر و حل مسئله در احتمال - راهنمای بقا در استت ۱۱۰",
+      "url": "probability/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%87%E2%80%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AA%D9%81%DA%A9%D8%B1%20%D8%AF%D8%B1%20%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84/",
+      "folder": "probability"
+    },
+    {
+      "id": "probability/جلسه اول.md",
+      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
+      "folder": "probability"
+    },
+    {
+      "id": "probability/جلسه دوم.md",
+      "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
+      "folder": "probability"
+    },
+    {
+      "id": "probability/جلسه سوم.md",
+      "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
+      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
+      "folder": "probability"
     }
   ],
   "محاسبات_عددی": [
@@ -221,32 +317,6 @@
       "folder": "probability"
     }
   ],
-  "استت۱۱۰": [
-    {
-      "id": "probability/اصول سه‌گانه تفکر در احتمال.md",
-      "title": "اصول سه‌گانه تفکر و حل مسئله در احتمال - راهنمای بقا در استت ۱۱۰",
-      "url": "probability/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%87%E2%80%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AA%D9%81%DA%A9%D8%B1%20%D8%AF%D8%B1%20%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84/",
-      "folder": "probability"
-    },
-    {
-      "id": "probability/جلسه اول.md",
-      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
-      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
-      "folder": "probability"
-    },
-    {
-      "id": "probability/جلسه دوم.md",
-      "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
-      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
-      "folder": "probability"
-    },
-    {
-      "id": "probability/جلسه سوم.md",
-      "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
-      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
-      "folder": "probability"
-    }
-  ],
   "مهارت_حل_مسئله": [
     {
       "id": "probability/اصول سه‌گانه تفکر در احتمال.md",
@@ -292,26 +362,6 @@
       "id": "probability/جلسه اول.md",
       "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
       "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
-      "folder": "probability"
-    }
-  ],
-  "ترکیبیات": [
-    {
-      "id": "probability/جلسه اول.md",
-      "title": "جلسه اول نظریه احتمال - مقدمه و اصول شمارش",
-      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/",
-      "folder": "probability"
-    },
-    {
-      "id": "probability/جلسه دوم.md",
-      "title": "جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)",
-      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/",
-      "folder": "probability"
-    },
-    {
-      "id": "probability/جلسه سوم.md",
-      "title": "جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد",
-      "url": "probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/",
       "folder": "probability"
     }
   ],

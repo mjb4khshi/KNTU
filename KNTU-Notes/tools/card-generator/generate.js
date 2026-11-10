@@ -17,6 +17,7 @@ const courseMap = {
   'numerical-analysis': { name: 'محاسبات عددی', color: '#8b5cf6', glow: 'rgba(139, 92, 246, 0.25)' },
   'statics': { name: 'استاتیک و مکانیک', color: '#c2410c', glow: 'rgba(194, 65, 12, 0.25)' },
   'probability': { name: 'نظریه احتمال و کاربردها', color: '#6366f1', glow: 'rgba(99, 102, 241, 0.25)' },
+  'glossary': { name: 'واژه‌نامه تخصصی', color: '#06b6d4', glow: 'rgba(6, 182, 212, 0.25)' },
   'projects': { name: 'پروژه‌ها و مقالات', color: '#a855f7', glow: 'rgba(168, 85, 247, 0.25)' }
 };
 

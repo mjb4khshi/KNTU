@@ -178,6 +178,21 @@ title: خانه
     </div>
   </a>
 
+  <!-- ۱۱. واژه‌نامه تخصصی اصطلاحات علمی -->
+  <a href="glossary/" class="subject-card" style="border-color: rgba(6, 182, 212, 0.3);">
+    <div class="subject-card-icon" style="color: #06b6d4;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+    </div>
+    <h3 class="subject-card-title">واژه‌نامه تخصصی و اصطلاحات</h3>
+    <p class="subject-card-desc">
+      دیکشنری تعاملی واژگان تخصصی انگلیسی، معادل‌های مصوب فارسی، کاربردها و تعاریف به تفکیک دروس با قابلیت جستجو.
+    </p>
+    <div class="subject-card-footer">
+      <span>ورود به واژه‌نامه</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transform: scaleX(-1);"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </div>
+  </a>
+
 </div>
 
 !!! tip "نکته"
