@@ -163,7 +163,22 @@ title: خانه
     </div>
   </a>
 
-  <!-- ۱۰. دوره‌های برنامه‌نویسی و فرانت‌اند -->
+  <!-- ۱۰. مبانی مهندسی برق -->
+  <a href="electrical/" class="subject-card">
+    <div class="subject-card-icon" style="color: #eab308;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+    </div>
+    <h3 class="subject-card-title">مبانی مهندسی برق</h3>
+    <p class="subject-card-desc">
+      تحلیل مدارهای DC و AC، مدارهای مرتبه اول و دوم، تشدید، ماشین‌های الکتریکی و مدل‌سازی سیستم‌های صنعتی.
+    </p>
+    <div class="subject-card-footer">
+      <span>مشاهده مباحث</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transform: scaleX(-1);"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </div>
+  </a>
+
+  <!-- ۱۱. دوره‌های برنامه‌نویسی و فرانت‌اند -->
   <a href="out of kntu university/" class="subject-card">
     <div class="subject-card-icon" style="color: var(--theme-color-success);">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
@@ -178,7 +193,7 @@ title: خانه
     </div>
   </a>
 
-  <!-- ۱۱. واژه‌نامه تخصصی اصطلاحات علمی -->
+  <!-- ۱۲. واژه‌نامه تخصصی اصطلاحات علمی -->
   <a href="glossary/" class="subject-card" style="border-color: rgba(6, 182, 212, 0.3);">
     <div class="subject-card-icon" style="color: #06b6d4;">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>

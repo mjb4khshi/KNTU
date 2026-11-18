@@ -51,6 +51,12 @@
       "folder": "calculus"
     },
     {
+      "id": "electrical/second-order-circuits.md",
+      "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+      "url": "electrical/second-order-circuits/",
+      "folder": "electrical"
+    },
+    {
       "id": "glossary/index.md",
       "title": "واژه‌نامه تخصصی اصطلاحات علمی و دانشگاهی",
       "url": "glossary/",
@@ -91,6 +97,62 @@
       "title": "درس استاتیک و مقاومت مصالح",
       "url": "statics/",
       "folder": "statics"
+    }
+  ],
+  "مهندسی_برق": [
+    {
+      "id": "electrical/second-order-circuits.md",
+      "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+      "url": "electrical/second-order-circuits/",
+      "folder": "electrical"
+    }
+  ],
+  "مدار_مرتبه_دوم": [
+    {
+      "id": "electrical/second-order-circuits.md",
+      "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+      "url": "electrical/second-order-circuits/",
+      "folder": "electrical"
+    }
+  ],
+  "مهندسی_صنایع": [
+    {
+      "id": "electrical/second-order-circuits.md",
+      "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+      "url": "electrical/second-order-circuits/",
+      "folder": "electrical"
+    }
+  ],
+  "زنجیره_تأمین": [
+    {
+      "id": "electrical/second-order-circuits.md",
+      "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+      "url": "electrical/second-order-circuits/",
+      "folder": "electrical"
+    }
+  ],
+  "اتوماسیون_صنعتی": [
+    {
+      "id": "electrical/second-order-circuits.md",
+      "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+      "url": "electrical/second-order-circuits/",
+      "folder": "electrical"
+    }
+  ],
+  "اثر_شلاقی": [
+    {
+      "id": "electrical/second-order-circuits.md",
+      "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+      "url": "electrical/second-order-circuits/",
+      "folder": "electrical"
+    }
+  ],
+  "تشدید": [
+    {
+      "id": "electrical/second-order-circuits.md",
+      "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+      "url": "electrical/second-order-circuits/",
+      "folder": "electrical"
     }
   ],
   "واژه": [
