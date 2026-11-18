@@ -1,0 +1,3409 @@
+<!DOCTYPE html><html lang="fa" dir="rtl" data-theme="persian-dark"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع - MJ'S KNTU Notes</title>
+  
+  
+  
+
+  <!-- Sarv Metadata for Graph, Search & Navigation -->
+  <script>var base_url = '../..';</script>
+  <meta name="sarv-site-root" content="../../">
+  <meta name="sarv-search-url" content="../../search/search_index.json">
+  <meta name="sarv-graph-url" content="../../sarv-graph.json">
+  <meta name="sarv-current-page" content="electrical/second-order-circuits.md">
+  <meta name="sarv-current-url" content="electrical/second-order-circuits/">
+
+  <!-- Favicon -->
+  
+  <link rel="icon" href="../../Group 1w.png">
+  
+
+  <!-- Sarv UI Theme CSS -->
+  <link rel="stylesheet" href="../../assets/css/sarv-tokens.css">
+  <link rel="stylesheet" href="../../assets/css/sarv-core.css">
+  <link rel="stylesheet" href="../../assets/css/sarv-components.css">
+  <link rel="stylesheet" href="../../assets/css/sarv-obsidian.css">
+  <link rel="stylesheet" href="../../assets/css/sarv-pygments.css">
+
+  <!-- Extra CSS -->
+  
+
+  <!-- Immediate Early Theme & Layout Application -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('sarv-theme') || 'persian-dark';
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.setAttribute('datatheme', t);
+      if (t.includes('dark') || t === 'ocean-abyss' || t === 'cyberpunk' || t === 'emerald' || t === 'sunset' || t === 'tokyo-midnight' || t === 'coffee-roast' || t === 'crimson' || t === 'royal-purple' || t === 'nordic') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      var layoutMode = localStorage.getItem('sarv-layout-mode');
+      if (layoutMode === 'full') {
+        document.documentElement.classList.add('sarv-mode-fullwidth');
+      }
+    })();
+  </script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style>
+  <meta property="og:image" content="https://mjb4khshi.github.io/KNTU/assets/cards/electrical/second-order-circuits.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:title" content="از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://mjb4khshi.github.io/KNTU/assets/cards/electrical/second-order-circuits.png">
+  <meta name="twitter:title" content="از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع">
+</head>
+
+<body>
+  <!-- نوار پیشرفت مطالعه بالای صفحه -->
+  <div id="sarv-reading-progress"></div>
+
+  <!-- هدر -->
+  <header class="sarv-header">
+  <div class="sarv-header-container">
+    <!-- سمت راست: لوگو و نام سایت (کاملاً هم‌تراز با ستون ناوبری راست) -->
+    <a href="../.." class="sarv-header-brand">
+      <div class="sarv-brand-logo">
+        
+        <img src="../../Group 1w.png" alt="Logo">
+        
+      </div>
+      <span class="sarv-brand-title">MJ'S KNTU Notes</span>
+    </a>
+
+    <!-- مرکز: سرچ‌بار مینیمال با افکت فوکوس از مرکز سرو -->
+    <div class="sarv-header-search-wrap">
+      <div class="input-wrap w-full">
+        <div class="input-box">
+          <div class="input-icon">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          </div>
+          <input type="text" id="sarv-header-search-trigger" class="input-field" placeholder="جستجو در تمام جزوات و مباحث..." readonly="">
+          <div class="input-kbd">Ctrl+K</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- سمت چپ: اکشن‌ها، سوییچر تم و دکمه موبایل -->
+    <div class="sarv-header-actions">
+      <!-- دکمه گراف کل دانش -->
+      <button type="button" id="sarv-open-global-graph" class="btn btn-sm btn-accent sarv-graph-btn" title="مشاهده گراف ارتباطات تمام یادداشت‌ها">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg>
+        <span class="hidden-mobile">گراف شبکه</span>
+      </button>
+
+      <!-- دراپ‌داون سوییچ ۱۵ تم سرو -->
+      <div class="sarv-select-wrap">
+        <button type="button" id="sarv-theme-select-trigger" class="sarv-select-trigger">
+          <span id="sarv-current-theme-dot" class="sarv-theme-dot"></span>
+          <span id="sarv-current-theme-name">تم رنگی</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+        </button>
+
+        <div id="sarv-theme-select-menu" class="sarv-select-menu">
+          <div class="sarv-select-item" data-theme-id="persian-dark"><span class="sarv-theme-dot" style="background:#0066a4"></span> ایرانی تاریک</div>
+          <div class="sarv-select-item" data-theme-id="persian-light"><span class="sarv-theme-dot" style="background:#0066a4"></span> ایرانی روشن</div>
+          <div class="sarv-select-item" data-theme-id="ocean-abyss"><span class="sarv-theme-dot" style="background:#06b6d4"></span> اقیانوس ژرف</div>
+          <div class="sarv-select-item" data-theme-id="emerald"><span class="sarv-theme-dot" style="background:#10b981"></span> زمردین</div>
+          <div class="sarv-select-item" data-theme-id="cyberpunk"><span class="sarv-theme-dot" style="background:#00f0ff"></span> سایبرپانک</div>
+          <div class="sarv-select-item" data-theme-id="sunset"><span class="sarv-theme-dot" style="background:#ff5e36"></span> غروب آفتاب</div>
+          <div class="sarv-select-item" data-theme-id="matcha"><span class="sarv-theme-dot" style="background:#84cc16"></span> ماچا</div>
+          <div class="sarv-select-item" data-theme-id="nordic"><span class="sarv-theme-dot" style="background:#0284c7"></span> نوردیک</div>
+          <div class="sarv-select-item" data-theme-id="rose-gold"><span class="sarv-theme-dot" style="background:#e11d48"></span> رزگلد</div>
+          <div class="sarv-select-item" data-theme-id="tokyo-midnight"><span class="sarv-theme-dot" style="background:#8b5cf6"></span> شب‌های توکیو</div>
+          <div class="sarv-select-item" data-theme-id="coffee-roast"><span class="sarv-theme-dot" style="background:#d97706"></span> قهوه رست</div>
+          <div class="sarv-select-item" data-theme-id="crimson"><span class="sarv-theme-dot" style="background:#e11d48"></span> یاقوت سرخ</div>
+          <div class="sarv-select-item" data-theme-id="royal-purple"><span class="sarv-theme-dot" style="background:#8b5cf6"></span> بنفش سلطنتی</div>
+        </div>
+      </div>
+
+      <!-- دکمه سوییچ حالت کانتینتری و تمام‌عرض -->
+      <button type="button" id="sarv-layout-toggle" class="btn btn-sm btn-neutral sarv-layout-btn" title="تغییر عرض صفحه (کانتینتر / تمام‌عرض)">
+        <svg class="sarv-icon-expand" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" x2="14" y1="3" y2="10"></line><line x1="3" x2="10" y1="21" y2="14"></line></svg>
+        <svg class="sarv-icon-collapse" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><polyline points="4 14 10 14 10 20"></polyline><polyline points="20 10 14 10 14 4"></polyline><line x1="14" x2="21" y1="10" y2="3"></line><line x1="10" x2="3" y1="14" y2="21"></line></svg>
+      </button>
+
+      <!-- دکمه منوی موبایل -->
+      <button type="button" id="sarv-mobile-menu-btn" class="btn btn-sm btn-neutral sarv-mobile-toggle" aria-label="باز کردن منو" onclick="document.getElementById('sarv-mobile-drawer').classList.add('is-open')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+  <!-- محتوای اصلی -->
+  <div class="sarv-layout-container">
+  <!-- ستون راست: منوی ناوبری -->
+  <nav class="sarv-nav-sidebar">
+  <div class="sarv-nav-tree">
+    
+      
+        <a href="../.." class="sarv-nav-link ">
+          <span class="sarv-nav-bullet"></span>
+          <span>خانه</span>
+        </a>
+      
+    
+      
+        <a href="../../tags/" class="sarv-nav-link ">
+          <span class="sarv-nav-bullet"></span>
+          <span>برچسب‌ها</span>
+        </a>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">واژه‌نامه تخصصی</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../../glossary/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>واژه‌نامه تخصصی اصطلاحات علمی و دانشگاهی</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">پروژه‌های دانشگاهی</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../../projects/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فهرست پروژه‌ها</span>
+                  </a>
+                
+              
+                
+                  <a href="../../projects/sarvestan/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>سروستان (سامانه هوشمند دانشجویی)</span>
+                  </a>
+                
+              
+                
+                  <a href="../../projects/kntu-card/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>طراحی کارت دانشجویی دانشگاه</span>
+                  </a>
+                
+              
+                
+                  <a href="../../projects/proji/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>شبیه‌ساز پرتابه Proji</span>
+                  </a>
+                
+              
+                
+                  <a href="../../projects/economics-study/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>پژوهش اقتصاد نهادگرا</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">ادبیات فارسی</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../../adabiat/%D8%A7%D9%86%D9%88%D8%A7%D8%B9%20%D8%B2%D8%A8%D8%A7%D9%86/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>ادبیات</span>
+                  </a>
+                
+              
+                
+                  <a href="../../adabiat/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%81%D8%A7%D8%B1%D8%B3%DB%8C/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>تاریخچه زبان پارسی</span>
+                  </a>
+                
+              
+                
+                  <a href="../../adabiat/%D8%AC%D8%AF%D8%A7%D9%84%20%D8%B3%D8%B9%D8%AF%DB%8C%20%D9%88%20%D9%85%D8%AF%D8%B9%DB%8C/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>جدال سعدی و مدعی</span>
+                  </a>
+                
+              
+                
+                  <a href="../../adabiat/%D8%B4%DA%A9%D9%84%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C%20%D9%88%20%D9%BE%DB%8C%D8%AF%D8%A7%DB%8C%D8%B4%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%85%D9%84%D9%81%D9%88%D8%B8/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>شکل‌گیری و پیدایش زبان‌ ملفوظ</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">ریاضیات و حساب دیفرانسیل</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../../calculus/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فهرست مطالب ریاضی عمومی</span>
+                  </a>
+                
+              
+                
+                  <a href="../../calculus/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D8%AA%20%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>معادلات دیفرانسیل</span>
+                  </a>
+                
+              
+                
+                  <a href="../../calculus/orthogonal-paths/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>مسیرهای متعامد</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group is-open">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">مبانی مهندسی برق</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>مبانی مهندسی برق و کاربردهای صنعتی</span>
+                  </a>
+                
+              
+                
+                  <a href="./" class="sarv-nav-sublink active">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">اقتصاد کلان</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../../macroeconomics/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>معرفی و فهرست فصول</span>
+                  </a>
+                
+              
+                
+                  <a href="../../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B1%20-%20%DA%86%D8%A7%D8%B1%DA%86%D9%88%D8%A8%20%D9%86%D8%B8%D8%B1%DB%8C%20%D9%88%20%D9%85%D9%81%D8%A7%D9%87%DB%8C%D9%85%20%D8%A8%D9%86%DB%8C%D8%A7%D8%AF%DB%8C%D9%86/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فصل ۱: چارچوب نظری و مفاهیم بنیادین توسعه</span>
+                  </a>
+                
+              
+                
+                  <a href="../../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B2%20-%20%D8%A7%D8%B7%D9%84%D8%B3%20%D8%A2%D9%85%D8%A7%D8%B1%DB%8C%20%D9%88%20%D9%BE%D9%88%D8%B3%D8%AA%D8%B1%D9%87%D8%A7%DB%8C%20%D8%AA%D8%A8%DB%8C%DB%8C%D9%86%DB%8C/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فصل ۲: اطلس آماری و پوسترهای تبیینی شاخص‌ها</span>
+                  </a>
+                
+              
+                
+                  <a href="../../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B3%20-%20%D9%88%D8%A7%DA%A9%D8%A7%D9%88%DB%8C%20%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DB%8C%20%D9%88%20%D8%AA%D8%AC%D8%A7%D8%B1%D8%A8%20%DA%AF%D8%B0%D8%A7%D8%B1/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فصل ۳: واکاوی تاریخی و تجارب گذار اقتصادی در کشورهای منتخب</span>
+                  </a>
+                
+              
+                
+                  <a href="../../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B4%20-%20%D9%85%D8%A7%D8%AA%D8%B1%DB%8C%D8%B3%20%D8%AA%D8%B7%D8%A8%DB%8C%D9%82%DB%8C%20%D9%88%20%D8%A7%D9%84%DA%AF%D9%88%D9%87%D8%A7%DB%8C%20%DA%AF%D8%B0%D8%A7%D8%B1/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فصل ۴: ماتریس تطبیقی و واکاوی راهبردی الگوهای گذار</span>
+                  </a>
+                
+              
+                
+                  <a href="../../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B5%20-%20%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C%20%D9%85%D8%AF%D9%84%20%D9%BE%D9%84%D8%AA%D9%81%D8%B1%D9%85%DB%8C%20%DA%AF%D8%B0%D8%A7%D8%B1%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فصل ۵: طراحی مدل پلتفرمی گذار اقتصادی ایران</span>
+                  </a>
+                
+              
+                
+                  <a href="../../macroeconomics/%D9%86%D8%AA%DB%8C%D8%AC%D9%87%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C%20%D9%88%20%D9%85%D9%86%D8%A7%D8%A8%D8%B9/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>نتیجه‌گیری کلان و فهرست منابع پژوهش</span>
+                  </a>
+                
+              
+                
+                  <a href="../../macroeconomics/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D9%86%D9%87%D8%A7%D8%AF%DA%AF%D8%B1%D8%A7%20%D9%88%20%D8%AF%D9%88%D9%84%D8%AA%20%D8%AA%D9%88%D8%B3%D8%B9%D9%87%E2%80%8C%DA%AF%D8%B1%D8%A7/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>اقتصاد نهادگرا و دولت توسعه‌گرا</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">نقشه‌برداری</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../../mapping/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>جزوه و مطالب درس نقشه‌برداری</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">اقتصاد خرد</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../../micro%20economics/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فهرست مطالب</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">محاسبات عددی</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../../numerical-analysis/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>درس محاسبات عددی و تحلیل الگوریتم‌ها</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">دوره‌های آزاد و برنامه‌نویسی</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../../out%20of%20kntu%20university/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>معرفی دوره‌ها</span>
+                  </a>
+                
+              
+                
+                  <div class="sarv-nav-nested-group ">
+                    <button type="button" class="sarv-nav-nested-header" onclick="this.parentElement.classList.toggle('is-open')">
+                      <span>جاوا اسکریپت</span>
+                      <svg class="sarv-nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                    </button>
+                    <div class="sarv-nav-subitems-wrap">
+                      <div class="sarv-nav-subitems-inner">
+                        
+                          
+                            <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/jonas/" class="sarv-nav-sublink ">
+                              <span class="sarv-nav-subbullet"></span>
+                              <span>🚀 برنامه ۲۱ روزه یادگیری JavaScript با دوره Jonas</span>
+                            </a>
+                          
+                        
+                          
+                            <div class="sarv-nav-nested-group " style="padding-right: 0.5rem;">
+                              <button type="button" class="sarv-nav-nested-header" onclick="this.parentElement.classList.toggle('is-open')">
+                                <span>دام و رویدادها (DOM &amp; Events)</span>
+                                <svg class="sarv-nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                              </button>
+                              <div class="sarv-nav-subitems-wrap">
+                                <div class="sarv-nav-subitems-inner">
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/DOM%20%26%20events/selecting%20and%20manipulating%20Elements/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>سلکت کردن یک عنصر در فایل HTML با آیدی یا کلاس یا نوع</span>
+                                      </a>
+                                    
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          
+                        
+                          
+                            <div class="sarv-nav-nested-group " style="padding-right: 0.5rem;">
+                              <button type="button" class="sarv-nav-nested-header" onclick="this.parentElement.classList.toggle('is-open')">
+                                <span>مبانی بخش ۱ (Fundamentals 1)</span>
+                                <svg class="sarv-nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                              </button>
+                              <div class="sarv-nav-subitems-wrap">
+                                <div class="sarv-nav-subitems-inner">
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/%3D%3D%20vs%20%3D%3D%3D/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>عملگرهای مقایسه تساوی</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/Falsy%20%20truthy%20values/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>Falsy  truthy values</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/Fundamentals%20%E2%80%93%20Part%201/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>📘 Fundamentals – Part 1</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/Logical%20Operators%20%26%20switch/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>عملگرهای منطقی</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/conditional%20%28Ternary%29%20Operator/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>عبارت شرطی</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/data-types/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>انواع داده</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/if-else-statements/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>🔀 شرط‌ها در JavaScript: if / else</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/operators/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>عملگرها</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/template%20literals/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>📌 Template Literals در JavaScript</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/type%20conversion/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>🔄 تبدیل نوع‌ها در JavaScript</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/variables/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>Variables</span>
+                                      </a>
+                                    
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          
+                        
+                          
+                            <div class="sarv-nav-nested-group " style="padding-right: 0.5rem;">
+                              <button type="button" class="sarv-nav-nested-header" onclick="this.parentElement.classList.toggle('is-open')">
+                                <span>مبانی بخش ۲ (Fundamentals 2)</span>
+                                <svg class="sarv-nav-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                              </button>
+                              <div class="sarv-nav-subitems-wrap">
+                                <div class="sarv-nav-subitems-inner">
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Array%20Operations%20%28methods%29/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>عملگر های آرایه(متد)</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Arrays/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>آرایه ها</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Functions/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>توابع در جاوا اسکریپت</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Fundamentals%20%E2%80%93%20Part%202/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>📘 Fundamentals – Part 2</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/loops/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>حلقه ها</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/object%20methods%28functions%29/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>متدهای شی در جاوا اسکریپت</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/objects/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>شیء در جاوا اسکریپت</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/strict%20mode/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>Strict mode</span>
+                                      </a>
+                                    
+                                  
+                                    
+                                      <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/this/" class="sarv-nav-sublink ">
+                                        <span class="sarv-nav-subbullet"></span>
+                                        <span>واژه کلیدی this</span>
+                                      </a>
+                                    
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          
+                        
+                      </div>
+                    </div>
+                  </div>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">فیزیک دانشگاهی</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../../physics/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>فهرست مطالب درس فیزیک ۱</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">نظریه احتمال</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../../probability/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>درس نظریه احتمال و آمار مهندسی</span>
+                  </a>
+                
+              
+                
+                  <a href="../../probability/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%87%E2%80%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AA%D9%81%DA%A9%D8%B1%20%D8%AF%D8%B1%20%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>اصول سه‌گانه تفکر و حل مسئله در احتمال - راهنمای بقا در استت ۱۱۰</span>
+                  </a>
+                
+              
+                
+                  <a href="../../probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>جلسه اول نظریه احتمال - مقدمه و اصول شمارش</span>
+                  </a>
+                
+              
+                
+                  <a href="../../probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)</span>
+                  </a>
+                
+              
+                
+                  <a href="../../probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">برنامه‌نویسی دانشگاهی</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../../programming/%D8%AC%D8%B2%D9%88%D9%87%20%DA%A9%D9%84%D8%A7%D8%B3%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C%20%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%A7%D8%B1%D8%B2%D8%A7%D9%86%DB%8C/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>جزوه کلاس برنامه‌نویسی استاد ارزانی</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+      
+        <div class="sarv-nav-group ">
+          <button type="button" class="sarv-nav-group-header" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="sarv-nav-folder-icon">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path></svg>
+            </span>
+            <span class="sarv-nav-group-title">استاتیک و مقاومت مصالح</span>
+            <svg class="sarv-nav-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          
+          <div class="sarv-nav-subitems-wrap">
+            <div class="sarv-nav-subitems-inner">
+              
+                
+                  <a href="../../statics/" class="sarv-nav-sublink ">
+                    <span class="sarv-nav-subbullet"></span>
+                    <span>درس استاتیک و مقاومت مصالح</span>
+                  </a>
+                
+              
+            </div>
+          </div>
+        </div>
+      
+    
+  </div>
+</nav>
+
+<style>
+.sarv-nav-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.sarv-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: var(--radius-button);
+  color: color-mix(in oklab, var(--color-base-content) 85%, transparent);
+  text-decoration: none !important;
+  font-size: 0.86rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.sarv-nav-link:hover, .sarv-nav-link.active {
+  background: color-mix(in oklab, var(--color-primary) 12%, transparent);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+.sarv-nav-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--color-base-500) 80%, transparent);
+  transition: background 0.2s ease;
+}
+.sarv-nav-link.active .sarv-nav-bullet {
+  background: var(--color-primary);
+  box-shadow: 0 0 6px var(--color-primary);
+}
+.sarv-nav-group-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.65rem;
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-button);
+  color: var(--color-base-content);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: right;
+  transition: all 0.2s ease;
+}
+.sarv-nav-group-header:hover {
+  background: color-mix(in oklab, var(--color-base-500) 40%, transparent);
+}
+.sarv-nav-group-title {
+  flex: 1;
+}
+.sarv-nav-chevron {
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotate(180deg);
+}
+.sarv-nav-group.is-open > .sarv-nav-group-header .sarv-nav-chevron,
+.sarv-nav-nested-group.is-open > .sarv-nav-nested-header .sarv-nav-chevron {
+  transform: rotate(90deg);
+}
+
+/* Smooth Accordion Animation */
+.sarv-nav-subitems-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  margin-right: 1.15rem;
+  padding-right: 0.65rem;
+  border-right: 2px solid color-mix(in oklab, var(--color-base-500) 45%, transparent);
+}
+.sarv-nav-group.is-open > .sarv-nav-subitems-wrap,
+.sarv-nav-nested-group.is-open > .sarv-nav-subitems-wrap {
+  grid-template-rows: 1fr;
+}
+.sarv-nav-subitems-inner {
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 4px 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  opacity: 0;
+  transform: translateY(-5px);
+}
+.sarv-nav-group.is-open > .sarv-nav-subitems-wrap .sarv-nav-subitems-inner,
+.sarv-nav-nested-group.is-open > .sarv-nav-subitems-wrap .sarv-nav-subitems-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sarv-nav-sublink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: calc(var(--radius-button) * 0.7);
+  color: color-mix(in oklab, var(--color-base-content) 75%, transparent);
+  text-decoration: none !important;
+  font-size: 0.825rem;
+  transition: all 0.15s ease;
+}
+.sarv-nav-sublink:hover, .sarv-nav-sublink.active {
+  color: var(--color-primary);
+  background: color-mix(in oklab, var(--color-primary) 10%, transparent);
+  font-weight: 600;
+}
+.sarv-nav-subbullet {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--color-base-500) 70%, transparent);
+  transition: background 0.2s ease;
+}
+.sarv-nav-sublink.active .sarv-nav-subbullet {
+  background: var(--color-primary);
+}
+.sarv-nav-nested-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.35rem 0.65rem;
+  background: transparent;
+  border: none;
+  color: var(--color-base-content);
+  font-family: var(--font-sans);
+  font-size: 0.825rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: right;
+}
+</style>
+
+  <!-- ستون وسط: محتوای اصلی یادداشت -->
+  <main class="sarv-main-content">
+    <article id="sarv-article">
+      <!-- نشانگر زمان مطالعه و تعداد کلمات -->
+      
+      <div class="sarv-reading-meta">
+        <span class="reading-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>زمان تقریبی مطالعه: ۲۴ دقیقه</span>
+        </span>
+        <span class="reading-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>۴,۲۰۲ کلمه</span>
+        </span>
+        <button type="button" class="reading-badge sarv-print-btn" onclick="window.print()" title="چاپ یا ذخیره نسخه تمیز PDF">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect width="12" height="8" x="6" y="14"></rect></svg>
+          <span>چاپ / PDF</span>
+        </button>
+      </div>
+      
+
+      <!-- بدنه محتوا -->
+      <div class="sarv-markdown-content">
+        <h1 id="_1">از مدار تا زنجیره تأمین: کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع<a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
+<blockquote>
+<p><strong>ایده محوری برای ارائه:</strong><br>
+وقتی دانشجویان مهندسی صنایع یا مکانیک برای اولین بار با معادلات دیفرانسیل مدارهای مرتبه دوم (<span class="arithmatex">\(RLC\)</span>) روبه‌رو می‌شوند، اغلب آن را مبحثی صرفاً برقی و انتزاعی می‌پندارند. اما واقعیت این است که <strong>معادلات مرتبه دوم، زبان بنیادین توصیف رفتار تمام سیستم‌های پویا در جهان فیزیکی و کسب‌وکار هستند</strong>؛ از تنظیم میرایی بازوی رباتیک جوشکاری در خط تولید تا مهار نوسانات مرگبار موجودی انبار در زنجیره تأمین جهانی!</p>
+</blockquote>
+<hr>
+<h2 id="_2">مقدمه و شهود فیزیکی: چرا مدارهای مرتبه دوم منحصربه‌فردند؟<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>در مهندسی برق، مدارها بر اساس مرتبه معادله دیفرانسیل حاکم بر آن‌ها دسته‌بندی می‌شوند:</p>
+<ul>
+<li><strong>مدارهای مرتبه اول (<span class="arithmatex">\(RC\)</span> یا <span class="arithmatex">\(RL\)</span>):</strong><br>
+  تنها یک عنصر ذخیره‌کننده انرژی (فقط خازن یا فقط سلف) دارند. پاسخ گذرا در این مدارها کاملاً <strong>یکنواخت (Monotonic)</strong> است؛ یعنی ولتاژ یا جریان به صورت نمایی (<span class="arithmatex">\(e^{-t/\tau}\)</span>) شارژ یا دشارژ می‌شود. در این مدارها <strong>هیچ‌گاه نوسان، رفت‌وبرگشت یا فراجهش (Overshoot)</strong> رخ نمی‌دهد.</li>
+<li><strong>مدارهای مرتبه دوم (<span class="arithmatex">\(RLC\)</span>):</strong><br>
+  حداقل شامل <strong>دو انبار انرژی ناهمجنس و مکمل</strong> هستند:</li>
+<li><strong>سلف (<span class="arithmatex">\(L\)</span>):</strong> انرژی را به صورت میدان مغناطیسی بر پایه جریان ذخیره می‌کند (<span class="arithmatex">\(E_L = \frac{1}{2} L i^2\)</span>).</li>
+<li><strong>خازن (<span class="arithmatex">\(C\)</span>):</strong> انرژی را به صورت میدان الکترواستاتیکی بر پایه ولتاژ ذخیره می‌کند (<span class="arithmatex">\(E_C = \frac{1}{2} C v^2\)</span>).</li>
+</ul>
+<pre class="mermaid"><code>flowchart LR
+    L["سلف (L)&lt;br/&gt;انبار مغناطیسی (جریان)"] &lt;--&gt;|"تبادل رفت‌وبرگشت انرژی&lt;br/&gt;(پدیده نوسان)"| C["خازن (C)&lt;br/&gt;انبار الکتریکی (ولتاژ)"]
+    L &amp; C -.-&gt;|"اتلاف تدریجی به صورت گرما"| R["مقاومت (R)&lt;br/&gt;عنصر میراکننده و اصطکاک"]
+
+    style L fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff
+    style C fill:#1e293b,stroke:#a855f7,stroke-width:2px,color:#fff
+    style R fill:#7f1d1d,stroke:#ef4444,stroke-width:2px,color:#fff</code></pre>
+<p>همین حضور دو انبار ناهمجنس باعث پدیده‌ای شبیه به <strong>آونگ (پاندول)</strong> می‌شود: انرژی مانند آبی که در یک تشت به چپ و راست حرکت می‌کند، مدام بین سلف و خازن دست‌به‌دست می‌شود. اگر مقاومت (<span class="arithmatex">\(R\)</span>) در مدار نباشد، این تبادل تا ابد ادامه می‌یابد (نوسان نامیرا)؛ و اگر مقاومت وجود داشته باشد، این انرژی به تدریج به حرارت تبدیل شده و نوسان میرا می‌گردد.</p>
+<hr>
+<h3 id="mass-spring-damper">هم‌ارزی کامل با سیستم مکانیکی جرم، فنر و کمک‌فنر (Mass-Spring-Damper)<a class="headerlink" href="#mass-spring-damper" title="Permanent link">¶</a></h3>
+<p>یکی از قدرتمندترین روش‌های فهم مهندسی، <strong>قیاس سیستم‌ها (System Analogy)</strong> است. مدار الکتریکی <span class="arithmatex">\(RLC\)</span> دقیقاً کپی مو‌به‌موی سیستم مکانیکی <strong>جرم، فنر و دمپر</strong> است:</p>
+<pre class="mermaid"><code>flowchart TD
+    subgraph Circuit ["دنیای الکتریک (مدار RLC سری)"]
+        direction TB
+        E1["سلف L: مخالفت با تغییر جریان"]
+        E2["خازن C: ذخیره بار با تغییر ولتاژ"]
+        E3["مقاومت R: تلف انرژی الکتریکی"]
+        E4["جریان i: نرخ جابه‌جایی بار"]
+    end
+    subgraph Mechanics ["دنیای مکانیک (جرم، فنر و دمپر)"]
+        direction TB
+        M1["جرم m: لختی و مخالفت با تغییر سرعت"]
+        M2["نرمی فنر 1/k: تغییر شکل در برابر نیرو"]
+        M3["دمپر c: اصطکاک و تلف انرژی مکانیکی"]
+        M4["سرعت v: نرخ جابه‌جایی مکانیکی"]
+    end
+
+    E1 &lt;==&gt; M1
+    E2 &lt;==&gt; M2
+    E3 &lt;==&gt; M3
+    E4 &lt;==&gt; M4</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">کمیت الکتریکی (مدار <span class="arithmatex">\(RLC\)</span> سری)</th>
+<th style="text-align: center;">فرمول الکتریکی</th>
+<th style="text-align: left;">کمیت مکانیکی متناظر (جرم-فنر-دمپر)</th>
+<th style="text-align: center;">فرمول مکانیکی</th>
+<th style="text-align: left;">مفهوم فیزیکی مشترک</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>سلف (<span class="arithmatex">\(L\)</span>)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(v_L = L \frac{di}{dt}\)</span></td>
+<td style="text-align: left;"><strong>جرم (<span class="arithmatex">\(m\)</span>)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(F_m = m \frac{dv}{dt}\)</span></td>
+<td style="text-align: left;"><strong>لختی و اینرسی:</strong> تمایل به حفظ وضعیت فعلی و مقاومت در برابر تغییر ناگهانی جریان/سرعت</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>خازن (<span class="arithmatex">\(C\)</span>)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(v_C = \frac{1}{C} q\)</span></td>
+<td style="text-align: left;"><strong>نرمی فنر (<span class="arithmatex">\(\frac{1}{k}\)</span>)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(F_k = k x \implies x = \frac{1}{k} F\)</span></td>
+<td style="text-align: left;"><strong>انعطاف‌پذیری و کشسانی:</strong> ظرفیت انباشت انرژی پتانسیل بر اثر جابه‌جایی بار/تغییر مکان</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>مقاومت (<span class="arithmatex">\(R\)</span>)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(v_R = R i\)</span></td>
+<td style="text-align: left;"><strong>دمپر ویسکوز (<span class="arithmatex">\(c\)</span>)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(F_c = c v\)</span></td>
+<td style="text-align: left;"><strong>اتلاف و میرایی:</strong> اصطکاک و تبدیل انرژی جنبشی/الکتریکی به گرما</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>بار الکتریکی (<span class="arithmatex">\(q\)</span>)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(i = \frac{dq}{dt}\)</span></td>
+<td style="text-align: left;"><strong>جابه‌جایی (<span class="arithmatex">\(x\)</span>)</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(v = \frac{dx}{dt}\)</span></td>
+<td style="text-align: left;">متغیر حالت اصلی سیستم</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>جریان الکتریکی (<span class="arithmatex">\(i\)</span>)</strong></td>
+<td style="text-align: center;">نرخ جریان بار</td>
+<td style="text-align: left;"><strong>سرعت (<span class="arithmatex">\(v\)</span>)</strong></td>
+<td style="text-align: center;">نرخ تغییر موقعیت</td>
+<td style="text-align: left;">شارش حالت</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ولتاژ منبع (<span class="arithmatex">\(e(t)\)</span>)</strong></td>
+<td style="text-align: center;">نیرو‌محرکه الکتریکی</td>
+<td style="text-align: left;"><strong>نیروی خارجی (<span class="arithmatex">\(F(t)\)</span>)</strong></td>
+<td style="text-align: center;">تحریک مکانیکی</td>
+<td style="text-align: left;">ورودی محرک سیستم</td>
+</tr>
+</tbody>
+</table>
+<h4 id="omega_0">مقایسه فرکانس طبیعی نوسان (<span class="arithmatex">\(\omega_0\)</span>)<a class="headerlink" href="#omega_0" title="Permanent link">¶</a></h4>
+<p>در هر دو سیستم، فرکانس طبیعی بدون اتلاف دقیقاً از یک ساختار ریاضی تبعیت می‌کند:</p>
+<div class="arithmatex">\[\omega_{0, \text{Electric}} = \frac{1}{\sqrt{LC}} \quad \longleftrightarrow \quad \omega_{0, \text{Mechanical}} = \sqrt{\frac{k}{m}} = \frac{1}{\sqrt{m \cdot (1/k)}}\]</div>
+<ul>
+<li><strong>افزایش سلف (<span class="arithmatex">\(L\)</span>) یا جرم (<span class="arithmatex">\(m\)</span>):</strong> سیستم را سنگین و پرلختی می‌کند؛ فرکانس نوسانات پایین می‌آید و واکنش سیستم به تغییرات تنبل‌تر می‌شود.</li>
+<li><strong>افزایش خازن (<span class="arithmatex">\(C\)</span>) یا نرم‌تر شدن فنر (<span class="arithmatex">\(1/k\)</span>):</strong> سیستم منعطف‌تر می‌شود؛ فرکانس کاهش می‌یابد و برای رسیدن به تعادل جابه‌جایی بیشتری نیاز است.</li>
+<li><strong>افزایش مقاومت (<span class="arithmatex">\(R\)</span>) یا دمپر (<span class="arithmatex">\(c\)</span>):</strong> نوسانات را سرکوب می‌کند؛ اما اگر بیش از حد بزرگ شود، حرکت سیستم را خفه و قفل می‌کند.</li>
+</ul>
+<hr>
+<h2 id="_3">سه رژیم رفتاری پاسخ گذرا: کلید طلایی طراحی مهندسی<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>معادله دیفرانسیل حاکم بر مدار <span class="arithmatex">\(RLC\)</span> سری به صورت زیر است:</p>
+<div class="arithmatex">\[L \frac{d^2 i}{dt^2} + R \frac{di}{dt} + \frac{1}{C} i = 0 \implies \frac{d^2 i}{dt^2} + 2\alpha \frac{di}{dt} + \omega_0^2 i = 0\]</div>
+<p>که در آن:<br>
+* <strong>فرکانس طبیعی نامیرا:</strong> <span class="arithmatex">\(\omega_0 = \frac{1}{\sqrt{LC}}\)</span><br>
+* <strong>ضریب میرایی نپر:</strong> <span class="arithmatex">\(\alpha = \frac{R}{2L}\)</span><br>
+* <strong>نسبت میرایی (Damping Ratio):</strong> <span class="arithmatex">\(\zeta = \frac{\alpha}{\omega_0} = \frac{R}{2} \sqrt{\frac{C}{L}}\)</span></p>
+<p>ریشه‌های معادله مشخصه عبارتند از:</p>
+<div class="arithmatex">\[s_{1, 2} = -\alpha \pm \sqrt{\alpha^2 - \omega_0^2} = -\zeta\omega_0 \pm \omega_0 \sqrt{\zeta^2 - 1}\]</div>
+<p>بسته به مقدار نسبت میرایی (<span class="arithmatex">\(\zeta\)</span>)، سه رژیم رفتاری کاملاً متمایز پدید می‌آید:</p>
+<pre class="mermaid"><code>flowchart TD
+    D["ریشه‌های مشخصه سیستم s1,2"] --&gt;|"ζ &lt; 1 (α &lt; ω0)"| U["۱. میرای ضعیف (Underdamped)&lt;br/&gt;نوسان شدید + فراجهش"]
+    D --&gt;|"ζ = 1 (α = ω0)"| C["۲. میرایی بحرانی (Critically Damped)&lt;br/&gt;سریع‌ترین حالت بدون نوسان"]
+    D --&gt;|"ζ &gt; 1 (α &gt; ω0)"| O["۳. میرای شدید (Overdamped)&lt;br/&gt;بسیار کند و تنبل"]
+
+    style U fill:#7f1d1d,stroke:#ef4444,color:#fff
+    style C fill:#064e3b,stroke:#10b981,color:#fff
+    style O fill:#1e3a8a,stroke:#3b82f6,color:#fff</code></pre>
+<h3 id="_4">مقایسه دقیق سه رژیم میرایی<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ویژگی مهندسی</th>
+<th style="text-align: center;">میرای ضعیف (Underdamped)</th>
+<th style="text-align: center;">میرایی بحرانی (Critically Damped)</th>
+<th style="text-align: center;">میرای شدید (Overdamped)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>شرط نسبت میرایی</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\zeta &lt; 1 \quad (\alpha &lt; \omega_0)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\zeta = 1 \quad (\alpha = \omega_0)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\zeta &gt; 1 \quad (\alpha &gt; \omega_0)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ماهیت ریشه‌ها</strong></td>
+<td style="text-align: center;">مختلط مزدوج (<span class="arithmatex">\(-\alpha \pm j\omega_d\)</span>)</td>
+<td style="text-align: center;">حقیقی مضاعف (<span class="arithmatex">\(-\alpha, -\alpha\)</span>)</td>
+<td style="text-align: center;">حقیقی متمایز منفی (<span class="arithmatex">\(s_1, s_2\)</span>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>فرکانس نوسان</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(\omega_d = \sqrt{\omega_0^2 - \alpha^2}\)</span></td>
+<td style="text-align: center;">نوسان وجود ندارد</td>
+<td style="text-align: center;">نوسان وجود ندارد</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>فرم ریاضی پاسخ</strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(e^{-\alpha t} \left[ A_1 \cos(\omega_d t) + A_2 \sin(\omega_d t) \right]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\((A_1 + A_2 t) e^{-\alpha t}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(A_1 e^{s_1 t} + A_2 e^{s_2 t}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>فراجهش (Overshoot)</strong></td>
+<td style="text-align: center;">دارد (گاهی تا ۱۰۰٪ مقدار پله!)</td>
+<td style="text-align: center;"><strong>دقیقاً صفر</strong></td>
+<td style="text-align: center;"><strong>دقیقاً صفر</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>زمان رسیدن به تعادل</strong></td>
+<td style="text-align: center;">طولانی (به دلیل ارتعاش مداوم)</td>
+<td style="text-align: center;"><strong>کوتاه‌ترین زمان ممکن</strong></td>
+<td style="text-align: center;">بسیار طولانی (به دلیل لختی اتلافی)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>تشبیه روزمره</strong></td>
+<td style="text-align: center;">کمک‌فنر خراب ماشین (اتومبیل بالا و پایین می‌پرد)</td>
+<td style="text-align: center;">در بازشوی استاندارد بیمارستان (سریع بسته می‌شود بدون کوبیده شدن)</td>
+<td style="text-align: center;">در آغشته به گریس غلیظ (به سختی و با زور بسته می‌شود)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="the-engineering-trap">تله مهندسی (The Engineering Trap)<a class="headerlink" href="#the-engineering-trap" title="Permanent link">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">یک اشتباه رایج میان دانشجویان مهندسی</p>
+<p>یک باور غلط شهودی این است که: <em>«اگر مقاومت نوسان را کم می‌کند، پس هر چه مقاومت (<span class="arithmatex">\(R\)</span>) یا ضریب اصطکاک را بالاتر ببریم، سیستم سریع‌تر آرام می‌گیرد و زودتر به حالت ماندگار می‌رسد!»</em><br>
+<strong>این یک تله خطرناک است!</strong></p>
+<p>افزایش مقاومت فقط و فقط تا نقطه <strong>میرایی بحرانی (<span class="arithmatex">\(\zeta = 1\)</span>)</strong> زمان نشست را کوتاه می‌کند. به محض اینکه از مرز <span class="arithmatex">\(\zeta = 1\)</span> عبور کنید و وارد رژیم Overdamped شوید، یکی از ریشه‌های معادله مشخصه به سمت صفر میل می‌کند (<span class="arithmatex">\(s_1 \to 0\)</span>). این ریشه به <strong>«قطب کند غالب (Dominant Slow Pole)»</strong> تبدیل شده و باعث می‌شود سیستم برای رسیدن به ۲ درصد نهایی، زمان بسیار بیشتری تلف کند!</p>
+</div>
+<hr>
+<h2 id="rlc">آزمایشگاه تعاملی: شبیه‌ساز پاسخ پله مدار RLC<a class="headerlink" href="#rlc" title="Permanent link">¶</a></h2>
+<p>با استفاده از اسلایدرهای زیر مقادیر مقاومت (<span class="arithmatex">\(R\)</span>)، سلف (<span class="arithmatex">\(L\)</span>) و خازن (<span class="arithmatex">\(C\)</span>) را تغییر دهید و پاسخ پله ولتاژ خازن (<span class="arithmatex">\(v_C(t)\)</span>) را به همراه نسبت میرایی (<span class="arithmatex">\(\zeta\)</span>) و وضعیت پایداری سیستم به صورت زنده مشاهده کنید:</p>
+<div class="rlc-sim-box">
+  <div class="rlc-sim-controls">
+    <div class="rlc-presets">
+      <span class="rlc-preset-title">حالت‌های پیش‌فرض:</span>
+      <button class="rlc-btn" id="presetUnder">میرای ضعیف (Underdamped)</button>
+      <button class="rlc-btn rlc-btn-active" id="presetCritical">میرایی بحرانی (Critical)</button>
+      <button class="rlc-btn" id="presetOver">میرای شدید (Overdamped)</button>
+    </div>
+
+    <div class="rlc-sliders-grid">
+      <div class="rlc-slider-group">
+        <div class="rlc-slider-label">
+          <span>مقاومت ($R$):</span>
+          <strong id="valR">200</strong> $\Omega$
+        </div>
+        <input type="range" id="sliderR" min="10" max="600" step="5" value="200" class="rlc-range">
+      </div>
+
+      <div class="rlc-slider-group">
+        <div class="rlc-slider-label">
+          <span>سلف ($L$):</span>
+          <strong id="valL">50</strong> $mH$
+        </div>
+        <input type="range" id="sliderL" min="10" max="200" step="5" value="50" class="rlc-range">
+      </div>
+
+      <div class="rlc-slider-group">
+        <div class="rlc-slider-label">
+          <span>خازن ($C$):</span>
+          <strong id="valC">5.0</strong> $\mu F$
+        </div>
+        <input type="range" id="sliderC" min="0.5" max="25" step="0.5" value="5" class="rlc-range">
+      </div>
+    </div>
+
+    <div class="rlc-metrics-bar">
+      <div class="rlc-metric-item">
+        <span class="rlc-metric-name">نسبت میرایی ($\zeta$):</span>
+        <strong class="rlc-metric-val" id="metricZeta">1.00</strong>
+      </div>
+      <div class="rlc-metric-item">
+        <span class="rlc-metric-name">فرکانس طبیعی ($\omega_0$):</span>
+        <strong class="rlc-metric-val" id="metricW0">2000 rad/s</strong>
+      </div>
+      <div class="rlc-metric-item">
+        <span class="rlc-metric-name">وضعیت رژیم:</span>
+        <span class="rlc-regime-tag" id="regimeBadge">میرایی بحرانی (بهینه)</span>
+      </div>
+      <div class="rlc-metric-item">
+        <span class="rlc-metric-name">درصد فراجهش ($M_p$):</span>
+        <strong class="rlc-metric-val" id="metricOvershoot">0%</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="rlc-canvas-container">
+    <canvas id="rlcCanvas" width="850" height="400"></canvas>
+  </div>
+</div>
+
+<style>
+.rlc-sim-box {
+  background: var(--color-base-200, rgba(15, 23, 42, 0.7));
+  border: 1px solid var(--color-base-300, rgba(234, 179, 8, 0.3));
+  border-radius: var(--radius-card, 16px);
+  padding: 1.25rem;
+  margin: 1.75rem 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.rlc-presets {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+.rlc-preset-title {
+  font-size: 0.85rem;
+  color: var(--color-base-content);
+  opacity: 0.8;
+  font-weight: 600;
+}
+.rlc-btn {
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid var(--color-base-300, rgba(255, 255, 255, 0.15));
+  background: var(--color-base-100, rgba(30, 41, 59, 0.8));
+  color: var(--color-base-content, #e2e8f0);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.rlc-btn:hover {
+  border-color: #eab308;
+  color: #eab308;
+}
+.rlc-btn-active {
+  background: #eab308;
+  color: #0f172a;
+  border-color: #eab308;
+  font-weight: 700;
+}
+.rlc-sliders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.rlc-slider-group {
+  background: var(--color-base-100, rgba(15, 23, 42, 0.5));
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-base-300, rgba(255, 255, 255, 0.08));
+}
+.rlc-slider-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-base-content);
+}
+.rlc-range {
+  width: 100%;
+  accent-color: #eab308;
+  cursor: pointer;
+}
+.rlc-metrics-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  background: var(--color-base-100, rgba(15, 23, 42, 0.6));
+  border-radius: 10px;
+  border: 1px solid var(--color-base-300, rgba(255, 255, 255, 0.08));
+  font-size: 0.85rem;
+}
+.rlc-metric-val {
+  font-family: ui-monospace, monospace;
+  color: #eab308;
+  margin-right: 4px;
+}
+.rlc-regime-tag {
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+.rlc-canvas-container {
+  width: 100%;
+  background: #020617;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+#rlcCanvas {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.getElementById("rlcCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+
+  const sR = document.getElementById("sliderR");
+  const sL = document.getElementById("sliderL");
+  const sC = document.getElementById("sliderC");
+
+  const valR = document.getElementById("valR");
+  const valL = document.getElementById("valL");
+  const valC = document.getElementById("valC");
+
+  const metricZeta = document.getElementById("metricZeta");
+  const metricW0 = document.getElementById("metricW0");
+  const metricOvershoot = document.getElementById("metricOvershoot");
+  const regimeBadge = document.getElementById("regimeBadge");
+
+  const btnUnder = document.getElementById("presetUnder");
+  const btnCrit = document.getElementById("presetCritical");
+  const btnOver = document.getElementById("presetOver");
+
+  function setActiveBtn(btn) {
+    [btnUnder, btnCrit, btnOver].forEach(b => b.classList.remove("rlc-btn-active"));
+    if (btn) btn.classList.add("rlc-btn-active");
+  }
+
+  btnUnder.addEventListener("click", () => {
+    sR.value = 50; sL.value = 50; sC.value = 5;
+    setActiveBtn(btnUnder);
+    updateSim();
+  });
+
+  btnCrit.addEventListener("click", () => {
+    sR.value = 200; sL.value = 50; sC.value = 5;
+    setActiveBtn(btnCrit);
+    updateSim();
+  });
+
+  btnOver.addEventListener("click", () => {
+    sR.value = 450; sL.value = 50; sC.value = 5;
+    setActiveBtn(btnOver);
+    updateSim();
+  });
+
+  [sR, sL, sC].forEach(el => el.addEventListener("input", () => {
+    setActiveBtn(null);
+    updateSim();
+  }));
+
+  function updateSim() {
+    const R = parseFloat(sR.value);
+    const L = parseFloat(sL.value) * 1e-3; // H
+    const C = parseFloat(sC.value) * 1e-6; // F
+
+    valR.textContent = R;
+    valL.textContent = sL.value;
+    valC.textContent = sC.value;
+
+    const w0 = 1 / Math.sqrt(L * C);
+    const alpha = R / (2 * L);
+    const zeta = alpha / w0;
+
+    metricW0.textContent = Math.round(w0) + " rad/s";
+    metricZeta.textContent = zeta.toFixed(2);
+
+    let overshootPct = 0;
+    if (zeta < 1) {
+      overshootPct = Math.exp(-Math.PI * zeta / Math.sqrt(1 - zeta * zeta)) * 100;
+      regimeBadge.textContent = "میرای ضعیف (Underdamped)";
+      regimeBadge.style.background = "rgba(239, 68, 68, 0.2)";
+      regimeBadge.style.color = "#f87171";
+      regimeBadge.style.borderColor = "rgba(239, 68, 68, 0.4)";
+    } else if (Math.abs(zeta - 1.0) < 0.05) {
+      regimeBadge.textContent = "میرایی بحرانی (بهینه)";
+      regimeBadge.style.background = "rgba(16, 185, 129, 0.2)";
+      regimeBadge.style.color = "#34d399";
+      regimeBadge.style.borderColor = "rgba(16, 185, 129, 0.4)";
+    } else {
+      regimeBadge.textContent = "میرای شدید (Overdamped)";
+      regimeBadge.style.background = "rgba(59, 130, 246, 0.2)";
+      regimeBadge.style.color = "#60a5fa";
+      regimeBadge.style.borderColor = "rgba(59, 130, 246, 0.4)";
+    }
+    metricOvershoot.textContent = overshootPct > 0.1 ? overshootPct.toFixed(1) + "%" : "0%";
+
+    drawChart(R, L, C, w0, alpha, zeta);
+  }
+
+  function drawChart(R, L, C, w0, alpha, zeta) {
+    const w = canvas.width;
+    const h = canvas.height;
+    ctx.clearRect(0, 0, w, h);
+
+    // Padding
+    const padL = 70;
+    const padR = 40;
+    const padT = 40;
+    const padB = 50;
+
+    const plotW = w - padL - padR;
+    const plotH = h - padT - padB;
+
+    // Time horizon: 5 / alpha or at least 5 periods
+    let tMax = Math.max(0.005, 5 / Math.max(alpha, 100));
+    if (zeta < 0.3) tMax = Math.min(0.02, 8 * (2 * Math.PI / w0));
+
+    // Voltage scale: 0 to 2.0 V (Step is 1.0 V)
+    const vMax = 2.0;
+
+    // Grid
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.07)";
+    ctx.lineWidth = 1;
+
+    for (let v = 0; v <= 2.0; v += 0.5) {
+      const y = padT + plotH - (v / vMax) * plotH;
+      ctx.beginPath();
+      ctx.moveTo(padL, y);
+      ctx.lineTo(w - padR, y);
+      ctx.stroke();
+
+      ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
+      ctx.font = "12px monospace";
+      ctx.textAlign = "right";
+      ctx.fillText(v.toFixed(1) + " V", padL - 10, y + 4);
+    }
+
+    // Step input reference (1.0 V dashed line)
+    const stepY = padT + plotH - (1.0 / vMax) * plotH;
+    ctx.save();
+    ctx.setLineDash([6, 6]);
+    ctx.strokeStyle = "rgba(234, 179, 8, 0.6)";
+    ctx.beginPath();
+    ctx.moveTo(padL, stepY);
+    ctx.lineTo(w - padR, stepY);
+    ctx.stroke();
+    ctx.fillStyle = "#eab308";
+    ctx.textAlign = "left";
+    ctx.fillText("ورودی پله = ۱.۰V", w - padR - 100, stepY - 8);
+    ctx.restore();
+
+    // Axis
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.25)";
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(padL, padT);
+    ctx.lineTo(padL, padT + plotH);
+    ctx.lineTo(w - padR, padT + plotH);
+    ctx.stroke();
+
+    // Time labels
+    ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
+    ctx.textAlign = "center";
+    for (let k = 1; k <= 5; k++) {
+      const frac = k / 5;
+      const t = frac * tMax;
+      const x = padL + frac * plotW;
+      ctx.fillText((t * 1000).toFixed(1) + " ms", x, padT + plotH + 22);
+    }
+
+    // Plot response curve vC(t)
+    ctx.beginPath();
+    ctx.lineWidth = 3;
+
+    if (zeta < 1) {
+      ctx.strokeStyle = "#f87171"; // Red for underdamped
+    } else if (Math.abs(zeta - 1.0) < 0.05) {
+      ctx.strokeStyle = "#34d399"; // Green for critical
+    } else {
+      ctx.strokeStyle = "#60a5fa"; // Blue for overdamped
+    }
+
+    const steps = 400;
+    for (let i = 0; i <= steps; i++) {
+      const t = (i / steps) * tMax;
+      let vc = 0;
+
+      if (zeta < 0.999) {
+        const wd = w0 * Math.sqrt(1 - zeta * zeta);
+        const phi = Math.atan(zeta / Math.sqrt(1 - zeta * zeta));
+        vc = 1.0 - (Math.exp(-alpha * t) / Math.sqrt(1 - zeta * zeta)) * Math.sin(wd * t + Math.acos(zeta));
+      } else if (Math.abs(zeta - 1.0) <= 0.001) {
+        vc = 1.0 - (1 + w0 * t) * Math.exp(-w0 * t);
+      } else {
+        const s1 = -alpha + Math.sqrt(alpha * alpha - w0 * w0);
+        const s2 = -alpha - Math.sqrt(alpha * alpha - w0 * w0);
+        vc = 1.0 + (s2 * Math.exp(s1 * t) - s1 * Math.exp(s2 * t)) / (s1 - s2);
+      }
+
+      const x = padL + (i / steps) * plotW;
+      const y = padT + plotH - (Math.max(0, vc) / vMax) * plotH;
+
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+  }
+
+  updateSim();
+});
+</script>
+
+<hr>
+<h2 id="_5">کاربردهای مستقیم در کف کارخانه (نگاه سخت‌افزاری)<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<h3 id="_6">۱. اصلاح ضریب توان، بانک خازنی و فاجعه تشدید هارمونیکی<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<p>در کارخانجات و شهرک‌های صنعتی، عمده مصرف‌کنندگان انرژی الکتریکی بارهای سلفی سه‌فاز هستند: <strong>موتورهای القایی، ترانسفورماتورها و کوره‌های قوس</strong>. این تجهیزات برای ایجاد شار مغناطیسی به <strong>توان راکتیو (<span class="arithmatex">\(Q\)</span>)</strong> نیاز دارند.</p>
+<blockquote>
+<p><strong>شهود مهندسی توان راکتیو:</strong><br>
+توان راکتیو مانند <strong>حباب‌های هوای داخل یک لوله آب</strong> است؛ نه تشنگی را رفع می‌کند و نه کار مکانیکی انجام می‌دهد، اما فضای مفید لوله‌کشی و ظرفیت پمپ‌ها را اشغال می‌کند! یا مانند <strong>کامیون‌های خالی</strong> که مدام میان نیروگاه و کارخانه در رفت‌وآمدند و ظرفیت ترافیکی کابل‌ها و پست‌های برق را هدر می‌دهند.<br>
+اگر ضریب توان (<span class="arithmatex">\(\cos\phi\)</span>) کارخانه از <span class="arithmatex">\(0.9\)</span> پایین‌تر بیاید، وزارت نیرو جریمه‌های سنگینی به نام <strong>جریمه توان راکتیو</strong> در قبض برق منظور می‌کند!</p>
+</blockquote>
+<pre class="mermaid"><code>flowchart TD
+    subgraph Grid ["تولید و انتقال توان"]
+        Gen["نیروگاه برق"] --&gt; Cable["کابل‌های توزیع و ترانسفورماتور (اندوکتانس L_grid)"]
+    end
+    subgraph Factory ["کف کارخانه"]
+        Cable --&gt; Bus["باس‌بار اصلی توزیع برق"]
+        Bus --&gt; Motor["موتورهای القایی صنعتی (سلفی)"]
+        Bus --&gt; VFD["درایوهای فرکانس متغیر (تولید هارمونیک)"]
+        Bus --&gt; Bank["بانک خازنی اصلاح ضریب توان (C_bank)"]
+    end
+    Cable &lt;--&gt;|"تشکیل مدار مرتبه دوم تشدیدی LC"| Bank
+    style Bank fill:#1e293b,stroke:#eab308,stroke-width:2px,color:#fff
+    style Cable fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#fff
+    style VFD fill:#7f1d1d,stroke:#ef4444,stroke-width:2px,color:#fff</code></pre>
+<h4 id="_7">تولد مدار مرتبه دوم در دل کارخانه<a class="headerlink" href="#_7" title="Permanent link">¶</a></h4>
+<p>برای حذف این جریمه، مهندسان صنایع و برق یک <strong>بانک خازنی (<span class="arithmatex">\(C_{\text{bank}}\)</span>)</strong> در تابلوی توزیع اصلی کارخانه نصب می‌کنند تا توان راکتیو مورد نیاز موتورها به صورت محلی تأمین شود و به شبکه سرریز نکند.<br>
+اما در همین لحظه، یک سیستم مرتبه دوم پنهان متولد می‌شود:<br>
+* سلف معادل شبکه و ترانسفورماتور پست برق (<span class="arithmatex">\(L_{\text{grid}}\)</span>)<br>
+* بانک خازنی کارخانه (<span class="arithmatex">\(C_{\text{bank}}\)</span>)</p>
+<p>فرکانس تشدید طبیعی این شبکه صنعتی برابر است با:</p>
+<div class="arithmatex">\[f_{\text{res}} = \frac{1}{2\pi \sqrt{L_{\text{grid}} C_{\text{bank}}}}\]</div>
+<h4 id="_8">خطر مرگبار هم‌فرکانسی با هارمونیک‌ها<a class="headerlink" href="#_8" title="Permanent link">¶</a></h4>
+<p>امروزه در خطوط تولید مدرن، ده‌ها درایو کنترل دور موتور (VFD)، اینورتر و ربات وجود دارند که به دلیل سوئیچینگ الکترونیک قدرت، <strong>هارمونیک‌های ولتاژ و جریان</strong> (به‌ویژه هارمونیک‌های پنجم ۲۵۰Hz و هفتم ۳۵۰Hz) تولید می‌کنند.<br>
+اگر تصادفاً فرکانس تشدید مدار کارخانه (<span class="arithmatex">\(f_{\text{res}}\)</span>) روی یکی از این هارمونیک‌ها بیفتد:<br>
+1. امپدانس معادل مدار <span class="arithmatex">\(LC\)</span> در فرکانس تشدید به شدت سقوط می‌کند یا جریان به بی‌نهایت میل می‌کند!<br>
+2. جریان‌های صدها آمپری هارمونیکی در بانک خازنی جاری می‌شوند.<br>
+3. <strong>پیامد فاجعه‌بار:</strong> باد کردن و ترکیدن باتری‌های خازنی، آتش‌سوزی در تابلوی برق، ذوب شدن شینه‌های مسی و قطعی کامل خط تولید کارخانه!</p>
+<h4 id="detuned-reactor">راه‌حل مهندسی: راکتور دیتیون (Detuned Reactor)<a class="headerlink" href="#detuned-reactor" title="Permanent link">¶</a></h4>
+<p>برای نجات کارخانه، مهندسان با هر خازن یک سلف کوچک به نام <strong>راکتور فیلتر دیتیون (<span class="arithmatex">\(L_{\text{detune}}\)</span>)</strong> به صورت سری متصل می‌کنند تا فرکانس تشدید کل مدار مرتبه دوم را عمداً به زیر فرکانس کمترین هارمونیک موجود (مثلاً روی ۱۸۹ هرتز یا ۴.۲ برابر فرکانس پایه) جابه‌جا کنند. با این کار، سیستم برای تمام هارمونیک‌های صنعتی خاصیت سلفی پیدا کرده و امکان وقوع تشدید ناممکن می‌شود.</p>
+<hr>
+<h3 id="rfid">۲. تگ‌های RFID در انبارهای هوشمند و لجستیک<a class="headerlink" href="#rfid" title="Permanent link">¶</a></h3>
+<p>در کارخانجات خودروسازی، انبارداری هوشمند آمازون و مدیریت زنجیره تأمین، از برچسب‌های <strong>RFID پسیو (Passive RFID Tags)</strong> برای ردیابی آنی پالت‌ها و قطعات استفاده می‌شود. این تگ‌ها نه باتری دارند و نه سیم برق! پس چگونه داده‌ها را مخابره می‌کنند؟</p>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    participant R as دستگاه ریدر (Reader)
+    participant T as مدار تشدید تگ RFID (L-C)
+    participant C as میکروچیپ RFID
+
+    R-&gt;&gt;T: تابش امواج الکترومغناطیسی با فرکانس f0
+    Note over T: تشدید مدار LC و جهش ولتاژ القایی
+    T-&gt;&gt;C: تأمین انرژی DC برای روشن شدن تراشه
+    Note over C: خواندن کد یکتای محصول (EPC)
+    C-&gt;&gt;T: سوئیچ مقاومت موازی (مدولاسیون بار)
+    T--&gt;&gt;R: بازتاب موج با دامنه مدوله‌شده (Backscatter)
+    Note over R: دیکود کردن کد کالا بدون تغییر فرکانس</code></pre>
+<ol>
+<li><strong>جذب توان بی‌سیم از طریق مدار تشدید <span class="arithmatex">\(LC\)</span>:</strong><br>
+   درون تگ یک سیم‌پیچ کوچک (سلف <span class="arithmatex">\(L\)</span>) با یک خازن میکروسکوپی (<span class="arithmatex">\(C\)</span>) مدار مرتبه دوم هماهنگ با فرکانس کاری ریدر (مثلاً <span class="arithmatex">\(13.56\text{ MHz}\)</span>) می‌سازند. با عبور پالت از برابر آنتن ریدر، پدیده <strong>تشدید (Resonance)</strong> رخ می‌دهد؛ ولتاژ القایی دو سر خازن ناگهان به چندین ولت می‌رسد، یکسو شده و چیپ چند میلی‌واتی را روشن می‌کند.</li>
+<li><strong>مدولاسیون بار (Load Modulation / Backscattering):</strong><br>
+   تگ برای ارسال پاسخ، فرستنده رادیویی پرمصرف ندارد؛ بلکه تراشه، یک مقاومت کوچک را به صورت متناوب با مدار <span class="arithmatex">\(LC\)</span> موازی یا قطع می‌کند. تغییر امپدانس در مدار تشدید تگ، باعث تغییر در ضریب بازتاب میدان الکترومغناطیسی روی آنتن ریدر می‌شود. ریدر این تغییرات دامنه را خوانده و کد محصول را استخراج می‌کند!</li>
+</ol>
+<hr>
+<h3 id="agv">۳. کوره‌های گرمایش القایی و شارژ بی‌سیم ربات‌های انبار (AGV)<a class="headerlink" href="#agv" title="Permanent link">¶</a></h3>
+<p>در صنایع فولاد، عملیات حرارتی، فرم‌دهی قطعات خودرو و خطوط تولید لوله‌های فلزی، به جای کوره‌های سنتی گازسوز و پردود، از <strong>کوره‌های القایی (Induction Heating)</strong> استفاده می‌شود.</p>
+<ul>
+<li><strong>نحوه کارکرد:</strong> جریان متناوب فرکانس بالا (از چند کیلوهرتز تا چند مگاهرتز) از یک کویل مسی عبور می‌کند و میدان مغناطیسی شدیدی درون شمش فولادی القا می‌نماید. این میدان، جریان‌های گردابی پرقدرت فوکو (Eddy Currents) درون فلز به راه می‌اندازد و بر اثر مقاومت اهمی قطعه، در عرض چند ثانیه فولاد را سرخ و گداخته می‌کند!</li>
+<li><strong>نقش مدار مرتبه دوم:</strong> چون کویل کوره یک سلف خالص (<span class="arithmatex">\(L\)</span>) با ضریب توان بسیار پایین است، اتصال مستقیم آن به شبکه برق نیازمند ژنراتورهای نجومی خواهد بود. با موازی کردن یک بانک خازنی باکیفیت (<span class="arithmatex">\(C\)</span>) با کویل، یک مدار تانک تشدیدی (<span class="arithmatex">\(LC\)</span> Tank) ساخته می‌شود. سیستم دقیقاً در <strong>فرکانس تشدید</strong> راه‌اندازی می‌گردد؛ در این حالت جریان مصرفی از منبع تغذیه به حداقل ممکن می‌رسد و ضریب توان معادل مدار دقیقاً <span class="arithmatex">\(1.0\)</span> خواهد بود.</li>
+<li><strong>شارژ بی‌سیم ربات‌های خودران (AGV):</strong><br>
+  در انبارهای مدرن لجستیک، ربات‌های AGV برای شارژ شدن نیازی به سوکت فیزیکی ندارند. یک پد فرستنده در کف زمین و یک پد گیرنده زیر ربات قرار دارد. مدار فرستنده و گیرنده هر دو روی یک فرکانس تشدید مشترک هماهنگ می‌شوند (Resonant Inductive Coupling) تا انتقال ده‌ها کیلووات توان در فاصله چند سانتی‌متری هوا با راندمان بالاتر از ۹۲ درصد امکان‌پذیر گردد.</li>
+</ul>
+<hr>
+<h3 id="snubber-circuits">۴. مدارهای اسنابر (Snubber Circuits) در حفاظت کلیدهای صنعتی<a class="headerlink" href="#snubber-circuits" title="Permanent link">¶</a></h3>
+<p>هنگامی که یک کنتاکتور بزرگ، رله الکترومکانیکی، ترانزیستور ماسفت یا ماژول IGBT موتور یک نوار نقاله را خاموش می‌کند، جریان سلفی بار به صورت ناگهانی قطع می‌شود. طبق رابطه ولتاژ سلف:</p>
+<div class="arithmatex">\[v_L = L \frac{di}{dt}\]</div>
+<p>چون زمان قطع (<span class="arithmatex">\(dt\)</span>) در نیمه‌هادی‌ها در حد چند نانوثانیه است، شیب تغییرات جریان (<span class="arithmatex">\(\frac{di}{dt}\)</span>) به بی‌نهایت میل کرده و یک <strong>پیک ولتاژ ضربه‌ای وحشتناک (چندین هزار ولت)</strong> روی کنتاکت‌ها ایجاد می‌شود که باعث ایجاد جرقه شدید (Arcing)، فرسایش فیزیکی یا سوختن کامل سوییچ الکترونیکی می‌گردد!</p>
+<p>مهندسان با موازی کردن یک <strong>مدار اسنابر <span class="arithmatex">\(RC\)</span></strong> با سوییچ، مدار مرتبه دومی طراحی می‌کنند که:<br>
+1. نرخ افزایش ولتاژ دو سر کلید (<span class="arithmatex">\(\frac{dv}{dt}\)</span>) را محدود سازد.<br>
+2. انرژی ذخیره‌شده در میدان مغناطیسی سلف کابل‌ها را در خازن جذب کرده و در مقاومت اسنابر در رژیم <strong>میرایی بحرانی</strong> تخلیه نماید تا از هرگونه نوسان القایی جلوگیری شود.</p>
+<hr>
+<h2 id="_9">مدل‌سازی دینامیکی سیستم‌ها در مهندسی صنایع<a class="headerlink" href="#_9" title="Permanent link">¶</a></h2>
+<h3 id="_10">۱. رباتیک و اتوماسیون خطوط مونتاژ: بهینه‌سازی توازن میان زمان سیکل و ضایعات<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<p>در ایستگاه‌های جوشکاری رباتیک، برش لیزری یا برداشتن و گذاشتن قطعات (Pick-and-Place)، بازوی رباتیک با یک سیستم محرک الکتریکی (موتور سروو و گیربکس) حرکت داده می‌شود. رفتار حرکتی بازوی ربات دقیقاً از معادله دینامیکی مرتبه دوم تبعیت می‌کند:</p>
+<div class="arithmatex">\[J \frac{d^2 \theta}{dt^2} + B \frac{d\theta}{dt} + K \theta = \tau(t)\]</div>
+<p>که در آن <span class="arithmatex">\(J\)</span> ممان اینرسی بازو، <span class="arithmatex">\(B\)</span> ضریب میرایی و اصطکاک و <span class="arithmatex">\(K\)</span> صلبیت و سختی مکانیکی بازوست.</p>
+<pre class="mermaid"><code>flowchart LR
+    subgraph Under ["حالت Underdamped (میرای ضعیف)"]
+        direction TB
+        U1["رسیدن سریع به مقصد"] --&gt; U2["لرزش و اورشوت بازو"]
+        U2 --&gt; U3["برخورد یا خطای مونتاژ"]
+        U3 --&gt; U4["افزایش نرخ ضایعات (Scrap Rate)"]
+    end
+    subgraph Over ["حالت Overdamped (میرای شدید)"]
+        direction TB
+        O1["حرکت بسیار نرم و بدون لرزش"] --&gt; O2["سرعت بسیار پایین حرکت"]
+        O2 --&gt; O3["افزایش زمان سیکل (Cycle Time)"]
+        O3 --&gt; O4["کاهش ظرفیت تولید خط مونتاژ"]
+    end
+    subgraph Critical ["حالت بهینه: میرایی بحرانی (ζ ≈ 0.7 - 1.0)"]
+        direction TB
+        C1["سریع‌ترین زمان نشست بدون برخورد"]
+        C2["ماکزیمم بازده کلی تجهیزات (OEE)"]
+    end</code></pre>
+<ul>
+<li><strong>اگر کنترلر در حالت میرای ضعیف (<span class="arithmatex">\(\zeta &lt; 1\)</span>) باشد:</strong> بازو سریع حرکت می‌کند، اما در نقطه توقف دچار لرزش مکانیکی (Ringing) می‌شود. این لرزش باعث برخورد قطعه کار، فرسایش مفاصل ربات و افزایش نرخ ضایعات (Scrap Rate) می‌شود.</li>
+<li><strong>اگر کنترلر در حالت میرای شدید (<span class="arithmatex">\(\zeta &gt; 1\)</span>) باشد:</strong> هیچ‌گونه لرزشی رخ نمی‌دهد، اما ربات به شدت کند عمل می‌کند؛ در نتیجه زمان سیکل تولید (Cycle Time) بالا رفته و گلوگاه خط کندتر می‌شود.</li>
+<li><strong>تصمیم بهینه مهندسی صنایع:</strong> مهندس صنایع به کمک مهندس کنترل، پارامترهای کنترلر (PID) را روی <strong>میرایی بحرانی (<span class="arithmatex">\(\zeta = 1\)</span>) یا میرایی بهینه با ضریب <span class="arithmatex">\(\zeta \approx 0.7\)</span></strong> تنظیم می‌کند تا کمترین زمان نشست ممکن با تضمین عدم برخورد حاصل شود.</li>
+</ul>
+<hr>
+<h3 id="bullwhip-effect-rlc">۲. مدل‌سازی زنجیره تأمین و اثر شلاقی (Bullwhip Effect) به عنوان مدار RLC<a class="headerlink" href="#bullwhip-effect-rlc" title="Permanent link">¶</a></h3>
+<p>یکی از شاهکارهای پیوند مهندسی برق با دینامیک سیستم‌ها (System Dynamics) در مهندسی صنایع، <strong>تحلیل اثر شلاقی در زنجیره تأمین به عنوان یک مدار <span class="arithmatex">\(RLC\)</span> مرتبه دوم</strong> است.</p>
+<blockquote>
+<p><strong>اثر شلاقی (Bullwhip Effect) چیست؟</strong><br>
+پدیده‌ای که در آن تغییرات و نوسانات کوچک در تقاضای مصرف‌کننده نهایی در بازار، هر چه به لایه‌های بالاتر زنجیره (توزیع‌کننده <span class="arithmatex">\(\to\)</span> کارخانه <span class="arithmatex">\(\to\)</span> تأمین‌کننده مواد خام) حرکت می‌کند، با ضریب فزاینده و غیرقابل کنترلی بزرگ‌تر می‌شود.</p>
+</blockquote>
+<pre class="mermaid"><code>flowchart LR
+    Demand["تغییر ناگهانی تقاضای بازار&lt;br/&gt;(ورودی پله e(t))"] --&gt; Retail["خرده‌فروش&lt;br/&gt;(نوسان ۵٪)"]
+    Retail --&gt; Dist["توزیع‌کننده&lt;br/&gt;(نوسان ۱۵٪)"]
+    Dist --&gt; Plant["کارخانه سازنده&lt;br/&gt;(نوسان ۴۰٪)"]
+    Plant --&gt; Raw["تأمین‌کننده ماده اولیه&lt;br/&gt;(نوسان ۸۰٪)"]
+
+    style Demand fill:#0284c7,stroke:#38bdf8,color:#fff
+    style Retail fill:#1e293b,stroke:#a855f7,color:#fff
+    style Dist fill:#1e293b,stroke:#a855f7,color:#fff
+    style Plant fill:#7f1d1d,stroke:#f87171,color:#fff
+    style Raw fill:#991b1b,stroke:#ef4444,stroke-width:2px,color:#fff</code></pre>
+<h4 id="rlc_1">جدول تناظر مفاهیم زنجیره تأمین با مدار RLC<a class="headerlink" href="#rlc_1" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">کمیت در مدار</th>
+<th style="text-align: left;">مفهوم در زنجیره تأمین</th>
+<th style="text-align: left;">نقش و رفتار دینامیکی</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>سلف (<span class="arithmatex">\(L\)</span>)</strong></td>
+<td style="text-align: left;"><strong>زمان تدارک و لختی تولید (Lead Time)</strong></td>
+<td style="text-align: left;">همان‌طور که سلف اجازه تغییر ناگهانی جریان را نمی‌دهد، زمان ساخت، حمل‌ونقل و لختی ماشین‌آلات نیز مانع از تنظیم آنی ظرفیت تولید می‌شوند.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>خازن (<span class="arithmatex">\(C\)</span>)</strong></td>
+<td style="text-align: left;"><strong>ظرفیت انبار و موجودی اطمینان (Buffer)</strong></td>
+<td style="text-align: left;">جریان ورودی کالا منهای جریان خروجی، در انبار جمع می‌شود (<span class="arithmatex">\(q = \int (i_{in} - i_{out})dt\)</span>)؛ دقیقاً مشابه انباشت بار الکتریکی در خازن.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>مقاومت (<span class="arithmatex">\(R\)</span>)</strong></td>
+<td style="text-align: left;"><strong>سیاست‌های هموارسازی (Order Smoothing)</strong></td>
+<td style="text-align: left;">میزان بازدارندگی مدیران از واکنش‌های آنی به نوسانات مقطعی و سیاست‌های احتیاطی در تبادل شفاف اطلاعات.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>ولتاژ (<span class="arithmatex">\(v_C\)</span>)</strong></td>
+<td style="text-align: left;"><strong>سطح موجودی انبار (Inventory Level)</strong></td>
+<td style="text-align: left;">متغیر کلیدی سیستم که نوسان آن موجب خسارت به سیستم می‌شود.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_11">چرا زنجیره تأمین مانند یک مدار مرتبه دوم نوسان می‌کند؟<a class="headerlink" href="#_11" title="Permanent link">¶</a></h4>
+<p>وقتی تقاضای بازار ناگهان افزایش می‌یابد (ورودی پله):<br>
+1. به دلیل <strong>لختی و زمان تدارک (سلف <span class="arithmatex">\(L\)</span>)</strong>، کارخانه بلافاصله نمی‌تواند کالا تحویل دهد؛ پس موجودی انبارها افت می‌کند و خطر کمبود کالا (Stockout) شکل می‌گیرد.<br>
+2. مدیران زنجیره تأمین وحشت‌زده می‌شوند و سفارش‌های دوچندان ثبت می‌کنند.<br>
+3. پس از گذشت زمان تأخیر (<span class="arithmatex">\(L\)</span>)، حجم عظیمی از کالاهای سفارش داده شده ناگهان وارد انبارها می‌شوند (<strong>خازن <span class="arithmatex">\(C\)</span> پر می‌شود</strong>).<br>
+4. این بار سیستم دچار <strong>فراجهش موجودی (Inventory Overshoot)</strong> می‌شود و انبارها پر از کالای مازاد و خواب سنگین سرمایه می‌گردند!<br>
+5. مدیران سفارش‌ها را لغو می‌کنند؛ خط تولید خاموش می‌شود تا انبار خالی شود، و مجدداً کمبود رخ می‌دهد!</p>
+<p>این پدیده دقیقاً پاسخ <strong>میرای ضعیف (Underdamped)</strong> یک مدار مرتبه دوم است. تنها راه رهایی از این تله، افزایش مقاومت کنترلی (<span class="arithmatex">\(R\)</span>) از طریق <strong>شفافیت داده‌ها (سیستم‌های ERP و اشتراک‌گذاری لحظه‌ای تقاضای POS)</strong> و بهینه‌سازی سیستم به سوی <strong>میرایی بحرانی</strong> است.</p>
+<hr>
+<h2 id="executive-summary">جمع‌بندی در یک نگاه (Executive Summary)<a class="headerlink" href="#executive-summary" title="Permanent link">¶</a></h2>
+<p>برای ارائه سریع و مرور مفهومی در آزمون‌ها یا جلسات کاری، ماتریس زیر خلاصه‌ای جامع از پل ارتباطی میان برق، مکانیک و مهندسی صنایع را به نمایش می‌گذارد:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">بعد مقایسه</th>
+<th style="text-align: left;">مهندسی برق (مدار <span class="arithmatex">\(RLC\)</span>)</th>
+<th style="text-align: left;">مهندسی مکانیک (جرم-فنر-دمپر)</th>
+<th style="text-align: left;">مهندسی صنایع (زنجیره تأمین)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>عنصر لختی و اینرسی</strong></td>
+<td style="text-align: left;">سلف (<span class="arithmatex">\(L\)</span>)</td>
+<td style="text-align: left;">جرم و اینرسی (<span class="arithmatex">\(m\)</span>)</td>
+<td style="text-align: left;">زمان انتظار تأمین و ساخت (Lead Time)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>عنصر انباشت و ظرفیت</strong></td>
+<td style="text-align: left;">خازن (<span class="arithmatex">\(C\)</span>)</td>
+<td style="text-align: left;">نرمی فنر (<span class="arithmatex">\(\frac{1}{k}\)</span>)</td>
+<td style="text-align: left;">ظرفیت ذخیره‌سازی انبار (Inventory Capacity)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>عنصر میراکننده و اتلاف</strong></td>
+<td style="text-align: left;">مقاومت (<span class="arithmatex">\(R\)</span>)</td>
+<td style="text-align: left;">اصطکاک و دمپر (<span class="arithmatex">\(c\)</span>)</td>
+<td style="text-align: left;">سیاست هموارسازی سفارش‌ها و شفافیت اطلاعات</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>پاسخ میرای ضعیف (<span class="arithmatex">\(\zeta &lt; 1\)</span>)</strong></td>
+<td style="text-align: left;">نوسان ولتاژ، اسپایک و تشدید خطرناک</td>
+<td style="text-align: left;">ارتعاش و کوبش مکانیکی، لرزش بازوی ربات</td>
+<td style="text-align: left;">اثر شلاقی، تاب خوردن میان کمبود و انباشت مازاد</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>پاسخ میرای شدید (<span class="arithmatex">\(\zeta &gt; 1\)</span>)</strong></td>
+<td style="text-align: left;">رسیدن کند و تنبل به مقدار هدف</td>
+<td style="text-align: left;">حرکت بسیار سنگین و قفل‌شونده</td>
+<td style="text-align: left;">زمان سیکل طولانی، تأخیرهای مزمن در تحویل</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>پاسخ میرایی بحرانی (<span class="arithmatex">\(\zeta = 1\)</span>)</strong></td>
+<td style="text-align: left;">سریع‌ترین صعود بدون حتی یک ولت اورشوت</td>
+<td style="text-align: left;">نرم‌ترین و سریع‌ترین حرکت بازوی ربات</td>
+<td style="text-align: left;">حداقل هزینه کل (تعادل میان خواب کالا و سفارش)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a href="../../tags/#مهندسی_برق" class="sarv-tag" data-tag="مهندسی_برق">#مهندسی_برق</a> <a href="../../tags/#مدار_مرتبه_دوم" class="sarv-tag" data-tag="مدار_مرتبه_دوم">#مدار_مرتبه_دوم</a> <a href="../../tags/#مهندسی_صنایع" class="sarv-tag" data-tag="مهندسی_صنایع">#مهندسی_صنایع</a> <a href="../../tags/#زنجیره_تأمین" class="sarv-tag" data-tag="زنجیره_تأمین">#زنجیره_تأمین</a> <a href="../../tags/#اتوماسیون_صنعتی" class="sarv-tag" data-tag="اتوماسیون_صنعتی">#اتوماسیون_صنعتی</a> <a href="../../tags/#اثر_شلاقی" class="sarv-tag" data-tag="اثر_شلاقی">#اثر_شلاقی</a> <a href="../../tags/#تشدید" class="sarv-tag" data-tag="تشدید">#تشدید</a> <a href="../../tags/#دانشگاه" class="sarv-tag" data-tag="دانشگاه">#دانشگاه</a></p>
+      </div>
+
+      <!-- بخش بک‌لینک‌ها (پیوندهای ورودی به سبک ابسیدین) -->
+      
+
+      <!-- ناوبری صفحه قبلی و بعدی -->
+      
+      <div class="sarv-page-nav">
+        
+        <a href="../" class="btn btn-relief btn-neutral sarv-nav-btn prev">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+          <div class="sarv-nav-text">
+            <span class="sarv-nav-sub">صفحه قبل</span>
+            <span class="sarv-nav-title">مبانی مهندسی برق و کاربردهای صنعتی</span>
+          </div>
+        </a>
+        
+
+        
+        <a href="../../macroeconomics/" class="btn btn-relief btn-neutral sarv-nav-btn next">
+          <div class="sarv-nav-text">
+            <span class="sarv-nav-sub">صفحه بعد</span>
+            <span class="sarv-nav-title">معرفی و فهرست فصول</span>
+          </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"></path></svg>
+        </a>
+        
+      </div>
+      
+    </article>
+  </main>
+
+  <!-- ستون چپ: فهرست تیترها (TOC) و گراف محلی -->
+  <aside class="sarv-toc-sidebar">
+    <div class="sarv-toc-container">
+  <!-- فهرست عناوین صفحه -->
+  
+  <div class="sarv-toc-box">
+    <div class="sarv-toc-title">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="21" x2="3" y1="6" y2="6"></line><line x1="15" x2="3" y1="12" y2="12"></line><line x1="17" x2="3" y1="18" y2="18"></line></svg>
+      <span>در این صفحه</span>
+    </div>
+    <ul class="sarv-toc-list">
+      
+        <li class="sarv-toc-item depth-1">
+          <a href="#_1" class="sarv-toc-link">از مدار تا زنجیره تأمین: کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع</a>
+        </li>
+        
+          <li class="sarv-toc-item depth-2">
+            <a href="#_2" class="sarv-toc-link">مقدمه و شهود فیزیکی: چرا مدارهای مرتبه دوم منحصربه‌فردند؟</a>
+          </li>
+        
+          <li class="sarv-toc-item depth-2">
+            <a href="#_3" class="sarv-toc-link">سه رژیم رفتاری پاسخ گذرا: کلید طلایی طراحی مهندسی</a>
+          </li>
+        
+          <li class="sarv-toc-item depth-2">
+            <a href="#rlc" class="sarv-toc-link">آزمایشگاه تعاملی: شبیه‌ساز پاسخ پله مدار RLC</a>
+          </li>
+        
+          <li class="sarv-toc-item depth-2">
+            <a href="#_5" class="sarv-toc-link">کاربردهای مستقیم در کف کارخانه (نگاه سخت‌افزاری)</a>
+          </li>
+        
+          <li class="sarv-toc-item depth-2">
+            <a href="#_9" class="sarv-toc-link">مدل‌سازی دینامیکی سیستم‌ها در مهندسی صنایع</a>
+          </li>
+        
+          <li class="sarv-toc-item depth-2">
+            <a href="#executive-summary" class="sarv-toc-link">جمع‌بندی در یک نگاه (Executive Summary)</a>
+          </li>
+        
+      
+    </ul>
+  </div>
+  
+
+  <!-- گراف ارتباطات این یادداشت (Local Graph) -->
+  <div class="sarv-local-graph-box-wrapper">
+    <div class="sarv-local-graph-header">
+      <div class="sarv-toc-title">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg>
+        <span>ارتباطات این یادداشت</span>
+      </div>
+    </div>
+    <div id="sarv-local-graph-box" class="sarv-local-graph-canvas-container">
+      <div class="sarv-graph-placeholder">در حال بارگذاری گراف پیوندها...</div>
+    </div>
+  </div>
+</div>
+
+<style>
+.sarv-toc-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.sarv-toc-box {
+  background: color-mix(in oklab, var(--color-base) 75%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 45%, transparent);
+  border-radius: var(--radius-card);
+  padding: 1rem;
+}
+.sarv-toc-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-base-content);
+  margin-bottom: 0.75rem;
+}
+.sarv-toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.sarv-toc-item.depth-2 { padding-right: 0; }
+.sarv-toc-item.depth-3 { padding-right: 0.75rem; }
+.sarv-toc-item.depth-4 { padding-right: 1.25rem; }
+.sarv-toc-link {
+  display: block;
+  font-size: 0.8rem;
+  color: color-mix(in oklab, var(--color-base-content) 70%, transparent);
+  text-decoration: none !important;
+  line-height: 1.5;
+  transition: all 0.18s ease;
+  border-right: 2px solid transparent;
+  padding: 0.25rem 0.5rem 0.25rem 0.25rem;
+  border-radius: 6px 0 0 6px;
+}
+.sarv-toc-link:hover {
+  color: var(--color-primary);
+  border-right-color: var(--color-primary);
+  background: color-mix(in oklab, var(--color-primary) 8%, transparent);
+}
+.sarv-toc-link.active {
+  color: var(--color-primary) !important;
+  font-weight: 700 !important;
+  border-right: 3px solid var(--color-primary) !important;
+  background: color-mix(in oklab, var(--color-primary) 12%, transparent) !important;
+}
+
+/* Local Graph Box in Sidebar (Harmonious Theme Integration) */
+.sarv-local-graph-box-wrapper {
+  background: color-mix(in oklab, var(--color-base) 75%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 45%, transparent);
+  border-radius: var(--radius-card);
+  padding: 0.85rem;
+  overflow: hidden;
+}
+.sarv-local-graph-canvas-container {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background: color-mix(in oklab, var(--color-base-500) 18%, var(--color-base));
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.sarv-graph-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 0.75rem;
+  color: var(--color-neutral);
+}
+</style>
+
+<script>
+(function() {
+  function setupTocScrollspy() {
+    const links = document.querySelectorAll('.sarv-toc-link');
+    if (!links.length) return;
+
+    const headingEntries = [];
+    links.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        const id = decodeURIComponent(href.slice(1));
+        const el = document.getElementById(id);
+        if (el) {
+          headingEntries.push({ id, el, link });
+        }
+      }
+    });
+
+    if (!headingEntries.length) return;
+
+    function onScroll() {
+      const scrollY = window.scrollY;
+      const headerOffset = 110;
+      let activeEntry = headingEntries[0];
+
+      for (let i = 0; i < headingEntries.length; i++) {
+        const top = headingEntries[i].el.getBoundingClientRect().top + scrollY;
+        if (scrollY + headerOffset >= top - 25) {
+          activeEntry = headingEntries[i];
+        } else {
+          break;
+        }
+      }
+
+      headingEntries.forEach(entry => {
+        if (entry === activeEntry) {
+          entry.link.classList.add('active');
+        } else {
+          entry.link.classList.remove('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupTocScrollspy);
+  } else {
+    setupTocScrollspy();
+  }
+})();
+</script>
+  </aside>
+</div>
+
+<style>
+.sarv-page-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid color-mix(in oklab, var(--color-base-500) 40%, transparent);
+}
+.sarv-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-card);
+  text-decoration: none !important;
+}
+.sarv-nav-text {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+.sarv-nav-sub {
+  font-size: 0.72rem;
+  color: var(--color-neutral);
+}
+.sarv-nav-title {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--color-base-content);
+}
+.sarv-nav-btn.next .sarv-nav-text {
+  text-align: left;
+}
+</style>
+
+  <!-- فوتر -->
+  <footer class="sarv-footer">
+  <div class="sarv-footer-content">
+    <!-- متن کپی رایت و معرفی -->
+    <div class="sarv-footer-info">
+      
+      <p class="sarv-copyright">ساخته شده با مقادیر فراوان چای و حوصله بسیار توسط MJBakhshi</p>
+      
+      <p class="sarv-credit">
+        طراحی شده با دیزاین‌سیستم <strong>Sarv UI v0.3.1</strong> و معماری بومی تم برای MkDocs
+      </p>
+    </div>
+
+    <!-- شبکه‌های اجتماعی -->
+    <div class="sarv-footer-socials">
+      <a href="https://github.com/mjb4khshi" target="_blank" rel="noopener noreferrer" class="sarv-social-link" title="گیت‌هاب">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"></path></svg>
+      </a>
+      <a href="https://linkedin.com/in/mjb4khshi" target="_blank" rel="noopener noreferrer" class="sarv-social-link" title="لینکدین">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style>
+.sarv-footer {
+  margin-top: auto;
+  border-top: 1px solid color-mix(in oklab, var(--color-base-500) 40%, transparent);
+  background: color-mix(in oklab, var(--color-base) 85%, transparent);
+  padding: 1.75rem 1.5rem;
+}
+.sarv-footer-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.sarv-footer-info p {
+  margin: 0.15rem 0;
+  font-size: 0.85rem;
+}
+.sarv-credit {
+  color: var(--color-neutral);
+  font-size: 0.78rem !important;
+}
+.sarv-footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  direction: ltr;
+}
+.sarv-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: color-mix(in oklab, var(--color-base-500) 45%, transparent);
+  color: var(--color-base-content);
+  transition: all 0.2s ease;
+  text-decoration: none !important;
+}
+.sarv-social-link:hover {
+  background: var(--color-primary);
+  color: var(--color-primary-content);
+  transform: translateY(-2px);
+}
+</style>
+
+  <!-- کشوی مدرن موبایل -->
+  <div id="sarv-mobile-drawer" class="sarv-drawer-fullscreen" onclick="if(event.target===this)this.classList.remove('is-open')">
+  <div class="sarv-drawer-fullscreen-inner" onclick="event.stopPropagation()">
+    <!-- هدر منوی تمام‌صفحه -->
+    <div class="sarv-drawer-header">
+      <div class="sarv-drawer-brand">
+        <div class="sarv-drawer-logo">
+          
+          <img src="../../Group 1w.png" alt="Logo" width="30" height="30">
+          
+        </div>
+        <div>
+          <span class="sarv-drawer-title">MJ'S KNTU Notes</span>
+          <span class="sarv-drawer-subtitle">سامانه یکپارچه یادداشت‌ها و جزوات</span>
+        </div>
+      </div>
+      <button type="button" class="btn btn-sm btn-neutral sarv-drawer-close" aria-label="بستن منو" onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+    </div>
+
+    <!-- بدنه اسکرول‌شونده منو -->
+    <div class="sarv-drawer-body">
+      <!-- ۱. جستجوی سریع -->
+      <div class="sarv-drawer-search-wrap" onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open'); document.getElementById('sarv-search-modal').classList.add('is-open'); setTimeout(() =&gt; document.getElementById('sarv-search-input')?.focus(), 60);">
+        <div class="input-wrap w-full">
+          <div class="input-box">
+            <div class="input-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+            </div>
+            <input type="text" class="input-field" placeholder="جستجو در تمام جزوات و مباحث..." readonly="">
+            <div class="input-kbd">جستجو</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ۲. دکمه گراف کل یادداشت‌ها -->
+      <div class="sarv-drawer-quick-actions">
+        <button type="button" class="btn btn-accent w-full sarv-drawer-action-btn" onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open'); document.getElementById('sarv-open-global-graph')?.click();">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg>
+          <span>مشاهده گراف ارتباطات یادداشت‌ها</span>
+        </button>
+      </div>
+
+      <!-- ۳. سوییچ ۱۵ تم رنگی سرو (سلکتور کامپکت) -->
+      <div class="sarv-drawer-section">
+        <div class="sarv-drawer-section-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a7 7 0 0 0 0 14v6a1 1 0 0 0 1-1 9 9 0 0 0 8-9c0-5-4-9-9-10Z"></path></svg>
+          <span>انتخاب تم رنگی</span>
+        </div>
+        <div class="sarv-compact-select-wrap">
+          <select id="sarv-mobile-theme-select" class="sarv-compact-select" onchange="window.SarvThemes.applyTheme(this.value)">
+            <option value="persian-dark">🇮🇷 ایرانی تاریک (پیش‌فرض)</option>
+            <option value="persian-light">🇮🇷 ایرانی روشن</option>
+            <option value="ocean-abyss">🌊 اقیانوس ژرف (Ocean Abyss)</option>
+            <option value="emerald">🌿 زمردین (Emerald)</option>
+            <option value="cyberpunk">⚡ سایبرپانک (Cyberpunk)</option>
+            <option value="sunset">🌅 غروب آفتاب (Sunset)</option>
+            <option value="matcha">🍵 ماچا (Matcha)</option>
+            <option value="nordic">❄️ نوردیک (Nordic)</option>
+            <option value="rose-gold">🌸 رزگلد (Rose Gold)</option>
+            <option value="tokyo-midnight">🌌 شب‌های توکیو (Tokyo)</option>
+            <option value="coffee-roast">☕ قهوه رست (Coffee)</option>
+            <option value="crimson">💎 یاقوت سرخ (Crimson)</option>
+            <option value="royal-purple">👑 بنفش سلطنتی (Royal)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ۴. بخش‌های اصلی -->
+      <div class="sarv-drawer-section">
+        <div class="sarv-drawer-section-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span>بخش‌های اصلی</span>
+        </div>
+        <div class="sarv-drawer-grid">
+          
+            
+              <a href="../.." class="sarv-drawer-card " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                <div class="sarv-drawer-card-icon">
+                  
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                  
+                </div>
+                <span>خانه</span>
+              </a>
+            
+          
+            
+              <a href="../../tags/" class="sarv-drawer-card " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                <div class="sarv-drawer-card-icon">
+                  
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                  
+                </div>
+                <span>برچسب‌ها</span>
+              </a>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </div>
+      </div>
+
+      <!-- ۵. فهرست دروس و دسته‌بندی‌ها -->
+      <div class="sarv-drawer-section">
+        <div class="sarv-drawer-section-title">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path><path d="M6 6h10"></path><path d="M6 10h10"></path></svg>
+          <span>دسته‌بندی‌ها و دروس</span>
+        </div>
+        <div class="sarv-drawer-list">
+          
+            
+          
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>واژه‌نامه تخصصی</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../../glossary/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>واژه‌نامه تخصصی اصطلاحات علمی و دانشگاهی</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>پروژه‌های دانشگاهی</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../../projects/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فهرست پروژه‌ها</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../projects/sarvestan/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>سروستان (سامانه هوشمند دانشجویی)</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../projects/kntu-card/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>طراحی کارت دانشجویی دانشگاه</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../projects/proji/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>شبیه‌ساز پرتابه Proji</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../projects/economics-study/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>پژوهش اقتصاد نهادگرا</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>ادبیات فارسی</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../../adabiat/%D8%A7%D9%86%D9%88%D8%A7%D8%B9%20%D8%B2%D8%A8%D8%A7%D9%86/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>ادبیات</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../adabiat/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DA%86%D9%87%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%81%D8%A7%D8%B1%D8%B3%DB%8C/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>تاریخچه زبان پارسی</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../adabiat/%D8%AC%D8%AF%D8%A7%D9%84%20%D8%B3%D8%B9%D8%AF%DB%8C%20%D9%88%20%D9%85%D8%AF%D8%B9%DB%8C/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>جدال سعدی و مدعی</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../adabiat/%D8%B4%DA%A9%D9%84%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C%20%D9%88%20%D9%BE%DB%8C%D8%AF%D8%A7%DB%8C%D8%B4%20%D8%B2%D8%A8%D8%A7%D9%86%20%D9%85%D9%84%D9%81%D9%88%D8%B8/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>شکل‌گیری و پیدایش زبان‌ ملفوظ</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>ریاضیات و حساب دیفرانسیل</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../../calculus/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فهرست مطالب ریاضی عمومی</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../calculus/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D8%AA%20%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>معادلات دیفرانسیل</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../calculus/orthogonal-paths/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>مسیرهای متعامد</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group is-open">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>مبانی مهندسی برق</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>مبانی مهندسی برق و کاربردهای صنعتی</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="./" class="sarv-drawer-sublink active" onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>اقتصاد کلان</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../../macroeconomics/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>معرفی و فهرست فصول</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B1%20-%20%DA%86%D8%A7%D8%B1%DA%86%D9%88%D8%A8%20%D9%86%D8%B8%D8%B1%DB%8C%20%D9%88%20%D9%85%D9%81%D8%A7%D9%87%DB%8C%D9%85%20%D8%A8%D9%86%DB%8C%D8%A7%D8%AF%DB%8C%D9%86/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فصل ۱: چارچوب نظری و مفاهیم بنیادین توسعه</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B2%20-%20%D8%A7%D8%B7%D9%84%D8%B3%20%D8%A2%D9%85%D8%A7%D8%B1%DB%8C%20%D9%88%20%D9%BE%D9%88%D8%B3%D8%AA%D8%B1%D9%87%D8%A7%DB%8C%20%D8%AA%D8%A8%DB%8C%DB%8C%D9%86%DB%8C/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فصل ۲: اطلس آماری و پوسترهای تبیینی شاخص‌ها</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B3%20-%20%D9%88%D8%A7%DA%A9%D8%A7%D9%88%DB%8C%20%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE%DB%8C%20%D9%88%20%D8%AA%D8%AC%D8%A7%D8%B1%D8%A8%20%DA%AF%D8%B0%D8%A7%D8%B1/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فصل ۳: واکاوی تاریخی و تجارب گذار اقتصادی در کشورهای منتخب</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B4%20-%20%D9%85%D8%A7%D8%AA%D8%B1%DB%8C%D8%B3%20%D8%AA%D8%B7%D8%A8%DB%8C%D9%82%DB%8C%20%D9%88%20%D8%A7%D9%84%DA%AF%D9%88%D9%87%D8%A7%DB%8C%20%DA%AF%D8%B0%D8%A7%D8%B1/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فصل ۴: ماتریس تطبیقی و واکاوی راهبردی الگوهای گذار</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../macroeconomics/%D9%81%D8%B5%D9%84%20%DB%B5%20-%20%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C%20%D9%85%D8%AF%D9%84%20%D9%BE%D9%84%D8%AA%D9%81%D8%B1%D9%85%DB%8C%20%DA%AF%D8%B0%D8%A7%D8%B1%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فصل ۵: طراحی مدل پلتفرمی گذار اقتصادی ایران</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../macroeconomics/%D9%86%D8%AA%DB%8C%D8%AC%D9%87%E2%80%8C%DA%AF%DB%8C%D8%B1%DB%8C%20%D9%88%20%D9%85%D9%86%D8%A7%D8%A8%D8%B9/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>نتیجه‌گیری کلان و فهرست منابع پژوهش</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../macroeconomics/%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%20%D9%86%D9%87%D8%A7%D8%AF%DA%AF%D8%B1%D8%A7%20%D9%88%20%D8%AF%D9%88%D9%84%D8%AA%20%D8%AA%D9%88%D8%B3%D8%B9%D9%87%E2%80%8C%DA%AF%D8%B1%D8%A7/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>اقتصاد نهادگرا و دولت توسعه‌گرا</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>نقشه‌برداری</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../../mapping/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>جزوه و مطالب درس نقشه‌برداری</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>اقتصاد خرد</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../../micro%20economics/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فهرست مطالب</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>محاسبات عددی</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../../numerical-analysis/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>درس محاسبات عددی و تحلیل الگوریتم‌ها</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>دوره‌های آزاد و برنامه‌نویسی</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../../out%20of%20kntu%20university/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>معرفی دوره‌ها</span>
+                      </a>
+                    
+                  
+                    
+                      <div class="sarv-drawer-nested-group " style="margin-right: 0.5rem; margin-top: 0.35rem;">
+                        <button type="button" class="sarv-drawer-group-btn" style="font-size: 0.82rem; padding: 0.45rem 0.65rem;" onclick="this.parentElement.classList.toggle('is-open')">
+                          <span>جاوا اسکریپت</span>
+                          <svg class="sarv-drawer-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                        </button>
+                        <div class="sarv-drawer-sublist">
+                          
+                            
+                              <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/jonas/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                <span class="sarv-drawer-bullet"></span>
+                                <span>🚀 برنامه ۲۱ روزه یادگیری JavaScript با دوره Jonas</span>
+                              </a>
+                            
+                          
+                            
+                              <div class="sarv-drawer-nested-group" style="margin-right: 0.5rem;">
+                                <div style="font-size: 0.75rem; font-weight: bold; color: var(--color-neutral); padding: 0.25rem 0.5rem;">دام و رویدادها (DOM &amp; Events)</div>
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/DOM%20%26%20events/selecting%20and%20manipulating%20Elements/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>سلکت کردن یک عنصر در فایل HTML با آیدی یا کلاس یا نوع</span>
+                                    </a>
+                                  
+                                
+                              </div>
+                            
+                          
+                            
+                              <div class="sarv-drawer-nested-group" style="margin-right: 0.5rem;">
+                                <div style="font-size: 0.75rem; font-weight: bold; color: var(--color-neutral); padding: 0.25rem 0.5rem;">مبانی بخش ۱ (Fundamentals 1)</div>
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/%3D%3D%20vs%20%3D%3D%3D/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>عملگرهای مقایسه تساوی</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/Falsy%20%20truthy%20values/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>Falsy  truthy values</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/Fundamentals%20%E2%80%93%20Part%201/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>📘 Fundamentals – Part 1</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/Logical%20Operators%20%26%20switch/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>عملگرهای منطقی</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/conditional%20%28Ternary%29%20Operator/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>عبارت شرطی</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/data-types/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>انواع داده</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/if-else-statements/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>🔀 شرط‌ها در JavaScript: if / else</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/operators/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>عملگرها</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/template%20literals/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>📌 Template Literals در JavaScript</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/type%20conversion/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>🔄 تبدیل نوع‌ها در JavaScript</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part1/variables/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>Variables</span>
+                                    </a>
+                                  
+                                
+                              </div>
+                            
+                          
+                            
+                              <div class="sarv-drawer-nested-group" style="margin-right: 0.5rem;">
+                                <div style="font-size: 0.75rem; font-weight: bold; color: var(--color-neutral); padding: 0.25rem 0.5rem;">مبانی بخش ۲ (Fundamentals 2)</div>
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Array%20Operations%20%28methods%29/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>عملگر های آرایه(متد)</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Arrays/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>آرایه ها</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Functions/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>توابع در جاوا اسکریپت</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/Fundamentals%20%E2%80%93%20Part%202/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>📘 Fundamentals – Part 2</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/loops/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>حلقه ها</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/object%20methods%28functions%29/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>متدهای شی در جاوا اسکریپت</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/objects/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>شیء در جاوا اسکریپت</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/strict%20mode/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>Strict mode</span>
+                                    </a>
+                                  
+                                
+                                  
+                                    <a href="../../out%20of%20kntu%20university/JS%20%D9%86%D9%88%D8%AA%E2%80%8C%D9%87%D8%A7%DB%8C%20%D8%AC%D8%A7%D9%88%D8%A7%20%D8%A7%D8%B3%DA%A9%D8%B1%DB%8C%D9%BE%D8%AA/Fundamentals%20-%20Part2/this/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                                      <span class="sarv-drawer-bullet"></span>
+                                      <span>واژه کلیدی this</span>
+                                    </a>
+                                  
+                                
+                              </div>
+                            
+                          
+                        </div>
+                      </div>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>فیزیک دانشگاهی</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../../physics/%D9%81%D9%87%D8%B1%D8%B3%D8%AA%20%D9%85%D8%B7%D8%A7%D9%84%D8%A8/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>فهرست مطالب درس فیزیک ۱</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>نظریه احتمال</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../../probability/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>درس نظریه احتمال و آمار مهندسی</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../probability/%D8%A7%D8%B5%D9%88%D9%84%20%D8%B3%D9%87%E2%80%8C%DA%AF%D8%A7%D9%86%D9%87%20%D8%AA%D9%81%DA%A9%D8%B1%20%D8%AF%D8%B1%20%D8%A7%D8%AD%D8%AA%D9%85%D8%A7%D9%84/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>اصول سه‌گانه تفکر و حل مسئله در احتمال - راهنمای بقا در استت ۱۱۰</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%A7%D9%88%D9%84/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>جلسه اول نظریه احتمال - مقدمه و اصول شمارش</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%AF%D9%88%D9%85/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>جلسه دوم نظریه احتمال - اثبات داستانی (Story Proof) و فرمول خط و توپ (Stars and Bars)</span>
+                      </a>
+                    
+                  
+                    
+                      <a href="../../probability/%D8%AC%D9%84%D8%B3%D9%87%20%D8%B3%D9%88%D9%85/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>جلسه سوم نظریه احتمال - مسئله و پارادوکس روز تولد</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>برنامه‌نویسی دانشگاهی</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../../programming/%D8%AC%D8%B2%D9%88%D9%87%20%DA%A9%D9%84%D8%A7%D8%B3%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%E2%80%8C%D9%86%D9%88%DB%8C%D8%B3%DB%8C%20%D8%A7%D8%B3%D8%AA%D8%A7%D8%AF%20%D8%A7%D8%B1%D8%B2%D8%A7%D9%86%DB%8C/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>جزوه کلاس برنامه‌نویسی استاد ارزانی</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+            
+              <div class="sarv-drawer-group ">
+                <button type="button" class="sarv-drawer-group-btn" onclick="this.parentElement.classList.toggle('is-open')">
+                  <span>استاتیک و مقاومت مصالح</span>
+                  <svg class="sarv-drawer-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"></path></svg>
+                </button>
+                <div class="sarv-drawer-sublist">
+                  
+                    
+                      <a href="../../statics/" class="sarv-drawer-sublink " onclick="document.getElementById('sarv-mobile-drawer').classList.remove('is-open')">
+                        <span class="sarv-drawer-bullet"></span>
+                        <span>درس استاتیک و مقاومت مصالح</span>
+                      </a>
+                    
+                  
+                </div>
+              </div>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Full-Screen Mobile Drawer with Soft Blur */
+.sarv-drawer-fullscreen {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100000;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background: color-mix(in oklab, var(--color-base) 92%, transparent);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: scale(1.02);
+  display: flex;
+  flex-direction: column;
+}
+.sarv-drawer-fullscreen.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+.sarv-drawer-fullscreen-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.sarv-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+}
+.sarv-drawer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+.sarv-drawer-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: color-mix(in oklab, var(--color-primary) 15%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sarv-drawer-title {
+  display: block;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-base-content);
+}
+.sarv-drawer-subtitle {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-neutral);
+}
+.sarv-drawer-body {
+  padding: 1.25rem 1.5rem 3rem 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  flex: 1;
+}
+.sarv-drawer-search-wrap {
+  cursor: pointer;
+}
+.sarv-drawer-quick-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+.sarv-drawer-action-btn {
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+}
+.sarv-drawer-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-neutral);
+  margin-bottom: 0.75rem;
+}
+.sarv-compact-select-wrap {
+  position: relative;
+  width: 100%;
+}
+.sarv-compact-select {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  background: color-mix(in oklab, var(--color-base-500) 45%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 75%, transparent);
+  border-radius: var(--radius-button);
+  padding: 0.7rem 1rem 0.7rem 2.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-base-content);
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+}
+.sarv-compact-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-primary) 20%, transparent);
+}
+.sarv-compact-select option {
+  background: var(--color-base);
+  color: var(--color-base-content);
+  padding: 0.5rem;
+}
+.sarv-compact-select-wrap::after {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--color-neutral);
+  pointer-events: none;
+}
+.sarv-drawer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+.sarv-drawer-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-button);
+  background: color-mix(in oklab, var(--color-base-500) 40%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  text-decoration: none !important;
+  color: var(--color-base-content);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+.sarv-drawer-card:hover, .sarv-drawer-card.active {
+  border-color: var(--color-primary);
+  background: color-mix(in oklab, var(--color-primary) 12%, transparent);
+  color: var(--color-primary);
+}
+.sarv-drawer-card-icon {
+  color: var(--color-primary);
+}
+.sarv-drawer-group {
+  margin-bottom: 0.5rem;
+}
+.sarv-drawer-group-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  background: color-mix(in oklab, var(--color-base-500) 30%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+  border-radius: var(--radius-button);
+  color: var(--color-base-content);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  text-align: right;
+}
+.sarv-drawer-chevron {
+  transition: transform 0.25s ease;
+  transform: rotate(180deg);
+}
+.sarv-drawer-group.is-open .sarv-drawer-chevron {
+  transform: rotate(90deg);
+}
+.sarv-drawer-sublist {
+  display: none;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 4px;
+  padding-right: 0.75rem;
+  border-right: 2px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+}
+.sarv-drawer-group.is-open .sarv-drawer-sublist {
+  display: flex;
+}
+.sarv-drawer-sublink {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 8px;
+  color: color-mix(in oklab, var(--color-base-content) 80%, transparent);
+  text-decoration: none !important;
+  font-size: 0.825rem;
+}
+.sarv-drawer-sublink:hover, .sarv-drawer-sublink.active {
+  color: var(--color-primary);
+  background: color-mix(in oklab, var(--color-primary) 10%, transparent);
+}
+.sarv-drawer-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--color-base-500) 80%, transparent);
+}
+.sarv-drawer-sublink.active .sarv-drawer-bullet {
+  background: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .sarv-drawer-fullscreen-inner {
+    max-width: 100% !important;
+  }
+  .sarv-drawer-header {
+    padding: 1rem 1.15rem !important;
+  }
+  .sarv-drawer-body {
+    padding: 1rem 1.15rem 4rem 1.15rem !important;
+  }
+  .sarv-drawer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+}
+</style>
+
+  <!-- مودال گراف کل دانش -->
+  <div id="sarv-global-graph-modal" class="sarv-modal-backdrop">
+  <div class="sarv-modal-content">
+    <div class="sarv-modal-header">
+      <div class="sarv-modal-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg>
+        <span>گراف جامع ارتباطات تمام یادداشت‌ها (Global Knowledge Graph)</span>
+      </div>
+      <button type="button" id="sarv-close-global-graph" class="btn btn-sm btn-neutral">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+    </div>
+
+    <div class="sarv-modal-body">
+      <div id="sarv-global-graph-box" class="sarv-global-graph-canvas">
+        <!-- Canvas injected by graph-engine.js -->
+      </div>
+    </div>
+
+    <div class="sarv-modal-footer">
+      <span class="sarv-graph-hint">💡 نکته: با اسکرول ماوس زوم کنید، با درگ کردن نودها را حرکت دهید و برای باز کردن یادداشت روی نود کلیک نمایید.</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.sarv-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.sarv-modal-backdrop.is-open {
+  display: flex;
+}
+.sarv-modal-content {
+  width: 100%;
+  max-width: 1100px;
+  height: 85vh;
+  background: color-mix(in oklab, var(--color-base) 94%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 80%, transparent);
+  border-radius: var(--radius-card);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: modalScaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes modalScaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.sarv-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+}
+.sarv-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-base-content);
+}
+.sarv-modal-body {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--color-base-500) 20%, transparent);
+}
+.sarv-global-graph-canvas {
+  width: 100%;
+  height: 100%;
+}
+.sarv-modal-footer {
+  padding: 0.75rem 1.5rem;
+  border-top: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+  font-size: 0.8rem;
+  color: var(--color-neutral);
+}
+</style>
+
+  <!-- مودال جستجوی سریع -->
+  <div id="sarv-search-modal" class="sarv-search-backdrop">
+  <div class="sarv-search-dialog">
+    <div class="sarv-search-header">
+      <div class="input-wrap w-full">
+        <div class="input-box">
+          <div class="input-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          </div>
+          <input type="text" id="sarv-search-input" class="input-field" placeholder="جستجو در تمام جزوات، فرمول‌ها و مباحث..." autocomplete="off">
+          <button type="button" id="sarv-search-close" class="sarv-search-close-btn">
+            <kbd>ESC</kbd>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="sarv-search-results" class="sarv-search-results-box">
+      <div class="sarv-search-empty">عبارتی را برای جستجو وارد کنید...</div>
+    </div>
+
+    <div class="sarv-search-footer">
+      <span>راهنما: با کلیدهای <strong>Esc</strong> یا کلیک روی پس‌زمینه پنجره را ببندید.</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.sarv-search-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5rem 1rem 2rem 1rem;
+}
+.sarv-search-backdrop.is-open {
+  display: flex;
+}
+.sarv-search-dialog {
+  width: 100%;
+  max-width: 680px;
+  max-height: 80vh;
+  background: color-mix(in oklab, var(--color-base) 96%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 80%, transparent);
+  border-radius: var(--radius-card);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: searchFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes searchFadeIn {
+  from { opacity: 0; transform: scale(0.96) translateY(-10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.sarv-search-header {
+  padding: 1.25rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--color-base-500) 40%, transparent);
+}
+.sarv-search-close-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 0.75rem;
+}
+.sarv-search-close-btn kbd {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  background: color-mix(in oklab, var(--color-base-500) 60%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 90%, transparent);
+  color: var(--color-neutral);
+}
+.sarv-search-results-box {
+  padding: 1rem 1.25rem;
+  overflow-y: auto;
+  max-height: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.sarv-search-empty {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--color-neutral);
+  font-size: 0.9rem;
+}
+.sarv-search-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-button);
+  background: color-mix(in oklab, var(--color-base-500) 25%, transparent);
+  border: 1px solid color-mix(in oklab, var(--color-base-500) 50%, transparent);
+  text-decoration: none !important;
+  color: inherit;
+  transition: all 0.15s ease;
+}
+.sarv-search-item:hover {
+  border-color: var(--color-primary);
+  background: color-mix(in oklab, var(--color-primary) 12%, transparent);
+}
+.sarv-search-item-title {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--color-primary);
+}
+.sarv-search-item-snippet {
+  font-size: 0.8rem;
+  color: color-mix(in oklab, var(--color-base-content) 75%, transparent);
+  line-height: 1.5;
+}
+.sarv-search-footer {
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid color-mix(in oklab, var(--color-base-500) 40%, transparent);
+  font-size: 0.78rem;
+  color: var(--color-neutral);
+}
+</style>
+
+  <!-- دکمه شناور بازگشت به بالا -->
+  <button type="button" id="sarv-back-to-top" class="btn btn-accent sarv-back-to-top" title="بازگشت به بالای صفحه">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m18 15-6-6-6 6"></path></svg>
+  </button>
+
+  <style>
+  .sarv-back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 990;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(12px);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  </style>
+
+  <!-- اسکریپت‌های تم سرو -->
+  <script src="../../assets/js/theme.js"></script>
+  <script src="../../assets/js/copy-code.js"></script>
+  <script src="../../assets/js/checkbox-anim.js"></script>
+  <script src="../../assets/js/reading-progress.js"></script>
+  <script src="../../assets/js/graph-engine.js"></script>
+  <script src="../../assets/js/hover-preview.js"></script>
+  <script src="../../assets/js/mermaid-theme.js"></script>
+  <script src="../../assets/js/search.js"></script>
+
+  <!-- اسکریپت‌های افزوده (KaTeX / MathJax / ...) -->
+  
+  <script src="../../javascripts/mathjax.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  
+  <script src="../../javascripts/translate.js"></script>
+  
+  <script src="../../search/main.js"></script>
+  
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

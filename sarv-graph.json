@@ -6,10 +6,10 @@
       "url": "./",
       "folder": "عمومی",
       "tags": [],
-      "words": 348,
+      "words": 373,
       "isHome": true,
       "radius": 9.0,
-      "degree": 16
+      "degree": 17
     },
     {
       "id": "ext:16790dcb",
@@ -240,6 +240,36 @@
       ],
       "words": 470,
       "degree": 0,
+      "radius": 4.8
+    },
+    {
+      "id": "electrical/index.md",
+      "title": "مبانی مهندسی برق و کاربردهای صنعتی",
+      "url": "electrical/",
+      "folder": "electrical",
+      "tags": [],
+      "words": 267,
+      "isHub": true,
+      "degree": 2,
+      "radius": 5.8
+    },
+    {
+      "id": "electrical/second-order-circuits.md",
+      "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+      "url": "electrical/second-order-circuits/",
+      "folder": "electrical",
+      "tags": [
+        "مهندسی_برق",
+        "مدار_مرتبه_دوم",
+        "مهندسی_صنایع",
+        "زنجیره_تأمین",
+        "اتوماسیون_صنعتی",
+        "اثر_شلاقی",
+        "تشدید",
+        "دانشگاه"
+      ],
+      "words": 4202,
+      "degree": 1,
       "radius": 4.8
     },
     {
@@ -1027,6 +1057,11 @@
       "type": "external"
     },
     {
+      "source": "electrical/index.md",
+      "target": "electrical/second-order-circuits.md",
+      "type": "card"
+    },
+    {
       "source": "macroeconomics/index.md",
       "target": "macroeconomics/فصل ۱ - چارچوب نظری و مفاهیم بنیادین.md",
       "type": "card"
@@ -1263,6 +1298,11 @@
     },
     {
       "source": "index.md",
+      "target": "electrical/index.md",
+      "type": "hub"
+    },
+    {
+      "source": "index.md",
       "target": "glossary/index.md",
       "type": "hub"
     },
@@ -1400,6 +1440,31 @@
         "دانشگاه"
       ],
       "summary": "# درس معادلات دیفرانسیل و کاربردهای آن ## مباحث تحلیلی، روش‌های حل کلاسیک و کاربردهای مهندسی  !!! note \tاین بخش به یادداشت‌ها، روش‌های تحلیلی حل معادلات و بانک مسائل درس **معادلات..."
+    },
+    "electrical/": {
+      "id": "electrical/index.md",
+      "title": "مبانی مهندسی برق و کاربردهای صنعتی",
+      "url": "electrical/",
+      "folder": "electrical",
+      "tags": [],
+      "summary": "# درس مبانی مهندسی برق و تحلیل سیستم‌ها  ## مدارهای الکتریکی، ماشین‌های صنعتی و مدل‌سازی دینامیکی سیستم‌ها  !!! note \"معرفی دوره\" \tاین بخش به یادداشت‌ها، شهودهای مهندسی، تحلیل مدار..."
+    },
+    "electrical/second-order-circuits/": {
+      "id": "electrical/second-order-circuits.md",
+      "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+      "url": "electrical/second-order-circuits/",
+      "folder": "electrical",
+      "tags": [
+        "مهندسی_برق",
+        "مدار_مرتبه_دوم",
+        "مهندسی_صنایع",
+        "زنجیره_تأمین",
+        "اتوماسیون_صنعتی",
+        "اثر_شلاقی",
+        "تشدید",
+        "دانشگاه"
+      ],
+      "summary": "# از مدار تا زنجیره تأمین: کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع  > **ایده محوری برای ارائه:**   > وقتی دانشجویان مهندسی صنایع یا مکانیک برای اولین بار با معادلات دیفر..."
     },
     "glossary/": {
       "id": "glossary/index.md",
@@ -1911,6 +1976,12 @@
         "folder": "calculus"
       },
       {
+        "id": "electrical/second-order-circuits.md",
+        "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+        "url": "electrical/second-order-circuits/",
+        "folder": "electrical"
+      },
+      {
         "id": "glossary/index.md",
         "title": "واژه‌نامه تخصصی اصطلاحات علمی و دانشگاهی",
         "url": "glossary/",
@@ -1951,6 +2022,62 @@
         "title": "درس استاتیک و مقاومت مصالح",
         "url": "statics/",
         "folder": "statics"
+      }
+    ],
+    "مهندسی_برق": [
+      {
+        "id": "electrical/second-order-circuits.md",
+        "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+        "url": "electrical/second-order-circuits/",
+        "folder": "electrical"
+      }
+    ],
+    "مدار_مرتبه_دوم": [
+      {
+        "id": "electrical/second-order-circuits.md",
+        "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+        "url": "electrical/second-order-circuits/",
+        "folder": "electrical"
+      }
+    ],
+    "مهندسی_صنایع": [
+      {
+        "id": "electrical/second-order-circuits.md",
+        "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+        "url": "electrical/second-order-circuits/",
+        "folder": "electrical"
+      }
+    ],
+    "زنجیره_تأمین": [
+      {
+        "id": "electrical/second-order-circuits.md",
+        "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+        "url": "electrical/second-order-circuits/",
+        "folder": "electrical"
+      }
+    ],
+    "اتوماسیون_صنعتی": [
+      {
+        "id": "electrical/second-order-circuits.md",
+        "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+        "url": "electrical/second-order-circuits/",
+        "folder": "electrical"
+      }
+    ],
+    "اثر_شلاقی": [
+      {
+        "id": "electrical/second-order-circuits.md",
+        "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+        "url": "electrical/second-order-circuits/",
+        "folder": "electrical"
+      }
+    ],
+    "تشدید": [
+      {
+        "id": "electrical/second-order-circuits.md",
+        "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+        "url": "electrical/second-order-circuits/",
+        "folder": "electrical"
       }
     ],
     "واژه": [
