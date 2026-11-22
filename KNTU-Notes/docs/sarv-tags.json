@@ -1,10 +1,62 @@
 {
   "معادلات_دیفرانسیل": [
     {
+      "id": "calculus/bessel.md",
+      "title": "معادلات دیفرانسیل بسل",
+      "url": "calculus/bessel/",
+      "folder": "calculus"
+    },
+    {
       "id": "calculus/معادلات دیفرانسیل.md",
       "title": "معادلات دیفرانسیل",
       "url": "calculus/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D8%AA%20%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84/",
       "folder": "calculus"
+    }
+  ],
+  "توابع_بسل": [
+    {
+      "id": "calculus/bessel.md",
+      "title": "معادلات دیفرانسیل بسل",
+      "url": "calculus/bessel/",
+      "folder": "calculus"
+    }
+  ],
+  "روش_فروبنیوس": [
+    {
+      "id": "calculus/bessel.md",
+      "title": "معادلات دیفرانسیل بسل",
+      "url": "calculus/bessel/",
+      "folder": "calculus"
+    }
+  ],
+  "تابع_گاما": [
+    {
+      "id": "calculus/bessel.md",
+      "title": "معادلات دیفرانسیل بسل",
+      "url": "calculus/bessel/",
+      "folder": "calculus"
+    }
+  ],
+  "ارتعاشات": [
+    {
+      "id": "calculus/bessel.md",
+      "title": "معادلات دیفرانسیل بسل",
+      "url": "calculus/bessel/",
+      "folder": "calculus"
+    }
+  ],
+  "مهندسی_صنایع": [
+    {
+      "id": "calculus/bessel.md",
+      "title": "معادلات دیفرانسیل بسل",
+      "url": "calculus/bessel/",
+      "folder": "calculus"
+    },
+    {
+      "id": "electrical/second-order-circuits.md",
+      "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+      "url": "electrical/second-order-circuits/",
+      "folder": "electrical"
     }
   ],
   "ریاضیات": [
@@ -108,14 +160,6 @@
     }
   ],
   "مدار_مرتبه_دوم": [
-    {
-      "id": "electrical/second-order-circuits.md",
-      "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
-      "url": "electrical/second-order-circuits/",
-      "folder": "electrical"
-    }
-  ],
-  "مهندسی_صنایع": [
     {
       "id": "electrical/second-order-circuits.md",
       "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",

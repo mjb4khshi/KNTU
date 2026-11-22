@@ -89,13 +89,30 @@
       "radius": 4.8
     },
     {
+      "id": "calculus/bessel.md",
+      "title": "معادلات دیفرانسیل بسل",
+      "url": "calculus/bessel/",
+      "folder": "calculus",
+      "tags": [
+        "معادلات_دیفرانسیل",
+        "توابع_بسل",
+        "روش_فروبنیوس",
+        "تابع_گاما",
+        "ارتعاشات",
+        "مهندسی_صنایع"
+      ],
+      "words": 6381,
+      "degree": 1,
+      "radius": 4.8
+    },
+    {
       "id": "calculus/orthogonal-paths.md",
       "title": "مسیرهای متعامد",
       "url": "calculus/orthogonal-paths/",
       "folder": "calculus",
       "tags": [],
       "words": 2763,
-      "degree": 0,
+      "degree": 1,
       "radius": 4.8
     },
     {
@@ -238,9 +255,9 @@
         "فروبنیوس",
         "دانشگاه"
       ],
-      "words": 470,
-      "degree": 0,
-      "radius": 4.8
+      "words": 515,
+      "degree": 2,
+      "radius": 5.8
     },
     {
       "id": "electrical/index.md",
@@ -1057,6 +1074,16 @@
       "type": "external"
     },
     {
+      "source": "calculus/معادلات دیفرانسیل.md",
+      "target": "calculus/bessel.md",
+      "type": "card"
+    },
+    {
+      "source": "calculus/معادلات دیفرانسیل.md",
+      "target": "calculus/orthogonal-paths.md",
+      "type": "card"
+    },
+    {
       "source": "electrical/index.md",
       "target": "electrical/second-order-circuits.md",
       "type": "card"
@@ -1410,6 +1437,21 @@
       "folder": "adabiat",
       "tags": [],
       "summary": "# شکل‌گیری و پیدایش زبان‌ ملفوظ  ## دال و مدلول  مثال: دال-->درخت. مدلول-->مصداق بیرونی درخت یا همون تصویرش  ## منبع مطالعه زبان  دو منبع زیر قطعی نیستند ولی کمک‌کننده هستند.  ###..."
+    },
+    "calculus/bessel/": {
+      "id": "calculus/bessel.md",
+      "title": "معادلات دیفرانسیل بسل",
+      "url": "calculus/bessel/",
+      "folder": "calculus",
+      "tags": [
+        "معادلات_دیفرانسیل",
+        "توابع_بسل",
+        "روش_فروبنیوس",
+        "تابع_گاما",
+        "ارتعاشات",
+        "مهندسی_صنایع"
+      ],
+      "summary": "# معادلات دیفرانسیل بسل و توابع بسل  **معادله دیفرانسیل بسل (Bessel's Differential Equation)** یکی از ارکان بنیادین فیزیک ریاضی و مهندسی است. این معادله زمانی ظاهر می‌شود که بخواهی..."
     },
     "calculus/orthogonal-paths/": {
       "id": "calculus/orthogonal-paths.md",
@@ -1926,10 +1968,62 @@
   "tags": {
     "معادلات_دیفرانسیل": [
       {
+        "id": "calculus/bessel.md",
+        "title": "معادلات دیفرانسیل بسل",
+        "url": "calculus/bessel/",
+        "folder": "calculus"
+      },
+      {
         "id": "calculus/معادلات دیفرانسیل.md",
         "title": "معادلات دیفرانسیل",
         "url": "calculus/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D8%AA%20%D8%AF%DB%8C%D9%81%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84/",
         "folder": "calculus"
+      }
+    ],
+    "توابع_بسل": [
+      {
+        "id": "calculus/bessel.md",
+        "title": "معادلات دیفرانسیل بسل",
+        "url": "calculus/bessel/",
+        "folder": "calculus"
+      }
+    ],
+    "روش_فروبنیوس": [
+      {
+        "id": "calculus/bessel.md",
+        "title": "معادلات دیفرانسیل بسل",
+        "url": "calculus/bessel/",
+        "folder": "calculus"
+      }
+    ],
+    "تابع_گاما": [
+      {
+        "id": "calculus/bessel.md",
+        "title": "معادلات دیفرانسیل بسل",
+        "url": "calculus/bessel/",
+        "folder": "calculus"
+      }
+    ],
+    "ارتعاشات": [
+      {
+        "id": "calculus/bessel.md",
+        "title": "معادلات دیفرانسیل بسل",
+        "url": "calculus/bessel/",
+        "folder": "calculus"
+      }
+    ],
+    "مهندسی_صنایع": [
+      {
+        "id": "calculus/bessel.md",
+        "title": "معادلات دیفرانسیل بسل",
+        "url": "calculus/bessel/",
+        "folder": "calculus"
+      },
+      {
+        "id": "electrical/second-order-circuits.md",
+        "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
+        "url": "electrical/second-order-circuits/",
+        "folder": "electrical"
       }
     ],
     "ریاضیات": [
@@ -2033,14 +2127,6 @@
       }
     ],
     "مدار_مرتبه_دوم": [
-      {
-        "id": "electrical/second-order-circuits.md",
-        "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
-        "url": "electrical/second-order-circuits/",
-        "folder": "electrical"
-      }
-    ],
-    "مهندسی_صنایع": [
       {
         "id": "electrical/second-order-circuits.md",
         "title": "از مدار تا زنجیره تأمین - کاربردهای مدارهای مرتبه دوم در صنعت و مهندسی صنایع",
