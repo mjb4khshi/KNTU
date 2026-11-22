@@ -1086,9 +1086,9 @@
 <p>اکنون با تغییر متغیر بدون‌بعد <span class="arithmatex">\(x = kr\)</span> (که در آن <span class="arithmatex">\(dx = k \, dr\)</span>، <span class="arithmatex">\(\frac{dR}{dr} = k \frac{dR}{dx}\)</span> و <span class="arithmatex">\(\frac{d^2 R}{dr^2} = k^2 \frac{d^2 R}{dx^2}\)</span>)، به فرم جهان‌شمول و نام‌آشنای <strong>معادله دیفرانسیل بسل مرتبه <span class="arithmatex">\(\nu\)</span></strong> می‌رسیم:</p>
 <div class="admonition tip">
 <p class="admonition-title">فرم استاندارد معادله بسل</p>
-<div class="arithmatex">\[x^2 y'' + x y' + (x^2 - \nu^2)y = 0$$
-یا به فرم نرمال:
-$$y'' + \frac{1}{x} y' + \left(1 - \frac{\nu^2}{x^2}\right)y = 0\]</div>
+<div class="arithmatex">\[x^2 y'' + x y' + (x^2 - \nu^2)y = 0\]</div>
+<p>یا به فرم نرمال:</p>
+<div class="arithmatex">\[y'' + \frac{1}{x} y' + \left(1 - \frac{\nu^2}{x^2}\right)y = 0\]</div>
 </div>
 <hr>
 <h2 id="_5">تابع گاما؛ تعمیم فاکتوریل و مشتقات کسری<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
@@ -1118,9 +1118,9 @@ $$y'' + \frac{1}{x} y' + \left(1 - \frac{\nu^2}{x^2}\right)y = 0\]</div>
 <p>اگر بخواهیم عملگر مشتق را به مرتبه‌های غیرصحیح <span class="arithmatex">\(\alpha \in \mathbb{R}\)</span> (مانند مشتق نیم‌مرتبه <span class="arithmatex">\(\frac{d^{1/2}}{dx^{1/2}}\)</span>) تعمیم دهیم، فاکتوریل‌ها با تابع گاما جایگزین می‌شوند:</p>
 <div class="admonition tip">
 <p class="admonition-title">فرمول مشتق کسری ریمان-لیوویل</p>
-<div class="arithmatex">\[\frac{d^\alpha}{dx^\alpha} x^n = \frac{\Gamma(n+1)}{\Gamma(n+1-\alpha)} x^{n-\alpha}$$
-برای مثال، مشتق نیم‌مرتبه تابع $x$:
-$$\frac{d^{1/2}}{dx^{1/2}} x = \frac{\Gamma(2)}{\Gamma(1.5)} x^{0.5} = \frac{1}{\frac{\sqrt{\pi}}{2}} \sqrt{x} = \frac{2\sqrt{x}}{\sqrt{\pi}}\]</div>
+<div class="arithmatex">\[\frac{d^\alpha}{dx^\alpha} x^n = \frac{\Gamma(n+1)}{\Gamma(n+1-\alpha)} x^{n-\alpha}\]</div>
+<p>برای مثال، مشتق نیم‌مرتبه تابع <span class="arithmatex">\(x\)</span>:</p>
+<div class="arithmatex">\[\frac{d^{1/2}}{dx^{1/2}} x = \frac{\Gamma(2)}{\Gamma(1.5)} x^{0.5} = \frac{1}{\frac{\sqrt{\pi}}{2}} \sqrt{x} = \frac{2\sqrt{x}}{\sqrt{\pi}}\]</div>
 </div>
 <p>این تعمیم دقیقاً همان دلیلی است که به ما اجازه می‌دهد فرمول حل سری بسل را نه فقط برای مرتبه‌های صحیح، بلکه به صورت یکپارچه برای <strong>تمام مرتبه‌های حقیقی <span class="arithmatex">\(\nu \ge 0\)</span></strong> بیان کنیم.</p>
 <hr>
@@ -1191,9 +1191,9 @@ $$\frac{d^{1/2}}{dx^{1/2}} x = \frac{\Gamma(2)}{\Gamma(1.5)} x^{0.5} = \frac{1}{
 <p>با بازگشت به سری <span class="arithmatex">\(y(x) = \sum_{k=0}^\infty a_{2k} x^{2k+\nu}\)</span>، فرمول جاودانه <strong>تابع بسل نوع اول مرتبه <span class="arithmatex">\(\nu\)</span></strong> آشکار می‌شود:</p>
 <div class="admonition tip">
 <p class="admonition-title">فرم بسته تابع بسل نوع اول <span class="arithmatex">\(J_\nu(x)\)</span></p>
-<div class="arithmatex">\[J_\nu(x) = \sum_{k=0}^\infty \frac{(-1)^k}{k! \, \Gamma(\nu+k+1)} \left(\frac{x}{2}\right)^{2k+\nu}$$
-برای مرتبه‌های صحیح $\nu = n \in \{0, 1, 2, \dots\}$، با توجه به اینکه $\Gamma(n+k+1) = (n+k)!$ است:
-$$J_n(x) = \sum_{k=0}^\infty \frac{(-1)^k}{k! \, (n+k)!} \left(\frac{x}{2}\right)^{2k+n}\]</div>
+<div class="arithmatex">\[J_\nu(x) = \sum_{k=0}^\infty \frac{(-1)^k}{k! \, \Gamma(\nu+k+1)} \left(\frac{x}{2}\right)^{2k+\nu}\]</div>
+<p>برای مرتبه‌های صحیح <span class="arithmatex">\(\nu = n \in \{0, 1, 2, \dots\}\)</span>، با توجه به اینکه <span class="arithmatex">\(\Gamma(n+k+1) = (n+k)!\)</span> است:</p>
+<div class="arithmatex">\[J_n(x) = \sum_{k=0}^\infty \frac{(-1)^k}{k! \, (n+k)!} \left(\frac{x}{2}\right)^{2k+n}\]</div>
 </div>
 <p>چند بسط ابتدایی برای مراتب پرکاربرد:</p>
 <div class="arithmatex">\[J_0(x) = 1 - \frac{x^2}{2^2} + \frac{x^4}{2^2 \cdot 4^2} - \frac{x^6}{2^2 \cdot 4^2 \cdot 6^2} + \dots = 1 - \frac{x^2}{4} + \frac{x^4}{64} - \frac{x^6}{2304} + \dots\]</div>

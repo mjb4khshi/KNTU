@@ -286,7 +286,14 @@ article h2 {
   background: rgba(248, 250, 252, 0.75) !important;
   backdrop-filter: blur(8px);
   margin: 1.5rem 0 !important;
-  overflow: hidden;
+  overflow-x: auto !important;
+  max-width: 100% !important;
+}
+
+.admonition .arithmatex,
+.admonition mjx-container {
+  max-width: 100% !important;
+  overflow-x: auto !important;
 }
 
 .dark .admonition {
